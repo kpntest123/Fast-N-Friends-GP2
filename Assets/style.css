@@ -1,0 +1,131 @@
+/* Style global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Barre de navigation */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #FDF1D9; /* Couleur de fond similaire */
+    padding: 20px;
+  }
+  
+  .navbar-logo {
+    margin-right: 10px;
+  }
+  
+  .navbar-title {
+    font-family: 'Futura PT', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+    color: #FDF1D9; /* Couleur identique au fond */
+  }
+  
+  .nav-item {
+    font-family: 'Futura PT', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    margin-right: 20px;
+  }
+  
+  .search-icon {
+    margin-left: 5px;
+  }
+  
+
+/* Bloc 1 : Titre et description */
+.intro {
+    text-align: center;
+    background-color: #f5e3b3;
+    padding: 40px 20px;
+}
+
+.intro h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Bloc 2 : Image et module de recherche */
+.search-section {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.search-section .car-image img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+}
+
+.search-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.search-bar input[type="text"],
+.search-bar input[type="number"],
+.search-bar input[type="date"] {
+    padding: 15px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-bar button.btn-search {
+    padding: 15px 20px;
+    background-color: #ffd700;
+    color: #333;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Bloc 3 : Titre et chiffre */
+.stats {
+    text-align: center;
+    background-color: #f5e3b3;
+    padding: 60px 20px;
+}
+
+.stats h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.stats .number {
+    font-size: 96px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stats p {
+    font-size: 16px;
+    color: #666;
+}

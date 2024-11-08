@@ -3,56 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page d'accueil - Fast 'N Friends</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Fast 'N Friends - Page d'accueil</title>
+    <link rel="stylesheet" href="Assets/style.css">
 </head>
 <body>
 
-    <!-- En-tête avec logo et boutons -->
+    <!-- Barre de navigation -->
     <header>
-        <div class="container">
-            <div class="header-left">
-                <h1>Fast 'N Friends</h1>
-            </div>
-            <div class="header-right">
-                <button class="btn">S'inscrire</button>
-                <button class="btn">Se connecter</button>
-            </div>
-        </div>
+        <div class="navbar">
+            <img src="Assets/Logo-16 (1) 1.svg" alt="Logo" class="navbar-logo">
+            <span class="navbar-title">Fast 'N Friends</span>
+            
+            <span class="nav-item">Événements partenaires</span>
+            <span class="nav-item">Rechercher</span>
+            
+            <button class="search-button">Chercher !</button>
+            <img src="ICON DE LA RECHERCHE" alt="Recherche" class="search-icon" title="la recherche">
+          </div>          
     </header>
 
-    <!-- Section Pourquoi choisir -->
-    <section class="why-choose">
-        <h2>Pourquoi choisir Fast ‘N Friends ?</h2>
-        <p>Lorem lorem lorem loremLorem lorem lorem lorem</p>
-        <p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem</p>
-        <p>Lorem lorem lorem lorem lorem lorem Lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem</p>
+    <!-- Bloc 1 : Titre et description -->
+    <section class="intro">
+        <h1>Lorem lorem lorem lorem lorem lorem</h1>
+        <p>Lorem lorem lorem lorem Lorem lorem lorem lorem Lorem lorem lorem</p>
     </section>
 
-    <!-- Section Avantages -->
-    <section class="advantages">
-        <h2>Quels sont les réels avantages du covoiturage</h2>
-        <p>Conducteurs prêts à te conduire !</p>
-    </section>
-
-    <!-- Section Recherche -->
-    <section class="search">
-        <div class="search-container">
-            <label for="from">De ?</label>
-            <input type="text" id="from" placeholder="Lieu de départ">
-            <label for="to">Vers ?</label>
-            <input type="text" id="to" placeholder="Lieu de destination">
-            <label for="people">Pour combien de personnes ?</label>
-            <input type="number" id="people" min="1" max="10">
-            <label for="date">Quand ?</label>
-            <input type="date" id="date">
+    <!-- Bloc 2 : Image et module de recherche -->
+    <section class="search-section">
+        <div class="car-image">
+            <img src="car-image.png" alt="Illustration voiture">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="De ?" />
+            <input type="text" placeholder="Vers ?" />
+            <input type="number" placeholder="Pour combien de personnes ?" />
+            <input type="date" placeholder="Quand ?" />
             <button class="btn-search">Chercher !</button>
         </div>
     </section>
 
-    <!-- Section Evénements partenaires -->
-    <section class="partners">
-        <h2>Événements partenaires</h2>
+    <!-- Bloc 3 : Titre et chiffre -->
+    <section class="stats">
+        <h2>Lorem lorem lorem lorem lorem lorem</h2>
+        <div class="number">196</div>
+        <p>Conducteurs prêts à te conduire !</p>
     </section>
 
 </body>
