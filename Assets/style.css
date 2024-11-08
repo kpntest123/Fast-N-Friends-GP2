@@ -11,37 +11,69 @@ body {
     color: #333;
 }
 
-/* Barre de navigation */
 .navbar {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: #FDF1D9; /* Couleur de fond similaire */
-    padding: 20px;
-  }
-  
-  .navbar-logo {
+    background-color: #FDF1D9; /* Couleur de fond similaire à la maquette */
+    padding: 15px 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 50px; /* Ajustez selon la taille de votre logo */
     margin-right: 10px;
-  }
-  
-  .navbar-title {
-    font-family: 'Futura PT', sans-serif;
+}
+
+.navbar-title {
     font-size: 50px;
     font-weight: bold;
     font-style: italic;
-    color: #FDF1D9; /* Couleur identique au fond */
-  }
-  
-  .nav-item {
-    font-family: 'Futura PT', sans-serif;
+    color: #FDF1D9; /* Assurez-vous que cette couleur correspond au fond */
+    margin-right: 40px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
     font-size: 30px;
     font-weight: bold;
     color: black;
     margin-right: 20px;
-  }
-  
-  .search-icon {
-    margin-left: 5px;
-  }
+}
+
+.nav-button {
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.nav-button.signup {
+    color: white;
+    background-color: #FF9900; /* Couleur pour le bouton S'inscrire */
+    border: none;
+}
+
+.search-icon {
+    height: 24px; /* Ajustez selon la taille de votre icône */
+    width: 24px;
+    margin-left: 10px;
+}
+
   
 
 /* Bloc 1 : Titre et description */
