@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fast 'N Friends - Page d'accueil</title>
+
+    <!--
+    TEMPORAIRE : LIEN POUR LA POLICE FUTURA PT, DANS LE FUTUR INTEGRER LES FICHIERS COMPLETS
+    -->
+
+    <link rel="stylesheet" href="https://use.typekit.net/ftc2niq.css">
+    
     <link rel="stylesheet" href="Assets/style.css">
 </head>
 <body>
@@ -11,7 +18,7 @@
     <!-- Barre de navigation -->
     <header>
         <div class="logo-container">
-          <img src="Assets/Logo-16 (1) 1.svg" alt="Fast 'N Friends Logo">
+          <img src="Assets/Img/FNF_logo_background_removed.png" alt="Fast 'N Friends Logo">
           <h1>Fast 'N Friends</h1>
         </div>
         <nav>
@@ -19,8 +26,8 @@
             <li><a href="#"><strong>Événements partenaires</strong></a></li>
             <li>
               <a href="#">
-                <img src="Assets/loupe de recherche.svg" alt="Rechercher" class="search-icon">
                 <strong>Rechercher</strong>
+                <img src="Assets/Img/Loupe de recherche.svg" alt="Rechercher" class="search-icon">
               </a>
             </li>
             <li>
@@ -42,17 +49,17 @@
 
     <!-- Bloc 2 : Image et module de recherche -->
     <section class="search-section">
-        <div class="car-image">
-            <img src="car-image.png" alt="Illustration voiture">
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="De ?" />
-            <input type="text" placeholder="Vers ?" />
-            <input type="number" placeholder="Pour combien de personnes ?" />
-            <input type="date" placeholder="Quand ?" />
-            <button class="btn-search">Chercher !</button>
-        </div>
-    </section>
+      <div class="car-image">
+          <img src="Assets/Img/background_img_bloc2.jpg" alt="Illustration voiture">
+      </div>
+      <form class="search-bar" action="#" method="GET">
+          <input type="text" placeholder="De ?" required />
+          <input type="text" placeholder="Vers ?" required />
+          <input type="number" placeholder="Pour combien de personnes ?" required />
+          <input type="date" required />
+          <button class="btn-search">Chercher !</button>
+      </form>
+  </section>
 
     <!-- Bloc 3 : Titre et chiffre -->
     <section class="stats">
@@ -60,6 +67,12 @@
         <div class="number">196</div>
         <p>Conducteurs prêts à te conduire !</p>
     </section>
+
+    <br><br><br>
+
+    <h1 class="titre-1-classic">Test - taille de titre</h1>
+    <h2 class="titre-2-classic">Test - taille de titre</h2>
+    <h3 class="titre-3-classic">Test - taille de titre</h3>
 
 </body>
 </html>

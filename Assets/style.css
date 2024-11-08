@@ -1,4 +1,7 @@
-/* Style global */
+/*COULEUR JAUNE : color: #F6BF48;*/
+
+/* Style global : */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +11,42 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
+    color: #000000;
 }
 
+p {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
 
+/* Styles des titres */
+.titre-1-classic {
+  font-family: "futura-pt-bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+}
+
+.titre-2-classic {
+  font-family: "futura-pt-bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.titre-3-classic {
+  font-family: "futura-pt-bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+}
+
+/* Style de la barre de naviguation */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -31,10 +63,23 @@ header {
     margin-right: 10px;
   }
 
+  /* Mise en page pour le H1 de la barre de nav "FAST 'N FRIENDS" */
+  .logo-container h1 {
+    font-family: "futura-pt-bold", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 32px;
+    color: #F6BF48;
+  }
+
   nav ul {
     list-style-type: none;
     display: flex;
     align-items: center;
+    font-family: "futura-pt-bold", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
   }
 
   nav ul li {
@@ -42,15 +87,15 @@ header {
   }
 
   nav ul li a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     display: flex;
     align-items: center;
   }
 
   .search-icon {
-    height: 20px;
-    margin-right: 5px;
+    height: 30px;
+    margin-left: 8px;
   }
 
   .btn {
@@ -60,13 +105,16 @@ header {
   }
 
   .btn-white {
-    background-color: #fff;
-    color: #333;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid black;
+    border-radius: 15px;
   }
 
   .btn-yellow {
-    background-color: #FFCC00;
-    color: #333;
+    background-color: #F6BF48;
+    color: #000000;
+    border-radius: 15px;
   }
 
   
@@ -74,44 +122,59 @@ header {
 /* Bloc 1 : Titre et description */
 .intro {
     text-align: center;
-    background-color: #f5e3b3;
+    background-color: #F6BF48;
+    font-size: 24px;
     padding: 40px 20px;
 }
 
-.intro h1 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
+.intro p {
+    font-size: 20px;
+    color: #000000;
 }
 
-.intro p {
-    font-size: 16px;
-    color: #666;
+.intro h1 {
+  font-size: 24px;
+  color: #000000;
+  font-family: "futura-pt-bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* Bloc 2 : Image et module de recherche */
 .search-section {
-    position: relative;
-    text-align: center;
-    padding: 20px;
+  position: relative;
+  text-align: center;
+  padding: 0; /* Enlever le padding pour que l'image aille jusqu'aux bords */
+  width: 100%;
+  height: 50vh;
+}
+
+.search-section .car-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .search-section .car-image img {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ceci assure que l'image couvre tout l'espace sans déformation */
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0; /* Enlever le border-radius pour avoir les coins droits */
 }
 
+/* Ajuster la position de la barre de recherche */
 .search-bar {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Assure que la barre de recherche est au-dessus de l'image */
+  width: 80%; /* ou la largeur que vous préférez */
+  max-width: 1200px; /* pour éviter que ça devienne trop large sur grands écrans */
 }
 
 .search-bar input[type="text"],
@@ -125,8 +188,8 @@ header {
 
 .search-bar button.btn-search {
     padding: 15px 20px;
-    background-color: #ffd700;
-    color: #333;
+    background-color: #F6BF48;
+    color: #000000;
     border: none;
     font-size: 14px;
     cursor: pointer;
@@ -136,7 +199,7 @@ header {
 /* Bloc 3 : Titre et chiffre */
 .stats {
     text-align: center;
-    background-color: #f5e3b3;
+    background-color: #F6BF48;
     padding: 60px 20px;
 }
 
@@ -156,3 +219,15 @@ header {
     font-size: 16px;
     color: #666;
 }
+
+
+
+
+
+
+
+/*POLICE D'ÉCRITURE 
+
+ELLE EST A INTEGRER UNE FOIS QUE TOUT EST BON !
+
+*/
