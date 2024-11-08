@@ -1,0 +1,133 @@
+/* Style global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* En-tête */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-left h1 {
+    font-size: 24px;
+    color: #007b6b;
+}
+
+header .header-right .btn {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007b6b;
+    color: #fff;
+    cursor: pointer;
+}
+
+header .header-right .btn:hover {
+    background-color: #005f53;
+}
+
+/* Section Pourquoi choisir */
+.why-choose {
+    text-align: left;
+    padding: 50px 0;
+}
+
+.why-choose h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.why-choose p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Section Avantages */
+.advantages {
+    background-color: #eafaf8;
+    padding: 50px 0;
+    text-align: left;
+}
+
+.advantages h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.advantages p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Section Recherche */
+.search {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-container label {
+    font-weight: bold;
+}
+
+.search-container input[type="text"],
+.search-container input[type="number"],
+.search-container input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(20% - 10px);
+}
+
+.btn-search {
+    padding: 10px 20px;
+    background-color: #007b6b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    background-color: #005f53;
+}
+
+/* Section Événements partenaires */
+.partners {
+    background-color: #f4f4f9;
+    padding: 50px 0;
+}
+
+.partners h2 {
+    font-size: 28px;
+    color: #333;
+}
