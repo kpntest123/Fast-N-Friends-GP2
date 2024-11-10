@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast 'N Friends - Navbar</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ftc2niq.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #000000;
+        }
+
+        /* Style de la barre de navigation */
+        header {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 15px; /* Réduit de 20px à 15px */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 35px; /* Réduit de 40px à 35px */
+            margin-right: 10px;
+        }
+
+        .logo-container h1 {
+            font-family: "futura-pt-bold", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 26px; /* Réduit de 32px à 26px */
+            color: #F6BF48;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            font-family: "futura-pt-book", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 14px; /* Réduit de 18px à 14px */
+        }
+
+        nav ul li {
+            margin-left: 25px; /* Réduit de 30px à 25px */
+        }
+
+        nav ul li a {
+            color: #000000;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon {
+            height: 25px; /* Réduit de 30px à 25px */
+            margin-left: 6px; /* Réduit de 8px à 6px */
+        }
+
+        .btn {
+            padding: 8px 16px; /* Réduit de 10px 20px à 8px 16px */
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-white {
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid black;
+            border-radius: 12px; /* Réduit de 15px à 12px */
+        }
+
+        .btn-yellow {
+            background-color: #F6BF48;
+            color: #000000;
+            border-radius: 12px; /* Réduit de 15px à 12px */
+        }
+    </style>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <header>
+        <div class="logo-container">
+            <img src="Assets/Img/FNF_logo_background_removed.png" alt="Fast 'N Friends Logo">
+            <h1>Fast 'N Friends</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#"><strong>Événements partenaires</strong></a></li>
+                <li>
+                    <a href="#">
+                        <strong>Rechercher</strong>
+                        <img src="Assets/Img/Loupe de recherche.svg" alt="Rechercher" class="search-icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-white"><strong>Se connecter</strong></a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-yellow"><strong>S'inscrire</strong></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

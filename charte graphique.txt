@@ -1,0 +1,22 @@
+Partie graphique :
+
+COULEUR JAUNE : color: #F6BF48;
+
+Texte standard : 16px 
+Texte pour la barre de navigation : 16px ==> donc la même que pour le texte normal
+Grands titres : 26px 
+Titres moyens : 20px
+Petits titres : 16px ==> donc la même que pour le texte normal
+
+
+
+Pour les Fonts et WEIGHT :
+
+Futura PT Book : font-weight: 400;
+Futura PT Bold : font-weight: 700;
+Futura PT Heavy : font-weight: 900;
+Futura PT Book Italic : font-weight: 400; et font-style: italic;
+Futura PT Bold Italic : font-weight: 700; et font-style: italic;
+Futura PT Heavy Italic : font-weight: 900; et font-style: italic;
+
+Espace entre un titre et un P : margin-bottom: 30px;
