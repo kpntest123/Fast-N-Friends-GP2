@@ -18,7 +18,7 @@ body {
 
 p {
   font-family: "FuturaPT", sans-serif;
-  font-weight: 400; /* Regular (Book) */
+  /* font-weight: 400;  Regular (Book) */
   font-style: normal;
   font-size: 16px; /* Réduit de 20px à 16px */
 }
@@ -26,21 +26,21 @@ p {
 /* Styles des titres */
 .titre-1-classic {
   font-family: "FuturaPT", sans-serif;
-  font-weight: 700; /* Bold */
+  /* font-weight: 700;  Bold */
   font-style: normal;
   font-size: 26px; /* Réduit de 32px à 26px pour correspondre au H1 de la navbar */
 }
 
 .titre-2-classic {
   font-family: "FuturaPT", sans-serif;
-  font-weight: 700; /* Bold */
+  /* font-weight: 700;  Bold */
   font-style: normal;
   font-size: 20px; /* Réduit de 24px à 20px */
 }
 
 .titre-3-classic {
   font-family: "FuturaPT", sans-serif;
-  font-weight: 700; /* Bold */
+  /* font-weight: 700;  Bold */
   font-style: normal;
   font-size: 16px; /* Réduit de 20px à 16px */
 }
@@ -67,7 +67,7 @@ header {
 
 .logo-container h1 {
   font-family: "FuturaPT", sans-serif;
-  font-weight: 700; /* Bold */
+  /* font-weight: 700;  Bold */
   font-style: normal;
   font-size: 26px;
   color: #F6BF48;
@@ -78,7 +78,7 @@ nav ul {
   display: flex;
   align-items: center;
   font-family: "FuturaPT", sans-serif;
-  font-weight: 400; /* Book */
+  /* font-weight: 400;  Book */
   font-style: normal;
   font-size: 16px; /* Réduit de 18px à 14px comme dans la navbar */
 }
@@ -102,7 +102,7 @@ nav ul li a {
 .btn {
   padding: 8px 16px; /* Réduit de 10px 20px à 8px 16px */
   border-radius: 5px;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .btn-white {
@@ -135,7 +135,7 @@ nav ul li a {
   font-size: 26px; /* Réduit de 24px à 20px */
   color: #000000;
   font-family: "FuturaPT", sans-serif;
-  font-weight: 900; /* Heavy */
+  /* font-weight: 900;  Heavy */
   font-style: normal;
   margin-bottom: 30px;
 }
@@ -209,7 +209,7 @@ nav ul li a {
 }
 
 .stats .number {
-  font-size: 72px; /* Réduit de 96px à 72px */
+  font-size: 190px; /* Réduit de 96px à 72px */
   color: #333;
   margin-bottom: 8px; /* Réduit de 10px à 8px */
 }

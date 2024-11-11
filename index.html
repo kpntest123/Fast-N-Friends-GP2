@@ -1,77 +1,101 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fast 'N Friends - Page d'accueil</title>
 
-    <!--
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast 'N Friends - Page d'accueil</title>
+
+  <!--
     TEMPORAIRE : LIEN POUR LA POLICE FUTURA PT, DANS LE FUTUR INTEGRER LES FICHIERS COMPLETS
     qui se trouvent déjà dans les ASSETS 
     -->
-    
-    <link rel="stylesheet" href="Assets/CSS/style.css">
+
+  <link rel="stylesheet" href="Assets/CSS/style.css">
 </head>
+
 <body>
 
-    <!-- Barre de navigation -->
-    <header>
-        <div class="logo-container">
-          <img src="Assets/Img/FNF_logo_background_removed.png" alt="Fast 'N Friends Logo">
-          <h1>Fast 'N Friends</h1>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#"><strong>Événements partenaires</strong></a></li>
-            <li>
-              <a href="#">
-                <strong>Rechercher</strong>
-                <img src="Assets/Img/Loupe de recherche.svg" alt="Rechercher" class="search-icon">
-              </a>
-            </li>
-            <li>
-              <a href="#" class="btn btn-white"><strong>Se connecter</strong></a>
-            </li>
-            <li>
-              <a href="#" class="btn btn-yellow"><strong>S'inscrire</strong></a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+  <!-- Barre de navigation -->
+  <header>
+    <div class="logo-container">
+      <img src="Assets/Img/FNF_logo_background_removed.png" alt="Fast 'N Friends Logo">
+      <h1>Fast 'N Friends</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#"><strong>Événements partenaires</strong></a></li>
+        <li>
+          <a href="#">
+            <strong>Rechercher</strong>
+            <img src="Assets/Img/Loupe de recherche.svg" alt="Rechercher" class="search-icon">
+          </a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-white"><strong>Se connecter</strong></a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-yellow"><strong>S'inscrire</strong></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-      
-    <!-- Bloc 1 : Titre et description -->
-    <section class="intro">
-        <h1>Lorem lorem lorem lorem lorem lorem</h1>
-        <p>Lorem lorem lorem lorem Lorem lorem lorem lorem Lorem lorem lorem</p>
-    </section>
 
-    <!-- Bloc 2 : Image et module de recherche -->
-    <section class="search-section">
-      <div class="car-image">
-          <img src="Assets/Img/background_img_bloc2.jpg" alt="Illustration voiture">
-      </div>
-      <form class="search-bar" action="#" method="GET">
-          <input type="text" placeholder="De ?" required />
-          <input type="text" placeholder="Vers ?" required />
-          <input type="number" placeholder="Pour combien de personnes ?" required />
-          <input type="date" required />
-          <button class="btn-search">Chercher !</button>
-      </form>
+  <!-- Bloc 1 : Titre et description -->
+  <section class="intro">
+    <h1>Lorem lorem lorem lorem lorem lorem</h1>
+    <p>Lorem lorem lorem lorem Lorem lorem lorem lorem Lorem lorem lorem</p>
   </section>
 
-    <!-- Bloc 3 : Titre et chiffre -->
-    <section class="stats">
-        <h2>Lorem lorem lorem lorem lorem lorem</h2>
-        <div class="number">196</div>
-        <p>Conducteurs prêts à te conduire !</p>
-    </section>
+  <!-- Bloc 2 : Image et module de recherche -->
+  <section class="search-section">
+    <div class="car-image">
+      <img src="Assets/Img/background_img_bloc2.jpg" alt="Illustration voiture">
+    </div>
+    <form class="search-bar" action="#" method="GET">
+      <input type="text" placeholder="De ?" required />
+      <input type="text" placeholder="Vers ?" required />
+      <input type="number" placeholder="Pour combien de personnes ?" required />
+      <input type="date" required />
+      <button class="btn-search">Chercher !</button>
+    </form>
+  </section>
 
-    <br><br><br>
+  <!-- Bloc 3 : Titre et chiffre -->
+  <section class="stats">
+    <h2>Lorem lorem lorem lorem lorem lorem</h2>
+    <div class="number" id="userCount">0</div>
+    <p>Conducteurs prêts à te conduire !</p>
+  </section>
+                                          <!-- DANS UN FUTUR PROCHE METTRE TOUT CA DANS LE DOC JS DEJA CREE -->
+                                          <script>
+                                            document.addEventListener("DOMContentLoaded", function () {
+                                              const targetNumber = 196;
+                                              const element = document.getElementById("userCount");
+                                              let currentNumber = 0;
+                                              const increment = Math.ceil(targetNumber / 100); // Ajuste la vitesse de progression ici
 
-    <h1 class="titre-1-classic">Test - taille de titre</h1>
-    <h2 class="titre-2-classic">Test - taille de titre</h2>
-    <h3 class="titre-3-classic">Test - taille de titre</h3>
+                                              const interval = setInterval(() => {
+                                                currentNumber += increment;
+                                                if (currentNumber >= targetNumber) {
+                                                  currentNumber = targetNumber;
+                                                  clearInterval(interval);
+                                                }
+                                                element.textContent = currentNumber;
+                                              }, 30); // Ajuste la vitesse de l'animation en ms ici
+                                            });
+                                          </script>
+
+  <br><br><br>
+
+
+
+  <!-- Bloc ??? : TEST EN TOUT GENRE -->
+  <h1 class="titre-1-classic">Test - taille de titre</h1>
+  <h2 class="titre-2-classic">Test - taille de titre</h2>
+  <h3 class="titre-3-classic">Test - taille de titre</h3>
 
 </body>
+
 </html>
