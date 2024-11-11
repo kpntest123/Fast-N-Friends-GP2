@@ -20,3 +20,5 @@ Futura PT Bold Italic : font-weight: 700; et font-style: italic;
 Futura PT Heavy Italic : font-weight: 900; et font-style: italic;
 
 Espace entre un titre et un P : margin-bottom: 30px;
+
+https://www.outsystems.com/forge/component-overview/7704/algolia-places-o11
