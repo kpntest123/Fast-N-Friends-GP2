@@ -1,6 +1,6 @@
 Partie graphique :
 
-COULEUR JAUNE : color: #F6BF48;
+COULEUR JAUNE : color: #???;
 
 Texte standard : 16px 
 Texte pour la barre de navigation : 16px ==> donc la même que pour le texte normal

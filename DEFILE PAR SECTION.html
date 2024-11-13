@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST - Just By section</title>
+
+
+
+
+    <style>
+        /* Style de la page principale */
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+/* Container pour les sections */
+.container {
+  scroll-snap-type: y mandatory; /* Défilement forcé vertical */
+  overflow-y: scroll;
+  height: 100vh; /* Container occupant toute la hauteur de l'écran */
+}
+
+/* Style pour chaque écran */
+.screen {
+  scroll-snap-align: start; /* Chaque section s’aligne au début de l’écran */
+  height: 100vh; /* Chaque section occupe 100% de l'écran */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+/* Couleurs pour chaque section */
+.screen1 { background-color: #FFD700; }
+.screen2 { background-color: #87CEEB; }
+.screen3 { background-color: #FF6347; }
+    </style>
+</head>
+
+
+
+<!-- DEBUT DU CONTENU -->
+<body>
+    <div class="container">
+        <section class="screen screen1">Écran 1</section>
+        <section class="screen screen2">Écran 2</section>
+        <section class="screen screen3">Écran 3</section>
+      </div>
+      
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast 'N Friends - Page de connexion</title>
+  <link rel="stylesheet" href="Assets/CSS/style.css">
+
+  <style>
+    body {
+      font-family: 'Jost', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .login-container .remember-me {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .login-container .remember-me input {
+      margin-right: 0.5rem;
+      width: auto;
+    }
+
+    .login-container button {
+      width: 100%;
+      background-color: #ffa500;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Barre de navigation 
+   
+            EN TRAVAUX 
+  -->
+
+  <header>
+    <div class="logo-container">
+      <img src="Assets/Img/FNF_logo_background_removed.png" alt="Fast 'N Friends Logo">
+      <h1>Fast 'N Friends</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#"><strong>Événements partenaires</strong></a></li>
+        <li>
+          <a href="#">
+            <strong>Rechercher</strong>
+            <img src="Assets/Img/Loupe de recherche.svg" alt="Rechercher" class="search-icon">
+          </a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-white"><strong>Se connecter</strong></a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-yellow"><strong>S'inscrire</strong></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+<br><br><br><br><br><br>
+
+
+<div class="login-container">
+    <input type="email" placeholder="Email" />
+    <input type="password" placeholder="Mot de passe" />
+    <div class="remember-me">
+      <input type="checkbox" id="remember-me" />
+      <label for="remember-me">Se souvenir de moi</label>
+    </div>
+    <button>Connexion</button>
+  </div>
+
+</body>
+
+</html>
