@@ -8,7 +8,30 @@ Grands titres : 26px
 Titres moyens : 20px
 Petits titres : 16px ==> donc la même que pour le texte normal
 
+Pour un bloc titre + h1 ==> mise en page de base : 
 
+/*Bloc 4 : Les cartes*/
+
+.lescardsecolos {
+  text-align: center;
+  background-color: #ffffff;
+  font-size: 20px; /* Réduit de 24px à 20px */
+  padding: 30px 15px; /* Réduit de 40px 20px à 30px 15px */
+}
+
+.lescardsecolos p {
+  font-size: 16px; /* Réduit de 20px à 16px */
+  color: #000000;
+}
+
+.lescardsecolos h1 {
+  font-size: 26px; /* Réduit de 24px à 20px */
+  color: #000000;
+  font-family: "FuturaPT", sans-serif;
+  /* font-weight: 900;  Heavy */
+  font-style: normal;
+  margin-bottom: 30px;
+}
 
 Pour les Fonts et WEIGHT :
 
@@ -19,6 +42,32 @@ Futura PT Book Italic : font-weight: 400; et font-style: italic;
 Futura PT Bold Italic : font-weight: 700; et font-style: italic;
 Futura PT Heavy Italic : font-weight: 900; et font-style: italic;
 
-Espace entre un titre et un P : margin-bottom: 30px;
+<link rel="stylesheet" href="https://use.typekit.net/uah5lqa.css">
+
+Futura PT Book
+font-family: "futura-pt", sans-serif;
+font-weight: 400;
+font-style: normal;
+Futura PT Book Oblique
+font-family: "futura-pt", sans-serif;
+font-weight: 400;
+font-style: italic;
+Futura PT Heavy
+font-family: "futura-pt", sans-serif;
+font-weight: 700;
+font-style: normal;
+Futura PT Heavy Oblique
+font-family: "futura-pt", sans-serif;
+font-weight: 700;
+font-style: italic;
+Futura PT Bold
+font-family: "futura-pt-bold", sans-serif;
+font-weight: 700;
+font-style: normal;
+Futura PT Bold Oblique
+font-family: "futura-pt-bold", sans-serif;
+font-weight: 700;
+font-style: italic;
+
 
 https://www.outsystems.com/forge/component-overview/7704/algolia-places-o11
