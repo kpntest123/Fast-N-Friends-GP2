@@ -15,3 +15,4 @@ document.addEventListener("DOMContentLoaded", function() {
   }, 30); // Ajuste la vitesse de l'animation en ms ici
 });
 */
+
