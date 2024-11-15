@@ -206,19 +206,19 @@ nav ul li a {
 
 .stats h1 {
   font-size: 26px; /* Réduit de 24px à 20px */
-  color: #333;
+  color: #000000;
   margin-bottom: 16px; /* Réduit de 20px à 16px */
 }
 
 .stats .number {
   font-size: 190px; /* Réduit de 96px à 72px */
-  color: #333;
+  color: #000000;
   margin-bottom: 8px; /* Réduit de 10px à 8px */
 }
 
 .stats p {
   font-size: 16px;
-  color: #666;
+  color: #000000;
 }
 
 /*Bloc 4 : Les cartes*/
@@ -242,19 +242,39 @@ nav ul li a {
 }
 
 /*Bloc 5 : Pourquoi nous ?*/
-.pknous {
+.why-us {
   text-align: center;
   background-color: #F6BF48;
   padding: 30px 15px;
 }
 
-.pknous p {
+.why-us p {
   font-size: 16px; /* Réduit de 20px à 16px */
   color: #000000;
 }
 
-.pknous h1 {
+.why-us h1 {
   font-size: 26px; /* Réduit de 24px à 20px */
+  color: #000000;
+  font-family: "Futura-PT", sans-serif;
+  font-style: normal;
+  margin-bottom: 30px;
+}
+
+/*Bloc 6 */
+.bloc6 {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 30px 15px;
+}
+
+.bloc6 p {
+  font-size: 16px; 
+  color: #000000;
+}
+
+.bloc6 h1 {
+  font-size: 26px; 
   color: #000000;
   font-family: "Futura-PT", sans-serif;
   font-style: normal;

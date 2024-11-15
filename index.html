@@ -4,12 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fast 'N Friends - Page d'accueil</title>
+  <title>Voyageons ensemble, connectés et solidaires / Fast 'N Friends</title>
 
   <!--
     TEMPORAIRE : LIEN POUR LA POLICE FUTURA PT, DANS LE FUTUR INTEGRER LES FICHIERS COMPLETS
     qui se trouvent déjà dans les ASSETS 
     -->
+
+    <link rel="shortcut icon" href="Assets/Img/FNF_logo_background_removed.png" type="image/x-icon">
     <link rel="stylesheet" href="https://use.typekit.net/uah5lqa.css">                
 
   <link rel="stylesheet" href="Assets/CSS/style.css">
@@ -72,9 +74,9 @@
 
   <!-- Bloc 3 : Titre et chiffre -->
   <section class="stats">
-    <h1>Lorem lorem lorem lorem lorem lorem</h1>
+    <h1>Notre communauté s'étend !</h1>
     <div class="number" id="userCount">0</div>
-    <p>Conducteurs prêts à te conduire !</p>
+    <p>Conducteurs sont prêts à te conduire dès maintenant !</p>
   </section>
                                           <!-- DANS UN FUTUR PROCHE METTRE TOUT CA DANS LE DOC JS DEJA CREE -->
                                           <script>
@@ -82,7 +84,7 @@
                                               const targetNumber = 196;
                                               const element = document.getElementById("userCount");
                                               let currentNumber = 0;
-                                              const increment = Math.ceil(targetNumber / 100); // Ajuste la vitesse de progression ici
+                                              const increment = Math.ceil(targetNumber / 150); // vitesse de progression ici
 
                                               const interval = setInterval(() => {
                                                 currentNumber += increment;
@@ -91,7 +93,7 @@
                                                   clearInterval(interval);
                                                 }
                                                 element.textContent = currentNumber;
-                                              }, 30); // Ajuste la vitesse de l'animation en ms ici
+                                              }, 20); // Ajuste la vitesse de l'animation en ms ici
                                             });
                                           </script>
 
@@ -104,13 +106,16 @@
   
 
 
-
-
-
 <!-- Bloc 5 : Pourquoi choisir Fast 'N Friends -->
-<section class="pknous">
+<section class="why-us">
   <h1>Pourquoi nous choisir nous ?</h1>
   <p>Lorem Lorem Lorem ??</p>
+</section>
+
+<!-- Bloc 6 -->
+<section class="bloc6">
+  <h1>Lorem or IMG</h1>
+  <p>IMG ????????????? IMG ????????????? </p>
 </section>
 
 
