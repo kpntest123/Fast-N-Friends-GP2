@@ -3,78 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Navbar</title>
-  
-  <!-- Import Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-  <!-- Import de la police Jost -->
-  <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
-  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-    /* Application de la police Jost */
-    body, .navbar {
-      font-family: 'Jost', sans-serif;
-    }
-
-    /* Style pour masquer le texte Fast 'N Friends quand le menu hamburger apparaît */
-    @media (max-width: 992px) {
-      .navbar-brand span {
-        display: none;
-      }
-    }
-
-    /* Centrer le logo quand le menu hamburger est visible */
-    @media (max-width: 992px) {
-      .navbar-brand {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
-
-    /* Positionner le menu déroulant en dessous de la barre de navigation */
-    .navbar-collapse {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
+    /* Navbar globale */
+    .custom-navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       background-color: white;
-      z-index: 1;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
+    /* Logo */
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container img {
+      height: 32px;
+      margin-right: 8px;
+    }
+
+    .logo-container span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #4949FF;
+    }
+
+    /* Liens de navigation */
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    /* Bouton S'inscrire */
+    .btn-primary {
+      background-color: #4949FF;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #3d3db3; /* Bleu légèrement plus foncé */
+    }
+
+    /* Menu hamburger */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+
+    /* Texte "Fast 'N Friends" */
+    #fast-n-friends {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    /* Autres éléments du menu */
+    .menu-item {
+      font-size: 16px;
+    }
+
+    /* Menu hamburger */
+.hamburger img {
+  width: 24px;  /* Réduisez cette valeur selon vos besoins */
+  height: 24px; /* Réduisez cette valeur selon vos besoins */
+}
+
   </style>
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <!-- Logo + Texte Fast 'N Friends -->
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="Assets/Img/FNF_logo.svg" alt="Logo FNF" style="width: 40px; height: 40px;"> <!-- Remplace 'logo-fnf.png' par le chemin de ton logo -->
-      <span class="ml-2">Fast 'N Friends</span>
-    </a>
-    
-    <!-- Bouton menu hamburger aligné à droite -->
-    <div class="ml-auto">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <nav class="custom-navbar">
+    <div class="logo-container">
+      <img src="Assets/Img/FNF_logo.svg" alt="Logo" />
+      <span id="fast-n-friends">Fast 'N Friends</span>
     </div>
-    
-    <!-- Liens de navigation -->
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav text-center">
-        <a class="nav-item nav-link" href="#">Home</a>
-        <a class="nav-item nav-link" href="#">Features</a>
-        <a class="nav-item nav-link" href="#">Pricing</a>
-        <a class="nav-item nav-link" href="#">Contact</a>
-      </div>
+    <div class="hamburger" id="hamburger-icon">
+      <img src="Assets/Img/hambruger_menu.svg" alt="Menu" />
     </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#">Événements partenaires</a></li>
+      <li><a href="#">Rechercher</a></li>
+      <li><a href="#">Se connecter</a></li>
+      <li><a href="#" class="btn-primary">S'inscrire</a></li>
+    </ul>
   </nav>
 
-  <!-- Import Bootstrap JS et jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Basculer l'affichage du menu
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburgerIcon.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
+
 </body>
 </html>
