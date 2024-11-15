@@ -61,7 +61,7 @@ header {
 
 .logo-container img {
   height: 35px; /* Réduit de 40px à 35px comme dans la navbar */
-  margin-right: 10px;
+  margin-left: 15px;
 }
 
 .logo-container h1 {
@@ -124,7 +124,7 @@ nav ul li a {
 
 .intro p {
   font-size: 16px; /* Réduit de 20px à 16px */
-  color: #000000;
+  color: #660000;
 }
 
 .intro h1 {
