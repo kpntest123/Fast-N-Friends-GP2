@@ -25,7 +25,7 @@ function styles_scripts() {
         // Lien vers le fichier CSS local
         wp_enqueue_style(
             'style', // Nom du style
-            get_template_directory_uri() . '/assets/css/app.css' // Chemin vers le fichier CSS local
+            get_template_directory_uri() . '/Assets/css/app.css'
         );
 
     // Lier le JS Bootstrap depuis un CDN
