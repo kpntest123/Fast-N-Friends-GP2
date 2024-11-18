@@ -7,3 +7,8 @@ POV ta 70 ans et fana de facebook :
 ![image](https://github.com/user-attachments/assets/d1889fd7-88cc-4100-8ce9-5bc3f17434ed)
 
 
+Vu que je suis un vieux con sénile, mon mdp de wordpress : 
+
+![image](https://github.com/user-attachments/assets/3f858729-0c23-4f1e-a2d3-f46fcf1a0ade)
+
+
