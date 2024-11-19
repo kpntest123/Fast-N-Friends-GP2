@@ -35,6 +35,7 @@
     /* Liens de navigation */
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 20px;
       list-style: none;
       padding: 0;
@@ -44,11 +45,20 @@
     .nav-links a {
       text-decoration: none;
       color: #000;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links img {
+      width: 25px; /* Ajustez ici la taille selon vos besoins */
+      height: 25px; /* Ajustez ici la taille selon vos besoins */
+      margin-left: 5px;
+      margin-right: 5px;
     }
 
     /* Bouton S'inscrire */
     .btn-primary {
-      background-color: #4949FF;
+      background-color: #6565FF;
       color: white;
       padding: 8px 16px;
       border-radius: 6px;
@@ -57,13 +67,18 @@
     }
 
     .btn-primary:hover {
-      background-color: #3d3db3; /* Bleu légèrement plus foncé */
+      background-color: #6565FF;
     }
 
     /* Menu hamburger */
     .hamburger {
       display: none;
       cursor: pointer;
+    }
+
+    .hamburger img {
+      width: 24px;
+      height: 24px;
     }
 
     /* Responsiveness */
@@ -77,6 +92,7 @@
         background: white;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         padding: 10px;
+        z-index: 10;
       }
 
       .nav-links.show {
@@ -93,33 +109,31 @@
       font-size: 26px;
       font-weight: bold;
     }
-
-    /* Autres éléments du menu */
-    .menu-item {
-      font-size: 16px;
-    }
-
-    /* Menu hamburger */
-.hamburger img {
-  width: 24px;  /* Réduisez cette valeur selon vos besoins */
-  height: 24px; /* Réduisez cette valeur selon vos besoins */
-}
-
   </style>
 </head>
 <body>
 
   <nav class="custom-navbar">
     <div class="logo-container">
-      <img src="Assets/Img/FNF_logo.svg" alt="">
+      <img src="Assets/Img/FNF_logo.svg" alt="Logo">
       <span id="fast-n-friends">Fast 'N Friends</span>
     </div>
     <div class="hamburger" id="hamburger-icon">
-      <img src="Assets/Img/hambruger_menu.svg" alt="Menu" />
+      <img src="Assets/Img/hamburger_menu.svg" alt="Menu">
     </div>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#">Événements partenaires</a></li>
-      <li><a href="#">Rechercher</a></li>
+      <li>
+        <a href="#">
+          Événements partenaires
+          <img src="Assets/Img/ico fiesta.svg" alt="Dropdown">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Rechercher
+          <img src="Assets/Img/Loupe de recherche.svg" alt="Search">
+        </a>
+      </li>
       <li><a href="#">Se connecter</a></li>
       <li><a href="#" class="btn-primary">S'inscrire</a></li>
     </ul>
