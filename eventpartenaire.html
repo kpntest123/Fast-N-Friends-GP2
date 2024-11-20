@@ -150,38 +150,153 @@
                 <div class="col-4">
                     <div class="header-box">
                         <button
-                        class="btn btn-secondary dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        >Lieu</button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            class="btn btn-secondary dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Lieu
+                        </button>
+                        <ul class="dropdown-menu" id="cityDropdown">
+                            <!-- Les villes seront générées ici -->
                         </ul>
                     </div>
-            </div>
-                    
                 </div>
                 <div class="col-4">
                     <div class="header-box">
-                        <button>Event</button>
+                        <button class="btn btn-secondary dropdown-toggle" 
+                        type="button" 
+                        id="dropdownMenuButton" 
+                        data-bs-toggle="dropdown" 
+                        aria-expanded="false">Event</button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">Bal</a></li>
+                            <li><a class="dropdown-item" href="#">Concert</a></li>
+                            <li><a class="dropdown-item" href="#">Festival </a></li>
+                            <li><a class="dropdown-item" href="#">Expo</a></li>
+                            <li><a class="dropdown-item" href="#">Fête</a></li>
+                            <li><a class="dropdown-item" href="#">Sport</a></li>
+                        </ul>
+    
+
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="header-box">
-                        <button>Jour</button>
-                    </div>
-                </div>
+                        <input
+                        type="date"
+                        class="form-control"
+                        id="datePicker"
+                        style="padding: 15px; font-size: 1.2rem; text-align: center; border-radius: 10px; border: 2px solid #3d3db3; color: #3d3db3;"
+            
+                        >
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Première carte -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 100%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <img src="placeholder.jpg" class="card-img-top" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Titre Evénement</h5>
+                        <div class="row text-center align-items-center">
+                            <div class="col-4">
+                                <p class="mb-0" style="font-weight: bold; color: #3d3db3;">Tag</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="mb-0" style="font-weight: bold; color: #3d3db3;">Lieu</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="mb-0" style="font-weight: bold; color: #3d3db3;">Date</p>
+                            </div>
+                        </div>
+                        <p class="card-text mt-3" style="text-align: center;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac auctor enimLorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <a href="#" class="btn btn-primary d-block text-center">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Deuxième carte -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 100%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <img src="placeholder.jpg" class="card-img-top" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Titre Evénement</h5>
+                        <div class="row text-center align-items-center">
+                            <div class="col-4">
+                                <p class="mb-0" style="font-weight: bold; color: #3d3db3;">Tag</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="mb-0" style="font-weight: bold; color: #3d3db3;">Lieu</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="mb-0" style="font-weight: bold; color: #3d3db3;">Date</p>
+                            </div>
+                        </div>
+                        <p class="card-text mt-3" style="text-align: center;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac auctor enimLorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <a href="#" class="btn btn-primary d-block text-center">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Troisième carte -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 100%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <img src="placeholder.jpg" class="card-img-top" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Titre Evénement</h5>
+                        <div class="row text-center align-items-center">
+                            <div class="col-4">
+                                <p class="mb-0" style="font-weight: bold; color: #3d3db3;">Tag</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="mb-0" style="font-weight: bold; color: #3d3db3;">Lieu</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="mb-0" style="font-weight: bold; color: #3d3db3;">Date</p>
+                            </div>
+                        </div>
+                        <p class="card-text mt-3" style="text-align: center;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac auctor enimLorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <a href="#" class="btn btn-primary d-block text-center">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const cities = [
+            "Bruxelles", "Anvers", "Gand", "Charleroi", "Liège", "Bruges", "Namur",
+            "Louvain", "Mons", "Alost", "Malines", "La Louvière", "Courtrai",
+            "Hasselt", "Ostende", "Seraing", "Saint-Nicolas", "Tournai", "Genk",
+            "Roulers", "Mouscron", "Verviers", "Beveren", "Beringen", "Louvain-la-Neuve"
+        ];
+
+        const cityDropdown = document.getElementById('cityDropdown');
+
+        cities.forEach(city => {
+            const cityItem = document.createElement('li');
+            const cityLink = document.createElement('a');
+            cityLink.className = 'dropdown-item';
+            cityLink.href = '#';
+            cityLink.textContent = city;
+            cityItem.appendChild(cityLink);
+            cityDropdown.appendChild(cityItem);
+        });
+    </script>
 </body>
 </html>
