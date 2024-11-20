@@ -12,32 +12,91 @@
     <title>Page de modif des infos</title>
 
     <style>
-    .monprofil {
-    text-align: center;
-    background-color: #F6BF48;
-    padding: 30px 15px;
+    .profile-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      align-items: center;
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
     }
 
-    .monprofil p {
-    font-size: 16px; /* Réduit de 20px à 16px */
-    color: #000000;
+    .profile-info {
+      background-color: #E6E0F5;
+      padding: 20px;
+      border-radius: 10px;
     }
 
-    .monprofil h1 {
-    font-size: 26px; /* Réduit de 24px à 20px */
-    color: #000000;
-    font-family: "Futura-PT", sans-serif;
-    font-style: normal;
-    margin-bottom: 30px;
+    .profile-info p {
+      margin: 10px 0;
+    }
+
+    .profile-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .change-photo {
+      display: block;
+      margin-top: 10px;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .change-photo:hover {
+      text-decoration: underline;
     }
     </style>
 
 </head>
 <body>
-    <!-- Bloc 1 : Info Lorem -->
+    <!-- Bloc 1 : Barre de nav 
+     
+    A METTRE ICI
+    
+    -->
+
+    <br><br>
+
+
+    <!-- Bloc 2 : Info Lorem -->
     <section class="monprofil">
-        <h1>Pourquoi nous choisir nous ?</h1>
-        <p>Lorem Lorem Lorem ??</p>
+        <h1>Ton profil, ta zone, ta vie :</h1>
+        <p>Fais rêver les autres avec les informations que tu vas mettre, tout en restant dans la bienveillance et le respect !</p>
     </section>
+
+    <br><br><br>
+
+  <!-- Bloc 3 : La modif -->
+  <div class="profile-container">
+    <div class="profile-info-container">
+      <p>Ton surnom :</p>
+      <p>Ton nom :</p>
+      <p>Ton prénom :</p>
+      <p>Ton e-mail :</p>
+      <p>Ton numéro de téléphone :</p>
+      <p>Tu t'identifies comme ?</p>
+      <p>Quels sont tes hobbys ?</p>
+      <p>3 choses vitales dans la vie</p>
+      <p>Ton âge ?</p>
+      <p>Ta description :</p>
+    </div>
+    <div class="profile-info">
+      <p>gotham_est_a_moi</p>
+      <p>Delroche</p>
+      <p>Ethan</p>
+      <p>ethandelroche@gmail.com</p>
+      <p>+32 0492451458</p>
+      <p>Homme</p>
+      <p>LOREM LOREM LOREM</p>
+      <p>3 choses vitales dans la vie</p>
+      <p>Peu de mots, mais beaucoup d'actes</p>
+    </div>
+    <div class="profile-photo-container">
+      <img src="profile-photo.jpg" alt="Profile Photo" class="profile-photo">
+      <a href="#" class="change-photo">Changer de photo de profil</a>
+    </div>
+  </div>
 </body>
 </html>
