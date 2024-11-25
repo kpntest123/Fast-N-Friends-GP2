@@ -1,57 +1,59 @@
  <?php get_header(); ?>
 
-<!-- CEST LA PAGE DACCUEIL ICI--> 
+<!-- CEST LA PAGE DACCUEIL ICI, la page de base, une page basifiée--> 
 
-  <!-- Barre de navigation -->
-  <header>
-    <div class="logo-container">
-      <img src="Assets/Img/FNF_logo_background_removed.png" alt="Fast 'N Friends Logo">
-      <h1>Fast 'N Friends</h1>
-    </div>
-    <nav>
-      <ul>
-        <li>
-          <a href="#">
-            <img src="Assets/Img/ico fiesta.svg" alt="Fiesta" class="search-icon">
-            Événements partenaires
-          </a>
-            </li>
-        <li>
-          <a href="#">
-            Rechercher
-            <img src="Assets/Img/Loupe de recherche.svg" alt="Rechercher" class="search-icon">
-                                  
-          </a>
-        </li>
-        <li>
-          <a href="#" class="btn btn-white">Se connecter</a>
-        </li>
-        <li>
-          <a href="#" class="btn btn-yellow">S'inscrire</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <!-- NOUVELLE BARRE DE NAV - Barre de navigation -->
+  <nav class="custom-navbar">
+  <div class="logo-container">
+    <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF_logo.svg" alt="Logo">
+    <span id="fast-n-friends">Fast 'N Friends</span>
+  </div>
+  <div class="hamburger" id="hamburger-icon">
+    <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/hambruger_menu.svg" alt="Menu">
+  </div>
+  <ul class="nav-links" id="nav-links">
+    <li>
+      <a href="#">
+        Événements partenaires
+        <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/ico fiesta.svg" alt="Dropdown">
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        Rechercher
+        <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/Loupe de recherche.svg" alt="Search">
+      </a>
+    </li>
+    <li><a href="#">Se connecter</a></li>
+    <li><a href="#" class="btn-primary">S'inscrire</a></li>
+  </ul>
+</nav>
 
-
-  <!-- Bloc 1 : Titre et description -->
+  <!-- Bloc 1 : Titre et description, blabla agicheur -->
   <section class="intro">
-    <h1>Lorem lorem lorem lorem lorem lorem</h1>
-    <p>Lorem lorem lorem lorem Lorem lorem lorem lorem Lorem lorem lorem</p>
+    <h1>Ici, c'ets le texte en 42, bienvenu gros con !</h1>
+    <p>C'est du 30 normalement, si tout va bien !</p>
   </section>
 
   <!-- Bloc 2 : Image et module de recherche -->
   <section class="search-section">
     <div class="car-image">
-      <img src="Assets/Img/background_img_bloc2.jpg" alt="Illustration voiture">
+      <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/voitureback.jpg" alt="Bannière d'une voiture, IA">
     </div>
     <form class="search-bar" action="#" method="GET">
-      <input type="text" placeholder="De ?" required />
-      <input type="text" placeholder="Vers ?" required />
+      <div>
+        <input type="text" id="from-input" placeholder="De ?*" required />
+        <div class="autocomplete-suggestions" id="from-suggestions"></div>
+      </div>
+      <div>
+        <input type="text" id="to-input" placeholder="Vers ?" required />
+        <div class="autocomplete-suggestions" id="to-suggestions"></div>
+      </div>
       <input type="number" placeholder="Pour combien de personnes ?" required />
       <input type="date" required />
       <button class="btn-search">Chercher !</button>
     </form>
+    <i class="note">*Malheureusement, n'est disponible que dans 500 grandes villes en Belgique</i>
   </section>
 
 
@@ -61,24 +63,6 @@
     <div class="number" id="userCount">0</div>
     <p>Conducteurs sont prêts à te conduire dès maintenant !</p>
   </section>
-                                          <!-- DANS UN FUTUR PROCHE METTRE TOUT CA DANS LE DOC JS DEJA CREE -->
-                                          <script>
-                                            document.addEventListener("DOMContentLoaded", function () {
-                                              const targetNumber = 196;
-                                              const element = document.getElementById("userCount");
-                                              let currentNumber = 0;
-                                              const increment = Math.ceil(targetNumber / 150); // vitesse de progression ici
-
-                                              const interval = setInterval(() => {
-                                                currentNumber += increment;
-                                                if (currentNumber >= targetNumber) {
-                                                  currentNumber = targetNumber;
-                                                  clearInterval(interval);
-                                                }
-                                                element.textContent = currentNumber;
-                                              }, 20); // Ajuste la vitesse de l'animation en ms ici
-                                            });
-                                          </script>
 
 <!-- Bloc 4 : les réels avanatages du co-voiturage -->
 <section class="lescardsecolos">
