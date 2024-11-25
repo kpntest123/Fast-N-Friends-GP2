@@ -29,44 +29,38 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Futura-PT", sans-serif;
 }
 
 body {
-  font-family: "Futura-PT", sans-serif;
   background-color: #ffffff;
   color: #000000;
 }
 
 p {
-  font-family: "Futura-PT", sans-serif;
   font-style: normal;
   font-size: 20px;  
 }
 
 /* Styles des titres */
 .titre-1-classic {
-  font-family: "Futura-PT", sans-serif;
   font-style: normal;
   font-size: 26px; /* Réduit de 32px à 26px pour correspondre au H1 de la navbar */
 }
 
 .titre-2-classic {
-  font-family: "Futura-PT", sans-serif;
   font-style: normal;
   font-size: 20px; /* Réduit de 24px à 20px */
 }
 
 .titre-3-classic {
-  font-family: "Futura-PT", sans-serif;
   font-style: normal;
   font-size: 16px; /* Réduit de 20px à 16px */
 }
 
 /* Style de la barre de navigation */
     /* Navbar globale */
-    *{
-      font-family: Futura-Pt;
-    }
+
     .custom-navbar {
       display: flex;
       justify-content: space-between;
@@ -205,7 +199,6 @@ p {
 .intro h1 {
   font-size: 1.625rem; /* Réduit de 24px à 20px */
   color: #000000;
-  font-family: "Futura-PT", sans-serif;
   font-style: normal;
   margin-bottom: 1.875rem;
 }
@@ -333,7 +326,6 @@ p {
 .intro h1 {
   font-size: 1rem;
   color: #000000;
-  font-family: "Futura-PT", sans-serif;
   font-style: normal;
   margin-bottom: 1.875rem;
 }
@@ -400,7 +392,6 @@ p {
 .lescardsecolos h1 {
   font-size: 26px; 
   color: #000000;
-  font-family: "Futura-PT", sans-serif;
   font-style: normal;
   margin-bottom: 30px;
 }
@@ -420,7 +411,6 @@ p {
 .why-us h1 {
   font-size: 26px; /* Réduit de 24px à 20px */
   color: #000000;
-  font-family: "Futura-PT", sans-serif;
   font-style: normal;
   margin-bottom: 30px;
 }
@@ -440,7 +430,6 @@ p {
 .bloc6 h1 {
   font-size: 26px; 
   color: #000000;
-  font-family: "Futura-PT", sans-serif;
   font-style: normal;
   margin-bottom: 30px;
 }
