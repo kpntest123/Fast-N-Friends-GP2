@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voyageons ensemble, connectés et solidaires / Fast 'N Friends</title>
+  <title>Fast 'N Friends</title>
 
   <!--
     TEMPORAIRE : LIEN POUR LA POLICE FUTURA PT, DANS LE FUTUR INTEGRER LES FICHIERS COMPLETS
@@ -84,7 +84,7 @@ p {
     .logo-container span {
       font-size: 20px;
       font-weight: bold;
-      color: #4949FF;
+      color: #4B9BEB;
     }
 
     /* Liens de navigation */
@@ -113,7 +113,7 @@ p {
 
     /* Bouton S'inscrire */
     .btn-primary {
-      background-color: #4949FF;
+      background-color: #4B9BEB;
       color: white;
       padding: 8px 16px;
       border-radius: 6px;
@@ -122,7 +122,7 @@ p {
     }
 
     .btn-primary:hover {
-      background-color: #4949FF;
+      background-color: #4B9BEB;
     }
 
     /* Menu hamburger */
@@ -186,14 +186,14 @@ p {
 /* Bloc 1 : Titre et description */
 .intro {
   text-align: center;
-  background-color: #F6BF48;
+  background-color: #4B9BEB;
   font-size: 1.25rem; /* Réduit de 24px à 20px */
   padding: 1.875rem 0.9375rem; /* Réduit de 40px 20px à 30px 15px */
 }
 
 .intro p {
   font-size: 1rem; /* Réduit de 20px à 16px */
-  color: #660000;
+  color: #000000;
 }
 
 .intro h1 {
@@ -263,7 +263,7 @@ p {
 
 .search-bar button.btn-search {
   padding: 0.75rem 1.5rem;
-  background-color: #F6BF48;
+  background-color: #4B9BEB;
   color: #000000;
   border: none;
   font-size: 1rem;
@@ -276,7 +276,7 @@ p {
 }
 
 .search-bar button.btn-search:hover {
-  background-color: #e5af37;
+  background-color: #4B9BEB;
 }
 
 .autocomplete-suggestions {
@@ -297,7 +297,7 @@ p {
 }
 
 .autocomplete-suggestions div:hover {
-  background-color: #f5f5f5;
+  background-color: #4B9BEB;
 }
 
 .note {
@@ -356,7 +356,7 @@ p {
 /* Bloc 3 : Titre et chiffre */
 .stats {
   text-align: center;
-  background-color: #F6BF48;
+  background-color: #4B9BEB;
   padding: 45px 15px; /* Réduit de 60px 20px à 45px 15px */
 }
 
@@ -399,7 +399,7 @@ p {
 /*Bloc 5 : Pourquoi nous ?*/
 .why-us {
   text-align: center;
-  background-color: #F6BF48;
+  background-color: #4B9BEB;
   padding: 30px 15px;
 }
 
@@ -433,11 +433,164 @@ p {
   font-style: normal;
   margin-bottom: 30px;
 }
+
+/*
+
+STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION !
+
+*/
+
+/* Style général pour le formulaire */
+.inscription-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Fond clair */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.inscription-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style des champs */
+.inscription-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.inscription-form input[type="text"],
+.inscription-form input[type="email"],
+.inscription-form input[type="password"],
+.inscription-form input[type="tel"],
+.inscription-form input[type="date"],
+.inscription-form textarea,
+.inscription-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: border-color 0.2s;
+}
+
+.inscription-form input[type="text"]:focus,
+.inscription-form input[type="email"]:focus,
+.inscription-form input[type="password"]:focus,
+.inscription-form input[type="tel"]:focus,
+.inscription-form input[type="date"]:focus,
+.inscription-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Style des boutons radio et cases à cocher */
+.inscription-form input[type="radio"],
+.inscription-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.inscription-form div {
+    margin-bottom: 15px;
+}
+
+/* Style du bouton */
+.inscription-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4B9BEB; /* Bleu */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.inscription-form input[type="submit"]:hover {
+    background-color: #4B9BEB;
+}
+
+/* Style pour les messages d'erreur */
+.error-message {
+    color: #d9534f;
+    background-color: #4B9BEB;
+    border: 1px solid #ebccd1;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Style du textarea */
+.inscription-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Style spécifique à la photo de profil */
+.inscription-form input[type="file"] {
+    margin-top: 10px;
+}
+
+/* Style des conditions et newsletter */
+.inscription-form div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+
+/* Alignement des genres */
+.inscription-form div input[type="radio"] {
+    margin: 0;
+    margin-right: 5px;
+}
+
     </style>
     
 </head>
 
 <?php wp_head(); ?>
+
+<!-- BARRE DE NAV -->
+
+<nav class="custom-navbar">
+  <div class="logo-container">
+    <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF_logo.svg" alt="Logo">
+    <span id="fast-n-friends">Fast 'N Friends</span>
+  </div>
+  <div class="hamburger" id="hamburger-icon">
+    <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/hambruger_menu.svg" alt="Menu">
+  </div>
+  <ul class="nav-links" id="nav-links">
+    <li>
+      <a href="#">
+        Événements partenaires
+        <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/ico fiesta.svg" alt="Dropdown">
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        Rechercher
+        <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/Loupe de recherche.svg" alt="Search">
+      </a>
+    </li>
+    <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/inscription/'; ?>">Se connecter</a></li>
+    <li><a href="#" class="btn-primary">S'inscrire</a></li>
+  </ul>
+</nav>
 
 
 <body> <?php body_class(); ?>>

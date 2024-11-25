@@ -2,37 +2,13 @@
 
 <!-- CEST LA PAGE DACCUEIL ICI, la page de base, une page basifiée--> 
 
-  <!-- NOUVELLE BARRE DE NAV - Barre de navigation -->
-  <nav class="custom-navbar">
-  <div class="logo-container">
-    <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF_logo.svg" alt="Logo">
-    <span id="fast-n-friends">Fast 'N Friends</span>
-  </div>
-  <div class="hamburger" id="hamburger-icon">
-    <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/hambruger_menu.svg" alt="Menu">
-  </div>
-  <ul class="nav-links" id="nav-links">
-    <li>
-      <a href="#">
-        Événements partenaires
-        <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/ico fiesta.svg" alt="Dropdown">
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        Rechercher
-        <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/Loupe de recherche.svg" alt="Search">
-      </a>
-    </li>
-    <li><a href="#">Se connecter</a></li>
-    <li><a href="#" class="btn-primary">S'inscrire</a></li>
-  </ul>
-</nav>
+<!-- LA BARRE DE NAV SE TROUVE DANS LE HEADER -->
+
 
   <!-- Bloc 1 : Titre et description, blabla agicheur -->
   <section class="intro">
     <h1>Ici, c'ets le texte en 42, bienvenu gros con !</h1>
-    <p>C'est du 30 normalement, si tout va bien !</p>
+    <p>C'est du 30 normalement, si tout va bien ! ? ou - suis je ?</p>
   </section>
 
   <!-- Bloc 2 : Image et module de recherche -->
@@ -40,19 +16,19 @@
     <div class="car-image">
       <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/voitureback.jpg" alt="Bannière d'une voiture, IA">
     </div>
-    <form class="search-bar" action="#" method="GET">
-      <div>
-        <input type="text" id="from-input" placeholder="De ?*" required />
-        <div class="autocomplete-suggestions" id="from-suggestions"></div>
-      </div>
-      <div>
-        <input type="text" id="to-input" placeholder="Vers ?" required />
-        <div class="autocomplete-suggestions" id="to-suggestions"></div>
-      </div>
-      <input type="number" placeholder="Pour combien de personnes ?" required />
-      <input type="date" required />
-      <button class="btn-search">Chercher !</button>
-    </form>
+    <form class="search-bar" action="<?php echo site_url('/search/'); ?>" method="GET">
+  <div>
+    <input type="text" name="from" id="from-input" placeholder="De ?*" required />
+    <div class="autocomplete-suggestions" id="from-suggestions"></div>
+  </div>
+  <div>
+    <input type="text" name="to" id="to-input" placeholder="Vers ?" required />
+    <div class="autocomplete-suggestions" id="to-suggestions"></div>
+  </div>
+  <input type="number" name="people" placeholder="Pour combien de personnes ?" required />
+  <input type="date" name="date" required />
+  <button class="btn-search">Chercher !</button>
+</form>
     <i class="note">*Malheureusement, n'est disponible que dans 500 grandes villes en Belgique</i>
   </section>
 
