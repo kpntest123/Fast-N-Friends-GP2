@@ -7,8 +7,8 @@
 
   <!-- Bloc 1 : Titre et description, blabla agicheur -->
   <section class="intro">
-    <h1>Ici, c'ets le texte en 42, bienvenu gros con !</h1>
-    <p>C'est du 30 normalement, si tout va bien ! ? ou - suis je ?</p>
+    <h1>Ici, c'est le texte en 42 pixel desktop et mobile = 30 ???</h1>
+    <p>Ici le texte doit etre en 30 sur desktop et sur mobile en 16 ????</p>
   </section>
 
   <!-- Bloc 2 : Image et module de recherche -->

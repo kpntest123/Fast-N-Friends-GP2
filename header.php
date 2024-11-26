@@ -136,53 +136,6 @@ p {
       height: 24px;
     }
 
-    /* Responsiveness */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 10px;
-        z-index: 10;
-      }
-
-      .nav-links.show {
-        display: flex;
-      }
-
-      .hamburger {
-        display: block;
-      }
-        /* Cacher les icônes dans le menu hamburger */
-  .nav-links img {
-    display: none;
-  }
-
-  /* Retirer le style du bouton "S'inscrire" */
-  .btn-primary {
-    background-color: transparent; /* Retirer la couleur de fond */
-    color: black; /* Texte noir ou neutre */
-    padding: 0; /* Supprimer le padding */
-    border: none; /* Retirer les bordures */
-    font-weight: normal; /* Texte non gras */
-  }
-
-  /* Aligner proprement le menu dans le mode hamburger */
-  .nav-links {
-    gap: 10px; /* Ajuster l'espacement entre les éléments */
-  }
-    }
-
-    /* Texte "Fast 'N Friends" */
-    #fast-n-friends {
-      font-size: 26px;
-      font-weight: bold;
-    }
-
 /* Bloc 1 : Titre et description */
 .intro {
   text-align: center;
@@ -209,7 +162,7 @@ p {
   text-align: center;
   padding: 0;
   width: 100%;
-  height: 50vh;
+  height: 70vh; /* AJUSTEMENT DE TOUT LE BLOC !!!*/
 }
 
 .search-section .car-image {
@@ -309,48 +262,6 @@ p {
   color: white;
   padding: 0.3125rem;
   text-align: center;
-}
-
-/* Responsive Adjustments du bloc 1 + bloc 2 */
-@media (max-width: 768px) {
-  .intro {
-    font-size: 1rem;
-    padding: 1.5rem 0.75rem;
-  }
-
-  .intro p {
-  font-size: 0.624rem;
-  color: #660000;
-}
-
-.intro h1 {
-  font-size: 1rem;
-  color: #000000;
-  font-style: normal;
-  margin-bottom: 1.875rem;
-}
-
-
-  .search-bar {
-    width: 95%;
-    flex-direction: column;
-  }
-
-  .search-bar > * {
-    flex-basis: auto;
-  }
-
-  .search-bar input[type="text"],
-  .search-bar input[type="number"],
-  .search-bar input[type="date"] {
-    font-size: 0.9375rem;
-    padding: 0.625rem 0.875rem;
-  }
-
-  .search-bar button.btn-search {
-    font-size: 0.9375rem;
-    padding: 0.625rem 1.25rem;
-  }
 }
 
 /* Bloc 3 : Titre et chiffre */
@@ -557,6 +468,99 @@ STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION !
     margin: 0;
     margin-right: 5px;
 }
+
+
+
+
+
+
+
+
+
+/* PARTIE RESPONSIVE */
+@media (max-width: 840px) {
+  /* Navigation */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 10;
+    gap: 10px; /* Ajuster l'espacement entre les éléments */
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Cacher les icônes dans le menu hamburger */
+  .nav-links img {
+    display: none;
+  }
+
+  /* Retirer le style du bouton "S'inscrire" */
+  .btn-primary {
+    background-color: transparent; /* Retirer la couleur de fond */
+    color: black; /* Texte noir ou neutre */
+    padding: 0; /* Supprimer le padding */
+    border: none; /* Retirer les bordures */
+    font-weight: normal; /* Texte non gras */
+  }
+
+  /* Texte "Fast 'N Friends" */
+  #fast-n-friends {
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  /* Bloc introduction */
+  .intro {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .intro p {
+    font-size: 16px;
+    color: #000000;
+  }
+
+  .intro h1 {
+    font-size: 30px;
+    color: #000000;
+    font-style: normal;
+    margin-bottom: 1.875rem;
+  }
+
+  /* Barre de recherche */
+  .search-bar {
+    width: 95%;
+    flex-direction: column;
+  }
+
+  .search-bar > * {
+    flex-basis: auto;
+  }
+
+  .search-bar input[type="text"],
+  .search-bar input[type="number"],
+  .search-bar input[type="date"] {
+    font-size: 0.9375rem;
+    padding: 0.625rem 0.875rem;
+  }
+
+  .search-bar button.btn-search {
+    font-size: 0.9375rem;
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 
     </style>
     
