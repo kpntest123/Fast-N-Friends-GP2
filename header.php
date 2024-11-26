@@ -592,7 +592,7 @@ STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION !
       </a>
     </li>
     <li><a href=">">Se connecter</a></li>
-    <li><a class="btn-primary" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/inscription/'; ?>">S'inscrire</a></li>
+    <li><a class="btn-primary" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/register/'; ?>">S'inscrire</a></li>
     </ul>
 </nav>
 
