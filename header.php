@@ -591,9 +591,9 @@ STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION !
         <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/Loupe de recherche.svg" alt="Search">
       </a>
     </li>
-    <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/inscription/'; ?>">Se connecter</a></li>
-    <li><a href="#" class="btn-primary">S'inscrire</a></li>
-  </ul>
+    <li><a href=">">Se connecter</a></li>
+    <li><a class="btn-primary" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/inscription/'; ?>">S'inscrire</a></li>
+    </ul>
 </nav>
 
 
