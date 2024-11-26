@@ -7,14 +7,33 @@ $to = isset($_GET['to']) ? sanitize_text_field($_GET['to']) : '';
 $people = isset($_GET['people']) ? intval($_GET['people']) : 1;
 $date = isset($_GET['date']) ? sanitize_text_field($_GET['date']) : '';
 
-echo '<h2>Ta recherche :</h2>';
-echo '<p><strong>Aller de</strong> ' . $from . '</p>';
-echo '<p><strong>Vers :</strong> ' . $to . '</p>';
-echo '<p><strong>Nombre de gens :</strong> ' . $people . '</p>';
-echo '<p><strong>En date du :</strong> ' . $date . '</p>';
+?>
 
-// Plus tard ajouter ici la requête pour afficher les trajets correspondants
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-header text-center" style="background-color: #4B9BEB;">
+            <h2 class="mb-0" style="color: #000; font-size: 1.625rem;">Ta recherche</h2>
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-6 text-right font-weight-bold">Aller de :</div>
+                <div class="col-6 font-weight-bold"><?php echo esc_html($from); ?></div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-6 text-right font-weight-bold">Vers :</div>
+                <div class="col-6 font-weight-bold"><?php echo esc_html($to); ?></div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-6 text-right font-weight-bold">Nombre de gens :</div>
+                <div class="col-6 font-weight-bold"><?php echo esc_html($people); ?></div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-6 text-right font-weight-bold">En date du :</div>
+                <div class="col-6 font-weight-bold"><?php echo esc_html($date); ?></div>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-
-get_footer(); ?>
+<?php
+get_footer();
