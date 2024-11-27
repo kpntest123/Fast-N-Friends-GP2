@@ -474,6 +474,56 @@ STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION !
 
 
 
+/* PAGE 404 ! */
+.error-page {
+    text-align: center;
+    padding: 100px 50px;
+    background-color: #4B9BEB;
+}
+
+.error-404 {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Image styling */
+.car-accident {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 30px;
+    display: block;
+}
+
+/* Title and message */
+.page-title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.error-message {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Search form styling */
+.search-form-wrapper {
+    margin-bottom: 30px;
+}
+
+.search-form input[type="search"] {
+    width: 100%;
+    max-width: 400px
+
+
+
+
+
+
+
 
 
 
