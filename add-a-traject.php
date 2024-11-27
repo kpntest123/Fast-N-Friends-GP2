@@ -25,9 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
     ));
 
     if ($trajet_id) {
-        echo '<p style="color: green;">Trajet ajouté avec succès !</p>';
+        echo '<p style="color: green;">Tu as bien publié ton trajet !</p>';
     } else {
-        echo '<p style="color: red;">Une erreur s\'est produite. Veuillez réessayer.</p>';
+        echo '<p style="color: red;">Oops, erreur, réessaye !</p>';
     }
 }
 ?>
