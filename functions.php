@@ -50,4 +50,54 @@ add_action('wp_enqueue_scripts', 'styles_scripts');
 
 
 
+
+/* POUR LA PAGE DE CREATION DE TRAJET */
+function register_trajet_post_type() {
+    register_post_type('trajet', array(
+        'labels' => array(
+            'name' => 'Trajets',
+            'singular_name' => 'Trajet',
+            'add_new_item' => 'Ajouter un nouveau trajet',
+            'edit_item' => 'Modifier le trajet',
+            'all_items' => 'Tous les trajets',
+            'view_item' => 'Voir le trajet',
+            'search_items' => 'Rechercher un trajet',
+            'not_found' => 'Aucun trajet trouvé',
+            'not_found_in_trash' => 'Aucun trajet dans la corbeille',
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'trajets'),
+        'supports' => array('title', 'editor'),
+        'show_in_rest' => true,
+    ));
+}
+add_action('init', 'register_trajet_post_type');
+
+function register_trajet_meta() {
+    register_post_meta('trajet', 'from', array(
+        'type' => 'string',
+        'single' => true,
+        'show_in_rest' => true,
+    ));
+    register_post_meta('trajet', 'to', array(
+        'type' => 'string',
+        'single' => true,
+        'show_in_rest' => true,
+    ));
+    register_post_meta('trajet', 'people', array(
+        'type' => 'number',
+        'single' => true,
+        'show_in_rest' => true,
+    ));
+    register_post_meta('trajet', 'date', array(
+        'type' => 'string',
+        'single' => true,
+        'show_in_rest' => true,
+    ));
+}
+add_action('init', 'register_trajet_meta');
+
+
+
 ?>
