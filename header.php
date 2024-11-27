@@ -11,7 +11,7 @@
     qui se trouvent déjà dans les ASSETS 
     -->
 
-    <link rel="shortcut icon" href="Assets/Img/FNF_logo_background_removed.png" type="image/x-icon">
+    <link rel="shortcut icon" src="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF_logos_svg" type="image/x-icon">
     <link rel="stylesheet" href="https://use.typekit.net/uah5lqa.css"> 
 
 
