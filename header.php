@@ -211,49 +211,55 @@ p {
   margin-bottom: 1.875rem;
 }
 
-/* Bloc 2 : Image et module de recherche */
-.search-section {
-  position: relative;
-  text-align: center;
-  padding: 0;
-  width: 100%;
-  height: 50vh;
+
+
+/* Bloc 2 : Image et recherche */
+.imgandsearchcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #4B9BEB;
+  padding: 2rem;
+  margin: 0; /* Supprime toute marge extérieure */
 }
 
-.search-section .car-image {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
+.left-column {
+  flex: 1;
+  padding-right: 2rem;
+  display: flex;
+  align-items: center;
 }
 
-.search-section .car-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 0;
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue-box {
+  background-color: #4B9BEB;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%; /* S'assure que le bloc occupe 100% de la largeur */
+  margin: 0; /* Supprime toute marge extérieure */
+}
+
+
+.blue-box h1 {
+  margin-top: 0;
 }
 
 .search-bar {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 90%;
-  max-width: 1200px;
-  display: flex;
-  gap: 0.625rem;
-  padding: 0.9375rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0.625rem;
+  padding: 0.9375rem 0;
   border-radius: 1.875rem;
   box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 .search-bar > * {
-  flex: 1;
   min-width: 0;
 }
 
@@ -272,19 +278,21 @@ p {
 .search-bar button.btn-search {
   padding: 0.75rem 1.5rem;
   background-color: #4B9BEB;
-  color: #000000;
+  color: white;
   border: none;
   font-size: 1rem;
   cursor: pointer;
   outline: none;
   border-radius: 1.5625rem;
   white-space: nowrap;
-  flex: 0 0 auto;
   transition: background-color 0.3s;
+  display: block;
+  margin-top: 0.625rem;
+  width: 100%;
 }
 
 .search-bar button.btn-search:hover {
-  background-color: #4B9BEB;
+  background-color: #E64C3C;
 }
 
 .autocomplete-suggestions {
@@ -309,62 +317,127 @@ p {
 }
 
 .note {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent */
-  color: white;
-  padding: 0.3125rem;
-  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.5);
 }
 
-/* Responsive Adjustments du bloc 1 + bloc 2 */
-@media (max-width: 768px) {
-  .intro {
-    font-size: 1rem;
-    padding: 1.5rem 0.75rem;
+.car-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive pour les éléments */
+@media (max-width: 840px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    height: auto; /* Hauteur dynamique */
+    padding: 1.5rem;
   }
 
-  .intro p {
-  font-size: 0.624rem;
-  color: #660000;
-}
+  .left-column,
+  .right-column {
+    flex: unset;
+    width: 100%; /* Prend tout l'espace disponible */
+    padding: 0; /* Suppression des marges latérales */
+  }
 
-.intro h1 {
-  font-size: 1rem;
-  color: #000000;
-  font-style: normal;
-  margin-bottom: 1.875rem;
-}
+  .blue-box {
+    padding: 1.5rem;
+  }
 
+  .blue-box h1 {
+    font-size: 1.25rem; /* Taille ajustée */
+  }
 
   .search-bar {
-    width: 95%;
-    flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0.625rem;
+  padding: 0.9375rem 0;
+  border-radius: 1.875rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.search-bar > * {
+  min-width: 0;
+}
+
+.search-bar input[type="text"],
+.search-bar input[type="number"],
+.search-bar input[type="date"] {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 1.5625rem;
+  width: 100%;
+  background: white;
+}
+
+.search-btn-container {
+  grid-column: span 5; /* Occupe toute la largeur de la grille */
+  text-align: center; /* Centre le bouton */
+  margin-top: 1rem; /* Espacement entre la barre et le bouton */
+}
+
+.search-bar button.btn-search {
+  padding: 0.75rem 1.5rem;
+  background-color: #FF5733;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  border-radius: 1.5625rem;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+  width: auto; /* Le bouton garde sa taille naturelle */
+}
+
+.search-bar button.btn-search:hover {
+  background-color: #E64C3C;
+}
+
+  .car-image img {
+    max-height: 300px; /* Taille d'image réduite */
   }
 
-  .search-bar > * {
-    flex-basis: auto;
+  .note {
+    text-align: center; /* Centrage de la note */
+    font-size: 0.75rem; /* Réduction de la taille */
+  }
+}
+
+@media (max-width: 840px) {
+  .blue-box h1 {
+    font-size: 1rem;
   }
 
   .search-bar input[type="text"],
   .search-bar input[type="number"],
   .search-bar input[type="date"] {
-    font-size: 0.9375rem;
-    padding: 0.625rem 0.875rem;
+    font-size: 0.75rem; /* Taille encore réduite */
+    padding: 0.5rem 0.75rem;
   }
 
   .search-bar button.btn-search {
-    font-size: 0.9375rem;
-    padding: 0.625rem 1.25rem;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .car-image img {
+    max-height: 200px; /* Image encore plus compacte */
   }
 }
 
 /* Bloc 3 : Titre et chiffre */
 .stats {
   text-align: center;
-  background-color: #4B9BEB;
   padding: 45px 15px; /* Réduit de 60px 20px à 45px 15px */
 }
 
