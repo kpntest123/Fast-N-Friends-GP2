@@ -6,13 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fast 'N Friends</title>
 
-  <!--
+    <link rel="shortcut icon" src="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF_logos_svg" type="image/x-icon">
+
+
+      <!--
     TEMPORAIRE : LIEN POUR LA POLICE FUTURA PT, DANS LE FUTUR INTEGRER LES FICHIERS COMPLETS
     qui se trouvent déjà dans les ASSETS 
-    -->
-
-    <link rel="shortcut icon" src="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF_logos_svg" type="image/x-icon">
+    
+    POLICE POUR LE FUTURA PT :  -->
     <link rel="stylesheet" href="https://use.typekit.net/uah5lqa.css"> 
+
+    <!-- LIEN POUR LA MUSEO MODERNO ==> logo + recher sur accueil :  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bokor&family=Jost:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 
 
   <!--
@@ -23,8 +31,18 @@
 
     <style>
         /* Style global : 
-        ==> Pëoblème majeur, les tailles de police, c'est la merde, la grosse merde, rien ne va !
+        ==> Problème majeur, les tailles de police, c'est la merde, la grosse merde, rien ne va !
         */
+
+        /* STYLE POUR MUSEO MODERNO, JSP A QUOI CELA SERT !*/
+
+.museomoderno-<uniquifier> {
+  font-family: "MuseoModerno", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -518,15 +536,6 @@ STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION !
     width: 100%;
     max-width: 400px
 
-
-
-
-
-
-
-
-
-
 /* PARTIE RESPONSIVE */
 @media (max-width: 840px) {
   /* Navigation */
@@ -569,6 +578,7 @@ STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION !
   #fast-n-friends {
     font-size: 26px;
     font-weight: bold;
+    font-family: MuseoModerno;
   }
 
   /* Bloc introduction */
