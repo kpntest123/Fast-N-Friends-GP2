@@ -17,38 +17,45 @@
 
   <!-- Bloc 2 : Image et module de recherche -->
   
-  <section class="search-section">
+<!-- Bloc de recherche avec le formulaire -->
+<section class="search-section">
   <div class="imgandsearchcontainer">
-        <div class="left-column">
-          <div class="blue-box">
-            <h1>Besoin de te déplacer ?</h1>
-            <p>Que ce soit pour aller étudier ou aller à un event ?</p>
-            <p>T'es au bon endroits !</p>
+    <!-- Colonne de gauche : texte et formulaire de recherche -->
+    <div class="left-column">
+      <div class="blue-box">
+        <h1>Besoin de te déplacer ?</h1>
+        <p>Que ce soit pour aller étudier ou aller à un event ?</p>
+        <p>T'es au bon endroit !</p>
 
-            <form class="search-bar" action="<?php echo site_url('/search/'); ?>" method="GET">
-              <div>
-                <input type="text" name="from" id="from-input" placeholder="De ?*" required />
-                <div class="autocomplete-suggestions" id="from-suggestions"></div>
-              </div>
-              <div>
-                <input type="text" name="to" id="to-input" placeholder="Vers ?" required />
-                <div class="autocomplete-suggestions" id="to-suggestions"></div>
-              </div>
-              <input type="number" name="people" placeholder="Pour combien de personnes ?" required />
-              <input type="date" name="date" required />
-              <button class="btn-search">Chercher !</button>
-            </form>
+        <form class="search-bar" action="<?php echo site_url('/search/'); ?>" method="GET">
+          <div>
+            <input type="text" name="from" id="from-input" placeholder="De ?*" required />
+            <div class="autocomplete-suggestions" id="from-suggestions"></div>
+          </div>
+          <div>
+            <input type="text" name="to" id="to-input" placeholder="Vers ?" required />
+            <div class="autocomplete-suggestions" id="to-suggestions"></div>
+          </div>
+          <input type="number" name="people" placeholder="Pour combien de personnes ?" required />
+          <input type="date" name="date" required />
+        </form>
 
-            <p class="note">*Malheureusement, n'est disponible que dans 500 grandes villes en Belgique</p>
-          </div>
-        </div>
-        <div class="right-column">
-          <div class="car-image">
-            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/vintage-car.svg" alt="Search">
-          </div>
-        </div>
+        <!-- Bouton de recherche en dessous -->
+        <button class="search-bar-button">Chercher !</button>
+
+        <p class="note">*Malheureusement, n'est disponible que dans 500 grandes villes en Belgique</p>
       </div>
-  </section>
+    </div>
+
+    <!-- Colonne de droite : image -->
+    <div class="right-column">
+      <div class="car-image">
+        <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/vintage-car.svg" alt="Search">
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
   <!-- Bloc 3 : Titre et chiffre -->

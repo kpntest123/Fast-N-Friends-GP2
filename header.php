@@ -213,56 +213,80 @@ p {
 
 
 
-/* Bloc 2 : Image et recherche */
-.imgandsearchcontainer {
-  display: flex;
-  flex-wrap: wrap;
+/* Bloc général de la section de recherche */
+.search-section {
   background-color: #4B9BEB;
   padding: 2rem;
-  margin: 0; /* Supprime toute marge extérieure */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
+/* Conteneur pour la recherche et l'image */
+.imgandsearchcontainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Colonne de gauche (texte et formulaire) */
 .left-column {
-  flex: 1;
+  flex: 0 0 60%; /* 60% de la largeur */
   padding-right: 2rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Alignement du contenu en haut */
+  justify-content: center;
+  flex-direction: column; /* Met le texte et le formulaire dans une colonne */
 }
 
+/* Colonne de droite (image) */
 .right-column {
-  flex: 1;
+  flex: 0 0 40%; /* 40% de la largeur */
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+/* Boîte bleue contenant le texte et la barre de recherche */
 .blue-box {
   background-color: #4B9BEB;
   padding: 2rem;
   border-radius: 10px;
-  width: 100%; /* S'assure que le bloc occupe 100% de la largeur */
-  margin: 0; /* Supprime toute marge extérieure */
+  width: 100%;
+  max-width: 500px; /* Limite la taille de la boîte bleue */
+  color: white;
 }
 
-
+/* Titre et texte dans la boîte bleue */
 .blue-box h1 {
   margin-top: 0;
 }
 
+.blue-box p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem; /* Agrandir légèrement le texte */
+}
+
+/* Style du formulaire de recherche */
 .search-bar {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 3fr 3fr; /* Deux colonnes égales pour les inputs */
   grid-gap: 0.625rem;
-  padding: 0.9375rem 0;
-  border-radius: 1.875rem;
+  padding: 1rem;
+  border-radius: 1.5625rem;
   box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem; /* Espace barre de recherche et le bouton */
+  background-color: white;
+  width: 100%; /* formulaire de prendre toute la largeur disponible */
+  max-width: 1200px; /* Largeur max */
 }
 
 .search-bar > * {
   min-width: 0;
 }
 
+/* Styles des champs de saisie dans la barre de recherche */
 .search-bar input[type="text"],
 .search-bar input[type="number"],
 .search-bar input[type="date"] {
@@ -275,26 +299,25 @@ p {
   background: white;
 }
 
-.search-bar button.btn-search {
-  padding: 0.75rem 1.5rem;
+/* Style du bouton de recherche en dessous de la barre de recherche */
+.search-bar-button {
+  padding: 1rem 2rem;
   background-color: #4B9BEB;
   color: white;
   border: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   outline: none;
   border-radius: 1.5625rem;
-  white-space: nowrap;
-  transition: background-color 0.3s;
-  display: block;
-  margin-top: 0.625rem;
   width: 100%;
+  transition: background-color 0.3s;
 }
 
-.search-bar button.btn-search:hover {
+.search-bar-button:hover {
   background-color: #E64C3C;
 }
 
+/* Suggestions pour l'autocomplétion */
 .autocomplete-suggestions {
   position: absolute;
   top: 100%;
@@ -316,12 +339,14 @@ p {
   background-color: #4B9BEB;
 }
 
+/* Note sous le formulaire */
 .note {
   margin-top: 0.5rem;
   font-size: 0.875rem;
   color: rgba(0, 0, 0, 0.5);
 }
 
+/* Image de la voiture */
 .car-image img {
   max-width: 100%;
   height: auto;
@@ -330,110 +355,6 @@ p {
   border-radius: 10px;
 }
 
-/* Responsive pour les éléments */
-@media (max-width: 840px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-    height: auto; /* Hauteur dynamique */
-    padding: 1.5rem;
-  }
-
-  .left-column,
-  .right-column {
-    flex: unset;
-    width: 100%; /* Prend tout l'espace disponible */
-    padding: 0; /* Suppression des marges latérales */
-  }
-
-  .blue-box {
-    padding: 1.5rem;
-  }
-
-  .blue-box h1 {
-    font-size: 1.25rem; /* Taille ajustée */
-  }
-
-  .search-bar {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 0.625rem;
-  padding: 0.9375rem 0;
-  border-radius: 1.875rem;
-  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
-}
-
-.search-bar > * {
-  min-width: 0;
-}
-
-.search-bar input[type="text"],
-.search-bar input[type="number"],
-.search-bar input[type="date"] {
-  padding: 0.75rem 1rem;
-  border: 1px solid #ddd;
-  font-size: 1rem;
-  outline: none;
-  border-radius: 1.5625rem;
-  width: 100%;
-  background: white;
-}
-
-.search-btn-container {
-  grid-column: span 5; /* Occupe toute la largeur de la grille */
-  text-align: center; /* Centre le bouton */
-  margin-top: 1rem; /* Espacement entre la barre et le bouton */
-}
-
-.search-bar button.btn-search {
-  padding: 0.75rem 1.5rem;
-  background-color: #FF5733;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  outline: none;
-  border-radius: 1.5625rem;
-  white-space: nowrap;
-  transition: background-color 0.3s;
-  width: auto; /* Le bouton garde sa taille naturelle */
-}
-
-.search-bar button.btn-search:hover {
-  background-color: #E64C3C;
-}
-
-  .car-image img {
-    max-height: 300px; /* Taille d'image réduite */
-  }
-
-  .note {
-    text-align: center; /* Centrage de la note */
-    font-size: 0.75rem; /* Réduction de la taille */
-  }
-}
-
-@media (max-width: 840px) {
-  .blue-box h1 {
-    font-size: 1rem;
-  }
-
-  .search-bar input[type="text"],
-  .search-bar input[type="number"],
-  .search-bar input[type="date"] {
-    font-size: 0.75rem; /* Taille encore réduite */
-    padding: 0.5rem 0.75rem;
-  }
-
-  .search-bar button.btn-search {
-    font-size: 0.75rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .car-image img {
-    max-height: 200px; /* Image encore plus compacte */
-  }
-}
 
 /* Bloc 3 : Titre et chiffre */
 .stats {
