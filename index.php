@@ -24,6 +24,7 @@
             <h1>Besoin de te déplacer ?</h1>
             <p>Que ce soit pour aller étudier ou aller à un event ?</p>
             <p>T'es au bon endroits !</p>
+
             <form class="search-bar" action="<?php echo site_url('/search/'); ?>" method="GET">
               <div>
                 <input type="text" name="from" id="from-input" placeholder="De ?*" required />
@@ -35,9 +36,7 @@
               </div>
               <input type="number" name="people" placeholder="Pour combien de personnes ?" required />
               <input type="date" name="date" required />
-              <div class="search-btn-container">
-                <button class="btn-search">Chercher !</button>
-              </div>
+              <button class="btn-search">Chercher !</button>
             </form>
 
             <p class="note">*Malheureusement, n'est disponible que dans 500 grandes villes en Belgique</p>
