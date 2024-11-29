@@ -211,149 +211,85 @@ p {
   margin-bottom: 1.875rem;
 }
 
+/*PARTIE 2 : IMAGE ET BARRE DE NAV*/
 
-
-/* Bloc général de la section de recherche */
 .search-section {
   background-color: #4B9BEB;
   padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
-/* Conteneur pour la recherche et l'image */
-.imgandsearchcontainer {
-  display: flex;
+.search-container {
   width: 100%;
-  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+
+  max-width: 600px; /* Augmentation de la largeur maximale du conteneur */
+  width: 100%; /* Le conteneur prend toute la largeur disponible */
+  padding: 2rem; /* Réduction du padding pour un rendu plus compact */
 }
 
-/* Colonne de gauche (texte et formulaire) */
-.left-column {
-  flex: 0 0 60%; /* 60% de la largeur */
-  padding-right: 2rem;
+.search-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.form-group {
   display: flex;
-  align-items: flex-start; /* Alignement du contenu en haut */
-  justify-content: center;
-  flex-direction: column; /* Met le texte et le formulaire dans une colonne */
+  flex-direction: column;
 }
 
-/* Colonne de droite (image) */
-.right-column {
-  flex: 0 0 40%; /* 40% de la largeur */
+.form-group label {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.search-button {
+  grid-column: 1 / -1;
+  padding: 1rem 2rem;
+  background-color: #4B9BEB;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #2b7aca;
+}
+
+.note {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.image-container {
+  flex: 0 0 40%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Boîte bleue contenant le texte et la barre de recherche */
-.blue-box {
-  background-color: #4B9BEB;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 500px; /* Limite la taille de la boîte bleue */
-  color: white;
-}
-
-/* Titre et texte dans la boîte bleue */
-.blue-box h1 {
-  margin-top: 0;
-}
-
-.blue-box p {
-  margin-bottom: 1rem;
-  font-size: 1.2rem; /* Agrandir légèrement le texte */
-}
-
-/* Style du formulaire de recherche */
-.search-bar {
-  display: grid;
-  grid-template-columns: 3fr 3fr; /* Deux colonnes égales pour les inputs */
-  grid-gap: 0.625rem;
-  padding: 1rem;
-  border-radius: 1.5625rem;
-  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem; /* Espace barre de recherche et le bouton */
-  background-color: white;
-  width: 100%; /* formulaire de prendre toute la largeur disponible */
-  max-width: 1200px; /* Largeur max */
-}
-
-.search-bar > * {
-  min-width: 0;
-}
-
-/* Styles des champs de saisie dans la barre de recherche */
-.search-bar input[type="text"],
-.search-bar input[type="number"],
-.search-bar input[type="date"] {
-  padding: 0.75rem 1rem;
-  border: 1px solid #ddd;
-  font-size: 1rem;
-  outline: none;
-  border-radius: 1.5625rem;
-  width: 100%;
-  background: white;
-}
-
-/* Style du bouton de recherche en dessous de la barre de recherche */
-.search-bar-button {
-  padding: 1rem 2rem;
-  background-color: #4B9BEB;
-  color: white;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  outline: none;
-  border-radius: 1.5625rem;
-  width: 100%;
-  transition: background-color 0.3s;
-}
-
-.search-bar-button:hover {
-  background-color: #E64C3C;
-}
-
-/* Suggestions pour l'autocomplétion */
-.autocomplete-suggestions {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: white;
-  border-radius: 0.9375rem;
-  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
-  margin-top: 0.3125rem;
-  z-index: 1000;
-}
-
-.autocomplete-suggestions div {
-  padding: 0.625rem;
-  cursor: pointer;
-}
-
-.autocomplete-suggestions div:hover {
-  background-color: #4B9BEB;
-}
-
-/* Note sous le formulaire */
-.note {
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-/* Image de la voiture */
-.car-image img {
+.image-container img {
   max-width: 100%;
   height: auto;
-  max-height: 500px;
-  object-fit: cover;
-  border-radius: 10px;
+  max-height: 400px;
+  object-fit: contain;
 }
+
 
 
 /* Bloc 3 : Titre et chiffre */

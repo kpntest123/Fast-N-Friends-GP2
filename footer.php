@@ -90,43 +90,41 @@
     "Zuienkerke", "Zulte", "Zutendaal", "Zwalm", "Zwevegem", "Zwijndrecht"
 ];
 
- // Fonction générique pour gérer l'autocomplétion
- function setupAutocomplete(inputId, suggestionsId) {
-      const input = document.getElementById(inputId);
-      const suggestionsBox = document.getElementById(suggestionsId);
+  // Fonction générique pour gérer l'autocomplétion
+  function setupAutocomplete(inputId, suggestionsId) {
+    const input = document.getElementById(inputId);
+    const suggestionsBox = document.getElementById(suggestionsId);
 
-      input.addEventListener("input", () => {
-        const query = input.value.toLowerCase();
-        suggestionsBox.innerHTML = "";
+    input.addEventListener("input", () => {
+      const query = input.value.toLowerCase();
+      suggestionsBox.innerHTML = "";
 
-        if (query.length > 0) {
-          const suggestions = cities.filter(city => 
-            city.toLowerCase().includes(query)
-          ).slice(0, 10); // Limite à 10 suggestions pour une meilleure performance
+      if (query.length > 0) {
+        const suggestions = cities.filter(city => 
+          city.toLowerCase().includes(query)
+        ).slice(0, 10); // Limite à 10 suggestions pour une meilleure performance
 
-          suggestions.forEach(city => {
-            const suggestionDiv = document.createElement("div");
-            suggestionDiv.textContent = city;
-            suggestionDiv.addEventListener("click", () => {
-              input.value = city;
-              suggestionsBox.innerHTML = "";
-            });
-            suggestionsBox.appendChild(suggestionDiv);
+        suggestions.forEach(city => {
+          const suggestionDiv = document.createElement("div");
+          suggestionDiv.textContent = city;
+          suggestionDiv.addEventListener("click", () => {
+            input.value = city;
+            suggestionsBox.innerHTML = ""; // Efface les suggestions après sélection
           });
-        }
-      });
+          suggestionsBox.appendChild(suggestionDiv);
+        });
+      }
+    });
 
-      // Fermer les suggestions si on clique en dehors
-      document.addEventListener("click", (e) => {
-        if (!suggestionsBox.contains(e.target) && e.target !== input) {
-          suggestionsBox.innerHTML = "";
-        }
-      });
-    }
+    // Fermer les suggestions si on clique en dehors du champ de recherche
+    document.addEventListener("click", (event) => {
+      if (!input.contains(event.target) && !suggestionsBox.contains(event.target)) {
+        suggestionsBox.innerHTML = "";
+      }
+    });
+  }
 
-    // Initialiser l'autocomplétion pour les deux champs
-    setupAutocomplete("from-input", "from-suggestions");
-    setupAutocomplete("to-input", "to-suggestions");
+  setupAutocomplete("city-input", "suggestions-box");
 
 
     /*PARTIE 4 ==> animation des chiffres*/

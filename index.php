@@ -19,40 +19,32 @@
   
 <!-- Bloc de recherche avec le formulaire -->
 <section class="search-section">
-  <div class="imgandsearchcontainer">
-    <!-- Colonne de gauche : texte et formulaire de recherche -->
-    <div class="left-column">
-      <div class="blue-box">
-        <h1>Besoin de te déplacer ?</h1>
-        <p>Que ce soit pour aller étudier ou aller à un event ?</p>
-        <p>T'es au bon endroit !</p>
-
-        <form class="search-bar" action="<?php echo site_url('/search/'); ?>" method="GET">
-          <div>
-            <input type="text" name="from" id="from-input" placeholder="De ?*" required />
-            <div class="autocomplete-suggestions" id="from-suggestions"></div>
-          </div>
-          <div>
-            <input type="text" name="to" id="to-input" placeholder="Vers ?" required />
-            <div class="autocomplete-suggestions" id="to-suggestions"></div>
-          </div>
-          <input type="number" name="people" placeholder="Pour combien de personnes ?" required />
-          <input type="date" name="date" required />
-        </form>
-
-        <!-- Bouton de recherche en dessous -->
-        <button class="search-bar-button">Chercher !</button>
-
-        <p class="note">*Malheureusement, n'est disponible que dans 500 grandes villes en Belgique</p>
+  <div class="search-container">
+    <h1>Besoin de te déplacer ?</h1>
+    <p>Que ce soit pour aller étudier ou aller à un event ?</p>
+    <form class="search-form">
+      <div class="form-group">
+        <label for="from">De ?</label>
+        <input type="text" id="from" name="from" placeholder="Entrez votre point de départ" required>
       </div>
-    </div>
-
-    <!-- Colonne de droite : image -->
-    <div class="right-column">
-      <div class="car-image">
-        <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/vintage-car.svg" alt="Search">
+      <div class="form-group">
+        <label for="to">Vers ?</label>
+        <input type="text" id="to" name="to" placeholder="Entrez votre destination" required>
       </div>
-    </div>
+      <div class="form-group">
+        <label for="people">Pour combien de personnes ?</label>
+        <input type="number" id="people" name="people" min="1" required>
+      </div>
+      <div class="form-group">
+        <label for="date">Quand ?</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <button type="submit" class="search-button">Chercher !</button>
+    </form>
+    <p class="note">*Malheureusement, n'est disponible que dans 500 grandes villes en Belgique</p>
+  </div>
+  <div class="image-container">
+    <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/vintage-car.svg" alt="Voiture vintage">
   </div>
 </section>
 
