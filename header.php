@@ -84,7 +84,7 @@ p {
       align-items: center;
       background-color: white;
       padding: 10px 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A supp si on veux pas de "ligne" shadow de la navbar ! */
     }
 
     /* Logo */
@@ -196,7 +196,7 @@ p {
 
     /* Texte "Fast 'N Friends" */
     #fast-n-friends {
-      font-size: 26px;
+      font-size: 30px;
       font-weight: bold;
       font-family: MuseoModerno;
       text-decoration: none; /* Supprime le soulignement et le style dégeu de base*/
