@@ -46,12 +46,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Futura-PT", sans-serif;
 }
 
 body {
   background-color: #ffffff;
   color: #000000;
-  font-family: "Futura-PT", sans-serif;
 }
 
 p {
@@ -590,7 +590,7 @@ STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION !
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/deep-search/'; ?>">
         Rechercher
         <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/Loupe de recherche.svg" alt="Search">
       </a>
@@ -618,6 +618,12 @@ STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION !
                       <a href="<?php echo wp_logout_url( home_url() ); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/logout.svg" alt="Déconnexion">
                 Déconnexion
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/future-lien/'; ?>">
+              <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/id-card.svg" alt="Chat">
+              Mon profil
             </a>
           </li>
         </ul>

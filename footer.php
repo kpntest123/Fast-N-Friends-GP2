@@ -4,7 +4,16 @@
 
     
  <script>
-    // Liste des 50 plus grandes villes en Belgique
+    //Style du calendrier :
+    flatpickr("#calendar", {
+  dateFormat: "Y-m-d",
+  minDate: "today", /* Empêche la sélection de dates passées */
+  allowInput: true, /* Permet l'édition manuelle de la date */
++});
+
+
+
+// Liste des 50 plus grandes villes en Belgique
     const cities = [
     "Bruxelles", "Anvers", "Gand", "Charleroi", "Liège", "Bruges", "Namur",
     "Louvain", "Mons", "Alost", "Malines", "La Louvière", "Courtrai",
@@ -90,41 +99,44 @@
     "Zuienkerke", "Zulte", "Zutendaal", "Zwalm", "Zwevegem", "Zwijndrecht"
 ];
 
-  // Fonction générique pour gérer l'autocomplétion
-  function setupAutocomplete(inputId, suggestionsId) {
-    const input = document.getElementById(inputId);
-    const suggestionsBox = document.getElementById(suggestionsId);
+ // Fonction générique pour gérer l'autocomplétion
+ function setupAutocomplete(inputId, suggestionsId) {
+      const input = document.getElementById(inputId);
+      const suggestionsBox = document.getElementById(suggestionsId);
 
-    input.addEventListener("input", () => {
-      const query = input.value.toLowerCase();
-      suggestionsBox.innerHTML = "";
-
-      if (query.length > 0) {
-        const suggestions = cities.filter(city => 
-          city.toLowerCase().includes(query)
-        ).slice(0, 10); // Limite à 10 suggestions pour une meilleure performance
-
-        suggestions.forEach(city => {
-          const suggestionDiv = document.createElement("div");
-          suggestionDiv.textContent = city;
-          suggestionDiv.addEventListener("click", () => {
-            input.value = city;
-            suggestionsBox.innerHTML = ""; // Efface les suggestions après sélection
-          });
-          suggestionsBox.appendChild(suggestionDiv);
-        });
-      }
-    });
-
-    // Fermer les suggestions si on clique en dehors du champ de recherche
-    document.addEventListener("click", (event) => {
-      if (!input.contains(event.target) && !suggestionsBox.contains(event.target)) {
+      input.addEventListener("input", () => {
+        const query = input.value.toLowerCase();
         suggestionsBox.innerHTML = "";
-      }
-    });
-  }
 
-  setupAutocomplete("city-input", "suggestions-box");
+        if (query.length > 0) {
+          const suggestions = cities.filter(city => 
+            city.toLowerCase().includes(query)
+          ).slice(0, 10); // Limite à 10 suggestions pour une meilleure performance
+
+          suggestions.forEach(city => {
+            const suggestionDiv = document.createElement("div");
+            suggestionDiv.textContent = city;
+            suggestionDiv.addEventListener("click", () => {
+              input.value = city;
+              suggestionsBox.innerHTML = "";
+            });
+            suggestionsBox.appendChild(suggestionDiv);
+          });
+        }
+      });
+
+      // Fermer les suggestions si on clique en dehors
+      document.addEventListener("click", (e) => {
+        if (!suggestionsBox.contains(e.target) && e.target !== input) {
+          suggestionsBox.innerHTML = "";
+        }
+      });
+    }
+
+    // Initialiser l'autocomplétion pour les deux champs
+    setupAutocomplete("from-input", "from-suggestions");
+    setupAutocomplete("to-input", "to-suggestions");
+
 
 
     /*PARTIE 4 ==> animation des chiffres*/
