@@ -29,6 +29,15 @@
 
 
 
+
+
+                                        <!--LIEN POUR UN CALENDRIER + joli -->
+                                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+                                        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+
+
     <style>
         /* Style global : 
         ==> Pëoblème majeur, les tailles de police, c'est la merde, la grosse merde, rien ne va !
@@ -190,6 +199,8 @@ p {
       font-size: 26px;
       font-weight: bold;
       font-family: MuseoModerno;
+      text-decoration: none; /* Supprime le soulignement et le style dégeu de base*/
+      color: #4B9BEB;
     }
 
 /* STYLE POUR LA BARRE DE NAV QUAND CONNECTE*/
@@ -565,9 +576,9 @@ STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION !
 <!-- BARRE DE NAV -->
 
 <nav class="custom-navbar">
-  <div class="logo-container">
-    <span id="fast-n-friends" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/'; ?>">Fast 'N Friends</span>
-  </div>
+<div class="logo-container">
+    <a id="fast-n-friends" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/'; ?>">Fast 'N Friends</a>
+</div>
   <div class="hamburger" id="hamburger-icon">
     <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/hambruger_menu.svg" alt="Menu">
   </div>

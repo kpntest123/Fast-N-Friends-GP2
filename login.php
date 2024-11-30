@@ -13,13 +13,13 @@ get_header();
 
 
 
-
+<!--
 <div style="background-color: #3d3db3; ;text-align: center;padding: 25px;">
         <h1> Connecte-toi </h1>
         <p>pour accéder à ton compte</p>
         </div>
         <br><br>
-
+-->
 
         <form action="" method="POST">
     <?php wp_nonce_field('user_login_action', 'user_login_nonce'); ?>

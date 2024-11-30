@@ -11,23 +11,6 @@ get_header();?>
      height: 50vh;
    }
 
-   .search-section .car-image {
-     width: 100%;
-     height: 100%;
-     position: relative;
-     overflow: hidden;
-   }
-
-   .search-section .car-image img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     position: absolute;
-     top: 0;
-     left: 0;
-     border-radius: 0;
-   }
-
    .search-bar {
      position: absolute;
      top: 50%;
@@ -63,7 +46,7 @@ get_header();?>
 
    .search-bar button.btn-search {
      padding: 12px 24px;
-     background-color: #F6BF48;
+     background-color: #905DCA;
      color: #000000;
      border: none;
      font-size: 16px;
@@ -76,7 +59,7 @@ get_header();?>
    }
 
    .search-bar button.btn-search:hover {
-     background-color: #e5af37;
+     background-color: #905DCA;
    }
 
    .autocomplete-suggestions {
@@ -84,7 +67,7 @@ get_header();?>
      top: 100%;
      left: 0;
      right: 0;
-     background: white;
+     background: white; /* PEUT ETRE LA COULEUR SECONDAIRE, ORANGE OU AUTRE ???? FAIRE DES CONTRASTES, JE VAIS GERBER DES SHTROUMPFS SINON*/
      border-radius: 15px;
      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
      margin-top: 5px;
@@ -96,17 +79,50 @@ get_header();?>
      cursor: pointer;
    }
 
-   .autocomplete-suggestions div:hover {
-     background-color: #f5f5f5;
-   }
+
+   .filters-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn.selected {
+    background-color: green;
+    color: white;
+}
+
+#more-filters {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#more-filters:hover {
+    background-color: #0056b3;
+}
+
+
+
+   
+
   </style>
 </head>
 <body>
   <br><br><br><br>
   <section class="search-section">
-    <div class="car-image">
-      <img src="Assets/Img/background_img_bloc2.jpg" alt="Illustration voiture">
-    </div>
     <form class="search-bar" action="#" method="GET">
       <div>
         <input type="text" id="from-input" placeholder="De ?*" required />
@@ -117,14 +133,62 @@ get_header();?>
         <div class="autocomplete-suggestions" id="to-suggestions"></div>
       </div>
       <input type="number" placeholder="Pour combien de personnes ?" required />
-      <input type="date" required />
+      <input type="text" id="calendar">
       <button class="btn-search">Chercher !</button>
     </form>
-    <i>Malheureusement, n'est disponible que dans 500 grandes villes en Belgique</i>
   </section>
+
+
+
+  <!-- Bouton "Plus de filtres" -->
+<button id="more-filters" onclick="toggleFilters()">Plus de filtres</button>
+
+<!-- Section de filtres cachée -->
+<div id="filters" class="filters-container" style="display: none;">
+    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 1</button>
+    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 2</button>
+    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 3</button>
+    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 4</button>
+    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 5</button>
+    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 6</button>
+    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 7</button>
+    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 8</button>
+    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 9</button>
+    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 10</button>
+</div>
   
 
   <script>
+    //Style du calendrier :
+    flatpickr("#calendar", {
+  dateFormat: "Y-m-d",
+  minDate: "today", /* Empêche la sélection de dates passées */
+  allowInput: true, /* Permet l'édition manuelle de la date */
++});
+
+function toggleFilters() {
+    // Récupère l'élément des filtres et le bouton "plus de filtres"
+    var filtersContainer = document.getElementById("filters");
+    var filtersButton = document.getElementById("more-filters");
+
+    // Si les filtres sont cachés, les afficher, sinon les cacher
+    if (filtersContainer.style.display === "none") {
+        filtersContainer.style.display = "flex";  // Afficher les filtres
+        filtersButton.textContent = "Moins de filtres";  // Changer le texte du bouton
+    } else {
+        filtersContainer.style.display = "none";  // Cacher les filtres
+        filtersButton.textContent = "Plus de filtres";  // Remettre le texte initial
+    }
+}
+
+function toggleFilter(button) {
+    // Ajouter ou retirer la classe "selected" au bouton pour changer son état
+    button.classList.toggle("selected");
+}
+
+
+
+    
     // Liste des 50 plus grandes villes en Belgique
     const cities = [
     "Bruxelles", "Anvers", "Gand", "Charleroi", "Liège", "Bruges", "Namur",
