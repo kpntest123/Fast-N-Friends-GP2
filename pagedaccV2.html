@@ -131,34 +131,25 @@
 
 </head>
 <body>
-    <h1>Some text</h1>
-    <div class="container">
-        <div class="left-column">
-          <div class="blue-box">
-            <h1>Besoin de te déplacer ?</h1>
-            <p>Que ce soit pour aller étudier ou aller à un event ?</p>
-            <p>T'es au bon endroits !</p>
-            <form class="search-bar" action="<?php echo site_url('/search/'); ?>" method="GET">
-                <div>
-                  <input type="text" name="from" id="from-input" placeholder="De ?*" required />
-                  <div class="autocomplete-suggestions" id="from-suggestions"></div>
-                </div>
-                <div>
-                  <input type="text" name="to" id="to-input" placeholder="Vers ?" required />
-                  <div class="autocomplete-suggestions" id="to-suggestions"></div>
-                </div>
-                <input type="number" name="people" placeholder="Pour combien de personnes ?" required />
-                <input type="date" name="date" required />
-                <button class="btn-search">Chercher !</button>
-              </form>
-            <p class="note">*Malheureusement, n'est disponible que dans 500 grandes villes en Belgique</p>
-          </div>
-        </div>
-        <div class="right-column">
-          <div class="car-image">
-            <img src="Assets/Img/vintage-car.svg" alt="Bannière d'une voiture, IA">
-          </div>
-        </div>
-      </div>
+<section class="hero-section">
+  <div class="hero-text">
+    <h2>Besoin de te déplacer ?</h2>
+    <p>Que ce soit pour aller étudier ou aller à un event ?</p>
+    <em>T’es au bon endroit !</em>
+  </div>
+  <div class="search-container">
+    <form action="#" method="GET">
+      <input type="text" placeholder="De ?" name="from" class="search-input">
+      <input type="text" placeholder="Vers ?" name="to" class="search-input">
+      <input type="number" placeholder="Combien de personnes ?" name="people" class="search-input">
+      <input type="date" placeholder="Quand ?" name="date" class="search-input">
+      <button type="submit" class="search-button">Rechercher !</button>
+    </form>
+  </div>
+  <div class="hero-illustration">
+    <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/car-illustration.svg" alt="Illustration voiture">
+  </div>
+</section>
+
 </body>
 </html>

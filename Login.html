@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+
+    <title>Connecxion</title>
+
+    <style>
+        /* Navbar globale */
+        .custom-navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: white;
+          padding: 10px 20px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    
+        /* Logo */
+        .logo-container {
+          display: flex;
+          align-items: center;
+        }
+    
+        .logo-container img {
+          height: 32px;
+          margin-right: 8px;
+        }
+    
+        .logo-container span {
+          font-size: 20px;
+          font-weight: bold;
+          color: #4949FF;
+        }
+    
+        /* Liens de navigation */
+        .nav-links {
+          display: flex;
+          gap: 20px;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+    
+        .nav-links a {
+          text-decoration: none;
+          color: #000;
+        }
+    
+        /* Bouton S'inscrire */
+        .btn-primary {
+          background-color: #4949FF;
+          color: white;
+          padding: 8px 16px;
+          border-radius: 6px;
+          text-decoration: none;
+          transition: background-color 0.3s;
+        }
+    
+        .btn-primary:hover {
+          background-color: #3d3db3; /* Bleu légèrement plus foncé */
+        }
+    
+        /* Menu hamburger */
+        .hamburger {
+          display: none;
+          cursor: pointer;
+        }
+    
+        /* Responsiveness */
+        @media (max-width: 768px) {
+          .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+          }
+    
+          .nav-links.show {
+            display: flex;
+          }
+    
+          .hamburger {
+            display: block;
+          }
+        }
+    
+        /* Texte "Fast 'N Friends" */
+        #fast-n-friends {
+          font-size: 26px;
+          font-weight: bold;
+        }
+    
+        /* Autres éléments du menu */
+        .menu-item {
+          font-size: 16px;
+        }
+    
+        /* Menu hamburger */
+    .hamburger img {
+      width: 24px;  /* Réduisez cette valeur selon vos besoins */
+      height: 24px; /* Réduisez cette valeur selon vos besoins */
+    }
+    
+      </style>
+    </head>
+    <body>
+    
+      <nav class="custom-navbar">
+        <div class="logo-container">
+          <img src="Assets/Img/FNF_logo.svg" alt="Logo" />
+          <span id="fast-n-friends">Fast 'N Friends</span>
+        </div>
+        <div class="hamburger" id="hamburger-icon">
+          <img src="Assets/Img/hambruger_menu.svg" alt="Menu" />
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#">Événements partenaires</a></li>
+          <li><a href="#">Rechercher</a></li>
+          <li><a href="#">Se connecter</a></li>
+          <li><a href="#" class="btn-primary">S'inscrire</a></li>
+        </ul>
+      </nav>
+    
+      <script>
+        // Basculer l'affichage du menu
+        const hamburgerIcon = document.getElementById("hamburger-icon");
+        const navLinks = document.getElementById("nav-links");
+    
+        hamburgerIcon.addEventListener("click", () => {
+          navLinks.classList.toggle("show");
+        });
+      </script>
+<body>
+
+    <div style="background-color: #3d3db3; ;text-align: center;padding: 25px;">
+        <h1> Connecte-toi </h1>
+        <p>pour accéder à ton compte</p>
+        </div>
+        <br><br>
+
+        <div class="container d-flex justify-content-center">
+            <div class="row w-50">
+            <div class="col-12 mb-3">
+                <label for="Email" class="form-label"></label>
+                <input type="email" class="form-control" id="Email" placeholder="johndoe@gmail.com" style="border: 2px solid #3d3db3; border-radius: 8px;">
+              </div>
+
+              <div class="col-12 mb-3">
+                <label for="mdp" class="form-label"></label>
+                <input type="password" id="mdp" class="form-control" placeholder="Mot de passe" style="border: 2px solid #3d3db3; border-radius: 8px;">
+              </div>
+              <div class="col-12"> 
+                <div class="remember">
+                  <input type="checkbox" class="remember" id="remember">
+                  <label class="custom-control-label" for="remember">Se souvenir de moi</label>
+                </div>
+                <br>
+                <div class="col-12">
+                    <a href="lostpassword.html"><i>mot de passe oublié ?</i></a>
+                </div>
+                <br>
+                <div class="col-12">
+                    <button type="button" class="btn btn-primary w-100">Connecte-toi</button>
+                </div>
+            </div>
+            
+        </div>
+        
+
+        
+
+</body>
+        </html>

@@ -37,12 +37,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Futura-PT", sans-serif;
 }
 
 body {
   background-color: #ffffff;
   color: #000000;
+  font-family: "Futura-PT", sans-serif;
 }
 
 p {
@@ -189,7 +189,62 @@ p {
     #fast-n-friends {
       font-size: 26px;
       font-weight: bold;
+      font-family: MuseoModerno;
     }
+
+/* STYLE POUR LA BARRE DE NAV QUAND CONNECTE*/
+/* Menu principal */
+.account-icon {
+  position: relative;
+}
+
+/* Sous-menu masqué par défaut */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Style des liens dans le sous-menu */
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background: #f0f0f0;
+  color: #000;
+}
+
+/* Icônes dans les sous-menus */
+.dropdown-menu li img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Afficher le sous-menu au survol */
+.account-icon:hover .dropdown-menu {
+  display: block;
+}
+
+
+
 
 /* Bloc 1 : Titre et description */
 .intro {
@@ -211,7 +266,12 @@ p {
   margin-bottom: 1.875rem;
 }
 
-/*PARTIE 2 : IMAGE ET BARRE DE NAV*/
+
+
+
+
+
+/*PARTIE BLOC 2 : IMAGE ET BARRE DE RECHERCHE*/
 
 .search-section {
   background-color: #4B9BEB;
@@ -506,8 +566,7 @@ STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION !
 
 <nav class="custom-navbar">
   <div class="logo-container">
-    <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF_logo.svg" alt="Logo">
-    <span id="fast-n-friends">Fast 'N Friends</span>
+    <span id="fast-n-friends" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/'; ?>">Fast 'N Friends</span>
   </div>
   <div class="hamburger" id="hamburger-icon">
     <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/hambruger_menu.svg" alt="Menu">
@@ -525,10 +584,39 @@ STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION !
         <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/Loupe de recherche.svg" alt="Search">
       </a>
     </li>
-    <li><a href=">">Se connecter</a></li>
-    <li><a class="btn-primary" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/register/'; ?>">S'inscrire</a></li>
-    </ul>
+    
+    <?php if ( ! is_user_logged_in() ) : ?>
+      <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/login/'; ?>">Se connecter</a></li>
+      <li><a class="btn-primary" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/register/'; ?>">S'inscrire</a></li>
+    <?php else : ?>
+      <li class="account-icon dropdown">
+        <a href="#" class="icon-animation">
+          <div class="liquid-icon">
+            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/person.svg" alt="Mon Compte">
+          </div>
+          <span>Mon Compte</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/future-lien/'; ?>">
+              <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/chat.svg" alt="Chat">
+              Chat
+            </a>
+          </li>
+          <li>
+                      <a href="<?php echo wp_logout_url( home_url() ); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/logout.svg" alt="Déconnexion">
+                Déconnexion
+            </a>
+          </li>
+        </ul>
+      </li>
+    <?php endif; ?>
+  </ul>
 </nav>
+
+
+
 
 
 <body> <?php body_class(); ?>>

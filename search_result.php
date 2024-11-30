@@ -1,4 +1,4 @@
-w<?php
+<?php
 /* Template Name: Résultats de recherche */
 get_header();
 

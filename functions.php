@@ -100,4 +100,48 @@ add_action('init', 'register_trajet_meta');
 
 
 
+
+// Fonction pour gérer la connexion des utilisateurs
+function handle_user_login() {
+    if (isset($_POST['login_submit'])) {
+        // Vérifie le nonce pour la sécurité
+        check_admin_referer('user_login_action', 'user_login_nonce');
+
+        $creds = array(
+            'user_login'    => sanitize_text_field($_POST['username']),
+            'user_password' => sanitize_text_field($_POST['password']),
+            'remember'      => isset($_POST['remember']) ? true : false,
+        );
+
+        $user = wp_signon($creds, false);
+
+        if (is_wp_error($user)) {
+            // Enregistre l'erreur pour l'afficher sur la page
+            wp_redirect(add_query_arg('login_error', urlencode($user->get_error_message()), wp_get_referer()));
+            exit;
+        } else {
+            // Redirige après connexion
+            wp_redirect(home_url());
+            exit;
+        }
+    }
+}
+add_action('init', 'handle_user_login');
+
+function redirect_after_login($redirect_to, $request, $user) {
+    // Vérifie si l'utilisateur est authentifié
+    if (isset($user->roles) && is_array($user->roles)) {
+        if (in_array('administrator', $user->roles)) {
+            return admin_url(); // Redirige les administrateurs vers le tableau de bord
+        } else {
+            return home_url('/mon-compte'); // Redirige les utilisateurs normaux
+        }
+    }
+    return $redirect_to;
+}
+add_filter('login_redirect', 'redirect_after_login', 10, 3);
+
+
+
+
 ?>
