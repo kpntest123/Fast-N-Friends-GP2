@@ -125,3 +125,25 @@ style="border: 2px solid #3d3db3; border-radius: 8px;"
     setupAutocomplete("to-input", "to-suggestions");
   </script>
   </script>
+
+
+
+
+ <div class="card custom-card">
+        <div class="image-container">
+            <img src="https://via.placeholder.com/300x150" alt="Event image">
+            <div class="image-overlay">
+                <div class="tag">Tag</div>
+                <div class="details">
+                    <span>Date</span>
+                    <span>Lieu</span>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="event-title">Nom event</div>
+            <div class="event-description">
+                Lorem ipsum dolores descriptus tolovodus esta em mistral gagnam
+            </div>
+        </div>
+    </div>
