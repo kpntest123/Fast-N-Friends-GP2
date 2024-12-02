@@ -48,7 +48,17 @@ function styles_scripts() {
 }
 add_action('wp_enqueue_scripts', 'styles_scripts');
 
-
+//Lier le (je suis pas égoiste et je ne m'approprie pas les choses, enfin bon, je suis pas proudhon non plus) CSS personnalisé :
+function enqueue_custom_styles() {
+    // Charger le fichier CSS principal (csspersonal.css)
+    wp_enqueue_style(
+        'csspersonal', // Nom unique pour le fichier CSS
+        get_template_directory_uri() . '/Assets/CSS/csspersonal.css', // Chemin vers le fichier
+        array(), // Dépendances (s'il y a un fichier CSS à charger avant)
+        null // Pas de version (ou utilise `filemtime()` pour auto-versionner)
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
 
 /* POUR LA PAGE DE CREATION DE TRAJET */
