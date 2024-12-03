@@ -4,21 +4,25 @@
     if (is_page('deep-search')) : ?>
         <title>Recherche approfondie - FNF</title>
         <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
-    <?php elseif (is_page('page-2')) : ?>
-        <title>Lorem Ipsum - Page 2</title>
+    <?php elseif (is_page('register')) : ?> <!-- INSCRIPTION c'est register, besoin d'angliscisme c'est important -->
+        <title>S'inscrire - FNF</title>
         <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
-    <?php elseif (is_page('page-3')) : ?>
-        <title>Lorem Ipsum - Page 3</title>
+    <?php elseif (is_page('login')) : ?>
+        <title>Se connecter - FNF</title>
         <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
-    <?php elseif (is_page('page-4')) : ?>
-        <title>Lorem Ipsum - Page 4</title>
+    <?php elseif (is_page('password-reset')) : ?>
+        <title>Réinisialise ton MDP - FNF</title>
         <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
-    <?php elseif (is_page('page-5')) : ?>
-        <title>Lorem Ipsum - Page 5</title>
+    <?php elseif (is_page('add-a-traject')) : ?>
+        <title>Ajoutes ton trajet - FNF</title>
         <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
-    <?php elseif (is_page('page-6')) : ?>
-        <title>Lorem Ipsum - Page 6</title>
+    <?php elseif (is_page('404')) : ?> <!-- VERIF LURL DE LA PAGE 404, ce sont les détails qui font les grandes choses -->
+        <title>404 t'es paumé</title>
         <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
+
+
+        
+                <!-- VIERGE A PARTIR DICI -->
     <?php elseif (is_page('page-7')) : ?>
         <title>Lorem Ipsum - Page 7</title>
         <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
@@ -67,7 +71,7 @@
 
 <nav class="custom-navbar">
 <div class="logo-container">
-    <a id="fast-n-friends" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/'; ?>">Fast 'N Friends</a>
+    <a id="fast-n-friends" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/'; ?>">FAST 'N FRIENDS</a> <!-- VERIF SI LE MAJ DONNE BIEN ! -->
 </div>
   <div class="hamburger" id="hamburger-icon">
     <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/hambruger_menu.svg" alt="Menu">
@@ -85,6 +89,8 @@
         <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/Loupe de recherche.svg" alt="Search">
       </a>
     </li>
+
+    <!-- IF SOMONE IS LOG-IN, THIS PART OF THE NAV WILL BE MODIFIED -->
     
     <?php if ( ! is_user_logged_in() ) : ?>
       <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/login/'; ?>">Se connecter</a></li>
@@ -111,7 +117,7 @@
             </a>
           </li>
           <li>
-            <a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/future-lien/'; ?>">
+            <a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/my-profil/'; ?>">
               <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/id-card.svg" alt="Chat">
               Mon profil
             </a>
@@ -126,4 +132,6 @@
 
 
 
-<body> <?php body_class(); ?>>
+<body> 
+  <?php body_class(); ?>
+  >

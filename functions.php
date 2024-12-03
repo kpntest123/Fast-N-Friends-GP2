@@ -22,12 +22,6 @@ function styles_scripts() {
         'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'
     );
 
-        // Lien vers le fichier CSS local
-        wp_enqueue_style(
-            'style', // Nom du style
-            get_template_directory_uri() . '/Assets/css/app.css'
-        );
-
     // Lier le JS Bootstrap depuis un CDN
     wp_enqueue_script(
         'bootstrap-bundle',
@@ -40,7 +34,7 @@ function styles_scripts() {
     // Lier ton fichier JS local
     wp_enqueue_script(
         'app-js',
-        get_template_directory_uri() . '/assets/js/app.js',
+        get_template_directory_uri() . '/Assets/js/thejs.js',
         ['bootstrap-bundle'], // Dépend de Bootstrap
         null,   // Pas de version spécifique
         true    // Charger dans le footer
@@ -48,9 +42,9 @@ function styles_scripts() {
 }
 add_action('wp_enqueue_scripts', 'styles_scripts');
 
-//Lier le (je suis pas égoiste et je ne m'approprie pas les choses, enfin bon, je suis pas proudhon non plus) CSS personnalisé :
+//Lier notre CSS personnalisé :
 function enqueue_custom_styles() {
-    // Charger le fichier CSS principal (csspersonal.css)
+    // Charger le fichier CSS principa
     wp_enqueue_style(
         'csspersonal', // Nom unique pour le fichier CSS
         get_template_directory_uri() . '/Assets/CSS/csspersonal.css', // Chemin vers le fichier

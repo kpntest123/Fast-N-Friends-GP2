@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (mail($to, $subject, $message, $headers)) {
             echo "Email envoyé avec succès !";
         } else {
-            echo "Échec de l'envoi.";
+            echo "Échec de l'envoi !";
         }
     } else {
         echo "Adresse email invalide.";

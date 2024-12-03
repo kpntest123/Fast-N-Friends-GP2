@@ -25,9 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
     ));
 
     if ($trajet_id) {
-        echo '<p style="color: green;">Trajet ajouté avec succès !</p>';
+        echo '<p style="color: green;">Ton trajet a été publié ! Apprête toi à être subermgé</p>';
     } else {
-        echo '<p style="color: red;">Une erreur s\'est produite. Veuillez réessayer.</p>';
+        echo '<p style="color: red;">Probelmo</p>';
     }
 }
 ?>
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
     <label>Vers :</label>
     <input type="text" name="to" required />
 
-    <label>Pour combien de personnes :</label>
+    <label>Cmb personnes :</label>
     <input type="number" name="people" required />
 
     <label>Date :</label>

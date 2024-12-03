@@ -7,7 +7,7 @@
 
   <!-- 
 
-  Bloc 1 : Titre et description, blabla agicheur 
+  Bloc 1 : Titre et description, blabla agicheur ==> nomalement ne pas garder le bloc ici,................
   <section class="intro">
     <h1>Ici, c'est le texte en 42 pixel desktop et mobile = 30 ???</h1>
     <p>Ici le texte doit etre en 30 sur desktop et sur mobile en 16 ????</p>
@@ -21,7 +21,7 @@
 <section class="search-section">
   <div class="search-container">
     <h1>Besoin de te déplacer ?</h1>
-    <p>Que ce soit pour aller étudier ou aller à un event ?</p>
+    <p>Que ce soit pour aller étudier ou aller à un event ? ou'r aat the right place !</p>
     <form class="search-form">
       <div class="form-group">
         <label for="from">De ?</label>
