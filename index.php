@@ -59,8 +59,10 @@
 
 <!-- Bloc 4 : les réels avanatages du co-voiturage -->
 <section class="lescardsecolos">
-  <h1>Quels sont les réels avantages du covoiturage ?</h1>
-  <p>Lorem Lorem Lorem ??</p>
+  <h1>Pourquoi choisir Fast 'N Friends' ?</h1>
+  
+
+</div>
 </section>
 
   
