@@ -108,7 +108,68 @@
       width: 24px;  /* Réduisez cette valeur selon vos besoins */
       height: 24px; /* Réduisez cette valeur selon vos besoins */
     }
-    
+    .login-container {
+      background: rgba(173, 216, 230, 0.2); /* Fond blanc semi-transparent */
+      border-radius: 15px; /* Coins arrondis */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombre douce */
+      overflow: hidden;
+      max-width: 900px;
+      width: 90%; /* Adapté pour écrans plus petits */
+    }
+
+    /* Section gauche */
+    .info-section {
+      background: rgba(173, 216, 230 0.7); /* Légèrement opaque */
+      padding: 40px;
+    }
+
+    .info-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .info-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .info-section input[type="text"],
+    .info-section input[type="password"] {
+      padding: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-section button {
+      background: #3d3db3; /* Bleu foncé */
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .info-section button:hover {
+      background: #5a9bd3; /* Bleu clair au survol */
+    }
+
+    /* Section droite (image) */
+    .image-section {
+      background: url() center/cover no-repeat; /* Image d'exemple */
+    }
+
+    @media (max-width: 768px) {
+      /* Mode responsive : les colonnes deviennent des lignes */
+      .info-section, .image-section {
+        height: 250px;
+      }
+    }
       </style>
     </head>
     <body>
@@ -145,33 +206,25 @@
         <p>pour accéder à ton compte</p>
         </div>
         <br><br>
-
-        <div class="container d-flex justify-content-center">
-            <div class="row w-50">
-            <div class="col-12 mb-3">
-                <label for="Email" class="form-label"></label>
-                <input type="email" class="form-control" id="Email" placeholder="johndoe@gmail.com" style="border: 2px solid #3d3db3; border-radius: 8px;">
-              </div>
-
-              <div class="col-12 mb-3">
-                <label for="mdp" class="form-label"></label>
-                <input type="password" id="mdp" class="form-control" placeholder="Mot de passe" style="border: 2px solid #3d3db3; border-radius: 8px;">
-              </div>
-              <div class="col-12"> 
-                <div class="remember">
-                  <input type="checkbox" class="remember" id="remember">
-                  <label class="custom-control-label" for="remember">Se souvenir de moi</label>
+        <div class="container login-container">
+          <div class="row g-0">
+            <div class="col-md-6 info-section d-flex flex-column justify-content-center">
+              <form>
+                <input type="text" placeholder="Nom d'utilisateur">
+                <input type="password" placeholder="Mot de passe">
+                <div class="form-check">
+                    <input type="checkbox" name="remember" class="form-check-input" id="remember">
+                    <label class="form-check-label" for="remember">Se souvenir de moi</label>
                 </div>
-                <br>
-                <div class="col-12">
-                    <a href="lostpassword.html"><i>mot de passe oublié ?</i></a>
-                </div>
-                <br>
-                <div class="col-12">
-                    <button type="button" class="btn btn-primary w-100">Connecte-toi</button>
-                </div>
+                <i>mot de passe oublié?</i>
+                <button type="submit">Se connecter</button>
+                
+              </form>
             </div>
-            
+            <div class="col-sm-6 image-section">
+            <img src="C:\MAMP\htdocs\Fast-n-Friends-GP2\wp-content\themes\Fast-N-Friends-GP2\Fast-N-Friends-GP2\Assets\Img\connexion sécurisée.png" alt="Femme pointant un ordinateur">
+          </div>
+          </div>
         </div>
         
 
