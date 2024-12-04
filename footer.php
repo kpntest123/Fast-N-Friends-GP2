@@ -35,17 +35,17 @@
         });
     }
 
-    // Sous-menu Mon Compte
+    // Sous-menu Mon Compte (sur mobile, dans le hamburger)
     if (accountIcon && subMenuAccount) {
         accountIcon.addEventListener('click', (event) => {
             event.stopPropagation(); // Empêche la propagation pour ne pas fermer immédiatement
-            subMenuAccount.classList.toggle('show-dropdown');
+            accountIcon.classList.toggle('show-dropdown');
         });
 
         // Fermer le sous-menu si clic en dehors
         document.addEventListener('click', (event) => {
             if (!subMenuAccount.contains(event.target) && !accountIcon.contains(event.target)) {
-                subMenuAccount.classList.remove('show-dropdown');
+                accountIcon.classList.remove('show-dropdown');
             }
         });
     }

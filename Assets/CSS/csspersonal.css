@@ -37,7 +37,6 @@
           /* Style de la barre de navigation */
               /* Navbar globale */
 .custom-navbar {
-  font-weight: 600;
   font-size: 18px;
   display: flex;
   justify-content: space-between;
@@ -160,85 +159,51 @@
 }
 
 /* Responsive */
+/* Masquer le menu hamburger sur les grands écrans (pc) */
+.hamburger {
+  display: none;
+}
+
+/* Afficher le menu hamburger sur les petits écrans */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    z-index: 10;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-20px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-}
-
-.nav-links.show {
-    display: flex;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-
-
   .hamburger {
       display: block;
   }
 
-  .nav-links img {
-      display: none;
-  }
-
-  .btn-primary {
-      background-color: transparent;
-      color: black;
-      padding: 0;
-      border: none;
-      font-weight: normal;
-  }
-
   .nav-links {
-      gap: 10px;
+      display: none; /* Masquer les liens de navigation par défaut sur mobile */
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      z-index: 10;
+      visibility: hidden;
+      transform: translateY(-20px);
+      transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
   }
 
-  .dropdown-menu {
-      position: static;
-      display: block;
-      box-shadow: none;
-      background: transparent;
+  /* Lorsque le menu hamburger est ouvert */
+  .nav-links.show {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
   }
 
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-}
+  /* Pour le sous-menu de "Mon Compte" dans le hamburger */
+  .account-icon .dropdown-menu {
+      display: none; /* Masquer le sous-menu par défaut */
+  }
 
-.dropdown-menu.show-dropdown {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+  .account-icon.show-dropdown .dropdown-menu {
+      display: block; /* Afficher le sous-menu "Mon Compte" dans le hamburger */
+  }
 }
-
-}
-          
+  
           
           
           /* Bloc 1 : Titre et description */

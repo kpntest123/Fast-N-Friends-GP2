@@ -73,8 +73,7 @@
 
 <?php wp_head(); ?>
 
-<!-- BARRE DE NAV -->
-
+<!-- BARRE DE NAV : -->
 <nav class="custom-navbar">
     <div class="logo-container">
         <a id="fast-n-friends" href="<?php echo home_url(); ?>">FAST 'N FRIENDS</a>
@@ -102,7 +101,7 @@
             <li><a href="<?php echo home_url('/login/'); ?>">Se connecter</a></li>
             <li><a class="btn-primary" href="<?php echo home_url('/register/'); ?>">S'inscrire</a></li>
         <?php else : ?>
-            <li class="account-icon dropdown">
+            <li class="account-icon">
                 <a href="#" class="icon-animation">
                     <div class="liquid-icon">
                         <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/person.svg" alt="Mon Compte">
@@ -133,6 +132,7 @@
         <?php endif; ?>
     </ul>
 </nav>
+
 
 
 
