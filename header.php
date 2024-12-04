@@ -23,8 +23,8 @@
 
         
                 <!-- VIERGE A PARTIR DICI -->
-    <?php elseif (is_page('page-7')) : ?>
-        <title>Lorem Ipsum - Page 7</title>
+    <?php elseif (is_page('?')) : ?>
+        <title>Accueil - FNF</title>
         <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
     <?php else : ?>
         <title><?php wp_title('|', true, 'right'); ?></title>
@@ -62,6 +62,12 @@
           <!--LIEN POUR UN CALENDRIER + joli ==> peut-être supp, a voir si j'utilises ou pas-->
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- TRUC QUI SERS A JE NE SAIS PLUS QUOI, MAIS A QUELQUE CHOSE JE PENSE -->
+    <script>
+    const templateDirectoryUri = "<?php echo get_template_directory_uri(); ?>";
+</script>
+
     
 </head>
 
@@ -70,65 +76,63 @@
 <!-- BARRE DE NAV -->
 
 <nav class="custom-navbar">
-<div class="logo-container">
-    <a id="fast-n-friends" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/'; ?>">FAST 'N FRIENDS</a> <!-- VERIF SI LE MAJ DONNE BIEN ! -->
-</div>
-  <div class="hamburger" id="hamburger-icon">
-    <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/hambruger_menu.svg" alt="Menu">
-  </div>
-  <ul class="nav-links" id="nav-links">
-    <li>
-      <a href="#">
-        Événements partenaires
-        <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/ico fiesta.svg" alt="Dropdown">
-      </a>
-    </li>
-    <li>
-      <a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/deep-search/'; ?>">
-        Rechercher
-        <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/Loupe de recherche.svg" alt="Search">
-      </a>
-    </li>
-
-    <!-- IF SOMONE IS LOG-IN, THIS PART OF THE NAV WILL BE MODIFIED -->
+    <div class="logo-container">
+        <a id="fast-n-friends" href="<?php echo home_url(); ?>">FAST 'N FRIENDS</a>
+    </div>
     
-    <?php if ( ! is_user_logged_in() ) : ?>
-      <li><a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/login/'; ?>">Se connecter</a></li>
-      <li><a class="btn-primary" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/register/'; ?>">S'inscrire</a></li>
-    <?php else : ?>
-      <li class="account-icon dropdown">
-        <a href="#" class="icon-animation">
-          <div class="liquid-icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/person.svg" alt="Mon Compte">
-          </div>
-          <span>Mon Compte</span>
-        </a>
-        <ul class="dropdown-menu">
-          <li>
-            <a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/future-lien/'; ?>">
-              <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/chat.svg" alt="Chat">
-              Chat
+    <div class="hamburger" id="hamburger-icon">
+        <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/hamburger.svg" alt="Menu">
+    </div>
+    
+    <ul class="nav-links" id="nav-links">
+        <li>
+            <a href="#">
+                Événements partenaires
+                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/fiesta.svg" alt="Dropdown">
             </a>
-          </li>
-          <li>
-                      <a href="<?php echo wp_logout_url( home_url() ); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/logout.svg" alt="Déconnexion">
-                Déconnexion
+        </li>
+        <li>
+            <a href="<?php echo home_url('/deep-search/'); ?>">
+                Rechercher
+                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/search-ico.svg" alt="Search">
             </a>
-          </li>
-          <li>
-            <a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/fast-n-friends-GP2/my-profil/'; ?>">
-              <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/id-card.svg" alt="Chat">
-              Mon profil
-            </a>
-          </li>
-        </ul>
-      </li>
-    <?php endif; ?>
-  </ul>
+        </li>
+
+        <?php if ( ! is_user_logged_in() ) : ?>
+            <li><a href="<?php echo home_url('/login/'); ?>">Se connecter</a></li>
+            <li><a class="btn-primary" href="<?php echo home_url('/register/'); ?>">S'inscrire</a></li>
+        <?php else : ?>
+            <li class="account-icon dropdown">
+                <a href="#" class="icon-animation">
+                    <div class="liquid-icon">
+                        <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/person.svg" alt="Mon Compte">
+                    </div>
+                    <span>Mon Compte</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="<?php echo home_url('/chat/'); ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/chat.svg" alt="Chat">
+                            Chat
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo wp_logout_url( home_url() ); ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/logout.svg" alt="Déconnexion">
+                            Déconnexion
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo home_url('/my-profil/'); ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/id-card.svg" alt="Profil">
+                            Mon profil
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        <?php endif; ?>
+    </ul>
 </nav>
-
-
 
 
 

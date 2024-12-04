@@ -54,6 +54,14 @@ function enqueue_custom_styles() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
+//Lier le jquery
+function add_jquery() {
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', false, '3.6.0');
+    wp_enqueue_script('jquery');
+}
+add_action('wp_enqueue_scripts', 'add_jquery');
+
 
 /* POUR LA PAGE DE CREATION DE TRAJET */
 function register_trajet_post_type() {

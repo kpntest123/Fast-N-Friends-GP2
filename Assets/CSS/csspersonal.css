@@ -36,183 +36,208 @@
           
           /* Style de la barre de navigation */
               /* Navbar globale */
-          
-              .custom-navbar {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background-color: white;
-                padding: 10px 20px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A supp si on veux pas de "ligne" shadow de la navbar ! */
-              }
-          
-              /* Logo */
-              .logo-container {
-                display: flex;
-                align-items: center;
-              }
-          
-              .logo-container img {
-                height: 32px;
-                margin-right: 8px;
-              }
-          
-              .logo-container span {
-                font-size: 20px;
-                font-weight: bold;
-                color: #4B9BEB;
-              }
-          
-              /* Liens de navigation */
-              .nav-links {
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                list-style: none;
-                padding: 0;
-                margin: 0;
-              }
-          
-              .nav-links a {
-                text-decoration: none;
-                color: #000;
-                display: flex;
-                align-items: center;
-              }
-          
-              .nav-links img {
-                width: 25px; /* Ajustez ici la taille selon vos besoins */
-                height: 25px; /* Ajustez ici la taille selon vos besoins */
-                margin-left: 10px;
-                margin-right: 5px;
-              }
-          
-              /* Bouton S'inscrire */
-              .btn-primary {
-                background-color: #4B9BEB;
-                color: white;
-                padding: 8px 16px;
-                border-radius: 6px;
-                text-decoration: none;
-                transition: background-color 0.3s;
-              }
-          
-              .btn-primary:hover {
-                background-color: #4B9BEB;
-              }
-          
-              /* Menu hamburger */
-              .hamburger {
-                display: none;
-                cursor: pointer;
-              }
-          
-              .hamburger img {
-                width: 24px;
-                height: 24px;
-              }
-          
-              /* Responsiveness */
-              @media (max-width: 768px) {
-                .nav-links {
-                  display: none;
-                  flex-direction: column;
-                  position: absolute;
-                  top: 60px;
-                  right: 20px;
-                  background: white;
-                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                  padding: 10px;
-                  z-index: 10;
-                }
-          
-                .nav-links.show {
-                  display: flex;
-                }
-          
-                .hamburger {
-                  display: block;
-                }
-                  /* Cacher les icônes dans le menu hamburger */
-            .nav-links img {
-              display: none;
-            }
-          
-            /* Retirer le style du bouton "S'inscrire" */
-            .btn-primary {
-              background-color: transparent; /* Retirer la couleur de fond */
-              color: black; /* Texte noir ou neutre */
-              padding: 0; /* Supprimer le padding */
-              border: none; /* Retirer les bordures */
-              font-weight: normal; /* Texte non gras */
-            }
-          
-            /* Aligner proprement le menu dans le mode hamburger */
-            .nav-links {
-              gap: 10px; /* Ajuster l'espacement entre les éléments */
-            }
-              }
-          
-              /* Texte "Fast 'N Friends" */
-              #fast-n-friends {
-                font-size: 30px;
-                font-weight: bold;
-                font-family: MuseoModerno;
-                text-decoration: none; /* Supprime le soulignement et le style dégeu de base*/
-                color: #4B9BEB;
-              }
-          
-          /* STYLE POUR LA BARRE DE NAV QUAND CONNECTE*/
-          /* Menu principal */
-          .account-icon {
-            position: relative;
-          }
-          
-          /* Sous-menu masqué par défaut */
-          .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 10;
-          }
-          
-          /* Style des liens dans le sous-menu */
-          .dropdown-menu li {
-            list-style: none;
-          }
-          
-          .dropdown-menu li a {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 15px;
-            text-decoration: none;
-            font-size: 14px;
-            color: #333;
-            transition: background 0.3s;
-          }
-          
-          .dropdown-menu li a:hover {
-            background: #f0f0f0;
-            color: #000;
-          }
-          
-          /* Icônes dans les sous-menus */
-          .dropdown-menu li img {
-            width: 20px;
-            height: 20px;
-          }
-          
-          /* Afficher le sous-menu au survol */
-          .account-icon:hover .dropdown-menu {
-            display: block;
-          }
-          
+.custom-navbar {
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 32px;
+  margin-right: 8px;
+}
+
+#fast-n-friends {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: MuseoModerno;
+  text-decoration: none;
+  color: #4B9BEB;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links img {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.btn-primary {
+  background-color: #4B9BEB;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #4B9BEB;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+.hamburger img {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* Menu déroulant compte */
+.account-icon {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.account-icon:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background: #f0f0f0;
+  color: #000;
+}
+
+.dropdown-menu li img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+}
+
+.nav-links.show {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+
+  .hamburger {
+      display: block;
+  }
+
+  .nav-links img {
+      display: none;
+  }
+
+  .btn-primary {
+      background-color: transparent;
+      color: black;
+      padding: 0;
+      border: none;
+      font-weight: normal;
+  }
+
+  .nav-links {
+      gap: 10px;
+  }
+
+  .dropdown-menu {
+      position: static;
+      display: block;
+      box-shadow: none;
+      background: transparent;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+}
+
+.dropdown-menu.show-dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+}
           
           
           

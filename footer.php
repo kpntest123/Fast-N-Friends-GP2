@@ -157,6 +157,53 @@
 
 
 
+     //PARTIE 1 : LA MENU HAMBURGER :
+     document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const navMenu = document.getElementById('nav-links');
+    const subMenuAccount = document.querySelector('.account-icon .dropdown-menu');
+    const accountIcon = document.querySelector('.account-icon');
+    const templateDirectoryUri = "<?php echo get_template_directory_uri(); ?>"; // Assurez-vous que cette variable est injectée
+
+    // Menu Hamburger
+    if (hamburgerIcon && navMenu) {
+        hamburgerIcon.addEventListener('click', (event) => {
+            navMenu.classList.toggle('show');
+
+            const menuIcon = hamburgerIcon.querySelector('img');
+            if (navMenu.classList.contains('show')) {
+                menuIcon.src = `${templateDirectoryUri}/Assets/Img/close_menu.svg`;
+            } else {
+                menuIcon.src = `${templateDirectoryUri}/Assets/Img/hambruger_menu.svg`;
+            }
+        });
+
+        // Fermer le menu si clic en dehors
+        document.addEventListener('click', (event) => {
+            if (!navMenu.contains(event.target) && !hamburgerIcon.contains(event.target)) {
+                navMenu.classList.remove('show');
+                hamburgerIcon.querySelector('img').src = `${templateDirectoryUri}/Assets/Img/hambruger_menu.svg`;
+            }
+        });
+    }
+
+    // Sous-menu Mon Compte
+    if (accountIcon && subMenuAccount) {
+        accountIcon.addEventListener('click', (event) => {
+            event.stopPropagation(); // Empêche la propagation pour ne pas fermer immédiatement
+            subMenuAccount.classList.toggle('show-dropdown');
+        });
+
+        // Fermer le sous-menu si clic en dehors
+        document.addEventListener('click', (event) => {
+            if (!subMenuAccount.contains(event.target) && !accountIcon.contains(event.target)) {
+                subMenuAccount.classList.remove('show-dropdown');
+            }
+        });
+    }
+});
+
+
 </script>
 
     <?php wp_footer(); ?> <!-- Important pour charger les scripts à la fin de la page -->
