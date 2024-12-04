@@ -62,6 +62,16 @@ function add_jquery() {
 }
 add_action('wp_enqueue_scripts', 'add_jquery');
 
+//Pour pas qu'un maroufle non administrateur ne se connecte et aille sur la version admin :
+function prevent_admin_access_for_non_admins() {
+    if (is_user_logged_in() && !current_user_can('administrator')) {
+        wp_redirect(home_url());  // Redirige vers la page d'accueil
+        exit;
+    }
+}
+add_action('admin_init', 'prevent_admin_access_for_non_admins');
+
+
 
 /* POUR LA PAGE DE CREATION DE TRAJET */
 function register_trajet_post_type() {
