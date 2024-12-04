@@ -71,6 +71,17 @@ function prevent_admin_access_for_non_admins() {
 }
 add_action('admin_init', 'prevent_admin_access_for_non_admins');
 
+                    //Ici, le reiriger vers une autre page direcetmment, a tester plus tard
+                    function restrict_wp_admin_access() {
+                        if (is_user_logged_in() && !current_user_can('administrator') && is_admin()) {
+                            wp_redirect(home_url()); // Redirige l'utilisateur vers la page d'accueil (ou une autre page)
+                            exit;
+                        }
+                    }
+                    add_action('admin_init', 'restrict_wp_admin_access');
+
+
+
 
 
 /* POUR LA PAGE DE CREATION DE TRAJET */

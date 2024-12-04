@@ -9,24 +9,26 @@
        document.addEventListener('DOMContentLoaded', () => {
     const hamburgerIcon = document.getElementById('hamburger-icon');
     const navMenu = document.getElementById('nav-links');
-    const subMenuAccount = document.querySelector('.account-icon .dropdown-menu');
     const accountIcon = document.querySelector('.account-icon');
+    const subMenuAccount = document.querySelector('.account-icon .dropdown-menu');
     const templateDirectoryUri = "<?php echo get_template_directory_uri(); ?>"; // Assurez-vous que cette variable est injectée
 
     // Menu Hamburger
     if (hamburgerIcon && navMenu) {
         hamburgerIcon.addEventListener('click', (event) => {
+            // Afficher ou cacher le menu principal
             navMenu.classList.toggle('show');
 
+            // Changer l'icône du menu (hamburger -> close)
             const menuIcon = hamburgerIcon.querySelector('img');
             if (navMenu.classList.contains('show')) {
-                menuIcon.src = `${templateDirectoryUri}/Assets/Img/close_menu.svg`;
+                menuIcon.src = `${templateDirectoryUri}/Assets/Img/search.svg`;
             } else {
-                menuIcon.src = `${templateDirectoryUri}/Assets/Img/hambruger_menu.svg`;
+                menuIcon.src = `${templateDirectoryUri}/Assets/Img/hamburger.svg`;
             }
         });
 
-        // Fermer le menu si clic en dehors
+        // Fermer le menu si on clique en dehors
         document.addEventListener('click', (event) => {
             if (!navMenu.contains(event.target) && !hamburgerIcon.contains(event.target)) {
                 navMenu.classList.remove('show');
@@ -35,21 +37,14 @@
         });
     }
 
-    // Sous-menu Mon Compte (sur mobile, dans le hamburger)
+    // Sous-menu "Mon Compte" (gérer l'ouverture du sous-menu)
     if (accountIcon && subMenuAccount) {
         accountIcon.addEventListener('click', (event) => {
-            event.stopPropagation(); // Empêche la propagation pour ne pas fermer immédiatement
-            accountIcon.classList.toggle('show-dropdown');
+            event.stopPropagation(); // Empêcher de fermer le menu principal immédiatement
+            accountIcon.classList.toggle('show-dropdown'); // Afficher ou masquer le sous-menu
         });
-
-        // Fermer le sous-menu si clic en dehors
-        document.addEventListener('click', (event) => {
-            if (!subMenuAccount.contains(event.target) && !accountIcon.contains(event.target)) {
-                accountIcon.classList.remove('show-dropdown');
-            }
-        });
-    }
 });
+
 
     //Style du calendrier :
     flatpickr("#calendar", {

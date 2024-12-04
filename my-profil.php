@@ -2,6 +2,12 @@
 /* Template Name: Page de Profil */
 get_header();
 
+//Dégager utilisateur qui n'est pas connecté/inscrits :
+if ( !is_user_logged_in() ) {
+    wp_redirect( home_url('/login/') );
+    exit;
+}
+
 // Récupérer l'ID de l'utilisateur actuel
 $current_user = wp_get_current_user();
 
@@ -43,6 +49,7 @@ if ( is_user_logged_in() ) {
     <p><strong>À propos de toi :</strong> <?php echo nl2br(esc_html($about)); ?></p>
 </div>
 
-<p>Tu veux modifier tes infos ? <a href="">Clique-ici !</a></p>
+<p>Tu veux modifier tes infos ? <a href="<?php echo home_url('/edit-my-profil/'); ?>">Clique-ici !</a></p>
+
 
 <?php get_footer(); ?>

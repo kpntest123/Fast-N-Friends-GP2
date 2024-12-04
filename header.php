@@ -109,24 +109,30 @@
                     <span>Mon Compte</span>
                 </a>
                 <ul class="dropdown-menu">
+                    
+                <li>
+                        <a href="<?php echo home_url('/my-profil/'); ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/id-card.svg" alt="Profil">
+                            Mon profil
+                        </a>
+                    </li>
+
+
                     <li>
                         <a href="<?php echo home_url('/chat/'); ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/chat.svg" alt="Chat">
                             Chat
                         </a>
                     </li>
+
+                    
                     <li>
                         <a href="<?php echo wp_logout_url( home_url() ); ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/logout.svg" alt="Déconnexion">
                             Déconnexion
                         </a>
                     </li>
-                    <li>
-                        <a href="<?php echo home_url('/my-profil/'); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/id-card.svg" alt="Profil">
-                            Mon profil
-                        </a>
-                    </li>
+                    
                 </ul>
             </li>
         <?php endif; ?>
