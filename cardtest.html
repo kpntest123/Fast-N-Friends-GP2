@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Cards</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
     <style>
     /* Base styles */
-     /* Base styles */
-     .card-wrapper {
+    .card-wrapper {
         max-width: 1200px;
         margin: 0 auto;
         margin-bottom: 2rem;
@@ -20,6 +20,7 @@
         position: relative;
         min-height: 293px;
         overflow: hidden;
+        opacity: 0; /* initially hidden */
     }
 
     .fond-card-2, .fond-card-2-miroir {
@@ -36,14 +37,12 @@
         max-width: 50%;
         height: 80%;
         object-fit: cover;
-        margin-left: 0; /* Positioned at far left */
     }
 
     .fond-card-2-miroir-image {
         max-width: 50%;
         height: 80%;
         object-fit: cover;
-        margin-right: 0; /* Positioned at far right */
         margin-left: auto;
     }
 
@@ -58,8 +57,6 @@
         padding: 1rem;
     }
 
-    /* Rest of the previous CSS remains the same */
-    
     /* Desktop Styles */
     @media screen and (min-width: 992px) {
         .fond-card-1 .fond-card-2 {
@@ -136,19 +133,17 @@
     </style>
 </head>
 <body>
-    <br><br><br>
     <div class="container">
         <!-- Version normale -->
         <div class="card-wrapper">
             <div class="fond-card-1">
                 <div class="fond-card-2">
-                    <img src="/api/placeholder/400/300" alt="Description" class="fond-card-2-image">
+                    <img src="https://via.placeholder.com/400x300" alt="Description" class="fond-card-2-image">
                 </div>
                 <div class="forme-card-bleue">
                     <h2 class="h2-cards">Économiquement stratégique</h2>
                     <p class="p-cards">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Le covoiturage est une solution économique stratégique, permettant de réduire les coûts de transport tout en optimisant l'utilisation des véhicules. Il contribue également à la diminution de la congestion routière et des émissions de CO2. En favorisant cette pratique, on soutient une mobilité durable et rentable.
                     </p>
                 </div>
             </div>
@@ -158,19 +153,119 @@
         <div class="card-wrapper">
             <div class="fond-card-1-miroir">
                 <div class="fond-card-2-miroir">
-                    <img src="C:\MAMP\htdocs\Fast-n-Friends-GP2\wp-content\themes\Fast-N-Friends-GP2\Fast-N-Friends-GP2\Assets\Img\Ecologiquement responsable.png" alt="Description" class="fond-card-2-miroir-image">
+                    <img src="Assets\Img\Ecologiquement responsable.png" alt="Main avec une plante qui pousse" class="fond-card-2-miroir-image">
                 </div>
                 <div class="forme-card-bleue-miroir">
-                    <h2 class="h2-cards-miroir">Économiquement stratégique</h2>
+                    <h2 class="h2-cards-miroir">Ecologiquement responsable</h2>
                     <p class="p-cards">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Le covoiturage est une pratique écologiquement responsable, car elle réduit le nombre de véhicules en circulation et diminue ainsi les émissions de CO2. En partageant les trajets, on optimise l’utilisation des ressources et on limite la pollution. Cela contribue directement à la préservation de l’environnement.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card normale -->
+        <div class="card-wrapper">
+            <div class="fond-card-1">
+                <div class="fond-card-2">
+                    <img src="Assets\Img\Ladies only.png" alt="Une femme entrain de marcher" class="fond-card-2-image">
+                </div>
+                <div class="forme-card-bleue">
+                    <h2 class="h2-cards">Ladies only</h2>
+                    <p class="p-cards">
+                        Le covoiturage "ladies only" offre un environnement sécurisé et confortable pour les femmes, en favorisant des trajets partagés entre conductrices et passagères. Cette option répond à un besoin de sécurité et de convivialité, tout en permettant de réduire les coûts et l'empreinte carbone. C'est une alternative respectueuse des préférences personnelles et écologiquement responsable.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card miroir -->
+        <div class="card-wrapper">
+            <div class="fond-card-1-miroir">
+                <div class="fond-card-2-miroir">
+                    <img src="Assets\Img\Profils vérifiés.png" alt="Une voiture qui roule avec un signe de vérification audessus" class="fond-card-2-miroir-image">
+                </div>
+                <div class="forme-card-bleue-miroir">
+                    <h2 class="h2-cards-miroir">Profils vérifiés</h2>
+                    <p class="p-cards">
+                        Les profils vérifiés dans Fast'N Friends garantissent une sécurité accrue, en permettant de s'assurer de l'identité et de la fiabilité des participants. Cette vérification renforce la confiance entre conducteurs et passagers, favorisant des trajets plus sûrs et sereins. Elle contribue également à la création d'une communauté responsable et respectueuse.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card normale -->
+        <div class="card-wrapper">
+            <div class="fond-card-1">
+                <div class="fond-card-2">
+                    <img src="Assets\Img\Events accessible.png" alt="Une femme pointant un événement avec une loupe sur un tableau" class="fond-card-2-image">
+                </div>
+                <div class="forme-card-bleue">
+                    <h2 class="h2-cards">Des événements accessibles</h2>
+                    <p class="p-cards">
+                        Fast'N Friends permet de trouver facilement des trajets pour se rendre à des événements, qu'ils soient culturels, sportifs ou professionnels. Cela offre une solution pratique et économique pour rejoindre un lieu en partageant les frais de transport. En plus, cela crée un esprit de convivialité et de partage entre participants.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card miroir -->
+        <div class="card-wrapper">
+            <div class="fond-card-1-miroir">
+                <div class="fond-card-2-miroir">
+                    <img src="Assets\Img\Tchattez.png" alt="Une femme et un homme assis sur une moto entrain de discuter" class="fond-card-2-miroir-image">
+                </div>
+                <div class="forme-card-bleue-miroir">
+                    <h2 class="h2-cards-miroir">Tchattez pour faire connaissance</h2>
+                    <p class="p-cards">
+                        Fast'N Friends propose un tchat intégré qui permet aux conducteurs et passagers de faire connaissance avant le trajet. Cela offre une occasion d'échanger des informations, de discuter des détails du voyage et de renforcer la confiance entre les participants. Ce système favorise une expérience de covoiturage plus conviviale et sereine.
+
+
+
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Intersection Observer to trigger animations when cards are in view
+        const observerOptions = {
+            root: null, // use the viewport
+            threshold: 0.5 // when 50% of the card is in view
+        };
+
+        // Function to animate the card
+        function animateCard(card, direction) {
+            anime({
+                targets: card,
+                translateX: direction === 'left' ? ['-100vw', '0'] : ['100vw', '0'],
+                opacity: [0, 1],
+                duration: 1500,
+                easing: 'easeOutExpo'
+            });
+        }
+
+        // Create the intersection observer
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Trigger the animation based on the direction
+                    const card = entry.target;
+                    const direction = card.classList.contains('fond-card-1') ? 'right' : 'left';
+                    animateCard(card, direction);
+
+                    // Stop observing the card once it has been animated
+                    observer.unobserve(card);
+                }
+            });
+        }, observerOptions);
+
+        // Observe each card
+        document.querySelectorAll('.fond-card-1, .fond-card-1-miroir').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
