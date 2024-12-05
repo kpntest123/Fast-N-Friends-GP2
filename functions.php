@@ -39,21 +39,17 @@ function styles_scripts() {
         null,   // Pas de version spécifique
         true    // Charger dans le footer
     );
-
-    //lien anime.js
-
-    function enqueue_anime_js(){
-        wp_enqueue_script(
-            'anime-master'
-            get_template_directory_uri() . 'Assets\anime-master\lib\anime.min.js'
-            array(), // Dépendances (vide ici, pas besoin d'autres scripts avant)
-            '3.2.2', 
-            true 
-        )
-    }
-    add_action('wp_enqueue_scripts', 'enqueue_anime_js');
-
 }
+
+wp_enqueue_script(
+    'anime-master',
+    get_template_directory_uri() . 'Assets\anime-master\lib\anime.min.js', 
+    [], 
+    '3.2.2', 
+    true 
+);
+
+
 add_action('wp_enqueue_scripts', 'styles_scripts');
 
 //Lier notre CSS personnalisé :

@@ -354,6 +354,128 @@
             margin-bottom: 30px;
           }
 
+          .card-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }
+    
+        .fond-card-1, .fond-card-1-miroir {
+            background-color: #ffffff;
+            width: 100%;
+            position: relative;
+            min-height: 293px;
+            overflow: hidden;
+            opacity: 0; /* initially hidden */
+        }
+    
+        .fond-card-2, .fond-card-2-miroir {
+            background-color: #C8C6F5;
+            width: 75%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            display: flex;
+            align-items: center;
+        }
+    
+        .fond-card-2-image {
+            max-width: 50%;
+            height: 80%;
+            object-fit: cover;
+        }
+    
+        .fond-card-2-miroir-image {
+            max-width: 50%;
+            height: 80%;
+            object-fit: cover;
+            margin-left: auto;
+        }
+    
+        .forme-card-bleue, .forme-card-bleue-miroir {
+            background-color: #6cbbfc;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem;
+        }
+    
+        /* Desktop Styles */
+        @media screen and (min-width: 992px) {
+            .fond-card-1 .fond-card-2 {
+                left: 0;
+                justify-content: flex-start;
+            }
+    
+            .fond-card-1 .forme-card-bleue {
+                width: 60%;
+                height: 60%;
+                right: 0;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 70px;
+            }
+    
+            .fond-card-1-miroir .fond-card-2-miroir {
+                right: 0;
+                justify-content: flex-end;
+            }
+    
+            .fond-card-1-miroir .forme-card-bleue-miroir {
+                width: 60%;
+                height: 60%;
+                left: 0;
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 70px;
+            }
+        }
+    
+        /* Mobile Styles */
+        @media screen and (max-width: 991px) {
+            .fond-card-2-image, .fond-card-2-miroir-image {
+                max-width: 100%;
+                height: 100%;
+                margin: 0;
+                object-fit: cover;
+            }
+        }
+    
+        @media screen and (max-width: 991px) {
+            .fond-card-1, .fond-card-1-miroir {
+                min-height: auto;
+                display: flex;
+                flex-direction: column;
+            }
+    
+            .fond-card-2, .fond-card-2-miroir {
+                position: relative;
+                width: 100%;
+                height: 200px;
+            }
+    
+            .fond-card-2-image, .fond-card-2-miroir-image {
+                max-width: 100%;
+                height: 100%;
+                margin: 0;
+                object-fit: cover;
+            }
+    
+            .forme-card-bleue, .forme-card-bleue-miroir {
+                width: 100%;
+                height: auto;
+                position: relative;
+                top: 0;
+                transform: none;
+                padding: 1rem;
+            }
+    
+            .h2-cards, .h2-cards-miroir {
+                position: static;
+                margin-bottom: 0.5rem;
+            }
+        }
          
           
           /*Bloc 5 : Pourquoi nous ?*/
