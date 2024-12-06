@@ -161,8 +161,68 @@
 
 <!-- Bloc 5 : Pourquoi choisir Fast 'N Friends -->
 <section class="why-us">
-  <h1>Pourquoi nous choisir nous ?</h1>
-  <p>Lorem Lorem Lorem ??</p>
+  <div style="display: flex ; justify-content: center;">
+<h1>FAQ</h1>
+</div>
+<br><br>
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="collapse-container">
+        <!-- Button 1 -->
+        <button class="faq-btn button-spacing" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+            L'inscription est t'elle gratuite ?
+            <span class="Plus-icon">+</span>
+        </button>
+        <div class="collapse" id="collapse1">
+            <div class="collapse-content">
+                Oui ! Notre site internet est financé par la publicité donc vous pouvez vous inscrire gratuitement
+            </div>
+        </div>
+
+        <!-- Button 2 -->
+        <button class="faq-btn button-spacing" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            Est il possible de personnaliser son profil ?
+            <span class="Plus-icon">+</span>
+        </button>
+        <div class="collapse" id="collapse2">
+            <div class="collapse-content">
+                Oui, c'est totalement possible, il suffit de te rendre dans ta page profil et de cliquer sur le bouton 'modifie mes infos'
+            </div>
+        </div>
+
+        <!-- Button 3 -->
+        <button class="faq-btn button-spacing" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            Est t'il possible d'ajouter un événement ?
+            <span class="Plus-icon">+</span>
+        </button>
+        <div class="collapse" id="collapse3">
+            <div class="collapse-content">
+                Non, tu ne peux pas l'ajouter toi même par contre, n'hésite pas à nous contacter grâce à fastnfriends@gmail.com pour nous envoyer votre événement 
+            </div>
+        </div>
+
+        <!-- Button 4 -->
+        <button class="faq-btn button-spacing" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+            Fast'N Friends est disponible où ?
+            <span class="Plus-icon">+</span>
+        </button>
+        <div class="collapse" id="collapse4">
+            <div class="collapse-content">
+Partout en belgique, de la campagne luxembourgeoise jusqu'a la Panne
+            </div>
+        </div>
+
+        <!-- Button 5 -->
+        <button class="faq-btn button-spacing" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+            Pourquoi avoir créer Fast'N Friends ?
+            <span class="Plus-icon">+</span>
+        </button>
+        <div class="collapse" id="collapse5">
+            <div class="collapse-content">
+                Car nous voulons, en tant qu'étudiant que ceux-ci puisse faire du co-voiturage et rencontrer des gens tout en conduisant
+            </div>
+        </div>
+    </div>
+</div>
 </section>
 
 <!-- Bloc 6 -->

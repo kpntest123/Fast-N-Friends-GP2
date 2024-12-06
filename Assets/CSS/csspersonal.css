@@ -496,6 +496,47 @@
             font-style: normal;
             margin-bottom: 30px;
           }
+/* Partie FAQ*/
+          .faq-btn {
+            width: 100%;
+                display: flex;
+                justify-content: space-between; 
+                align-items: center; 
+                padding: 12px 20px;
+                border-radius: 20px; 
+                background-color: #ffffff; 
+                color: #6cbbfc;
+                font-size: 16px;
+                font-weight: 500;
+                text-align: left; 
+                border: none;
+                cursor: pointer;
+            }
+            .collapse-container {
+                width: 100%; 
+                max-width: 600px; 
+            }
+    .faq-btn:hover {
+        background-color: #0056b3;
+    }
+    .Plus-icon {
+                font-size: 18px; 
+                font-weight: bold;
+            }
+    
+            .button-spacing {
+                margin-bottom: 15px;
+            }
+    
+            .collapse-content {
+                margin-top: 10px;
+                padding: 15px;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                background-color: #ffffff;
+                margin-bottom: 15px;
+            }
+    
           
           /*Bloc 6 */
           .bloc6 {
