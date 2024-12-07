@@ -50,6 +50,7 @@ if ( is_user_logged_in() ) {
 </div>
 
 <p>Tu veux modifier tes infos ? <a href="<?php echo home_url('/edit-my-profil/'); ?>">Clique-ici !</a></p>
+<p>Ou devenir conducteur en faisant contrôler ton identité ? Clique-ici ! <a href="<?php echo home_url('/become-a-driver/'); ?>">Clique-ici !</a></p>
 
 
 <?php get_footer(); ?>

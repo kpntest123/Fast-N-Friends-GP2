@@ -73,16 +73,16 @@
 
 <?php wp_head(); ?>
 
-<!-- BARRE DE NAV : -->
+    <!-- CECI EST LA BARRE DE NAV :-->
 <nav class="custom-navbar">
     <div class="logo-container">
-    <a id="fast-n-friends" href="<?php echo home_url(); ?>">FAST 'N FRIENDS</a>
+        <a id="fast-n-friends" href="<?php echo home_url(); ?>">FAST 'N FRIENDS</a>
     </div>
-    
+
     <div class="hamburger" id="hamburger-icon">
         <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/hamburger.svg" alt="Menu">
     </div>
-    
+
     <ul class="nav-links" id="nav-links">
         <li>
             <a href="#">
@@ -109,15 +109,12 @@
                     <span>Mon Compte</span>
                 </a>
                 <ul class="dropdown-menu">
-                    
-                <li>
+                    <li>
                         <a href="<?php echo home_url('/my-profil/'); ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/id-card.svg" alt="Profil">
                             Mon profil
                         </a>
                     </li>
-
-
                     <li>
                         <a href="<?php echo home_url('/chat/'); ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/chat.svg" alt="Chat">
@@ -125,19 +122,40 @@
                         </a>
                     </li>
 
-                    
+                    <li>
+                        <a href="">
+                                        <!-- Menu spécifique pour les conducteurs -->
+                                        <?php if (current_user_can('conducteur')) : ?>
+                                            <li><a href="<?php echo home_url('/mes-trajets/'); ?>">Mes trajets</a></li>
+                                        <?php endif; ?>
+                        </a>
+                    </li>
                     <li>
                         <a href="<?php echo wp_logout_url( home_url() ); ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/logout.svg" alt="Déconnexion">
                             Déconnexion
                         </a>
                     </li>
-                    
                 </ul>
             </li>
+
+            <!-- Section spécifique aux admins -->
+            <?php if (current_user_can('manage_site')) : ?>
+                <li><a href="<?php echo home_url('/add-a-event/'); ?>">Ajouts d'événements</a></li>
+            <?php endif; ?>
+
+
+
+            <!-- Section pour les covoitureurs -->
+            <?php if (current_user_can('covoitureur')) : ?>
+                <li><a href="<?php echo home_url('/covoiturage/'); ?>">Covoiturage</a></li>
+            <?php endif; ?>
+            
         <?php endif; ?>
     </ul>
 </nav>
+
+
 
 
 

@@ -1,0 +1,157 @@
+Ici, simplement des notes quand on sera motivé de faire la page de vérification d'identité : 
+
+Page de vérif : 
+
+-------------------------------------------------------------------------------------------------------
+if (!is_user_logged_in()) {
+    echo '<p>Vous devez être connecté pour accéder à cette page.</p>';
+    get_footer();
+    exit;
+}
+
+$current_user = wp_get_current_user(); // Récupération de l'utilisateur connecté
+$error = ''; // Variable pour gérer les erreurs ou succès
+
+// Traitement du formulaire
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_verification'])) {
+    // Vérification des fichiers téléchargés
+    if (isset($_FILES['identity_card']) && isset($_FILES['proof_of_address'])) {
+        $upload_dir = wp_upload_dir(); // Obtenir le chemin des uploads WordPress
+
+        // Sauvegarde des fichiers
+        $identity_card = $_FILES['identity_card'];
+        $proof_of_address = $_FILES['proof_of_address'];
+
+        $identity_card_path = $upload_dir['path'] . '/' . basename($identity_card['name']);
+        $proof_of_address_path = $upload_dir['path'] . '/' . basename($proof_of_address['name']);
+
+        if (move_uploaded_file($identity_card['tmp_name'], $identity_card_path) &&
+            move_uploaded_file($proof_of_address['tmp_name'], $proof_of_address_path)) {
+            
+            // Enregistrement des données dans les métas de l'utilisateur
+            update_user_meta($current_user->ID, 'identity_card_url', $upload_dir['url'] . '/' . basename($identity_card['name']));
+            update_user_meta($current_user->ID, 'proof_of_address_url', $upload_dir['url'] . '/' . basename($proof_of_address['name']));
+
+            $error = '<p class="success">Vos documents ont été envoyés avec succès !</p>';
+        } else {
+            $error = '<p class="error">Une erreur est survenue lors de l\'envoi des fichiers. Veuillez réessayer.</p>';
+        }
+    } else {
+        $error = '<p class="error">Veuillez télécharger les deux documents requis.</p>';
+    }
+}
+?>
+
+<div class="verification-container">
+    <h2>Vérification de votre profil</h2>
+    <p>Veuillez télécharger les documents suivants pour compléter la vérification.</p>
+
+    <?php if (!empty($error)) echo $error; ?>
+
+    <form method="post" enctype="multipart/form-data">
+        <label for="identity_card">Carte d'identité :</label>
+        <input type="file" name="identity_card" id="identity_card" accept="image/*" required>
+        <br><br>
+
+        <label for="proof_of_address">Justificatif de domicile :</label>
+        <input type="file" name="proof_of_address" id="proof_of_address" accept="image/*" required>
+        <br><br>
+
+        <button type="submit" name="submit_verification">Envoyer</button>
+    </form>
+</div>
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+page de functions : 
+--------------------------------------------------------------------------------------------------------------------------------------
+
+    //===> traitement des cartes d'identités, vérifications et enregistrement des images : 
+        function handle_profile_verification_uploads() {
+            if (isset($_POST['submit_verification']) && is_user_logged_in()) {
+                $user_id = get_current_user_id();
+            
+                // Vérification et upload des fichiers
+                $uploads = [];
+                $fields = [
+                    'identity_card' => 'Carte d’identité',
+                    'proof_of_address' => 'Justificatif de domicile'
+                ];
+            
+                foreach ($fields as $field => $label) {
+                    if (!empty($_FILES[$field]['name'])) {
+                        $uploaded_file = $_FILES[$field];
+                        $file_type = wp_check_filetype($uploaded_file['name']);
+            
+                        // Vérifier les types de fichiers autorisés (PDF, JPG, PNG, GIF)
+                        $allowed_types = ['pdf', 'jpg', 'jpeg', 'png', 'gif'];
+                        if (!in_array($file_type['ext'], $allowed_types)) {
+                            wp_die("Le fichier téléchargé pour '$label' n'est pas un type autorisé. Seuls les fichiers PDF et images sont autorisés.");
+                        }
+            
+                        // Gérer l'upload du fichier
+                        $upload = wp_handle_upload($uploaded_file, ['test_form' => false]);
+            
+                        if (isset($upload['file'])) {
+                            $uploads[$field] = $upload['url'];
+                        } else {
+                            wp_die('Erreur lors de l’upload de : ' . $label);
+                        }
+                    }
+                }
+            
+                // Stocker les URLs dans les métadonnées utilisateur
+                if (!empty($uploads)) {
+                    update_user_meta($user_id, 'verification_uploads', $uploads);
+                    wp_redirect(home_url('/my-profil/'));
+                    exit;
+                }
+            }
+        }
+        add_action('init', 'handle_profile_verification_uploads');
+        
+
+                            //==> et puis création d'une section pour voir et avoir accès à tout le bardas : 
+                                function add_verification_page() {
+                                    add_menu_page(
+                                        'Vérifications des utilisateurs',
+                                        'Identité',
+                                        'manage_options',
+                                        'user-verifications',
+                                        'display_verification_requests',
+                                        'dashicons-id', // Icône du menu
+                                        26
+                                    );
+                                }
+                                add_action('admin_menu', 'add_verification_page');
+
+                                // Afficher les demandes de vérification
+                                function display_verification_requests() {
+                                    $users = get_users();
+
+                                    echo '<h1>Demandes de vérification</h1>';
+                                    echo '<table class="widefat fixed" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Utilisateur</th>
+                                                <th>Carte d’identité</th>
+                                                <th>Justificatif de domicile</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>';
+
+                                    foreach ($users as $user) {
+                                        $uploads = get_user_meta($user->ID, 'verification_uploads', true);
+
+                                        if ($uploads) {
+                                            echo '<tr>';
+                                            echo '<td>' . esc_html($user->display_name) . '</td>';
+                                            echo '<td><a href="' . esc_url($uploads['identity_card']) . '" target="_blank">Voir</a></td>';
+                                            echo '<td><a href="' . esc_url($uploads['proof_of_address']) . '" target="_blank">Voir</a></td>';
+                                            echo '</tr>';
+                                        }
+                                    }
+
+                                    echo '</tbody></table>';
+                                }
