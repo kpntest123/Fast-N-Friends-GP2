@@ -21,15 +21,17 @@
 <section class="search-section">
   <div class="search-container">
     <h1>Besoin de te déplacer ?</h1>
-    <p>Que ce soit pour aller étudier ou aller à un event ? ou'r aat the right place !</p>
+    <p>Que ce soit pour aller étudier ou aller à un event, tu es au bon endroit !</p>
     <form class="search-form" action="<?php echo esc_url(get_permalink(get_page_by_path('search-results'))); ?>" method="get">
       <div class="form-group">
         <label for="from">De ?</label>
-        <input type="text" id="from" name="from" placeholder="Entrez votre point de départ" required>
+        <input type="text" id="from" name="from" placeholder="Entrez votre point de départ" required onkeyup="suggestCities(this.value, 'from')">
+        <ul id="from-suggestions" class="suggestions-list"></ul>
       </div>
       <div class="form-group">
         <label for="to">Vers ?</label>
-        <input type="text" id="to" name="to" placeholder="Entrez votre destination" required>
+        <input type="text" id="to" name="to" placeholder="Entrez votre destination" required onkeyup="suggestCities(this.value, 'to')">
+        <ul id="to-suggestions" class="suggestions-list"></ul>
       </div>
       <div class="form-group">
         <label for="people">Pour combien de personnes ?</label>
@@ -44,7 +46,7 @@
     <p class="note">*Malheureusement, n'est disponible que dans 500 grandes villes en Belgique</p>
   </div>
   <div class="image-container">
-    <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/vintage-car.svg" alt="Voiture vintage">
+    <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/vintage-car.svg" alt="Voiture vintage avec un arbre moderne">
   </div>
 </section>
 

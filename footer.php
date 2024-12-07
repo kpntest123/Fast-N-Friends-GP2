@@ -141,43 +141,38 @@
     "Zuienkerke", "Zulte", "Zutendaal", "Zwalm", "Zwevegem", "Zwijndrecht"
 ];
 
- // Fonction générique pour gérer l'autocomplétion
- function setupAutocomplete(inputId, suggestionsId) {
-      const input = document.getElementById(inputId);
-      const suggestionsBox = document.getElementById(suggestionsId);
 
-      input.addEventListener("input", () => {
-        const query = input.value.toLowerCase();
-        suggestionsBox.innerHTML = "";
+// Fonction de suggestions en temps réel
+function suggestCities(inputValue, inputId) {
+  const suggestionsList = document.getElementById(inputId + '-suggestions');
+  
+  // Clear previous suggestions
+  suggestionsList.innerHTML = '';
 
-        if (query.length > 0) {
-          const suggestions = cities.filter(city => 
-            city.toLowerCase().includes(query)
-          ).slice(0, 10); // Limite à 10 suggestions pour une meilleure performance
+  if (inputValue === '') return;
 
-          suggestions.forEach(city => {
-            const suggestionDiv = document.createElement("div");
-            suggestionDiv.textContent = city;
-            suggestionDiv.addEventListener("click", () => {
-              input.value = city;
-              suggestionsBox.innerHTML = "";
-            });
-            suggestionsBox.appendChild(suggestionDiv);
-          });
-        }
-      });
+  // Filtrer les villes correspondant à la valeur entrée
+  const filteredCities = cities.filter(city => city.toLowerCase().startsWith(inputValue.toLowerCase()));
 
-      // Fermer les suggestions si on clique en dehors
-      document.addEventListener("click", (e) => {
-        if (!suggestionsBox.contains(e.target) && e.target !== input) {
-          suggestionsBox.innerHTML = "";
-        }
-      });
-    }
+  // Afficher les suggestions
+  filteredCities.forEach(city => {
+    const suggestionItem = document.createElement('li');
+    suggestionItem.textContent = city;
+    suggestionItem.onclick = function () {
+      document.getElementById(inputId).value = city;
+      suggestionsList.innerHTML = ''; // Clear suggestions after selection
+    };
+    suggestionsList.appendChild(suggestionItem);
+  });
+}
 
-    // Initialiser l'autocomplétion pour les deux champs
-    setupAutocomplete("from-input", "from-suggestions");
-    setupAutocomplete("to-input", "to-suggestions");
+// Fonction pour fermer les suggestions si l'utilisateur clique ailleurs
+document.addEventListener('click', function(e) {
+  if (!e.target.matches('#from, #to')) {
+    document.getElementById('from-suggestions').innerHTML = '';
+    document.getElementById('to-suggestions').innerHTML = '';
+  }
+});
 
 
 

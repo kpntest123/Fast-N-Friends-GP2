@@ -54,7 +54,7 @@ if ( is_user_logged_in() ) {
         }
 
         // Rediriger vers la page de profil après la mise à jour
-        wp_redirect(home_url('/my-profil')); // Ou utiliser get_permalink($profil_page_id) si nécessaire
+        wp_redirect(home_url('/my-profil')); // Ou utiliser get_permalink($profil_page_id) si nécessaire, quand tout sera + avancé ! 
         exit;
     }
 } else {

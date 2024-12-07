@@ -76,7 +76,7 @@
 <!-- BARRE DE NAV : -->
 <nav class="custom-navbar">
     <div class="logo-container">
-        <a id="fast-n-friends" href="<?php echo home_url(); ?>">FAST 'N FRIENDS</a>
+    <a id="fast-n-friends" href="<?php echo home_url(); ?>">FAST 'N FRIENDS</a>
     </div>
     
     <div class="hamburger" id="hamburger-icon">
