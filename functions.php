@@ -184,6 +184,15 @@ function redirect_after_login($redirect_to, $request, $user) {
 }
 add_filter('login_redirect', 'redirect_after_login', 10, 3);
 
+function redirect_if_not_logged_in() {
+    // Vérifie si l'utilisateur est connecté et si la page est "my-profil"
+    if ( !is_user_logged_in() && is_page('my-profil') ) {
+        // Redirige vers la page d'accueil
+        wp_redirect( home_url() ); // Redirection vers l'accueil
+        exit();
+    }
+}
+add_action('template_redirect', 'redirect_if_not_logged_in');
 
 
 

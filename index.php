@@ -22,7 +22,7 @@
   <div class="search-container">
     <h1>Besoin de te déplacer ?</h1>
     <p>Que ce soit pour aller étudier ou aller à un event ? ou'r aat the right place !</p>
-    <form class="search-form">
+    <form class="search-form" action="<?php echo esc_url(get_permalink(get_page_by_path('search-results'))); ?>" method="get">
       <div class="form-group">
         <label for="from">De ?</label>
         <input type="text" id="from" name="from" placeholder="Entrez votre point de départ" required>

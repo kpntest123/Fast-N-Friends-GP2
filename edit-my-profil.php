@@ -41,21 +41,20 @@ if ( is_user_logged_in() ) {
         update_user_meta($current_user->ID, 'about', $new_about);
 
         // Gérer la mise à jour de la photo de profil
-if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] === UPLOAD_ERR_OK) {
-    // Traitement de l'upload de l'image
-    $upload = wp_handle_upload($_FILES['profile_picture'], array('test_form' => false));
-    if (isset($upload['url'])) {
-        // Si le téléchargement réussit, mettre à jour la photo de profil
-        update_user_meta($current_user->ID, 'profile_picture', $upload['url']);
-    } else {
-        // Si l'upload échoue, afficher un message d'erreur
-        echo 'Une erreur est survenue lors du téléchargement de votre photo de profil.';
-    }
-}
-
+        if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] === UPLOAD_ERR_OK) {
+            // Traitement de l'upload de l'image
+            $upload = wp_handle_upload($_FILES['profile_picture'], array('test_form' => false));
+            if (isset($upload['url'])) {
+                // Si le téléchargement réussit, mettre à jour la photo de profil
+                update_user_meta($current_user->ID, 'profile_picture', $upload['url']);
+            } else {
+                // Si l'upload échoue, afficher un message d'erreur
+                echo 'Une erreur est survenue lors du téléchargement de votre photo de profil.';
+            }
+        }
 
         // Rediriger vers la page de profil après la mise à jour
-        wp_redirect(home_url('/profil')); // Remplace avec l'URL de ta page de profil
+        wp_redirect(home_url('/my-profil')); // Ou utiliser get_permalink($profil_page_id) si nécessaire
         exit;
     }
 } else {
@@ -105,6 +104,3 @@ if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] ===
 </div>
 
 <?php get_footer(); ?>
-
-
-<?php get_footer(); 
