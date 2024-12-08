@@ -246,7 +246,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             color: #333;
-            background-color: pink; /* ==> normalement à supprimer, juste pour prévisualiser le contenait de recherche*/
+            background-color: rgb(255, 255, 255); /* ==> normalement à supprimer, juste pour prévisualiser le contenait de recherche*/
             max-width: 600px; /* Augmentation de la largeur maximale du conteneur */
             width: 100%; /* Le conteneur prend toute la largeur disponible */
             padding: 2rem; /* Réduction du padding pour un rendu plus compact */
