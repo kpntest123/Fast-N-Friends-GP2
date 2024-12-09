@@ -197,42 +197,22 @@ add_action('template_redirect', 'redirect_if_not_logged_in');
 
 
 
-/* ICI, CEST POUR LES ROLES SUR LE SITE WDP, PAS OUBLIER QUE YA "3 SITES" DIFF */
-            function add_custom_roles() {
-                // Ajouter un rôle "Admin" (admin du site)
-                add_role('admin', 'Admin', [
-                    'read' => true, // Peut lire le contenu du site
-                    'manage_site' => true, // Capacité personnalisée pour l'admin du site
-                ]);                
+                /* ICI, CEST POUR LES ROLES SUR LE SITE WDP, PAS OUBLIER QUE YA 2 "SITES" DIFF */
+                function add_custom_roles() {
+                    // Ajouter un rôle "Utilisateur Covoitureur" par défaut
+                    add_role('covoitureur', 'Covoitureur', [
+                        'read' => true, // Peut lire les contenus publics
+                        'upload_files' => true, // Permissions de téléversement de fichiers, se sera utile plus tard !
+                        'edit_posts' => false,   // Pas d'accès à l'éditeur d'articles
+                    ]);
+                }
+                add_action('init', 'add_custom_roles');
 
-                // Ajouter un rôle "Utilisateur Standard"
-                add_role('standard_user', 'Utilisateur Standard', [
-                    'read' => true, // Peut lire le contenu du site
-                ]);
-
-                // Ajouter un rôle "Covoitureur"
-                add_role('covoitureur', 'Covoitureur', [
-                    'read' => true, // Peut lire les contenus publics
-                    'upload_files' => false, // Pas de permissions de téléversement
-                    'edit_posts' => false,   // Pas d'accès à l'éditeur d'articles
-                ]);
-
-                // Ajouter un rôle "Conducteur" (si nécessaire)
-                add_role('conducteur', 'Conducteur', [
-                    'read' => true, // Peut lire les contenus publics
-                    'upload_files' => true, // Permissions de téléversement (pour charger des trajets par exemple)
-                    'edit_posts' => true,   // Peut accéder à l'éditeur d'articles
-                ]);
-            }
-            add_action('init', 'add_custom_roles');
-
-            // Définir le rôle par défaut pour les nouveaux utilisateurs
-            function set_default_user_role($user_id) {
-                $user = new WP_User($user_id);
-                $user->set_role('covoitureur'); // Assigne le rôle "Covoitureur" aux nouveaux inscrits
-            }
-            add_action('user_register', 'set_default_user_role');
-
-
+                // Définir le rôle par défaut pour les nouveaux utilisateurs
+                function set_default_user_role($user_id) {
+                    $user = new WP_User($user_id);
+                    $user->set_role('covoitureur'); // Assigne le rôle "Covoitureur" aux nouveaux inscrits
+                }
+                add_action('user_register', 'set_default_user_role');
 
 ?>

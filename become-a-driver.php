@@ -1,5 +1,6 @@
 <?php
-/* Template Name: Devenir un conducteur */ ?>
+/* Template Name: Devenir un conducteur */?>
 
-<?php
-get_footer();
+
+
+<?php get_footer(); ?>
