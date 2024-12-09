@@ -10,16 +10,13 @@
     const hamburgerIcon = document.getElementById('hamburger-icon');
     const navMenu = document.getElementById('nav-links');
     const accountIcon = document.querySelector('.account-icon');
-    const subMenuAccount = document.querySelector('.account-icon .dropdown-menu');
-    const templateDirectoryUri = "<?php echo get_template_directory_uri(); ?>"; // Assurez-vous que cette variable est injectée
+    const templateDirectoryUri = "<?php echo get_template_directory_uri(); ?>";
 
     // Menu Hamburger
     if (hamburgerIcon && navMenu) {
         hamburgerIcon.addEventListener('click', (event) => {
-            // Afficher ou cacher le menu principal
             navMenu.classList.toggle('show');
 
-            // Changer l'icône du menu (hamburger -> close)
             const menuIcon = hamburgerIcon.querySelector('img');
             if (navMenu.classList.contains('show')) {
                 menuIcon.src = `${templateDirectoryUri}/Assets/Img/search.svg`;
@@ -28,23 +25,33 @@
             }
         });
 
-        // Fermer le menu si on clique en dehors
+        // Close menu when clicking outside
         document.addEventListener('click', (event) => {
             if (!navMenu.contains(event.target) && !hamburgerIcon.contains(event.target)) {
                 navMenu.classList.remove('show');
-                hamburgerIcon.querySelector('img').src = `${templateDirectoryUri}/Assets/Img/hambruger_menu.svg`;
+                hamburgerIcon.querySelector('img').src = `${templateDirectoryUri}/Assets/Img/hamburger.svg`;
             }
         });
     }
 
-    // Sous-menu "Mon Compte" (gérer l'ouverture du sous-menu)
-    if (accountIcon && subMenuAccount) {
-        accountIcon.addEventListener('click', (event) => {
-            event.stopPropagation(); // Empêcher de fermer le menu principal immédiatement
-            accountIcon.classList.toggle('show-dropdown'); // Afficher ou masquer le sous-menu
-        });
-});
+    // Account dropdown in mobile menu
+    if (accountIcon) {
+        const accountDropdownToggle = accountIcon.querySelector('.icon-animation');
+        const subMenuAccount = accountIcon.querySelector('.dropdown-menu');
 
+        if (accountDropdownToggle && subMenuAccount) {
+            accountDropdownToggle.addEventListener('click', (event) => {
+                event.stopPropagation();
+                accountIcon.classList.toggle('show-dropdown');
+            });
+
+            // Prevent dropdown from closing when clicking inside
+            subMenuAccount.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+        }
+    }
+});
 
     //Style du calendrier :
     flatpickr("#calendar", {

@@ -140,7 +140,7 @@
                 </ul>
             </li>
 
-            <!-- Section spécifique aux admins ==> a faire fonctionner -->
+            <!-- Section spécifique aux admins ==> a faire fonctionner dans le futur -->
             <?php if (current_user_can('manage_site')) : ?>
                 <li><a href="<?php echo home_url('/add-a-event/'); ?>">Ajouts d'événements</a></li>
             <?php endif; ?>
