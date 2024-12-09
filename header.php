@@ -123,12 +123,13 @@
                     </li>
 
                     <li>
-                        <a href="">
-                                        <!-- Menu spécifique pour les conducteurs -->
-                                        <?php if (current_user_can('conducteur')) : ?>
-                                            <li><a href="<?php echo home_url('/mes-trajets/'); ?>">Mes trajets</a></li>
-                                        <?php endif; ?>
-                        </a>
+                                        <!-- Menu spécifique pour toutes les personnes enregistrés, si clique sur publie run trajet, page de disclaimer disant "toi paq connecté, 
+                                         connecte toi pour ajouter un trajet, pour forcer les gens a se faire un compte vérif !" -->
+                                         <a href="<?php echo home_url('/add-a-traject/'); ?>">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/chat.svg" alt="Chat">
+                                            Publier un trajet
+                                        </a>
+
                     </li>
                     <li>
                         <a href="<?php echo wp_logout_url( home_url() ); ?>">
