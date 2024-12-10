@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast 'N Friends Navbar</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar Styles */
+        .custom-navbar {
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .logo-container #fast-n-friends {
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #4B9BEB;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links img {
+            width: 25px;
+            height: 25px;
+            margin-left: 10px;
+        }
+
+        .btn-primary {
+            background-color: #4B9BEB;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .account-icon {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .account-icon:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu li {
+            list-style: none;
+        }
+
+        .dropdown-menu li a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 10px;
+                z-index: 10;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .account-icon .dropdown-menu {
+                position: static;
+                display: none;
+                width: 100%;
+                box-shadow: none;
+                background: #f9f9f9;
+            }
+
+            .account-icon.show-dropdown .dropdown-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="custom-navbar">
+        <div class="logo-container">
+            <a id="fast-n-friends" href="#">FAST 'N FRIENDS</a>
+        </div>
+
+        <div class="hamburger" id="hamburger-icon">
+            <img src="https://via.placeholder.com/24" alt="Menu">
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li>
+                <a href="#">
+                    Événements partenaires
+                    <img src="https://via.placeholder.com/25" alt="Dropdown">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Rechercher
+                    <img src="https://via.placeholder.com/25" alt="Search">
+                </a>
+            </li>
+
+            <li><a href="#" class="btn-primary">S'inscrire</a></li>
+            <li class="account-icon">
+                <a href="#" class="icon-animation">
+                    <img src="https://via.placeholder.com/25" alt="Mon Compte">
+                    <span>Mon Compte</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Mon profil</a></li>
+                    <li><a href="#">Chat</a></li>
+                    <li><a href="#">Publier un trajet</a></li>
+                    <li><a href="#">Déconnexion</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const navMenu = document.getElementById('nav-links');
+            const accountIcon = document.querySelector('.account-icon');
+
+            if (hamburgerIcon && navMenu) {
+                hamburgerIcon.addEventListener('click', (event) => {
+                    navMenu.classList.toggle('show');
+                });
+
+                document.addEventListener('click', (event) => {
+                    if (!navMenu.contains(event.target) && !hamburgerIcon.contains(event.target)) {
+                        navMenu.classList.remove('show');
+                    }
+                });
+            }
+
+            if (accountIcon) {
+                const accountDropdownToggle = accountIcon.querySelector('.icon-animation');
+                const subMenuAccount = accountIcon.querySelector('.dropdown-menu');
+
+                if (accountDropdownToggle && subMenuAccount) {
+                    accountDropdownToggle.addEventListener('click', (event) => {
+                        event.stopPropagation();
+                        accountIcon.classList.toggle('show-dropdown');
+                    });
+
+                    subMenuAccount.addEventListener('click', (event) => {
+                        event.stopPropagation();
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

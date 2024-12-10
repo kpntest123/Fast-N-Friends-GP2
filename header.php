@@ -20,6 +20,12 @@
         <title>404 t'es paumé</title>
         <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
 
+    <!--MARCHE PAS, SI FONCTIONNE TOUJOURS PAS A LA FIN, PAGE D4ACCUEIL MIGRÉ SUR /home-->
+    <?php elseif (is_page('https://fastnfriends.emu.isfsc.be/')) : ?>
+        <title>Accueil - FNF</title>
+        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
+
+
 
         
                 <!-- VIERGE A PARTIR DICI -->
@@ -140,17 +146,11 @@
                 </ul>
             </li>
 
-            <!-- Section spécifique aux admins -->
+            <!-- Section spécifique aux admins ==> a faire fonctionner dans le futur -->
             <?php if (current_user_can('manage_site')) : ?>
                 <li><a href="<?php echo home_url('/add-a-event/'); ?>">Ajouts d'événements</a></li>
             <?php endif; ?>
 
-
-
-            <!-- Section pour les covoitureurs -->
-            <?php if (current_user_can('covoitureur')) : ?>
-                <li><a href="<?php echo home_url('/covoiturage/'); ?>">Covoiturage</a></li>
-            <?php endif; ?>
             
         <?php endif; ?>
     </ul>
