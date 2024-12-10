@@ -38,8 +38,11 @@
         <input type="number" id="people" name="people" min="1" required>
       </div>
       <div class="form-group">
-        <label for="date">Quand ?</label>
-        <input type="date" id="date" name="date" required>
+          <input type="text" id="date" name="date" class="form-control" required>
+              <span class="input-group-text">
+                <i class="fa fa-calendar"></i>
+              </span>
+    </div>
       </div>
       <button type="submit" class="search-button">Chercher !</button>
     </form>
