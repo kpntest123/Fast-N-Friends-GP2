@@ -147,30 +147,31 @@
         
         /* Styles des boutons */
         .header-box {
-            text-align: center;
-            margin: 10px 0;
-        }
+    text-align: center;
+    margin: 10px 0;
+}
 
-        .header-box button {
-            background-color: white;
-            border: 2px solid #3d3db3;
-            border-radius: 10px;
-            padding: 15px 20px;
-            font-size: 1.2rem;
-            color: #3d3db3;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            width: 100%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+.header-box button {
+    background-color: white;
+    border: 2px solid #3d3db3;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    color: #3d3db3;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        .header-box button:hover {
-            background-color: #3d3db3;
-            color: white;
-            border-color: white;
-            transform: scale(1.05);
-        }
-        .event-container {
+.header-box button:hover {
+    background-color: #3d3db3;
+    color: white;
+    border-color: white;
+    transform: scale(1.05);
+}
+
+.event-container {
     display: flex; 
     justify-content: space-around; 
     align-items: stretch; 
@@ -217,7 +218,6 @@
     border-radius: 8px;
     margin-bottom: 10px;
     height: 150px;
-    
 }
 
 .event-info h4 {
@@ -237,11 +237,40 @@
     display: block;
     margin-top: 5px;
 }
+
 .active-filter {
     font-weight: bold;
     background-color: #4949FF;
     color: white;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .event-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .event-card {
+        flex-basis: calc(50% - 20px); /* Two cards per row with gap */
+        max-width: none; /* Remove max-width constraint */
+        min-width: 150px; /* Ensure minimum width */
+        margin: 0; /* Remove any default margins */
+    }
+}
+
+/* Additional tweaks for very small screens */
+@media (max-width: 480px) {
+    .event-card {
+        flex-basis: 100%; /* Single column on very small screens */
+        min-width: 100%; /* Ensure full width on small screens */
+    }
+}
+
     </style>
 </head>
 
