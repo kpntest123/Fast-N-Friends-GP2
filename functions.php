@@ -64,6 +64,12 @@ function enqueue_custom_styles() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
+            //Lier le css pour le footer ==> car marchait pas le lien en haut:
+            function enqueue_footer_styles() {
+                wp_enqueue_style('footer-style', get_template_directory_uri() . '/Assets/CSS/csspersonal.css');
+            }
+            add_action('wp_enqueue_scripts', 'enqueue_footer_styles');
+
 //Lier le jquery
 function add_jquery() {
     wp_deregister_script('jquery');
@@ -71,27 +77,6 @@ function add_jquery() {
     wp_enqueue_script('jquery');
 }
 add_action('wp_enqueue_scripts', 'add_jquery');
-
-//Pour pas qu'un maroufle non administrateur ne se connecte et aille sur la version admin :
-function prevent_admin_access_for_non_admins() {
-    if (is_user_logged_in() && !current_user_can('administrator')) {
-        wp_redirect(home_url());  // Redirige vers la page d'accueil
-        exit;
-    }
-}
-add_action('admin_init', 'prevent_admin_access_for_non_admins');
-
-                    //Ici, le reiriger vers une autre page direcetmment, a tester plus tard
-                    function restrict_wp_admin_access() {
-                        if (is_user_logged_in() && !current_user_can('administrator') && is_admin()) {
-                            wp_redirect(home_url()); // Redirige l'utilisateur vers la page d'accueil (ou une autre page)
-                            exit;
-                        }
-                    }
-                    add_action('admin_init', 'restrict_wp_admin_access');
-
-
-
 
 
 /* POUR LA PAGE DE CREATION DE TRAJET */
@@ -171,28 +156,49 @@ function handle_user_login() {
 }
 add_action('init', 'handle_user_login');
 
-function redirect_after_login($redirect_to, $request, $user) {
-    // Vérifie si l'utilisateur est authentifié
-    if (isset($user->roles) && is_array($user->roles)) {
-        if (in_array('administrator', $user->roles)) {
-            return admin_url(); // Redirige les administrateurs vers le tableau de bord
-        } else {
-            return home_url('/mon-compte'); // Redirige les utilisateurs normaux
-        }
-    }
-    return $redirect_to;
-}
-add_filter('login_redirect', 'redirect_after_login', 10, 3);
 
-function redirect_if_not_logged_in() {
-    // Vérifie si l'utilisateur est connecté et si la page est "my-profil"
-    if ( !is_user_logged_in() && is_page('my-profil') ) {
-        // Redirige vers la page d'accueil
-        wp_redirect( home_url() ); // Redirection vers l'accueil
-        exit();
-    }
-}
-add_action('template_redirect', 'redirect_if_not_logged_in');
+
+//Ici, je pense que c'est l'accès a WP-ADMIN        
+function redirect_after_login($redirect_to, $request, $user) {
+            // Vérifie si l'utilisateur est authentifié
+            if (isset($user->roles) && is_array($user->roles)) {
+                if (in_array('administrator', $user->roles)) {
+                    return admin_url(); // Redirige les administrateurs vers le tableau de bord
+                } else {
+                    return home_url('/mon-compte'); // Redirige les utilisateurs normaux
+                }
+            }
+            return $redirect_to;
+        }
+        add_filter('login_redirect', 'redirect_after_login', 10, 3);
+
+        function redirect_if_not_logged_in() {
+            // Vérifie si l'utilisateur est connecté et si la page est "my-profil"
+            if ( !is_user_logged_in() && is_page('my-profil') ) {
+                // Redirige vers la page d'accueil
+                wp_redirect( home_url() ); // Redirection vers l'accueil
+                exit();
+            }
+        }
+        add_action('template_redirect', 'redirect_if_not_logged_in');
+
+                    //Pour pas qu'un maroufle non administrateur ne se connecte et aille sur la version admin :
+            function prevent_admin_access_for_non_admins() {
+                if (is_user_logged_in() && !current_user_can('administrator')) {
+                    wp_redirect(home_url());  // Redirige vers la page d'accueil
+                    exit;
+                }
+            }
+            add_action('admin_init', 'prevent_admin_access_for_non_admins');
+
+                                //Ici, le reiriger vers une autre page direcetmment, a tester plus tard
+                                function restrict_wp_admin_access() {
+                                    if (is_user_logged_in() && !current_user_can('administrator') && is_admin()) {
+                                        wp_redirect(home_url()); // Redirige l'utilisateur vers la page d'accueil (ou une autre page)
+                                        exit;
+                                    }
+                                }
+                                add_action('admin_init', 'restrict_wp_admin_access');
 
 
 
@@ -214,5 +220,18 @@ add_action('template_redirect', 'redirect_if_not_logged_in');
                     $user->set_role('covoitureur'); // Assigne le rôle "Covoitureur" aux nouveaux inscrits
                 }
                 add_action('user_register', 'set_default_user_role');
+
+
+
+        //Ici, simplement pour fair een sorte que https://fastnfriends.emu.isfsc.be/ ne soit pas accessible mais redirection sur /home 
+        add_action('template_redirect', 'redirect_home_to_specific_page');
+
+            function redirect_home_to_specific_page() {
+            // Vérifie uniquement si on est sur la page d'accueil
+            if (is_front_page()) {
+                wp_redirect(home_url('/home/')); // Redirige vers la page /home
+                exit;
+                }
+            }
 
 ?>

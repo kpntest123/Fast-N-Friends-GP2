@@ -19,9 +19,7 @@
     <?php elseif (is_page('404')) : ?> <!-- VERIF LURL DE LA PAGE 404, ce sont les détails qui font les grandes choses -->
         <title>404 t'es paumé</title>
         <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
-
-    <!--MARCHE PAS, SI FONCTIONNE TOUJOURS PAS A LA FIN, PAGE D4ACCUEIL MIGRÉ SUR /home-->
-    <?php elseif (is_page('https://fastnfriends.emu.isfsc.be/')) : ?>
+    <?php elseif (is_page('home')) : ?>
         <title>Accueil - FNF</title>
         <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
 
