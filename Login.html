@@ -160,16 +160,19 @@
     }
 
     /* Section droite (image) */
-    .image-section {
-      background: url() center/cover no-repeat; /* Image d'exemple */
-    }
+    .image-section img {
+    width: 80%; 
+    height: 80%; 
+    object-fit: cover;
+    object-position: center; 
+}
 
-    @media (max-width: 768px) {
-      /* Mode responsive : les colonnes deviennent des lignes */
-      .info-section, .image-section {
-        height: 250px;
-      }
+
+@media (max-width: 768px) {
+    .image-section img {
+        object-fit: contain; 
     }
+}
       </style>
     </head>
     <body>
