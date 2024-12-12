@@ -1,7 +1,32 @@
 <?php
 /* Template Name: Page de connexion */
 get_header();
+?>
 
+<?php
+// Login logic
+if (isset($_POST['login_submit']) && wp_verify_nonce($_POST['user_login_nonce'], 'user_login_action')) {
+    $username = sanitize_user($_POST['username']);
+    $password = $_POST['password'];
+    $remember = isset($_POST['remember']) ? true : false;
+
+    $login_data = array(
+        'user_login'    => $username,
+        'user_password' => $password,
+        'remember'      => $remember
+    );
+
+    $user = wp_signon($login_data, false);
+
+    if (is_wp_error($user)) {
+        $error_message = urlencode($user->get_error_message());
+        wp_redirect(add_query_arg('login_error', $error_message, get_permalink()));
+        exit;
+    } else {
+        wp_redirect(home_url());
+        exit;
+    }
+}
 ?>
 
 <?php if (isset($_GET['login_error'])) : ?>
@@ -10,50 +35,41 @@ get_header();
     </div>
 <?php endif; ?>
 
+<div style="background-color: #3d3db3; text-align: center; padding: 25px;">
+    <h1 class="text-white">Connecte-toi</h1>
+    <p class="text-white">pour accéder à ton compte</p>
+</div>
+<br><br>
 
-
-
-<!--
-<div style="background-color: #3d3db3; ;text-align: center;padding: 25px;">
-        <h1> Connecte-toi </h1>
-        <p>pour accéder à ton compte</p>
-        </div>
-        <br><br>
--->
-
-        <form action="" method="POST">
-    <?php wp_nonce_field('user_login_action', 'user_login_nonce'); ?>
-    <div class="container d-flex justify-content-center">
-        <div class="row w-50">
-            <div class="col-12 mb-3">
-                <label for="username" class="form-label">Adresse email</label>
-                <input type="text" name="username" class="form-control" id="username" placeholder="johndoe@gmail.com" style="border: 2px solid #3d3db3; border-radius: 8px;" required>
-            </div>
-
-            <div class="col-12 mb-3">
-                <label for="password" class="form-label">Mot de passe</label>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" style="border: 2px solid #3d3db3; border-radius: 8px;" required>
-            </div>
-            
-            <div class="col-12 mb-3">
+<div class="container login-container">
+    <div class="row g-0">
+        <div class="col-md-6 info-section d-flex flex-column justify-content-center">
+            <form action="" method="POST">
+                <?php wp_nonce_field('user_login_action', 'user_login_nonce'); ?>
+                
+                <input type="text" name="username" placeholder="Nom d'utilisateur" required>
+                <input type="password" name="password" placeholder="Mot de passe" required>
+                
                 <div class="form-check">
                     <input type="checkbox" name="remember" class="form-check-input" id="remember">
                     <label class="form-check-label" for="remember">Se souvenir de moi</label>
                 </div>
-            </div>
-
-            <div class="col-12 mb-3">
-                <a href="<?php echo wp_lostpassword_url(); ?>"><i>Mot de passe oublié ?</i></a>
-            </div>
-
-            <div class="col-12">
-                <button type="submit" name="login_submit" class="btn btn-primary w-100">Connecte-toi</button>
-            </div>
+                
+                <a href="<?php echo wp_lostpassword_url(); ?>" class="mb-3"><i>Mot de passe oublié ?</i></a>
+                
+                <button type="submit" name="login_submit" class="btn btn-primary w-100">Se connecter</button>
+            </form>
+        </div>
+        
+        <div class="col-md-6 image-section">
+            <?php 
+            $image_url = get_template_directory_uri() . '/Assets/Img/connexion-securisee.png';
+            ?>
+            <img src="<?php echo esc_url($image_url); ?>" alt="Femme pointant un ordinateur" class="img-fluid">
         </div>
     </div>
-</form>
-
-        
+</div>
 
 <?php
 get_footer();
+?>

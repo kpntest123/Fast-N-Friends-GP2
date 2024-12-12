@@ -19,16 +19,18 @@ function styles_scripts() {
     // Lier le CSS Bootstrap depuis un CDN
     wp_enqueue_style(
         'bootstrap',
-        'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'
+        'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
+        [],
+        '5.3.3'
     );
 
     // Lier le JS Bootstrap depuis un CDN
     wp_enqueue_script(
         'bootstrap-bundle',
         'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
-        false,  // Pas de dépendance spécifique
-        null,   // Pas de version spécifique
-        true    // Charger dans le footer
+        ['jquery'],  // Ajouter jQuery comme dépendance
+        '5.3.3',    // Ajouter la version
+        true        // Charger dans le footer
     );
 
     // Lier ton fichier JS local
@@ -36,32 +38,42 @@ function styles_scripts() {
         'app-js',
         get_template_directory_uri() . '/Assets/js/thejs.js',
         ['bootstrap-bundle'], // Dépend de Bootstrap
-        null,   // Pas de version spécifique
+        filemtime(get_template_directory() . '/Assets/js/thejs.js'), // Version basée sur la date de modification
         true    // Charger dans le footer
     );
+
+    // Lier Anime.js
+    wp_enqueue_script(
+        'anime-master',
+        get_template_directory_uri() . '/Assets/anime-master/lib/anime.min.js', 
+        [], 
+        '3.2.2', 
+        true 
+    );
 }
-
-wp_enqueue_script(
-    'anime-master',
-    get_template_directory_uri() . 'Assets\anime-master\lib\anime.min.js', 
-    [], 
-    '3.2.2', 
-    true 
-);
-
-
 add_action('wp_enqueue_scripts', 'styles_scripts');
 
-//Lier notre CSS personnalisé :
+// Fonction pour lier les styles personnalisés
 function enqueue_custom_styles() {
-    // Charger le fichier CSS principa
+    // Charger le fichier CSS principal
     wp_enqueue_style(
         'csspersonal', // Nom unique pour le fichier CSS
         get_template_directory_uri() . '/Assets/CSS/csspersonal.css', // Chemin vers le fichier
-        array(), // Dépendances (s'il y a un fichier CSS à charger avant)
-        null // Pas de version (ou utilise `filemtime()` pour auto-versionner)
+        ['bootstrap'], // Dépendance de Bootstrap pour s'assurer qu'il est chargé après
+        filemtime(get_template_directory() . '/Assets/CSS/csspersonal.css') // Version basée sur la date de modification
     );
+
+    // Ajouter le CSS spécifique à la page de connexion
+    if (is_page_template('page-connexion.php')) {
+        wp_enqueue_style(
+            'fnf-login-styles', 
+            get_template_directory_uri() . '/Assets/css/login.css', 
+            ['bootstrap', 'csspersonal'], 
+            filemtime(get_template_directory() . '/Assets/css/login.css')
+        );
+    }
 }
+add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
             //Lier le css pour le footer ==> car marchait pas le lien en haut:
