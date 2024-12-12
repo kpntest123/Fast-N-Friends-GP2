@@ -199,7 +199,7 @@ if (!e.target.matches('#from, #to')) {
      const targetNumber = 9645;
      const element = document.getElementById("userCount");
      let currentNumber = 0;
-     const increment = Math.ceil(targetNumber / 10); // vitesse de progression ici   
+     const increment = Math.ceil(targetNumber / 3); // vitesse de progression ici   
      const interval = setInterval(() => {
        currentNumber += increment;
        if (currentNumber >= targetNumber) {
@@ -207,7 +207,7 @@ if (!e.target.matches('#from, #to')) {
          clearInterval(interval);
        }
        element.textContent = currentNumber;
-     }, 10); // Ajuste la vitesse de l'animation en ms ici
+     }, 3); // Ajuste la vitesse de l'animation en ms ici
    });  
 
    //Animation des cards dans accueil/
