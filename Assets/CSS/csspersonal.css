@@ -938,3 +938,115 @@
       width: 100%;
   }
 }
+
+/* Page profil */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  
+}
+
+/* Image de profil */
+.profile-picture {
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  margin: 20px 0;
+}
+
+/* Section rôle (Conducteur/Passager) */
+.role-section {
+  margin: 20px 0;
+  color: #4949FF;
+}
+
+/* Section d'informations principales */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.info-section p {
+  margin: 5px 0;
+  
+}
+
+/* Section Téléphone / Mail */
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 600px;
+  margin: 10px 0;
+}
+
+.contact-section p {
+  flex: 1;
+  text-align: center;
+  color: #3d3db3;
+}
+
+/* Section Trajets */
+.trips-section {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 600px;
+  margin-top: 30px;
+}
+
+.trips-section p {
+  flex: 1;
+  text-align: center;
+  color:#3d3db3 ;
+}
+
+.box {
+background-color: white;
+border-radius: 15px;
+width: 60%;
+height: 350px;
+display: flex; 
+justify-content: center; 
+align-items: center; 
+padding: 40px; 
+}
+
+.backgroundbox {
+display: flex; 
+flex-direction: column; 
+justify-content: center; 
+align-items: center; 
+background-color: rgba(173, 216, 230, 0.5); 
+margin: 0 auto;
+width: 100%;
+max-width: 1330px;
+height: 600px;
+border-radius: 20px; 
+padding: 5px; 
+}
+
+.profil-h3 {
+color: #333; 
+font-size: 1.5rem; 
+margin-bottom: 20px; 
+display: flex;
+justify-content: center;
+}
+.highlight {
+color: green; 
+font-weight: bold; 
+}
+
+.actions-section {
+  display: flex;
+  justify-content: center;
+  color: #007BFF;
+}

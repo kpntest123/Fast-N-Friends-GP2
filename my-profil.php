@@ -30,27 +30,44 @@ if ( is_user_logged_in() ) {
 ?>
 
 <!-- Contenu de la page de profil -->
-<div class="profil-info">
-    <h2>Mon Profil</h2>
-
-    <?php if ($profile_picture): ?>
-        <img src="<?php echo esc_url($profile_picture); ?>" alt="Photo de profil" />
-    <?php endif; ?>
-
-    <p><strong>Nom d'utilisateur :</strong> <?php echo esc_html($current_user->user_login); ?></p>
-    <p><strong>Nom :</strong> <?php echo esc_html($firstname); ?></p>
-    <p><strong>Prénom :</strong> <?php echo esc_html($lastname); ?></p>
-    <p><strong>Date de naissance :</strong> <?php echo esc_html($birthdate); ?></p>
-    <p><strong>Genre :</strong> <?php echo esc_html($gender); ?></p>
-    <p><strong>Ville :</strong> <?php echo esc_html($city); ?></p>
-    <p><strong>Ecole :</strong> <?php echo esc_html($school); ?></p>
-    <p><strong>Email :</strong> <?php echo esc_html($current_user->user_email); ?></p>
-    <p><strong>Numéro de téléphone :</strong> <?php echo esc_html($phone); ?></p>
-    <p><strong>À propos de toi :</strong> <?php echo nl2br(esc_html($about)); ?></p>
+<div style="background-color: #3d3db3; text-align: center; padding: 70px;">
+    <!-- Couleur de fond personnalisée pour l'en-tête -->
 </div>
 
-<p>Tu veux modifier tes infos ? <a href="<?php echo home_url('/edit-my-profil/'); ?>">Clique-ici !</a></p>
-<p>Ou devenir conducteur en faisant contrôler ton identité ? Clique-ici ! <a href="<?php echo home_url('/become-a-driver/'); ?>">Clique-ici !</a></p>
+<div class="profile-container">
+    <h1><?php echo esc_html($firstname . ' ' . $lastname); ?></h1>
+    <img src="<?php echo esc_url($profile_picture); ?>" alt="Votre photo de profil" class="profile-picture">
+
+    <div class="role-section">
+        <h2><?php echo esc_html($gender); ?> - Conducteur/Passager</h2>
+    </div>
+
+    <div class="info-section">
+        <p>A rejoint le : <span class="highlight">[date d'inscription]</span></p>
+        <p>Connecté il y a : <span class="highlight">[nbre heure/jour]</span></p>
+    </div>
+
+    <div class="contact-section">
+        <p><strong>Téléphone :</strong> <?php echo esc_html($phone); ?></p>
+        <p><strong>École :</strong> <?php echo esc_html($school); ?></p>
+    </div>
+</div>
+
+<div>
+    <div class="profil-h3">
+        <h3>À propos de moi</h3>
+    </div>
+    <div class="backgroundbox">
+        <div class="box">
+            <p><?php echo nl2br(esc_html($about)); ?></p>
+        </div>
+    </div>
+</div>
+
+<div class="actions-section">
+    <p>Modifier vos infos ? <a href="<?php echo home_url('/edit-my-profil/'); ?>">C'est par ici !</a></p>
+    <p>Devenir conducteur ? <a href="<?php echo home_url('/become-a-driver/'); ?>">Clique ici !</a></p>
+</div>
 
 
 <?php get_footer(); ?>
