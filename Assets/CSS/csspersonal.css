@@ -1237,3 +1237,124 @@ font-weight: bold;
       .edit-info-event-section {
           margin-bottom: 40px;
       }
+
+/* Event-partner */
+      .header-box button {
+        background-color: white;
+        border: 2px solid #3d3db3;
+        border-radius: 10px;
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        color: #3d3db3;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .header-box button:hover {
+        background-color: #3d3db3;
+        color: white;
+        border-color: white;
+        transform: scale(1.05);
+    }
+    
+    .event-container {
+        display: flex; 
+        justify-content: space-around; 
+        align-items: stretch; 
+        flex-wrap: wrap; 
+        gap: 20px; 
+        margin: 20px auto;
+        max-width: 1200px; 
+        padding: 10px;
+    }
+    
+    .event-card {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+        flex: 1; 
+        max-width: 250px; 
+        min-width: 200px; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .event-card .event-tag {
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+        background-color: #4949ff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .event-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .placeholder-box {
+        background-color: #d3d3d3;
+        color: #555;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        height: 150px;
+    }
+    
+    .event-info h4 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    .event-info p {
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+    
+    .event-info .event-date,
+    .event-info .event-location {
+        font-size: 0.8rem;
+        display: block;
+        margin-top: 5px;
+    }
+    
+    .active-filter {
+        font-weight: bold;
+        background-color: #4949FF;
+        color: white;
+    }
+    
+    
+    @media (max-width: 768px) {
+        .event-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            max-width: 100%;
+        }
+    
+        .event-card {
+            flex-basis: calc(50% - 20px); 
+            max-width: none; 
+            min-width: 150px; 
+            margin: 0; 
+        }
+    }
+    
+    
+    @media (max-width: 480px) {
+        .event-card {
+            flex-basis: 100%; 
+            min-width: 100%; 
+        }
+    }
