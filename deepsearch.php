@@ -138,20 +138,31 @@ get_header();?>
 
 
   <!-- Bouton "Plus de filtres" ==> a faire fonctionner -->
-<button id="more-filters" onclick="toggleFilters()">Plus de filtres</button>
+ <!-- Bouton pour ouvrir la page de filtres -->
+ <button id="openFilters">Plus de filtres</button>
 
-<!-- Section de filtres cachée, a faire fonctionner,...-->
-<div id="filters" class="filters-container" style="display: none;">
-    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 1</button>
-    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 2</button>
-    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 3</button>
-    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 4</button>
-    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 5</button>
-    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 6</button>
-    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 7</button>
-    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 8</button>
-    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 9</button>
-    <button class="filter-btn" onclick="toggleFilter(this)">Lorem 10</button>
+<!-- Overlay pour la page de filtres -->
+<div class="filter-overlay hidden" id="filterOverlay">
+    <div class="filter-modal">
+        <div class="filter-header">
+            <h2>Comment voyagez-vous ?</h2>
+            <button class="close-btn" id="closeModal">&times;</button>
+        </div>
+        <div class="filter-body">
+            <h3>Type d'hébergement</h3>
+            <div class="filter-options">
+                <label><input type="checkbox"> Tente</label>
+                <label><input type="checkbox"> Caravane</label>
+                <label><input type="checkbox"> Camping-car</label>
+                <label><input type="checkbox"> Van</label>
+                <label><input type="checkbox"> Tente de toit</label>
+            </div>
+            <!-- Ajoutez plus de filtres si nécessaire -->
+        </div>
+        <div class="filter-footer">
+            <button class="search-btn">Rechercher</button>
+        </div>
+    </div>
 </div>
   
 

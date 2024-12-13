@@ -247,3 +247,29 @@ if (!e.target.matches('#from, #to')) {
       document.querySelectorAll('.fond-card-1, .fond-card-1-miroir').forEach(card => {
           observer.observe(card);
       });
+
+
+
+      //fonction pour le + de filtres de "deep-search"
+// Sélection des éléments
+const openFilters = document.getElementById("openFilters");
+const filterOverlay = document.getElementById("filterOverlay");
+const closeModal = document.getElementById("closeModal");
+
+// Fonction pour ouvrir le modal
+openFilters.addEventListener("click", () => {
+    filterOverlay.classList.remove("hidden");
+});
+
+// Fonction pour fermer le modal
+closeModal.addEventListener("click", () => {
+    filterOverlay.classList.add("hidden");
+});
+
+// Fermer le modal si l'utilisateur clique en dehors du contenu
+filterOverlay.addEventListener("click", (event) => {
+    if (event.target === filterOverlay) {
+        filterOverlay.classList.add("hidden");
+    }
+});
+

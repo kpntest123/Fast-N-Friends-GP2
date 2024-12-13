@@ -732,6 +732,92 @@
               text-align: left; /* Alignement à gauche */
             }
 
+      /* STYLE POUR LA PAGE DE recherches profondes ==> same base que sur l'accueil, mais quelques ajouts / deep search*/
+      /* Overlay */
+.filter-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Masquer par défaut */
+.hidden {
+  display: none;
+}
+
+/* Modal */
+.filter-modal {
+  background-color: white;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* En-tête */
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.filter-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Corps */
+.filter-body {
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.filter-options label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Pied de page */
+.filter-footer {
+  padding: 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+}
+
+.search-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
 /* STYLE POUR LA PAGE DE VERIF D'IDENTITE ==> become-a-driver*/
 .verif-page-container {
   display: flex;
