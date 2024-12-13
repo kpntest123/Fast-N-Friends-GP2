@@ -32,24 +32,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
 }
 ?>
 
-<h2>Ajouter un trajet</h2>
-<form method="POST">
-    <label>De :</label>
-    <input type="text" name="from" required />
+<div style="background-color: #3d3db3; text-align: center; padding: 25px;">
+    <h1>Ajoute un trajet</h1>
+</div>
 
-    <label>Vers :</label>
-    <input type="text" name="to" required />
+<div class="AAT-form-container" id="AAT-form-container">
+    <div class="AAT-header" id="AAT-header">
+        <h1 id="AAT-title">Ajouter un trajet</h1>
+    </div>
+    <form method="POST" id="AAT-form">
+        <label for="from" class="AAT-label" id="AAT-label-from">De :</label>
+        <input type="text" id="AAT-from" name="from" class="AAT-input" required />
 
-    <label>Cmb personnes :</label>
-    <input type="number" name="people" required />
+        <label for="to" class="AAT-label" id="AAT-label-to">Vers :</label>
+        <input type="text" id="AAT-to" name="to" class="AAT-input" required />
 
-    <label>Date :</label>
-    <input type="date" name="date" required />
+        <label for="people" class="AAT-label" id="AAT-label-people">Places disponibles :</label>
+        <input type="number" id="AAT-people" name="people" class="AAT-input" required />
 
-    <label>Description :</label>
-    <textarea name="description" rows="4"></textarea>
+        <label for="date" class="AAT-label" id="AAT-label-date">Date :</label>
+        <input type="date" id="AAT-date" name="date" class="AAT-input" required />
 
-    <button type="submit" name="submit_trajet">Créer le trajet</button>
-</form>
+        <label for="description" class="AAT-label" id="AAT-label-description">Description :</label>
+        <textarea id="AAT-description" name="description" class="AAT-input" rows="4"></textarea>
+
+        <button type="submit" name="submit_trajet" id="AAT-submit" class="AAT-button">Ajouter un trajet</button>
+    </form>
+</div>
 
 <?php get_footer(); ?>
