@@ -58,7 +58,7 @@ if ( is_user_logged_in() ) {
     <div class="info-section">
     <p>A rejoint le : <span class="highlight"><?php echo date_i18n('d F Y', strtotime($current_user->user_registered)); ?></span></p>
 
-<!-- Récupération de l'heure de connexion -->
+<!-- Récupération de l'heure de connexion, basique, froid mais 100000% fonctionnel ! -->
 <p>Dernière connexion : 
         <span class="highlight">
             <?php
