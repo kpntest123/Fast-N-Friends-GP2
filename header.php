@@ -140,7 +140,7 @@
                                         -->
                                         <?php if (current_user_can('conducteur')): ?>
                                             <a href="<?php echo home_url('/add-a-traject/'); ?>">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/chat.svg" alt="Chat">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/add-something.svg" alt="Chat">
                                                 Publier un trajet
                                             </a>
                                         <?php endif; ?>
