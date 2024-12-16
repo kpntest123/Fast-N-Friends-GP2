@@ -105,149 +105,119 @@ const cities = [
 
     <!-- Script filtres -->
 
-    const events = [
-{ name: "Fête du vin", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", date: "15/01/2025", city: "Liège", tag: "Fête" },
-{ name: "Anima à Flagey", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", date: "16/01/2025", city: "Bruxelles", tag: "Festival" },
-{ name: "JardinExpo", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", date: "18/01/2025", city: "Liège", tag: "Expo" },
-{ name: "Grand Feu de bouge", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", date: "23/01/2025", city: "Namur", tag: "Fête" },
-{ name: "Belgique vs France", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", date: "24/01/2025", city: "Bruxelles", tag: "Sport" },
-{ name: "Bal de Charleroi", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", date: "25/01/2025", city: "Charleroi", tag: "Bal" },
-{ name: "Concert de Jul", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", date: "27/01/2025", city: "Genk", tag: "Concert" },
-{ name: "Saint Glinglin", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", date: "30/01/2025", city: "Anvers", tag: "Fête" },
-{ name: "Diable Rouge vs Anderlech", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", date: "01/02/2025", city: "Liège", tag: "Sport" },
-{ name: "Salon de l'auto", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", date: "03/02/2025", city: "Bruxelles", tag: "Expo" },
-{ name: "Bal de Mouscron", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", date: "05/02/2025", city: "Mouscron", tag: "Bal" },
-{ name: "Festival brassicole", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", date: "05/02/2025", city: "Tournai", tag: "Festival" }
-];
-
-const eventContainer = document.querySelector(".event-container");
-
-function renderEvents(filteredEvents) {
-eventContainer.innerHTML = "";
-
-filteredEvents.forEach(event => {
-    const eventCard = `
-    <div class="event-card">
-        <div class="placeholder-box">${event.date} - ${event.city}</div>
-        <div class="event-tag">${event.tag}</div>
-        <div class="event-info">
-            <h4>${event.name}</h4>
-            <p>${event.description}</p>
-        </div>
-    </div>
-    `;
-    
-    eventContainer.innerHTML += eventCard;
-});
-}
-renderEvents(events);
-
-let selectedCity = "";
+    let selectedCity = "";
 let selectedTag = "";
 let selectedDate = "";
 
-
 document.querySelectorAll("#cityDropdown .dropdown-item").forEach(item => {
-item.addEventListener("click", () => {
-    selectedCity = item.textContent;
-    filterEvents();
-    updateActiveFilter(
-        document.querySelectorAll("#cityDropdown .dropdown-item"), 
-        item.textContent
-    );
+    item.addEventListener("click", () => {
+        selectedCity = item.textContent;
+        filterEvents();
+        updateActiveFilter(document.querySelectorAll("#cityDropdown .dropdown-item"), item.textContent);
+    });
 });
-});
-
 
 document.querySelectorAll("#tagDropdown .dropdown-menu .dropdown-item").forEach(item => {
-item.addEventListener("click", (e) => {
-    e.preventDefault(); 
-    selectedTag = item.textContent.trim();
-    filterEvents();
-    updateActiveFilter(
-        document.querySelectorAll("#tagDropdown .dropdown-menu .dropdown-item"), 
-        item.textContent.trim()
-    );
+    item.addEventListener("click", (e) => {
+        e.preventDefault(); 
+        selectedTag = item.textContent.trim();
+        filterEvents();
+        updateActiveFilter(document.querySelectorAll("#tagDropdown .dropdown-menu .dropdown-item"), item.textContent.trim());
+    });
 });
-});
-const tagItems = document.querySelectorAll('ul[aria-labelledby="dropdownMenuButton"] .dropdown-item');
-
-tagItems.forEach(item => {
-item.addEventListener('click', (e) => {
-    e.preventDefault();
-    selectedTag = item.textContent.trim();
-    console.log("Selected tag:", selectedTag);
-    filterEvents();
-    
-    // Remove active class from all items
-    tagItems.forEach(el => el.classList.remove('active'));
-    // Add active class to clicked item
-    item.classList.add('active');
-});
-});
-
 
 document.getElementById("datePicker").addEventListener("change", (event) => {
-selectedDate = event.target.value;
-filterEvents();
+    selectedDate = event.target.value;
+    filterEvents();
 });
 
 function filterEvents() {
-console.log("Current filters:", {
-    city: selectedCity, 
-    tag: selectedTag, 
-    date: selectedDate
-});
+    const filteredEvents = events.filter(event => {
+        const matchesCity = !selectedCity || event.city === selectedCity;
+        const matchesTag = !selectedTag || event.tag === selectedTag;
 
-const filteredEvents = events.filter(event => {
-    const matchesCity = !selectedCity || event.city === selectedCity;
-    const matchesTag = !selectedTag || event.tag === selectedTag;
-    
-    // Convert event date to a Date object for comparison
-    const [day, month, year] = event.date.split('/');
-    const eventDate = new Date(year, month - 1, day); // month is 0-indexed
-    const selectedDateObj = selectedDate ? new Date(selectedDate) : null;
+        const [day, month, year] = event.date.split('/');
+        const eventDate = new Date(year, month - 1, day);
+        const selectedDateObj = selectedDate ? new Date(selectedDate) : null;
 
-    const matchesDate = !selectedDate || 
-        (selectedDateObj && 
-         eventDate.getFullYear() === selectedDateObj.getFullYear() &&
-         eventDate.getMonth() === selectedDateObj.getMonth() &&
-         eventDate.getDate() === selectedDateObj.getDate());
+        const matchesDate = !selectedDate || (selectedDateObj && eventDate.getFullYear() === selectedDateObj.getFullYear() &&
+            eventDate.getMonth() === selectedDateObj.getMonth() && eventDate.getDate() === selectedDateObj.getDate());
 
-    return matchesCity && matchesTag && matchesDate;
-});
+        return matchesCity && matchesTag && matchesDate;
+    });
 
-console.log("Filtered results:", filteredEvents);
-renderEvents(filteredEvents);
+    renderEvents(filteredEvents);
 }
 
 function updateActiveFilter(menuItems, selectedValue) {
-menuItems.forEach(item => {
-    item.classList.remove("active-filter");
-    if (item.textContent === selectedValue) {
-        item.classList.add("active-filter");
-    }
-});
+    menuItems.forEach(item => {
+        item.classList.remove("active-filter");
+        if (item.textContent === selectedValue) {
+            item.classList.add("active-filter");
+        }
+    });
 }
 
-
 document.getElementById("resetFilters").addEventListener("click", () => {
-selectedCity = "";
-selectedTag = "";
-selectedDate = "";
+    selectedCity = "";
+    selectedTag = "";
+    selectedDate = "";
 
+    document.querySelectorAll("#cityDropdown .dropdown-item, #tagDropdown .dropdown-item").forEach(item => {
+        item.classList.remove("active-filter");
+    });
 
-document.querySelectorAll("#cityDropdown .dropdown-item, #tagDropdown .dropdown-item").forEach(item => {
-    item.classList.remove("active-filter");
+    document.getElementById("datePicker").value = "";
+    renderEvents(events);
 });
 
 
-document.getElementById("datePicker").value = "";
+// Animations cards
 
+const observerOptions = {
+            root: null, 
+            threshold: 0.5 
+        };
 
-renderEvents(events);
-});
+        
+        function animateCard(card, direction) {
+            anime({
+                targets: card,
+                translateX: direction === 'left' ? ['-100vw', '0'] : ['100vw', '0'],
+                opacity: [0, 1],
+                duration: 1500,
+                easing: 'easeOutExpo'
+            });
+        }
+
+       
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    
+                    const card = entry.target;
+                    const direction = card.classList.contains('fond-card-1') ? 'right' : 'left';
+                    animateCard(card, direction);
+
+                    
+                    observer.unobserve(card);
+                }
+            });
+        }, observerOptions);
+
+        
+        document.querySelectorAll('.fond-card-1, .fond-card-1-miroir').forEach(card => {
+            observer.observe(card);
+        });
     </script>
+
+    <!-- Script d'animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+<script src="Assets\anime-master\lib\anime.js"></script>
+</body>
+</html>
+
 
 
     <?php wp_footer(); ?> <!-- Important pour charger les scripts à la fin de la page -->

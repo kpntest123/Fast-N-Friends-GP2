@@ -95,124 +95,78 @@ get_header(); ?>
 </div>
 <br>
 <div>
+    </div>
+    <div>
+    <div>
     <div style="text-align: center; margin-top: 20px;">
         <h2>Tous les événements</h2>
+    </div>
 
-    </div>
-    <div class="event-container">
-        
-        <div class="event-card">
-            
-            <div class="placeholder-box">15/01/2025 - Liège</div>
-            <div class="event-tag">Fête</div>
-            <div class="event-info">
-                <h4>Fête du vin</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    
-        
-        <div class="event-card">
-            <div class="placeholder-box">16/01/2025 - Bruxelles</div>
-            <div class="event-tag">Festival</div>
-            <div class="event-info">
-                <h4>Anima à Flagey</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    
-        
-        <div class="event-card">            
-            <div class="placeholder-box">18/01/2025 - Liège</div>
-            <div class="event-tag">Expo</div>
-            <div class="event-info">
-                <h4>JardinExpo</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    </div>
-    <div class="event-container">
-    <div class="event-card">            
-        <div class="placeholder-box">23/01/2025 - Namur</div>
-        <div class="event-tag">Fête</div>
-        <div class="event-info">
-            <h4>Grand Feu de bouge</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-    <div class="event-card">            
-        <div class="placeholder-box">24/01/2025 - Bruxelles</div>
-        <div class="event-tag">Sport</div>
-        <div class="event-info">
-            <h4>Belgique vs France</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-<div class="event-card">            
-    <div class="placeholder-box">25/01/2025 -  Charleroi</div>
-    <div class="event-tag">Bal</div>
-    <div class="event-info">
-        <h4>Bal de Charleroi</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-</div>
-</div>
-</div>
-<div class="event-container">
-    <div class="event-card">            
-        <div class="placeholder-box">27/01/2025 - Genk</div>
-        <div class="event-tag">Concert</div>
-        <div class="event-info">
-            <h4>Concert de Jul</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-    <div class="event-card">            
-        <div class="placeholder-box">30/01/2025 - Anvers</div>
-        <div class="event-tag">Fête</div>
-        <div class="event-info">
-            <h4>Saint Glinglin</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-<div class="event-card">            
-    <div class="placeholder-box">01/02/2025 - Liège</div>
-    <div class="event-tag">Sport</div>
-    <div class="event-info">
-        <h4>Diable Rouge vs Anderlech</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="event-container" id="eventContainer">
+        <?php
+        // WP_Query pour récupérer les événements
+        $args = array(
+            'post_type' => 'event',  // Custom post type 'event'
+            'posts_per_page' => -1,  // Récupérer tous les événements
+        );
+
+        $query = new WP_Query($args);
+        $events = [];
+
+        if ($query->have_posts()) : 
+            while ($query->have_posts()) : $query->the_post();
+                // Récupérer les métadonnées de l'événement
+                $date = get_post_meta(get_the_ID(), 'date', true); // Date de l'événement
+                $lieu = get_post_meta(get_the_ID(), 'lieu', true); // Lieu de l'événement
+                $tag = get_post_meta(get_the_ID(), 'tag', true); // Tag de l'événement
+                $description = get_the_excerpt(); // Description courte de l'événement
+                $title = get_the_title(); // Titre de l'événement
+                $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); // URL de l'image à la une de l'événement
+
+                // Ajouter les événements au tableau
+                $events[] = [
+                    'name' => $title,
+                    'description' => $description,
+                    'date' => $date,
+                    'city' => $lieu,
+                    'tag' => $tag,
+                    'image' => $image_url
+                ];
+            endwhile;
+            wp_reset_postdata();  // Réinitialiser la requête
+        else :
+            echo 'Aucun événement trouvé.';
+        endif;
+        ?>
+
+        <!-- Injecter les événements dynamiques dans une variable JavaScript -->
+        <script>
+            const events = <?php echo json_encode($events); ?>;
+            const eventContainer = document.querySelector(".event-container");
+
+            function renderEvents(filteredEvents) {
+                eventContainer.innerHTML = "";
+                filteredEvents.forEach(event => {
+                    const eventCard = `
+                    <div class="event-card">
+                        ${event.image ? `<img src="${event.image}" class="event-image" alt="Image de l'événement">` : ''}
+                        <div class="placeholder-box">${event.date} - ${event.city}</div>
+                        <div class="event-tag">${event.tag}</div>
+                        <div class="event-info">
+                            <h4>${event.name}</h4>
+                            <p>${event.description}</p>
+                        </div>
+                    </div>
+                    `;
+                    eventContainer.innerHTML += eventCard;
+                });
+            }
+
+            renderEvents(events);
+        </script>
     </div>
 </div>
-</div>
-<div class="event-container">
-    <div class="event-card">            
-        <div class="placeholder-box">03/02/2025 - Bruxelles</div>
-        <div class="event-tag">Expo</div>
-        <div class="event-info">
-            <h4>Salon de l'auto</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-    <div class="event-card">            
-        <div class="placeholder-box">05/02/2025 - Mouscron</div>
-        <div class="event-tag">Bal</div>
-        <div class="event-info">
-            <h4>Bal de Mouscron</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-<div class="event-card">            
-    <div class="placeholder-box">05/02/2025 - Tournai</div>
-    <div class="event-tag">Festival</div>
-    <div class="event-info">
-        <h4>Festival brassicole</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
 
 
 

@@ -89,7 +89,7 @@
 
     <ul class="nav-links" id="nav-links">
         <li>
-            <a href="#">
+        <a href="<?php echo home_url('/partner-event/'); ?>">
                 Événements partenaires
                 <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/fiesta.svg" alt="Dropdown">
             </a>

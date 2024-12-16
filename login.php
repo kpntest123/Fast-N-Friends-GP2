@@ -63,7 +63,7 @@ if (isset($_POST['login_submit']) && wp_verify_nonce($_POST['user_login_nonce'],
         
         <div class="col-md-6 image-section">
             <?php 
-            $image_url = get_template_directory_uri() . '/Assets/Img/connexion-securisee.png';
+            $image_url = get_template_directory_uri() . 'Assets\Img\connexion sécurisée.svg';
             ?>
             <img src="<?php echo esc_url($image_url); ?>" alt="Femme pointant un ordinateur" class="img-fluid">
         </div>
