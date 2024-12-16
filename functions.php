@@ -257,6 +257,7 @@ function redirect_after_login($redirect_to, $request, $user) {
                 exit;
                 }
             }
+            
 //ajout event, post custom
 
             function create_event_post_type() {

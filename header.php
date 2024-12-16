@@ -84,6 +84,15 @@
     </div>
 
     <ul class="nav-links" id="nav-links">
+
+            <?php if (current_user_can('administrator')) : ?>
+                <li>
+                <a class="add-event" href="<?php echo esc_url(admin_url()); ?>">
+                    ADMIN - Ajouter un event
+                </a>
+                </li>
+            <?php endif; ?>
+
         <li>
         <a href="<?php echo home_url('/partner-event/'); ?>">
                 Événements partenaires
@@ -140,10 +149,17 @@
                 </ul>
             </li>
 
-            <!-- Section spécifique aux admins ==> a faire fonctionner dans le futur -->
-            <?php if (current_user_can('manage_site')) : ?>
-                <li><a href="<?php echo home_url('/add-a-event/'); ?>">Ajouts d'événements</a></li>
-            <?php endif; ?>
+            <!---Solution 2 ==> ne pas afficher publier un trajet pour les personnes covoitureuses, mais dans la FAQ : Dire tu veux publier un trajet, 
+                                        suffit de te crééer un compte et faire vérifier ton compte !
+                                        
+                                        MARCHE completemment !
+                                        -->
+                                        <?php if (current_user_can('conducteur')): ?>
+                                            <a href="<?php echo home_url('/add-a-traject/'); ?>">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/chat.svg" alt="Chat">
+                                                Publier un trajet
+                                            </a>
+                                        <?php endif; ?>
 
             
         <?php endif; ?>
