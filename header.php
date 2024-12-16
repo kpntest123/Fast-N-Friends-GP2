@@ -132,12 +132,18 @@
                     </li>
 
                     <li>
-                                        <!-- Menu spécifique pour toutes les personnes enregistrés, si clique sur publie run trajet, page de disclaimer disant "toi paq connecté, 
-                                         connecte toi pour ajouter un trajet, pour forcer les gens a se faire un compte vérif !" -->
-                                         <a href="<?php echo home_url('/add-a-traject/'); ?>">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/add-something.svg" alt="Chat">
-                                            Publier un trajet
-                                        </a>
+                                        <!---
+                                            Solution 2 ==> ne pas afficher publier un trajet pour les personnes covoitureuses, mais dans la FAQ : Dire tu veux publier un trajet, 
+                                            suffit de te crééer un compte et faire vérifier ton compte !
+                                            
+                                            MARCHE completemment !
+                                        -->
+                                        <?php if (current_user_can('conducteur')): ?>
+                                            <a href="<?php echo home_url('/add-a-traject/'); ?>">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/chat.svg" alt="Chat">
+                                                Publier un trajet
+                                            </a>
+                                        <?php endif; ?>
 
                     </li>
                     <li>
@@ -148,20 +154,6 @@
                     </li>
                 </ul>
             </li>
-
-            <!---Solution 2 ==> ne pas afficher publier un trajet pour les personnes covoitureuses, mais dans la FAQ : Dire tu veux publier un trajet, 
-                                        suffit de te crééer un compte et faire vérifier ton compte !
-                                        
-                                        MARCHE completemment !
-                                        -->
-                                        <?php if (current_user_can('conducteur')): ?>
-                                            <a href="<?php echo home_url('/add-a-traject/'); ?>">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/chat.svg" alt="Chat">
-                                                Publier un trajet
-                                            </a>
-                                        <?php endif; ?>
-
-            
         <?php endif; ?>
     </ul>
 </nav>
