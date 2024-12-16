@@ -75,59 +75,59 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_inscription']))
     <h2>Inscris-toi !</h2>
     
     <?php if (!empty($error_message)): ?>
-        <p class="error-message"><?php echo esc_html($error_message); ?></p>
+        <p class="error-message" style="color: red;"><?php echo esc_html($error_message); ?></p>
     <?php endif; ?>
 
     <!-- Formulaire HTML -->
-    <form action="" method="post" enctype="multipart/form-data">
-        <label for="username">Nom d'utilisateur :</label>
-        <input type="text" name="username" id="username" required>
+    <form action="" method="post" enctype="multipart/form-data">8
+        <label for="username">*Nom d'utilisateur :</label>
+        <input type="text" name="username" id="username" value="<?php echo isset($username) ? esc_attr($username) : ''; ?>" required>
 
-        <label for="firstname">Nom :</label>
-        <input type="text" name="firstname" id="firstname" required>
+        <label for="firstname">$Nom :</label>
+        <input type="text" name="firstname" id="firstname" value="<?php echo isset($firstname) ? esc_attr($firstname) : ''; ?>" required>
 
-        <label for="lastname">Prénom :</label>
-        <input type="text" name="lastname" id="lastname" required>
+        <label for="lastname">*Prénom :</label>
+        <input type="text" name="lastname" id="lastname" value="<?php echo isset($lastname) ? esc_attr($lastname) : ''; ?>" required>
 
-        <label for="birthdate">Date de naissance :</label>
-        <input type="date" name="birthdate" id="birthdate" required>
+        <label for="birthdate">*Date de naissance :</label>
+        <input type="date" name="birthdate" id="birthdate" value="<?php echo isset($birthdate) ? esc_attr($birthdate) : ''; ?>" required>
 
-        <label for="gender">Genre :</label>
+        <label for="gender">*Genre :</label>
         <div>
-            <input type="radio" name="gender" value="Homme" id="male" required> Homme
-            <input type="radio" name="gender" value="Femme" id="female" required> Femme
-            <input type="radio" name="gender" value="Autre" id="other" required> Autre
+            <input type="radio" name="gender" value="Homme" id="male" <?php echo (isset($gender) && $gender === 'Homme') ? 'checked' : ''; ?> required> Homme
+            <input type="radio" name="gender" value="Femme" id="female" <?php echo (isset($gender) && $gender === 'Femme') ? 'checked' : ''; ?> required> Femme
+            <input type="radio" name="gender" value="Autre" id="other" <?php echo (isset($gender) && $gender === 'Autre') ? 'checked' : ''; ?> required> Autre
         </div>
 
-        <label for="city">Ville :</label>
-        <input type="text" name="city" id="city" required>
+        <label for="city">*Ville :</label>
+        <input type="text" name="city" id="city" value="<?php echo isset($city) ? esc_attr($city) : ''; ?>" required>
 
-        <label for="school">?Ton école elle ou champion?</label>
-        <input type="text" name="school" id="school">
+        <label for="school">*T'étudie ou ?</label>
+        <input type="text" name="school" id="school" value="<?php echo isset($school) ? esc_attr($school) : ''; ?>" required>
 
-        <label for="email">Email :</label>
-        <input type="email" name="email" id="email" required>
+        <label for="email">*Email :</label>
+        <input type="email" name="email" id="email" value="<?php echo isset($email) ? esc_attr($email) : ''; ?>" required>
 
-        <label for="confirm_email">Confirmer votre email :</label>
-        <input type="email" name="confirm_email" id="confirm_email" required>
+        <label for="confirm_email">*Confirmer votre email :</label>
+        <input type="email" name="confirm_email" id="confirm_email" value="<?php echo isset($email) ? esc_attr($email) : ''; ?>" required>
 
-        <label for="password">Mot de passe :</label>
+        <label for="password">*Mot de passe :</label>
         <input type="password" name="password" id="password" required>
 
-        <label for="confirm_password">Confirmer votre mot de passe :</label>
+        <label for="confirm_password">*Confirmer votre mot de passe :</label>
         <input type="password" name="confirm_password" id="confirm_password" required>
 
         <label for="phone">Numéro de téléphone :</label>
-        <input type="tel" name="phone" id="phone" placeholder="+32 4XX XX XX XX">
+        <input type="tel" name="phone" id="phone" value="<?php echo isset($phone) ? esc_attr($phone) : ''; ?>" placeholder="+32 4XX XX XX XX">
 
-        <label for="about">À propos de toi :</label>
-        <textarea name="about" id="about"></textarea>
+        <label for="about">*À propos de toi :</label>
+        <textarea name="about" id="about"><?php echo isset($about) ? esc_textarea($about) : ''; ?></textarea>
 
         <label for="profile_picture">Votre photo de profil :</label>
         <input type="file" name="profile_picture" id="profile_picture" accept="image/*">
 
         <div>
-            <input type="checkbox" name="terms" id="terms" required> J'ai lu les conditions d'utilisation
+            <input type="checkbox" name="terms" id="terms" <?php echo isset($terms) && $terms ? 'checked' : ''; ?> required> J'ai lu les conditions d'utilisation
             <input type="checkbox" name="newsletter" id="newsletter"> Je m'inscris à la Newsletter
         </div>
 
