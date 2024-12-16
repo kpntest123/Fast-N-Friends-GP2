@@ -155,3 +155,286 @@ page de functions :
 
                                     echo '</tbody></table>';
                                 }
+
+
+--------
+
+<form name="edit-article" id="edit-article" action="" method="POST" enctype="multipart/form-data">
+    <div class="container">
+        <!-- Titre de l'article -->
+        <div class="row mb-3">
+            <label for="TitreArt" class="col-sm-2 col-form-label edit-info-event-label">Titre Article</label>
+            <div class="col-sm-10">
+                <input type="text" name="TitreArt" class="form-control edit-info-event-input" id="TitreArt" required>
+            </div>
+        </div>
+
+        <!-- Description -->
+        <div class="row mb-3">
+            <label for="Description" class="col-sm-2 col-form-label edit-info-event-label">Description</label>
+            <div class="col-sm-10">
+                <textarea name="Description" class="form-control edit-info-event-input" id="Description" rows="2" required></textarea>
+            </div>
+        </div>
+
+        <!-- Tag -->
+        <div class="row mb-3">
+            <label for="Tag" class="col-sm-2 col-form-label edit-info-event-label">Tag</label>
+            <div class="col-sm-10">
+                <select name="Tag" class="form-control edit-info-event-input" id="Tag" required>
+                    <option>Concert</option>
+                    <option>Bal</option>
+                    <option>Fête</option>
+                    <option>Expo</option>
+                    <option>Sport</option>
+                    <option>Festival</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Lieu -->
+        <div class="row mb-3">
+            <label for="Lieu" class="col-sm-2 col-form-label edit-info-event-label">Lieu</label>
+            <div class="col-sm-10">
+                <select name="Lieu" class="form-control edit-info-event-input" id="Lieu" required>
+                    <!-- Liste de lieux -->
+                                           <option>Bruxelles</option>
+                        <option>Anvers</option>
+                        <option>Gand</option>
+                        <option>Charleroi</option>
+                        <option>Liège</option>
+                        <option>Bruges</option>
+                        <option>Namur</option>
+                        <option>Louvain</option>
+                        <option>Mons</option>
+                        <option>Alost</option>
+                        <option>Malines</option>
+                        <option>La Louvière</option>
+                        <option>Courtrai</option>
+                        <option>Hasselt</option>
+                        <option>Ostende</option>
+                        <option>Seraing</option>
+                        <option>Saint-Nicolas</option>
+                        <option>Tournai</option>
+                        <option>Genk</option>
+                        <option>Roulers</option>
+                        <option>Mouscron</option>
+                        <option>Verviers</option>
+                        <option>Beveren</option>
+                        <option>Beringen</option>
+                        <option>Louvain-la-Neuve</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Date -->
+        <div class="row mb-3">
+            <label for="birthday" class="col-sm-2 col-form-label edit-info-event-label">Date</label>
+            <div class="col-sm-10">
+                <input type="date" name="birthday" id="birthday" class="form-control edit-info-event-input" required>
+            </div>
+        </div>
+
+        <!-- Image d'illustration -->
+        <div class="row mb-3">
+            <label for="image-article" class="col-sm-2 col-form-label edit-info-event-label">Image d'illustration</label>
+            <div class="col-sm-10">
+                <input type="file" name="image-article" class="form-control edit-info-event-input" id="image-article" accept="image/*">
+            </div>
+        </div>
+
+        <!-- Bouton Ajouter -->
+        <div class="row mb-3">
+            <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="edit-info-event-btn">Ajouter l'événement</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+------
+
+
+      <!--ICI, favicon et titres des pages : -->
+      <?php
+    if (is_page('deep-search')) : ?>
+        <title>Recherche approfondie - FNF</title>
+        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
+    <?php elseif (is_page('register')) : ?> <!-- INSCRIPTION c'est register, besoin d'angliscisme c'est important -->
+        <title>S'inscrire - FNF</title>
+        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
+    <?php elseif (is_page('login')) : ?>
+        <title>Se connecter - FNF</title>
+        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
+    <?php elseif (is_page('password-reset')) : ?>
+        <title>Réinisialise ton MDP - FNF</title>
+        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
+    <?php elseif (is_page('add-a-traject')) : ?>
+        <title>Ajoutes ton trajet - FNF</title>
+        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
+    <?php elseif (is_page('404')) : ?> <!-- VERIF LURL DE LA PAGE 404, ce sont les détails qui font les grandes choses -->
+        <title>404 t'es paumé</title>
+        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
+    <?php elseif (is_page('home')) : ?>
+        <title>Accueil - FNF</title>
+        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
+
+
+
+        
+                <!-- VIERGE A PARTIR DICI -->
+    <?php elseif (is_page('?')) : ?>
+        <title>Accueil - FNF</title>
+        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
+    <?php else : ?>
+        <title><?php wp_title('|', true, 'right'); ?></title>
+        <link rel="icon" href="<?php echo get_site_icon_url(); ?>" type="image/x-icon">
+    <?php endif; ?>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast 'N Friends</title>
+
+    <link rel="shortcut icon" src="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF_logos_svg" type="image/x-icon">
+
+
+      <!--
+    TEMPORAIRE : LIEN POUR LA POLICE FUTURA PT, DANS LE FUTUR INTEGRER LES FICHIERS COMPLETS
+    qui se trouvent déjà dans les ASSETS 
+    
+    POLICE POUR LE FUTURA PT :  -->
+    <link rel="stylesheet" href="https://use.typekit.net/uah5lqa.css"> 
+
+    <!-- LIEN POUR LA MUSEO MODERNO ==> logo + rechercher sur accueil :  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bokor&family=Jost:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
+
+
+          <!-- LIEN POUR UN CALENDRIER + joli ==> peut-être supp, a voir si j'utilises ou pas ==> pour l'instant pas utilisé donc voir dans le temps -->
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+           <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- TRUC QUI SERS A JE NE SAIS PLUS QUOI, MAIS A QUELQUE CHOSE JE PENSE -->
+    <script>
+    const templateDirectoryUri = "<?php echo get_template_directory_uri(); ?>";
+</script>
+
+    
+</head>
+
+<?php wp_head(); ?>
+
+    <!-- CECI EST LA BARRE DE NAV :-->
+<nav class="custom-navbar">
+    <div class="logo-container">
+        <a id="fast-n-friends" href="<?php echo home_url(); ?>">FAST 'N FRIENDS</a>
+    </div>
+
+    <div class="hamburger" id="hamburger-icon">
+        <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/hamburger.svg" alt="Menu">
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+            <?php if (current_user_can('administrator')) : ?>
+                <li>
+                <a class="add-event" href="<?php echo esc_url(admin_url()); ?>">
+                    ADMIN - Ajouter un event
+                </a>
+                </li>
+            <?php endif; ?>
+
+        <li>
+<<<<<<< HEAD
+        <a href="<?php echo home_url('/partner-event/'); ?>">
+                Événements partenaires
+=======
+            <a href="#">
+>>>>>>> a71aea19933244bf77845f44d1fa59f8e65bc9f3
+                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/fiesta.svg" alt="Dropdown">
+                Événements partenaires
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo home_url('/deep-search/'); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/search-ico.svg" alt="Search">
+                Rechercher
+            </a>
+        </li>
+
+        <?php if ( ! is_user_logged_in() ) : ?>
+            <li><a href="<?php echo home_url('/login/'); ?>">Se connecter</a></li>
+            <li><a class="btn-primary" href="<?php echo home_url('/register/'); ?>">S'inscrire</a></li>
+        <?php else : ?>
+            <li class="account-icon">
+                <a href="#" class="icon-animation">
+                    <div class="liquid-icon">
+                        <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/person.svg" alt="Mon Compte">
+                    </div>
+                    <span>Mon Compte</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="<?php echo home_url('/my-profil/'); ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/id-card.svg" alt="Profil">
+                            Mon profil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo home_url('/chat/'); ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/chat.svg" alt="Chat">
+                            Chat
+                        </a>
+                    </li>
+
+                    <li>
+                                        <!---Solution 2 ==> ne pas afficher publier un trajet pour les personnes covoitureuses, mais dans la FAQ : Dire tu veux publier un trajet, 
+                                        suffit de te crééer un compte et faire vérifier ton compte !
+                                        
+                                        MARCHE completemment !
+                                        -->
+                                        <?php if (current_user_can('conducteur')): ?>
+                                            <a href="<?php echo home_url('/add-a-traject/'); ?>">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/chat.svg" alt="Chat">
+                                                Publier un trajet
+                                            </a>
+                                        <?php endif; ?>
+
+
+                    </li>
+                    <li>
+                        <a href="<?php echo wp_logout_url( home_url() ); ?>">
+                            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/logout.svg" alt="Déconnexion">
+                            Déconnexion
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Section spécifique aux admins ==> a faire fonctionner dans le futur -->
+            <?php if (current_user_can('manage_site')) : ?>
+                <li><a href="<?php echo home_url('/add-a-event/'); ?>">Ajouts d'événements</a></li>
+            <?php endif; ?>
+
+            
+        <?php endif; ?>
+    </ul>
+</nav>
+
+
+
+
+
+
+<body> 
+  <?php body_class(); ?>
+  >

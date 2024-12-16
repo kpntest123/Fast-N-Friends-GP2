@@ -257,6 +257,20 @@ function redirect_after_login($redirect_to, $request, $user) {
                 exit;
                 }
             }
+//ajout event, post custom
+
+            function create_event_post_type() {
+                $args = array(
+                    'public' => true,
+                    'label'  => 'Événements',
+                    'supports' => array('title', 'editor', 'thumbnail'),
+                    'taxonomies' => array('category', 'post_tag'),
+                    'menu_icon' => 'dashicons-calendar',
+                    'has_archive' => true,
+                );
+                register_post_type('event', $args);
+            }
+            add_action('init', 'create_event_post_type');
 
 
 
