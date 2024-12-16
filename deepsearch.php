@@ -80,39 +80,6 @@ get_header();?>
    }
 
 
-   .filters-container {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    margin: 5px;
-    padding: 10px 20px;
-    background-color: white;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.filter-btn.selected {
-    background-color: green;
-    color: white;
-}
-
-#more-filters {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#more-filters:hover {
-    background-color: #0056b3;
-}
    
 
   </style>
@@ -138,32 +105,7 @@ get_header();?>
 
 
   <!-- Bouton "Plus de filtres" ==> a faire fonctionner -->
- <!-- Bouton pour ouvrir la page de filtres -->
- <button id="openFilters">Plus de filtres</button>
-
-<!-- Overlay pour la page de filtres -->
-<div class="filter-overlay hidden" id="filterOverlay">
-    <div class="filter-modal">
-        <div class="filter-header">
-            <h2>Comment voyagez-vous ?</h2>
-            <button class="close-btn" id="closeModal">&times;</button>
-        </div>
-        <div class="filter-body">
-            <h3>Type d'hébergement</h3>
-            <div class="filter-options">
-                <label><input type="checkbox"> Tente</label>
-                <label><input type="checkbox"> Caravane</label>
-                <label><input type="checkbox"> Camping-car</label>
-                <label><input type="checkbox"> Van</label>
-                <label><input type="checkbox"> Tente de toit</label>
-            </div>
-            <!-- Ajoutez plus de filtres si nécessaire -->
-        </div>
-        <div class="filter-footer">
-            <button class="search-btn">Rechercher</button>
-        </div>
-    </div>
-</div>
+ 
   
 
 

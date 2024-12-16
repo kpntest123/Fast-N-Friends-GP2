@@ -29,11 +29,19 @@ if (isset($_POST['login_submit']) && wp_verify_nonce($_POST['user_login_nonce'],
 }
 ?>
 
+
+<!--TEST EN CAS dERREUR :-->
 <?php if (isset($_GET['login_error'])) : ?>
     <div class="alert alert-danger">
         <?php echo esc_html($_GET['login_error']); ?>
     </div>
 <?php endif; ?>
+
+<!-- Exemple d'affichage d'une erreur spécifique sur le nom d'utilisateur -->
+<?php if (isset($error_message) && strpos($error_message, 'incorrect') !== false) : ?>
+    <div class="error-message">Nom d'utilisateur ou mot de passe incorrect</div>
+<?php endif; ?>
+
 
 <div style="background-color:rgb(134, 179, 61); text-align: center; padding: 25px;">
     <h1 class="text-white">Connecte-toi</h1>
@@ -47,8 +55,9 @@ if (isset($_POST['login_submit']) && wp_verify_nonce($_POST['user_login_nonce'],
             <form action="" method="POST">
                 <?php wp_nonce_field('user_login_action', 'user_login_nonce'); ?>
                 
-                <input type="text" name="username" placeholder="Nom d'utilisateur" required>
+                <input type="text" name="username" placeholder="Nom d'utilisateur" value="<?php echo isset($_POST['username']) ? esc_attr($_POST['username']) : ''; ?>" required>
                 <input type="password" name="password" placeholder="Mot de passe" required>
+
                 
                 <div class="form-check">
                     <input type="checkbox" name="remember" class="form-check-input" id="remember">
