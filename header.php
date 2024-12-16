@@ -83,10 +83,6 @@
         <a id="fast-n-friends" href="<?php echo home_url(); ?>">FAST 'N FRIENDS</a>
     </div>
 
-    <div class="hamburger" id="hamburger-icon">
-        <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/hamburger.svg" alt="Menu">
-    </div>
-
     <ul class="nav-links" id="nav-links">
         <li>
         <a href="<?php echo home_url('/partner-event/'); ?>">
@@ -130,7 +126,7 @@
                                         <!-- Menu spécifique pour toutes les personnes enregistrés, si clique sur publie run trajet, page de disclaimer disant "toi paq connecté, 
                                          connecte toi pour ajouter un trajet, pour forcer les gens a se faire un compte vérif !" -->
                                          <a href="<?php echo home_url('/add-a-traject/'); ?>">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/chat.svg" alt="Chat">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/add-something.svg" alt="Chat">
                                             Publier un trajet
                                         </a>
 

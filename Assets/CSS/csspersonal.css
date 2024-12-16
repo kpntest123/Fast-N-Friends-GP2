@@ -176,65 +176,7 @@
   height: 20px;
 }
 
-/* Responsive */
-/* Masquer le menu hamburger sur les grands écrans (pc) */
-.hamburger {
-  display: none;
-}
 
-/* Afficher le menu hamburger sur les petits écrans */
-@media (max-width: 768px) {
-  .hamburger {
-      display: block;
-  }
-
-  .nav-links {
-      display: none; /* Masquer les liens de navigation par défaut sur mobile */
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: white;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      padding: 10px;
-      z-index: 10;
-      visibility: hidden;
-      transform: translateY(-20px);
-      transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-  }
-
-  /* Lorsque le menu hamburger est ouvert */
-  .nav-links.show {
-      display: flex;
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-  }
-
-  /* Pour le sous-menu de "Mon Compte" dans le hamburger */
-  .account-icon .dropdown-menu {
-      display: none; /* Masquer le sous-menu par défaut */
-  }
-
-  .account-icon.show-dropdown .dropdown-menu {
-      display: block; /* Afficher le sous-menu "Mon Compte" dans le hamburger */
-  }
-
-    .account-icon .dropdown-menu {
-        position: static;  /* Remove absolute positioning */
-        display: none;
-        width: 100%;
-        box-shadow: none;
-        border: none;
-        background: #f9f9f9;
-      }
-
-    .account-icon.show-dropdown .dropdown-menu {
-        display: block;
-    
-}
-}
   
           
           
