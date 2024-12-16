@@ -111,6 +111,24 @@
   height: 24px;
 }
 
+.add-event{
+  font-weight: bold;
+  font-size: 25px;
+  color: red;
+
+  animation: colorChange 1s infinite; /* Animation 'colorChange' sur 2 secondes, en boucle infinie, pour que ce soit visuel */
+}
+
+          @keyframes colorChange { /*Faire cloignoter le texte pour les admins*/
+            0% {
+                color: black; /* Texte noir */
+            }
+            100% {
+                color: rgb(255, 0, 0); /* Texte rouge */
+            }
+          }
+
+
 
 /* Menu déroulant compte */
 .account-icon {

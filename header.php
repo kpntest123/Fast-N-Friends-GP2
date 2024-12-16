@@ -54,7 +54,7 @@
     POLICE POUR LE FUTURA PT :  -->
     <link rel="stylesheet" href="https://use.typekit.net/uah5lqa.css"> 
 
-    <!-- LIEN POUR LA MUSEO MODERNO ==> logo + recher sur accueil :  -->
+    <!-- LIEN POUR LA MUSEO MODERNO ==> logo + rechercher sur accueil :  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bokor&family=Jost:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -63,7 +63,7 @@
 
 
 
-          <!--LIEN POUR UN CALENDRIER + joli ==> peut-être supp, a voir si j'utilises ou pas-->
+          <!-- LIEN POUR UN CALENDRIER + joli ==> peut-être supp, a voir si j'utilises ou pas ==> pour l'instant pas utilisé donc voir dans le temps -->
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
@@ -88,16 +88,24 @@
     </div>
 
     <ul class="nav-links" id="nav-links">
+            <?php if (current_user_can('administrator')) : ?>
+                <li>
+                <a class="add-event" href="<?php echo esc_url(admin_url()); ?>">
+                    ADMIN - Ajouter un event
+                </a>
+                </li>
+            <?php endif; ?>
+
         <li>
             <a href="#">
-                Événements partenaires
                 <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/fiesta.svg" alt="Dropdown">
+                Événements partenaires
             </a>
         </li>
         <li>
             <a href="<?php echo home_url('/deep-search/'); ?>">
-                Rechercher
                 <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/search-ico.svg" alt="Search">
+                Rechercher
             </a>
         </li>
 
@@ -127,12 +135,18 @@
                     </li>
 
                     <li>
-                                        <!-- Menu spécifique pour toutes les personnes enregistrés, si clique sur publie run trajet, page de disclaimer disant "toi paq connecté, 
-                                         connecte toi pour ajouter un trajet, pour forcer les gens a se faire un compte vérif !" -->
-                                         <a href="<?php echo home_url('/add-a-traject/'); ?>">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/chat.svg" alt="Chat">
-                                            Publier un trajet
-                                        </a>
+                                        <!---Solution 2 ==> ne pas afficher publier un trajet pour les personnes covoitureuses, mais dans la FAQ : Dire tu veux publier un trajet, 
+                                        suffit de te crééer un compte et faire vérifier ton compte !
+                                        
+                                        MARCHE completemment !
+                                        -->
+                                        <?php if (current_user_can('conducteur')): ?>
+                                            <a href="<?php echo home_url('/add-a-traject/'); ?>">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/chat.svg" alt="Chat">
+                                                Publier un trajet
+                                            </a>
+                                        <?php endif; ?>
+
 
                     </li>
                     <li>
