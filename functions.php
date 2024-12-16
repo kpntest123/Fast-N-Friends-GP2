@@ -324,7 +324,12 @@ function redirect_after_login($redirect_to, $request, $user) {
 
 
 
-    //EEnvoie de la vérif d'identité ==> marche pas :
+    //Page profil ==> récupération de la dernière connexion, l'heure, pour ensuite l'injecté dans la page profil :
+    function track_last_login($user_login, $user) {
+        update_user_meta($user->ID, 'last_login', current_time('mysql'));
+    }
+    add_action('wp_login', 'track_last_login', 10, 2);
+    
 
         
         
