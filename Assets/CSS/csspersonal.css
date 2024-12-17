@@ -482,46 +482,84 @@
           }
 
 
-                    /* Partie FAQ*/
-                    .faq-btn {
+                    /* Partie FAQ */
+                    .conteneur-faq {
                       width: 100%;
-                          display: flex;
-                          justify-content: space-between; 
-                          align-items: center; 
-                          padding: 12px 20px;
-                          border-radius: 20px; 
-                          background-color: #699ed7; 
-                          color: #fff;
-                          font-size: 16px;
-                          font-weight: 500;
-                          text-align: left; 
-                          border: none;
-                          cursor: pointer;
+                      max-width: 500px;
+                      border-radius: 10px;
+                      overflow: hidden;
+                      margin: 0 auto; /* Pour centrer la FAQ */
+                      padding: 20px; /* Ajouter un peu de padding pour l'espacement */
+                    }
+
+                    .item-faq {
+                      border-bottom: 1px solid #000000;
+                    }
+
+                    .item-faq:last-child {
+                      border-bottom: none;
+                    }
+
+                    .question-faq {
+                      padding: 20px;
+                      font-size: 20px;
+                      font-weight: bold;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      cursor: pointer;
+                      background-color: #94890e; /* Couleur de background*/
+                      transition: background-color 0.3s ease;
+                      border-radius: 11px;/*Se décider si on en mets une*/
+                    }
+
+                    .question-faq:hover {
+                      background-color: #5c83c1;
+                    }
+
+                    .reponse-faq {
+                      max-height: 0;
+                      overflow: hidden;
+                      padding: 0 20px;
+                      background-color: #f7f7f7;
+                      color: #3e4246;
+                      font-size: 18px;
+                      line-height: 1.6;
+                      transition: max-height 0.3s ease, padding 0.3s ease;
+                    }
+
+                    .reponse-faq.open {
+                      max-height: 200px; /* Ajuster pour des réponses plus longues */
+                      padding: 15px 20px;
+                    }
+
+                    .fleche {
+                      font-size: 18px;
+                      transition: transform 0.3s ease;
+                    }
+
+                    .fleche.open {
+                      transform: rotate(90deg);
+                    }
+
+                    /* Responsive Design */
+                    @media (max-width: 768px) {
+                      .question-faq {
+                        font-size: 14px;
+                        padding: 15px;
                       }
-                      .collapse-container {
-                          width: 100%; 
-                          max-width: 600px; 
+
+                      .reponse-faq {
+                        font-size: 13px;
                       }
-              .faq-btn:hover {
-                  background-color: #0056b3;
-              }
-              .Plus-icon {
-                          font-size: 18px; 
-                          font-weight: bold;
+                    }
+
+                    @media (max-width: 480px) {
+                      .conteneur-faq {
+                        max-width: 90%;
                       }
-              
-                      .button-spacing {
-                          margin-bottom: 15px;
-                      }
-              
-                      .collapse-content {
-                          margin-top: 10px;
-                          padding: 15px;
-                          border: 1px solid #ddd;
-                          border-radius: 10px;
-                          background-color: #ffffff;
-                          margin-bottom: 15px;
-                      }
+                    }
+
     
           
           /*Bloc 6 */
