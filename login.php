@@ -19,69 +19,110 @@ if (isset($_POST['login_submit']) && wp_verify_nonce($_POST['user_login_nonce'],
     $user = wp_signon($login_data, false);
 
     if (is_wp_error($user)) {
-        $error_message = urlencode($user->get_error_message());
-        wp_redirect(add_query_arg('login_error', $error_message, get_permalink()));
+        // Log failed login attempt for security monitoring
+        error_log('Failed login attempt for username: ' . $username);
+        
+        $error_message = $user->get_error_message();
+        wp_redirect(add_query_arg('login_error', urlencode($error_message), get_permalink()));
         exit;
     } else {
+        // Optional: Add logging for successful logins
+        error_log('Successful login for username: ' . $username);
+        
         wp_redirect(home_url());
         exit;
     }
 }
 ?>
 
-
-<!--TEST EN CAS dERREUR :-->
 <?php
+// Display login errors
 if (isset($_GET['login_error'])) : ?>
     <div class="alert alert-danger">
-        <?php echo esc_html($_GET['login_error']); ?>
+        <?php echo esc_html(urldecode($_GET['login_error'])); ?>
     </div>
 <?php endif; ?>
 
-
-        <!-- Exemple d'affichage d'une erreur spécifique sur le nom d'utilisateur -->
-        <?php if (isset($error_message) && strpos($error_message, 'incorrect') !== false) : ?>
-            <div class="error-message">Nom d'utilisateur ou mot de passe incorrect</div>
-        <?php endif; ?>
-
-
-
-<div style="background-color:#3d3db3; text-align: center; padding: 25px;">
+<div style="background-color:#4B9BEB; text-align: center; padding: 25px;">
     <h1 class="text-white">Connecte-toi</h1>
     <p class="text-white">pour accéder à ton compte, logique</p>
 </div>
-<br><br>
-
+<br>
 <div class="container login-container">
     <div class="row g-0">
         <div class="col-md-6 info-section d-flex flex-column justify-content-center">
-            <form action="" method="POST">
+            <form action="" method="POST" novalidate>
                 <?php wp_nonce_field('user_login_action', 'user_login_nonce'); ?>
                 
-                <input type="text" name="username" placeholder="Nom d'utilisateur" value="<?php echo isset($_POST['username']) ? esc_attr($_POST['username']) : ''; ?>" required>
-                <input type="password" name="password" placeholder="Mot de passe" required>
+                <div class="form-group mb-3">
+                    <label for="username" class="sr-only">Nom d'utilisateur</label>
+                    <input 
+                        type="text" 
+                        name="username" 
+                        id="username" 
+                        class="form-control" 
+                        placeholder="Nom d'utilisateur" 
+                        value="<?php echo isset($_POST['username']) ? esc_attr($_POST['username']) : ''; ?>" 
+                        required 
+                        autocomplete="username"
+                    >
+                </div>
+                
+                <div class="form-group mb-3">
+                    <label for="password" class="sr-only">Mot de passe</label>
+                    <input 
+                        type="password" 
+                        name="password" 
+                        id="password" 
+                        class="form-control" 
+                        placeholder="Mot de passe" 
+                        required 
+                        autocomplete="current-password"
+                    >
+                </div>
+                
+                <div class="form-group mb-3">
+                    <div class="form-check">
+                        <input 
+                            type="checkbox" 
+                            name="remember" 
+                            id="remember" 
+                            style="width: 16px; height: 16px;"
 
+                            <?php echo (isset($_POST['remember']) && $_POST['remember']) ? 'checked' : ''; ?>
+                        >
+                        <label class="form-check-label" for="remember">
+                            Se souvenir de moi
+                        </label>
+                    </div>
+                    
+                    <a href="<?php echo wp_lostpassword_url(); ?>" class="small text-muted">
+                        Mot de passe oublié ?
+                    </a>
+                </div>
                 
-                <div class="form-check">
-                    <input type="checkbox" name="remember" class="form-check-input" id="remember" <?php echo (isset($_POST['remember']) && $_POST['remember']) ? 'checked' : ''; ?>>Se souvenir de moi
-                    <a href="<?php echo wp_lostpassword_url(); ?>" class="mb-3"><i>Mot de passe oublié ?</i></a>
-                
-                <button type="submit" name="login_submit" class="btn btn-primary w-100">Se connecter</button>
+                <button 
+                    type="submit" 
+                    name="login_submit" 
+                    class="btn btn-primary w-100"
+                >
+                    Se connecter
+                </button>
             </form>
         </div>
         
         <div class="col-md-6 image-section">
             <?php 
-            $image_url = get_template_directory_uri() . 'Assets\Img\connexion sécurisée.svg';
+            $image_url = get_template_directory_uri() . '/Assets/Img/connexion sécurisée.svg';
             ?>
-            <img src="<?php echo esc_url($image_url); ?>" alt="Femme pointant un ordinateur" class="img-fluid">
-            </div>
+            <img 
+                src="<?php echo esc_url($image_url); ?>" 
+                alt="Femme pointant un ordinateur" 
+                class="img-fluid"
+            >
         </div>
     </div>
 </div>
-
-
-
 
 <?php
 get_footer();

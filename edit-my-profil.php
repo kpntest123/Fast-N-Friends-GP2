@@ -66,7 +66,7 @@ if ( is_user_logged_in() ) {
 ?>
 
 <!-- Contenu de la page Edit My Profile -->
-<div style="background-color: #3d3db3; text-align: center; padding: 70px;">
+<div style="background-color: #4B9BEB; text-align: center; padding: 70px;">
     <!-- Couleur de fond personnalisée pour l'en-tête -->
 </div>
 <div class="container">
