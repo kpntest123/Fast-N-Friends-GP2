@@ -57,51 +57,11 @@
             <a href="Page de contact.html">Contacts</a>
         </h3>
     </div>
-    <!--
 
-    FACEBOOK : 
-
-    <div class="column social">
-        <h3>Suivez-nous sur Facebook !</h3>
-        <a href="https://www.facebook.com/profile.php?id=100064804988393"><img src="Images/facedebook.png" alt="Facebook" width="24"></a>
-    </div>
-    
-    -->
-    <div class="column newsletter">
-        <h3><em>Vous souhaitez être au courant de toutes les dernières news ?</em> <strong>Inscrivez-vous à notre newsletter !</strong></h3>
-        <input type="email" placeholder="Votre e-mail">
-        <button onclick="submitNewsletter()">Soumettre</button>
-        <div class="message"><i>Voilà, c'est fait ! Vous êtes inscrit</i></div>
-    </div>
 </footer>
     </footer>
 
         <script>
-
-    
-const cities = [
-        "Bruxelles", "Anvers", "Gand", "Charleroi", "Liège", "Bruges", "Namur",
-        "Louvain", "Mons", "Alost", "Malines", "La Louvière", "Courtrai",
-        "Hasselt", "Ostende", "Seraing", "Saint-Nicolas", "Tournai", "Genk",
-        "Roulers", "Mouscron", "Verviers", "Beveren", "Beringen", "Louvain-la-Neuve"
-    ];
-
-    const cityDropdown = document.getElementById('cityDropdown');
-
-    cities.forEach(city => {
-        const cityItem = document.createElement('li');
-        const cityLink = document.createElement('a');
-        cityLink.className = 'dropdown-item';
-        cityLink.href = '#';
-        cityLink.textContent = city;
-        cityItem.appendChild(cityLink);
-        cityDropdown.appendChild(cityItem);
-    });
-
-
-
-
-
 
     <!-- Script filtres -->
 
