@@ -2,7 +2,7 @@
 /* Template Name: Evenement partenaire */
 get_header(); ?>
 
-<div style="background-color: #3d3db3; text-align: center; padding: 25px;">
+<div style="background-color: #4B9BEB; text-align: center; padding: 25px;">
             <h1 style="color: white;">Événements Partenaires</h1>
             <div class="container">
                 <div class="row justify-content-center">
@@ -45,7 +45,7 @@ get_header(); ?>
                             type="date"
                             class="form-control"
                             id="datePicker"
-                            style="padding: 15px; font-size: 1.2rem; text-align: center; border-radius: 10px; border: 2px solid #3d3db3; color: #3d3db3;"
+                            style="padding: 15px; font-size: 1.2rem; text-align: center; border-radius: 10px; border: 2px solid #4B9BEB; color: #4B9BEB;"
                  >
                         </div>
                     </div>

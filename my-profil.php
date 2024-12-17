@@ -26,7 +26,7 @@ if ( is_user_logged_in() ) {
     return;
 }
 ?>
-<div style="background-color: #3d3db3; text-align: center; padding: 70px;">
+<div style="background-color: #4B9BEB; text-align: center; padding: 70px;">
 </div>
 <!-- Contenu de la page de profil -->
 <div class="container mt-4">
@@ -51,7 +51,7 @@ if ( is_user_logged_in() ) {
                 ?></h3>
             </div>
 
-            <div class="info-section">
+            <div class="info-Psection">
                 <p>A rejoint le : <span class="highlight"><?php echo date_i18n('d F Y', strtotime($current_user->user_registered)); ?></span></p>
 
                 <p>Dernière connexion : 

@@ -942,8 +942,8 @@
 
 /* Login Page Specific Styles */
 .login-container {
-  background: rgba(75, 135, 235, 0.7);
-  border-radius: 15px;
+  background-color:#C8C6F5;
+  border-radius: 5px;
   overflow: hidden;
   max-width: 900px;
   width: 90%;
@@ -952,7 +952,6 @@
 
 /* Left Section */
 .info-section {
-  background: rgba(75, 135, 235, 0.7);
   padding: 40px;
 }
 
@@ -1046,14 +1045,14 @@
   display: flex;
   justify-content: center;
 }
-.info-section {
+.info-Psection {
 display: flex;
 flex-direction: column;
 justify-content: center;
 margin-bottom: 20px;
 }
 
-.info-section p {
+.info-Psection p {
   margin: 5px 0;
 }
 

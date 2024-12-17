@@ -226,3 +226,128 @@ filterOverlay.addEventListener("click", (event) => {
     }
 });
 
+const cities = [
+  "Bruxelles", "Anvers", "Gand", "Charleroi", "Liège", "Bruges", "Namur",
+  "Louvain", "Mons", "Alost", "Malines", "La Louvière", "Courtrai",
+  "Hasselt", "Ostende", "Seraing", "Saint-Nicolas", "Tournai", "Genk",
+  "Roulers", "Mouscron", "Verviers", "Beveren", "Beringen", "Louvain-la-Neuve"
+];
+
+const cityDropdown = document.getElementById('cityDropdown');
+
+cities.forEach(city => {
+  const cityItem = document.createElement('li');
+  const cityLink = document.createElement('a');
+  cityLink.className = 'dropdown-item';
+  cityLink.href = '#';
+  cityLink.textContent = city;
+  cityItem.appendChild(cityLink);
+  cityDropdown.appendChild(cityItem);
+});
+
+
+let selectedCity = "";
+let selectedTag = "";
+let selectedDate = "";
+
+document.querySelectorAll("#cityDropdown .dropdown-item").forEach(item => {
+item.addEventListener("click", () => {
+selectedCity = item.textContent;
+filterEvents();
+updateActiveFilter(document.querySelectorAll("#cityDropdown .dropdown-item"), item.textContent);
+});
+});
+
+document.querySelectorAll("#tagDropdown .dropdown-menu .dropdown-item").forEach(item => {
+item.addEventListener("click", (e) => {
+e.preventDefault(); 
+selectedTag = item.textContent.trim();
+filterEvents();
+updateActiveFilter(document.querySelectorAll("#tagDropdown .dropdown-menu .dropdown-item"), item.textContent.trim());
+});
+});
+
+document.getElementById("datePicker").addEventListener("change", (event) => {
+selectedDate = event.target.value;
+filterEvents();
+});
+
+function filterEvents() {
+const filteredEvents = events.filter(event => {
+const matchesCity = !selectedCity || event.city === selectedCity;
+const matchesTag = !selectedTag || event.tag === selectedTag;
+
+const [day, month, year] = event.date.split('/');
+const eventDate = new Date(year, month - 1, day);
+const selectedDateObj = selectedDate ? new Date(selectedDate) : null;
+
+const matchesDate = !selectedDate || (selectedDateObj && eventDate.getFullYear() === selectedDateObj.getFullYear() &&
+  eventDate.getMonth() === selectedDateObj.getMonth() && eventDate.getDate() === selectedDateObj.getDate());
+
+return matchesCity && matchesTag && matchesDate;
+});
+
+renderEvents(filteredEvents);
+}
+
+function updateActiveFilter(menuItems, selectedValue) {
+menuItems.forEach(item => {
+item.classList.remove("active-filter");
+if (item.textContent === selectedValue) {
+  item.classList.add("active-filter");
+}
+});
+}
+
+document.getElementById("resetFilters").addEventListener("click", () => {
+selectedCity = "";
+selectedTag = "";
+selectedDate = "";
+
+document.querySelectorAll("#cityDropdown .dropdown-item, #tagDropdown .dropdown-item").forEach(item => {
+item.classList.remove("active-filter");
+});
+
+document.getElementById("datePicker").value = "";
+renderEvents(events);
+});
+
+
+// Animations cards
+
+const observerOptions = {
+  root: null, 
+  threshold: 0.5 
+};
+
+
+function animateCard(card, direction) {
+  anime({
+      targets: card,
+      translateX: direction === 'left' ? ['-100vw', '0'] : ['100vw', '0'],
+      opacity: [0, 1],
+      duration: 1500,
+      easing: 'easeOutExpo'
+  });
+}
+
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          
+          const card = entry.target;
+          const direction = card.classList.contains('fond-card-1') ? 'right' : 'left';
+          animateCard(card, direction);
+
+          
+          observer.unobserve(card);
+      }
+  });
+}, observerOptions);
+
+
+document.querySelectorAll('.fond-card-1, .fond-card-1-miroir').forEach(card => {
+  observer.observe(card);
+});
+
