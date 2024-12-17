@@ -28,7 +28,7 @@
         
                 <!-- VIERGE A PARTIR DICI -->
     <?php elseif (is_page('?')) : ?>
-        <title>Accueil - FNF</title>
+        <title>?</title>
         <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
     <?php else : ?>
         <title><?php wp_title('|', true, 'right'); ?></title>
