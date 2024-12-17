@@ -1378,3 +1378,33 @@ font-weight: bold;
         .edit-info-event-section {
             margin-bottom: 40px;
         }
+
+/* Edit profil */
+        .form-control {
+          border-radius: 10px;
+          background-color: #E6E6FA; /* couleur lavande */
+        }
+    
+        /* Alignement des labels à droite */
+        .col-form-label {
+          text-align: right;
+        }
+    
+        /* Style pour le bouton */
+        .btn-custom {
+          background-color: #007bff; /* bleu */
+          color: white;
+          border-radius: 10px;
+          padding: 10px 20px;
+          border: none;
+          font-weight: bold;
+        }
+    
+        .btn-custom:hover {
+          background-color: #0056b3;
+        }
+    
+        /* Marges pour les containers */
+        .container {
+          margin-top: 20px;
+        }

@@ -27,6 +27,8 @@ if ( is_user_logged_in() ) {
     echo 'Veuillez vous connecter pour voir votre profil.';
     return;
 }
+
+
 ?>
 
 <!-- Contenu de la page de profil -->

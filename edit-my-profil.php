@@ -61,46 +61,105 @@ if ( is_user_logged_in() ) {
     echo 'Veuillez vous connecter pour modifier votre profil.';
     return;
 }
+
+
 ?>
 
 <!-- Contenu de la page Edit My Profile -->
-<div class="edit-profile-form">
-    <h2>Modifier mon profil</h2>
+<div style="background-color: #3d3db3; text-align: center; padding: 70px;">
+    <!-- Couleur de fond personnalisée pour l'en-tête -->
+</div>
+<div class="container">
+    <div class="edit-info-event-title" style="display: flex; justify-content: center;">
+        <h1>Modifier mes infos</h1>
+    </div>
+    <br><br>
 
-    <form action="" method="post" enctype="multipart/form-data">
-        <label for="firstname">Nom :</label>
-        <input type="text" name="firstname" id="firstname" value="<?php echo esc_attr($firstname); ?>" required>
-
-        <label for="lastname">Prénom :</label>
-        <input type="text" name="lastname" id="lastname" value="<?php echo esc_attr($lastname); ?>" required>
-
-        <label for="birthdate">Date de naissance :</label>
-        <input type="date" name="birthdate" id="birthdate" value="<?php echo esc_attr($birthdate); ?>" required>
-
-        <label for="gender">Genre :</label>
-        <div>
-            <input type="radio" name="gender" value="Homme" id="male" <?php checked($gender, 'Homme'); ?>> Homme
-            <input type="radio" name="gender" value="Femme" id="female" <?php checked($gender, 'Femme'); ?>> Femme
-            <input type="radio" name="gender" value="Autre" id="other" <?php checked($gender, 'Autre'); ?>> Autre
+    <form name="Edit-profil" id="edit-profil" method="POST" enctype="multipart/form-data">
+        <!-- Titre de l'article -->
+        <div class="row mb-3">
+            <label for="Nom" class="col-sm-2 col-form-label">Nom</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="Nom" name="firstname" value="<?php echo esc_attr($firstname); ?>" required>
+            </div>
         </div>
 
-        <label for="city">Ville :</label>
-        <input type="text" name="city" id="city" value="<?php echo esc_attr($city); ?>" required>
+        <!-- Prénom -->
+        <div class="row mb-3">
+            <label for="Prénom" class="col-sm-2 col-form-label">Prénom</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="Prénom" name="lastname" value="<?php echo esc_attr($lastname); ?>" required>
+            </div>
+        </div>
 
-        <label for="school">École :</label>
-        <input type="text" name="school" id="school" value="<?php echo esc_attr($school); ?>">
+        <!-- Date -->
+        <div class="row mb-3">
+            <label for="birthday" class="col-sm-2 col-form-label">Date</label>
+            <div class="col-sm-10">
+                <input type="date" id="birthday" name="birthdate" class="form-control" value="<?php echo esc_attr($birthdate); ?>" required>
+            </div>
+        </div>
 
-        <label for="phone">Numéro de téléphone :</label>
-        <input type="tel" name="phone" id="phone" value="<?php echo esc_attr($phone); ?>" placeholder="+32 4XX XX XX XX">
+        <!-- Genre -->
+        <div class="row mb-3">
+            <label for="Genre" class="col-sm-2 col-form-label">Genre</label>
+            <div class="col-sm-10">
+                <select class="form-control" id="Genre" name="gender">
+                    <option value="Homme" <?php selected($gender, 'Homme'); ?>>Homme</option>
+                    <option value="Femme" <?php selected($gender, 'Femme'); ?>>Femme</option>
+                    <option value="Autre" <?php selected($gender, 'Autre'); ?>>Autre</option>
+                </select>
+            </div>
+        </div>
 
-        <label for="about">À propos de toi :</label>
-        <textarea name="about" id="about"><?php echo esc_textarea($about); ?></textarea>
+        <!-- Ville -->
+        <div class="row mb-3">
+            <label for="Ville" class="col-sm-2 col-form-label">Ville</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="Ville" name="city" value="<?php echo esc_attr($city); ?>" required>
+            </div>
+        </div>
 
-        <label for="profile_picture">Changer votre photo de profil :</label>
-        <input type="file" name="profile_picture" id="profile_picture" accept="image/*">
+        <!-- École -->
+        <div class="row mb-3">
+            <label for="Ecole" class="col-sm-2 col-form-label">École</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="Ecole" name="school" value="<?php echo esc_attr($school); ?>">
+            </div>
+        </div>
 
-        <input type="submit" name="submit_edit_profile" value="Mettre à jour mon profil">
+        <!-- Numéro de téléphone -->
+        <div class="row mb-3">
+            <label for="Numero de telephone" class="col-sm-2 col-form-label">Téléphone</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="Numero de telephone" name="phone" value="<?php echo esc_attr($phone); ?>" placeholder="+32 4XX XX XX XX">
+            </div>
+        </div>
+
+        <!-- Description -->
+        <div class="row mb-3">
+            <label for="Aboutyou" class="col-sm-2 col-form-label">À propos de toi</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="Aboutyou" name="about" rows="8"><?php echo esc_textarea($about); ?></textarea>
+            </div>
+        </div>
+
+        <!-- Image de la vignette -->
+        <div class="row mb-3">
+            <label for="profile_picture" class="col-sm-2 col-form-label">Changer votre photo de profil</label>
+            <div class="col-sm-10">
+                <input type="file" class="form-control" id="profile_picture" name="profile_picture" accept="image/*">
+            </div>
+        </div>
+
+        <!-- Bouton Appliquer les modifications -->
+        <div class="row mb-3">
+            <div class="col-sm-12 text-center">
+                <input type="submit" name="submit_edit_profile" value="Mettre à jour mon profil" class="btn-custom">
+            </div>
+        </div>
     </form>
 </div>
+
 
 <?php get_footer(); ?>
