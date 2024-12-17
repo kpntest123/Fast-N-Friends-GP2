@@ -294,9 +294,7 @@
             font-size: 16px; /* Taille plus petite/grandes ==> selon mes besoin */
             color: rgba(0, 0, 0, 0.7); /* Ajuste la couleur si nécessaire */
             text-align: center; /* Optionnel */
-          }    
-          
-          
+          }             
           
           /* Bloc 3 : Titre et chiffre */
           .stats {
@@ -677,7 +675,7 @@
 
             .container-search-results h1{
             margin-top: 10px; /*Pour pas que ca se fasse écrasé par le bloc !*/
-              font-size: 26px;
+              font-size: 25px;
             color: #000;
             font-weight: bold;            
             }
@@ -843,6 +841,17 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
+.footer h1 {
+  color: #000;
+  font-size: 25px;
+}
+
+.footer p {
+  color: #000;
+  font-size: 18px;
+}
+
 .footer .column {
   flex: 1;
   margin: 0 10px;

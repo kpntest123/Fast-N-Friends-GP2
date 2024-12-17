@@ -6,7 +6,7 @@
     <div class="column logo">
         <img src="futur lien du logo que je dois foutre ici" alt="Logo">
         <div>
-            <h1>Fast 'N Friends</h1>
+            <h1 id="fast-n-friends2">Fast 'N Friends</h1>
         </div>
     </div>
     <div class="column">
