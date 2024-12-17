@@ -60,8 +60,9 @@ get_header();
     <p>Conducteurs sont prêts à te conduire dès maintenant !</p>
   </section>
 
-<!-- Les cards animés -->
 
+
+<!-- Bloc 4 : les cards animés -->
 <div class="container">
         <!-- Version normale -->
         <div class="card-wrapper">
@@ -159,71 +160,68 @@ get_header();
   
 
 
-<!-- Bloc 5 : FAQ : -->
-<section class="why-us">
-  <div style="display: flex ; justify-content: center;">
-<h1>FAQ</h1>
-</div>
-<br><br>
-<div class="d-flex justify-content-center align-items-center vh-100">
-    <div class="collapse-container">
-        <!-- Button 1 -->
-        <button class="faq-btn button-spacing" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-            L'inscription est t'elle gratuite ?
-            <span class="Plus-icon">+</span>
-        </button>
-        <div class="collapse" id="collapse1">
-            <div class="collapse-content">
-                Oui ! Notre site internet est financé par la publicité donc vous pouvez vous inscrire gratuitement
-            </div>
-        </div>
-
-        <!-- Button 2 -->
-        <button class="faq-btn button-spacing" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-            Est il possible de personnaliser son profil ?
-            <span class="Plus-icon">+</span>
-        </button>
-        <div class="collapse" id="collapse2">
-            <div class="collapse-content">
-                Oui, c'est totalement possible, il suffit de te rendre dans ta page profil et de cliquer sur le bouton 'modifie mes infos'
-            </div>
-        </div>
-
-        <!-- Button 3 -->
-        <button class="faq-btn button-spacing" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-            Est t'il possible d'ajouter un événement ?
-            <span class="Plus-icon">+</span>
-        </button>
-        <div class="collapse" id="collapse3">
-            <div class="collapse-content">
-                Non, tu ne peux pas l'ajouter toi même par contre, n'hésite pas à nous contacter grâce à fastnfriends@gmail.com pour nous envoyer votre événement 
-            </div>
-        </div>
-
-        <!-- Button 4 -->
-        <button class="faq-btn button-spacing" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-            Fast'N Friends est disponible où ?
-            <span class="Plus-icon">+</span>
-        </button>
-        <div class="collapse" id="collapse4">
-            <div class="collapse-content">
-Partout en belgique, de la campagne luxembourgeoise jusqu'a la Panne
-            </div>
-        </div>
-
-        <!-- Button 5 -->
-        <button class="faq-btn button-spacing" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-            Pourquoi avoir créer Fast'N Friends ?
-            <span class="Plus-icon">+</span>
-        </button>
-        <div class="collapse" id="collapse5">
-            <div class="collapse-content">
-                Car nous voulons, en tant qu'étudiant que ceux-ci puisse faire du co-voiturage et rencontrer des gens tout en conduisant
-            </div>
-        </div>
+<!-- Bloc 5 : FAQ -->
+<div class="conteneur-faq">
+    <div class="item-faq">
+      <div class="question-faq">
+        Q3        
+        <span class="fleche">➡️</span>
+      </div>
+      <div class="reponse-faq">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quia, nesciunt sint quidem nostrum 
+      </div>
     </div>
-</div>
-</section>
+    <div class="item-faq">
+      <div class="question-faq">
+        Q2
+        <span class="fleche">➡️</span>
+      </div>
+      <div class="reponse-faq">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quia, nesciunt sint quidem nostrum 
+      </div>
+    </div>
+    <div class="item-faq">
+      <div class="question-faq">
+        Q1
+        <span class="fleche">➡️</span>
+      </div>
+      <div class="reponse-faq">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quia, nesciunt sint quidem nostrum 
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    const itemsFaq = document.querySelectorAll('.item-faq');
+
+    itemsFaq.forEach(item => {
+        const question = item.querySelector('.question-faq');
+        const answer = item.querySelector('.reponse-faq');
+        const arrow = item.querySelector('.fleche');
+
+        question.addEventListener('click', () => {
+            const isOpen = answer.classList.contains('open');
+
+            // Fermer toutes les réponses ouvertes
+            document.querySelectorAll('.reponse-faq').forEach(a => a.classList.remove('open'));
+            document.querySelectorAll('.fleche').forEach(a => a.classList.remove('open'));
+
+            // Basculer l'élément actuel
+            if (!isOpen) {
+                answer.classList.add('open');
+                arrow.classList.add('open');
+            }
+        });
+    });
+</script>
+
+
+
+
+
+
 
 <!-- Bloc 6 -->
 <section class="bloc6">

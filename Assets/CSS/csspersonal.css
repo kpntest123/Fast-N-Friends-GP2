@@ -482,46 +482,77 @@
           }
 
 
-                    /* Partie FAQ*/
-                    .faq-btn {
+                    /* Partie FAQ */
+                    .conteneur-faq {
                       width: 100%;
-                          display: flex;
-                          justify-content: space-between; 
-                          align-items: center; 
-                          padding: 12px 20px;
-                          border-radius: 20px; 
-                          background-color: #699ed7; 
-                          color: #fff;
-                          font-size: 16px;
-                          font-weight: 500;
-                          text-align: left; 
-                          border: none;
-                          cursor: pointer;
+                      max-width: 500px;
+                      border-radius: 10px;
+                      overflow: hidden;
+                      margin: 0 auto; /* Pour centrer la FAQ */
+                      padding: 20px; /* Ajouter un peu de padding pour l'espacement */
+                    }
+
+                    .item-faq {
+                      border-bottom: 1px solid #000000;
+                    }
+
+                    .item-faq:last-child {
+                      border-bottom: none;
+                    }
+
+                    .question-faq {
+                      padding: 20px;
+                      font-size: 20px;
+                      font-weight: bold;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      cursor: pointer;
+                      background-color: #94890e; /* Couleur de background*/
+                      transition: background-color 0.3s ease;
+                      border-radius: 11px;/*Se décider si on en mets une*/
+                    }
+
+                    .question-faq:hover {
+                      background-color: #5c83c1;
+                    }
+
+                    .reponse-faq {
+                      max-height: 0;
+                      overflow: hidden;
+                      padding: 0 20px;
+                      background-color: #f7f7f7;
+                      color: #3e4246;
+                      font-size: 18px;
+                      line-height: 1.6;
+                      transition: max-height 0.3s ease, padding 0.3s ease;
+                    }
+
+                    .reponse-faq.open {
+                      max-height: 200px; /* Ajuster pour des réponses plus longues */
+                      padding: 15px 20px;
+                    }
+
+                    .fleche {
+                      font-size: 18px;
+                      transition: transform 0.3s ease;
+                    }
+
+                    .fleche.open {
+                      transform: rotate(90deg);
+                    }
+
+                    /* Responsive Design */
+                    @media (max-width: 768px) {
+                      .question-faq {
+                        font-size: 14px;
+                        padding: 15px;
                       }
-                      .collapse-container {
-                          width: 100%; 
-                          max-width: 600px; 
+
+                      .reponse-faq {
+                        font-size: 13px;
                       }
-              .faq-btn:hover {
-                  background-color: #4B9BEB;
-              }
-              .Plus-icon {
-                          font-size: 18px; 
-                          font-weight: bold;
-                      }
-              
-                      .button-spacing {
-                          margin-bottom: 15px;
-                      }
-              
-                      .collapse-content {
-                          margin-top: 10px;
-                          padding: 15px;
-                          border: 1px solid #ddd;
-                          border-radius: 10px;
-                          background-color: #ffffff;
-                          margin-bottom: 15px;
-                      }
+                    }
     
           
           /*Bloc 6 */
@@ -707,70 +738,70 @@
             }
 
       /* STYLE POUR LA PAGE DE recherches profondes ==> same base que sur l'accueil, mais quelques ajouts / deep search*/
-      /* Overlay */
-.filter-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
+                /* Overlay */
+          .filter-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+          }
 
-/* Masquer par défaut */
-.hidden {
-  display: none;
-}
+          /* Masquer par défaut */
+          .hidden {
+            display: none;
+          }
 
-/* Modal */
-.filter-modal {
-  background-color: white;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
+          /* Modal */
+          .filter-modal {
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+          }
 
-/* En-tête */
-.filter-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  border-bottom: 1px solid #eee;
-}
+          /* En-tête */
+          .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+          }
 
-.filter-header h2 {
-  font-size: 20px;
-  margin: 0;
-}
+          .filter-header h2 {
+            font-size: 20px;
+            margin: 0;
+          }
 
-.close-btn {
-  background: none;
-  border: none;
-  font-size:16px;
-  cursor: pointer;
-  color: #333;
-}
+          .close-btn {
+            background: none;
+            border: none;
+            font-size:16px;
+            cursor: pointer;
+            color: #333;
+          }
 
-/* Corps */
-.filter-body {
-  padding: 20px;
-  flex-grow: 1;
-  overflow-y: auto;
-}
+          /* Corps */
+          .filter-body {
+            padding: 20px;
+            flex-grow: 1;
+            overflow-y: auto;
+          }
 
-.filter-options label {
-  display: block;
-  margin-bottom: 10px;
-}
+          .filter-options label {
+            display: block;
+            margin-bottom: 10px;
+          }
 
 /* STYLE POUR LA PAGE DE VERIF D'IDENTITE ==> become-a-driver*/
 .verif-page-container {

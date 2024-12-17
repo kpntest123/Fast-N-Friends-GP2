@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_inscription']))
             update_user_meta($user_id, 'phone', $phone);
             update_user_meta($user_id, 'about', $about);
 
-            // Gérer la photo de profil
+            /*// Gérer la photo de profil
             if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] === UPLOAD_ERR_OK) {
                 $upload = wp_handle_upload($_FILES['profile_picture'], array('test_form' => false));
                 if (isset($upload['url'])) {
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_inscription']))
             // Envoyer un email de confirmation
             $subject = "Confirmation de votre inscription";
             $message = "Bonjour $username,\n\nVotre inscription a été réussie. Bienvenue sur notre site !";
-            wp_mail($email, $subject, $message);
+            wp_mail($email, $subject, $message);*/
 
             // Connecter l'utilisateur automatiquement
             wp_set_auth_cookie($user_id);
@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_inscription']))
         <label for="username">*Nom d'utilisateur :</label>
         <input type="text" name="username" id="username" value="<?php echo isset($username) ? esc_attr($username) : ''; ?>" required>
 
-        <label for="firstname">$Nom :</label>
+        <label for="firstname">*Nom :</label>
         <input type="text" name="firstname" id="firstname" value="<?php echo isset($firstname) ? esc_attr($firstname) : ''; ?>" required>
 
         <label for="lastname">*Prénom :</label>

@@ -33,14 +33,17 @@ function styles_scripts() {
         true        // Charger dans le footer
     );
 
-    // Lier ton fichier JS local
-    wp_enqueue_script(
-        'app-js',
-        get_template_directory_uri() . '/Assets/js/thejs.js',
-        ['bootstrap-bundle'], // Dépend de Bootstrap
-        filemtime(get_template_directory() . '/Assets/js/thejs.js'), // Version basée sur la date de modification
-        true    // Charger dans le footer
-    );
+    function my_theme_enqueue_scripts() {
+        // Lier le fichier JavaScript local
+        wp_enqueue_script(
+            'thejs', // Nom unique pour le script
+            get_template_directory_uri() . '/Assets/js/thejs.js', // Chemin vers le fichier JS
+            array(), // Dépendances (si aucune, laissez vide)
+            null, // Version (laisser null pour utiliser la version par défaut)
+            true // Mettre "true" pour placer le script dans le footer (recommandé)
+        );
+    }
+    add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
 
                     // Lier Anime.js
                     wp_enqueue_script(
