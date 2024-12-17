@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-<div style="background-color:rgb(97, 137, 207); text-align: center; padding: 25px;">
+<div style="background-color:#4B9BEB; text-align: center; padding: 25px;">
     <h1>Ajoute un trajet</h1>
 </div>
 

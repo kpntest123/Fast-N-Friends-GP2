@@ -1,14 +1,4 @@
 <footer>
-        <p>&copy; <?php echo date('Y'); ?> Fast 'N Friends. Tous droits réservés.</p>
-
-
-
-
-
-
-
-
-
 
 
         <!-- Pied de page -->
@@ -26,6 +16,8 @@
                 <a href="Erreur 404/Erreur 404 !.html">Lorem 1</a>
                 <a href="Erreur 404/Erreur 404 !.html">Lorem 2</a>
                 <a href="Erreur 404/Erreur 404 !.html">Lorem 3</a>
+                <br><br><br><br>
+                <h3>&copy; <?php echo date('Y'); ?> Fast 'N Friends. Tous droits réservés.</h3>
             </div>
 
             <div class="column"> <!-- DEUXIEME COLONNE-->
@@ -58,12 +50,7 @@
                 <h3><a href="<?php echo home_url('/404'); ?>">Legal Notice</a></h3>
                 <h3><a href="<?php echo home_url('/404'); ?>">Terms of Service</a></h3>
                 <h3><a href="<?php echo home_url('/404'); ?>">Privacy Policy</a></h3>
-            </div>
-
-
-            <div class="column-TDR"> <!-- COLONE QUI SERA A METTRE EN DESSOUS, SIMPLE LIGNE au centre -->
-                <h3>&copy; Fast 'N Friends 2025. Tous droits réservés</h3>
-            </div>
+            </div>                    
     </footer>
 
 
