@@ -676,7 +676,8 @@
             }
 
             .container-search-results h1{
-            font-size: 26px;
+            margin-top: 10px; /*Pour pas que ca se fasse écrasé par le bloc !*/
+              font-size: 26px;
             color: #000;
             font-weight: bold;            
             }
@@ -684,17 +685,12 @@
             /* Carte */
             .card {
               width: 80%; /* La carte prendra 80% de la largeur de son conteneur */
-              max-width: 600px; /* Limite la largeur maximale */
+              max-width: 600px; /* Et donc, avec le %, il faut composer avec ceci Limite la largeur maximale */
               margin: 0 auto; /* Centre la carte horizontalement */
             }
             .card-header {
               background-color: #4B9BEB;
               text-align: center;
-            }
-            .card-header h2 {
-              color: #000;
-              font-size: 20px;
-              margin-bottom: 0;
             }
 
             /* Corps de la carte */
@@ -871,41 +867,6 @@
 .footer .logo img {
   margin-right: 10px;
   width: 50px;
-}
-.footer .newsletter {
-  max-width: 300px;
-}
-.footer .newsletter input[type="email"] {
-  width: 100%;
-  padding: 8px;
-  margin-top: 10px;
-  background-color: #D35757;
-  border: 1px solid #000;
-  border-radius: 4px;
-  color: black;
-}
-.footer .newsletter input[type="email"]::placeholder {
-  color: black;
-}
-.footer .social {
-  display: flex;
-  align-items: center;
-}
-.footer .social a {
-  font-size: 20px;
-  margin-left: 10px;
-}
-.footer .newsletter .message {
-  margin-top: 10px;
-  display: none;
-}
-.footer .newsletter button {
-  background-color: #fff;
-  border: none;
-  padding: 8px 16px;
-  margin-top: 10px;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 /* Partie qui ne sers à je ne sais pas quoi ? ==> rien ne fais référence à cette partie */
