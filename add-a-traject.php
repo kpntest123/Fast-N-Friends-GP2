@@ -3,14 +3,11 @@
 get_header();
 ?>
 
-<div style="background-color: #3d3db3; text-align: center; padding: 25px;">
+<div style="background-color:rgb(97, 137, 207); text-align: center; padding: 25px;">
     <h1>Ajoute un trajet</h1>
 </div>
 
 <div class="AAT-form-container" id="AAT-form-container">
-    <div class="AAT-header" id="AAT-header">
-        <h1 id="AAT-title">Ajouter un trajet</h1>
-    </div>
     <form method="POST" id="AAT-form">
         <label for="from" class="AAT-label" id="AAT-label-from">De :</label>
         <input type="text" id="AAT-from" name="from" class="AAT-input" required />

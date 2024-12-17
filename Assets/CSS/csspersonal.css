@@ -552,36 +552,7 @@
                       .reponse-faq {
                         font-size: 13px;
                       }
-<<<<<<< HEAD
                     }
-
-                    @media (max-width: 480px) {
-                      .conteneur-faq {
-                        max-width: 90%;
-=======
-              .faq-btn:hover {
-                  background-color: #4B9BEB;
-              }
-              .Plus-icon {
-                          font-size: 18px; 
-                          font-weight: bold;
-                      }
-              
-                      .button-spacing {
-                          margin-bottom: 15px;
-                      }
-              
-                      .collapse-content {
-                          margin-top: 10px;
-                          padding: 15px;
-                          border: 1px solid #ddd;
-                          border-radius: 10px;
-                          background-color: #ffffff;
-                          margin-bottom: 15px;
->>>>>>> 8748217db38ada12635156488a2d0ee2e8d74974
-                      }
-                    }
-
     
           
           /*Bloc 6 */
@@ -767,70 +738,70 @@
             }
 
       /* STYLE POUR LA PAGE DE recherches profondes ==> same base que sur l'accueil, mais quelques ajouts / deep search*/
-      /* Overlay */
-.filter-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
+                /* Overlay */
+          .filter-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+          }
 
-/* Masquer par défaut */
-.hidden {
-  display: none;
-}
+          /* Masquer par défaut */
+          .hidden {
+            display: none;
+          }
 
-/* Modal */
-.filter-modal {
-  background-color: white;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
+          /* Modal */
+          .filter-modal {
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+          }
 
-/* En-tête */
-.filter-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  border-bottom: 1px solid #eee;
-}
+          /* En-tête */
+          .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+          }
 
-.filter-header h2 {
-  font-size: 20px;
-  margin: 0;
-}
+          .filter-header h2 {
+            font-size: 20px;
+            margin: 0;
+          }
 
-.close-btn {
-  background: none;
-  border: none;
-  font-size:16px;
-  cursor: pointer;
-  color: #333;
-}
+          .close-btn {
+            background: none;
+            border: none;
+            font-size:16px;
+            cursor: pointer;
+            color: #333;
+          }
 
-/* Corps */
-.filter-body {
-  padding: 20px;
-  flex-grow: 1;
-  overflow-y: auto;
-}
+          /* Corps */
+          .filter-body {
+            padding: 20px;
+            flex-grow: 1;
+            overflow-y: auto;
+          }
 
-.filter-options label {
-  display: block;
-  margin-bottom: 10px;
-}
+          .filter-options label {
+            display: block;
+            margin-bottom: 10px;
+          }
 
 /* STYLE POUR LA PAGE DE VERIF D'IDENTITE ==> become-a-driver*/
 .verif-page-container {
