@@ -35,98 +35,98 @@
           }
           
           /* Style de la barre de navigation */
-              /* Navbar globale */
-.custom-navbar {
-  font-size: 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
+          /* Navbar globale */
+        .custom-navbar {
+          font-size: 18px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: white;
+          padding: 10px 20px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          position: relative;
+        }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-}
+        .logo-container {
+          display: flex;
+          align-items: center;
+        }
 
-.logo-container img {
-  height: 32px;
-  margin-left: 12px;
-}
+        .logo-container img {
+          height: 32px;
+          margin-left: 12px;
+        }
 
-#fast-n-friends {
-  font-size: 30px;
-  font-weight: bold;
-  font-family: MuseoModerno;
-  text-decoration: none;
-  color: #4B9BEB;
-}
+        #fnfheader {
+          font-size: 30px;
+          font-weight: bold;
+          font-family: MuseoModerno;
+          text-decoration: none;
+          color: #4B9BEB;
+        }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+            /*Version pour mobile
+            #fnfheadersimple {
+              font-size: 25px;
+              font-weight: bold;
+              font-family: MuseoModerno;
+              text-decoration: none;
+              color: #4B9BEB;
+            }*/
 
-.nav-links a {
-  text-decoration: none;
-  color: #000;
-  display: flex;
-  align-items: center;
-}
 
-.nav-links img {
-  width: 25px;
-  height: 25px;
-  margin-left: 10px;
-  margin-right: 5px;
-}
+        .nav-links {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
 
-.btn-primary {
-  background-color: #4B9BEB;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
+        .nav-links a {
+          text-decoration: none;
+          color: #000;
+          display: flex;
+          align-items: center;
+        }
 
-.btn-primary:hover {
-  background-color: #4B9BEB;
-}
+        .nav-links img {
+          width: 25px;
+          height: 25px;
+          margin-left: 10px;
+          margin-right: 5px;
+        }
 
-.hamburger {
-  display: block;
-  cursor: pointer;
-}
+        .btn-primary {
+          background-color: #4B9BEB;
+          color: white;
+          padding: 8px 16px;
+          border-radius: 6px;
+          text-decoration: none;
+          transition: background-color 0.3s;
+        }
 
-.hamburger img {
-  width: 24px;
-  height: 24px;
-}
+        .btn-primary:hover {
+          background-color: #4B9BEB;
+        }
 
-.add-event{
-  font-weight: bold;
-  font-size: 25px;
-  color: red;
+        .add-event{
+          font-weight: bold;
+          font-size: 25px;
+          color: red;
 
-  animation: colorChange 1s infinite; /* Animation 'colorChange' sur 2 secondes, en boucle infinie, pour que ce soit visuel */
-}
+          animation: colorChange 1s infinite; /* Animation 'colorChange' sur 2 secondes, en boucle infinie, pour que ce soit visuel */
+        }
 
-          @keyframes colorChange { /*Faire cloignoter le texte pour les admins*/
-            0% {
-                color: black; /* Texte noir */
-            }
-            100% {
-                color: rgb(255, 0, 0); /* Texte rouge */
-            }
-          }
+                  @keyframes colorChange { /*Faire cloignoter le texte pour les admins*/
+                    0% {
+                        color: black; /* Texte noir */
+                    }
+                    100% {
+                        color: rgb(255, 0, 0); /* Texte rouge */
+                    }
+                  }
 
 
 
@@ -680,6 +680,11 @@
             font-weight: bold;            
             }
 
+            .container-search-results div{
+              font-size: 18px;
+              color: #000;
+              }
+
             /* Carte */
             .card {
               width: 80%; /* La carte prendra 80% de la largeur de son conteneur */
@@ -689,11 +694,6 @@
             .card-header {
               background-color: #4B9BEB;
               text-align: center;
-            }
-
-            /* Corps de la carte */
-            .card-body {
-              font-size: 18px;
             }
 
             /* Colonnes de texte */
@@ -834,7 +834,7 @@
 
 /* STYLE POUR LE FOOTER, le vrai :*/
 .footer {
-  background-color: #4B9BEB; /* Arrière plan global, couleur de fond*/
+  background-color: #8e8f91; /* Arrière plan global, couleur de fond*/
   color: black;
   padding: 20px;
   display: flex;
@@ -842,14 +842,24 @@
   align-items: flex-start;
 }
 
+#fnffooter { /*Copier le style du header*/ 
+  font-size: 50px; /* PEUT ETRE modifier surtout si on veux une concordance avec le style du header, car quand même taille que le header, on dirait trop un titre, contratse bizzar*/
+  font-weight: bold;
+  font-family: MuseoModerno;
+  text-decoration: none;
+  color: #4B9BEB;
+}
+
 .footer h1 {
   color: #000;
   font-size: 25px;
+  font-weight: bold;
 }
 
-.footer p {
+.footer h3 {
   color: #000;
   font-size: 18px;
+  font-style: italic;
 }
 
 .footer .column {
@@ -864,7 +874,7 @@
   color: black;
   text-decoration: none;
   display: block;
-  margin: 5px 0;
+  margin:5px 0;
 }
 .footer .column a:hover {
   text-decoration: underline;

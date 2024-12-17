@@ -77,7 +77,7 @@
     <!-- CECI EST LA BARRE DE NAV :-->
 <nav class="custom-navbar">
     <div class="logo-container">
-        <a id="fast-n-friends" href="<?php echo home_url(); ?>">FAST 'N FRIENDS</a>
+        <a id="fnfheader" href="<?php echo home_url(); ?>">FAST 'N FRIENDS</a>
     </div>
 
     <ul class="nav-links" id="nav-links">
@@ -154,6 +154,10 @@
         <?php endif; ?>
     </ul>
 </nav>
+
+
+
+
 
 
 

@@ -1,65 +1,81 @@
 <footer>
         <p>&copy; <?php echo date('Y'); ?> Fast 'N Friends. Tous droits réservés.</p>
 
+
+
+
+
+
+
+
+
+
+
         <!-- Pied de page -->
-<footer class="footer">
-    <div class="column logo">
-        <img src="futur lien du logo que je dois foutre ici" alt="Logo">
-        <div>
-            <h1 id="fast-n-friends2">Fast 'N Friends</h1>
-        </div>
-    </div>
-    <div class="column">
-        <h3>
-            <a href="Page D'accueil.html">Accueil</a>
-        </h3>
-        <h3>Découvrir les scouts</h3>
-        <a href="Erreur 404/Erreur 404 !.html">Le scoutisme c'est quoi ?</a>
-        <a href="Erreur 404/Erreur 404 !.html">Les sections</a>
-        <a href="Erreur 404/Erreur 404 !.html">La lois scouts</a>
+        <footer class="footer">
+            <div class="column logo">
+                <a id="fnffooter" href="<?php echo home_url(); ?>">FAST 'N FRIENDS</a>
+            </div>
+            
+            <div class="column">
+                <h1>
+                    <a href="<?php echo home_url('deep-search'); ?>">Rechercher un trajet</a>
+                </h1>
 
-        <!-- FOOTER DEPENDANT DE SI CONNECTE OU PAS CONNECTE -->
+                <h1>H1</h1>
+                <a href="Erreur 404/Erreur 404 !.html">Lorem 1</a>
+                <a href="Erreur 404/Erreur 404 !.html">Lorem 2</a>
+                <a href="Erreur 404/Erreur 404 !.html">Lorem 3</a>
+            </div>
 
-        <h3>Mon compte :</h3>
+            <div class="column"> <!-- DEUXIEME COLONNE-->
+                <h1>
+                    <a>Mon compte</a>
+                </h1>
 
-                <?php
-                // Démarrer la session PHP
-                session_start();
+                <!-- Si l'utilisateur n'est pas connecté, ceci s'affiche :-->
+                <?php if ( !is_user_logged_in() ) : ?>
+                    <h3><a href="<?php echo home_url('login'); ?>">Me connecter</a></h3>
+                    <h3><a href="<?php echo home_url('register'); ?>">M'inscrire</a></h3>
+                <?php else : ?>
 
-                // Vérifie si l'utilisateur est connecté (exemple : une variable de session appelée 'logged_in' est définie)
-                $is_logged_in = isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
-                ?>
+                    <!-- Si l'utilisateur est connecté ==> conditions de base -->
+                    <h3><a href="<?php echo home_url('profile'); ?>">Mon profil</a></h3>
+                    <h3><a href="<?php echo home_url('chat'); ?>">Chat</a></h3>
 
-                <?php if ($is_logged_in): ?>
-                    <!-- Si l'utilisateur est connecté -->
-                    <a href="modifier_profil.php">Modifier profil</a>
-                    <a href="chat.php">Chat</a>
-                    <a href="deconnexion.php">Déconnexion</a>
-                <?php else: ?>
-                    <!-- Si l'utilisateur n'est pas connecté -->
-                    <a href="connexion.php">Connexion</a>
-                    <a href="inscription.php">Inscriptions</a>
+                    <!-- Si l'utilisateur a le rôle "conducteur" ==> conditions avancées -->
+                    <?php if (current_user_can('conducteur')): ?>
+                        <h3><a href="<?php echo home_url('/add-a-traject'); ?>">Publier un trajet</a></h3>
+                    <?php endif; ?>
+
+                    <!-- Lien de déconnexion pour tout le monde de connecté -->
+                    <h3><a href="<?php echo wp_logout_url(home_url()); ?>">Déconnexion</a></h3>
                 <?php endif; ?>
             </div>
 
-            <!-- Fin du FOOTER DEPENDANT DE SI CONNECTE OU PAS CONNECTE -->
+            <div>
+                <h1>Informations légales</h1>
+                <h3><a href="<?php echo home_url('/404'); ?>">Legal Notice</a></h3>
+                <h3><a href="<?php echo home_url('/404'); ?>">Terms of Service</a></h3>
+                <h3><a href="<?php echo home_url('/404'); ?>">Privacy Policy</a></h3>
+            </div>
 
-    
-    </div>
-    <div class="column">
-        <h3>
-            <a href="Erreur 404/Erreur 404 !.html">Location</a>
-        </h3>
-        <h3>Espaces membres</h3>
-        <a href="Erreur 404/Erreur 404 !.html">Déjà inscrit</a>
-        <a href="Erreur 404/Erreur 404 !.html">Pas encore inscrit</a>
-        <h3>
-            <a href="Page de contact.html">Contacts</a>
-        </h3>
-    </div>
 
-</footer>
+            <div class="column-TDR"> <!-- COLONE QUI SERA A METTRE EN DESSOUS, SIMPLE LIGNE au centre -->
+                <h3>&copy; Fast 'N Friends 2025. Tous droits réservés</h3>
+            </div>
     </footer>
+
+
+
+
+
+
+
+
+
+
+    </footer> <!-- Footer de la page, mais pas du footer footer, oui je sais ce que je dis tqt-->
 
         <script>
 
