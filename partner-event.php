@@ -130,8 +130,10 @@ get_header(); ?>
                     'date' => $date,
                     'city' => $lieu,
                     'tag' => $tag,
-                    'image' => $image_url
+                    'image' => $image_url,
+                    'link' => get_permalink(get_the_ID()) // Récupère l'URL de l'article
                 ];
+                
             endwhile;
             wp_reset_postdata();  // Réinitialiser la requête
         else :
@@ -145,22 +147,25 @@ get_header(); ?>
             const eventContainer = document.querySelector(".event-container");
 
             function renderEvents(filteredEvents) {
-                eventContainer.innerHTML = "";
-                filteredEvents.forEach(event => {
-                    const eventCard = `
-                    <div class="event-card">
-                        ${event.image ? `<img src="${event.image}" class="event-image" alt="Image de l'événement">` : ''}
-                        <div class="placeholder-box">${event.date} - ${event.city}</div>
-                        <div class="event-tag">${event.tag}</div>
-                        <div class="event-info">
-                            <h4>${event.name}</h4>
-                            <p>${event.description}</p>
-                        </div>
+    eventContainer.innerHTML = ""; // Réinitialise le conteneur des événements
+    filteredEvents.forEach(event => {
+        const eventCard = `
+            <div class="event-card">
+                <a href="${event.link}" style="text-decoration: none; color: inherit;">
+                    ${event.image ? `<img src="${event.image}" class="event-image" alt="Image de l'événement">` : ''}
+                    <div class="placeholder-box">${event.date} - ${event.city}</div>
+                    <div class="event-tag">${event.tag}</div>
+                    <div class="event-info">
+                        <h4>${event.name}</h4>
+                        <p>${event.description}</p>
                     </div>
-                    `;
-                    eventContainer.innerHTML += eventCard;
-                });
-            }
+                </a>
+            </div>
+        `;
+        eventContainer.innerHTML += eventCard; // Ajoute la card cliquable dans le conteneur
+    });
+}
+
 
             renderEvents(events);
         </script>

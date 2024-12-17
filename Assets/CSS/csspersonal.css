@@ -1406,6 +1406,83 @@ font-weight: bold;
         }
     
         /* Marges pour les containers */
-        .container {
+        .EMP-container {
           margin-top: 20px;
+          margin-right: 70px;
+          margin-left: 0px;
         }
+
+        /* Styles par défaut */
+.container.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.error-404 img.car-accident {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.error-404 h1.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.error-404 p.error-message {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.error-404 a.button.home-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0073aa; /* Bleu WordPress */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.error-404 a.button.home-button:hover {
+  background-color: #005177; /* Bleu plus foncé au hover */
+}
+
+/* Media Queries */
+
+/* Écrans petits (mobiles) */
+@media (max-width: 768px) {
+  .error-404 h1.page-title {
+      font-size: 2rem;
+  }
+
+  .error-404 p.error-message {
+      font-size: 1rem;
+  }
+
+  .error-404 a.button.home-button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+  .error-404 h1.page-title {
+      font-size: 1.8rem;
+  }
+
+  .error-404 p.error-message {
+      font-size: 0.9rem;
+  }
+
+  .error-404 a.button.home-button {
+      padding: 6px 12px;
+      font-size: 0.8rem;
+  }
+}

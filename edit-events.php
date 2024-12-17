@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['TitreArt'])) {
     </div>
 
     <form name="edit-article" id="edit-article" action="" method="POST" enctype="multipart/form-data">
-    <div class="container">
+    <div class="EMP-container">
         <!-- Titre de l'article -->
         <div class="row mb-3">
             <label for="TitreArt" class="col-sm-2 col-form-label edit-info-event-label">Titre Article</label>
@@ -148,7 +148,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['TitreArt'])) {
     </div>
 
     <form name="edit-article" id="edit-article">
-        <div class="container">
+        <div class="EMP-container">
             <!-- Description détaillée -->
             <div class="row mb-3">
                 <label for="DescriptionDet" class="col-sm-2 col-form-label edit-info-event-label">Description détaillée de l'événement</label>
