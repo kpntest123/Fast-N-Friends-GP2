@@ -180,146 +180,111 @@
 
   
           
-          
-          /* Bloc 1 : Titre et description */
-          .intro {
-            text-align: center;
-            background-color: #4B9BEB;
-            font-size: 1.25rem; /* Réduit de 24px à 20px */
-            padding: 1.875rem 0.9375rem; /* Réduit de 40px 20px à 30px 15px */
-          }
-          
-          .intro p {
-            font-size: 1rem; /* Réduit de 20px à 16px */
-            color: #000000;
-          }
-          
-          .intro h1 {
-            font-size: 1.625rem; /* Réduit de 24px à 20px */
-            color: #000000;
-            font-style: normal;
-            margin-bottom: 1.875rem;
-          }
-          
-          
-          
-          
-          
-          
-          /*PARTIE BLOC 2 : IMAGE ET BARRE DE RECHERCHE*/
-          .search-section {
-            background-color: #4B9BEB;
-            padding: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          
-          .search-container {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            color: #333;
-            background-color: rgb(255, 255, 255); /* ==> normalement à supprimer, juste pour prévisualiser le contenait de recherche, finalement, le rendu est au rdv !*/
-            max-width: 600px; /* Augmentation de la largeur maximale du conteneur */
-            width: 100%; /* Le conteneur prend toute la largeur disponible */
-            padding: 2rem; /* Réduction du padding pour un rendu plus compact */
-          }
-          
-          .search-form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 1rem;
-          }
-          
-          .form-group {
-            display: flex;
-            flex-direction: column;
-          }
-          
-          .form-group label {
-            font-size: 18px;
-            margin-bottom: 0.5rem;
-          }
-          
-          .form-group input {
-            padding: 0.75rem 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 18px;
-          }
-          
-          .search-button {
-            grid-column: 1 / -1;
-            padding: 1rem 2rem;
-            background-color: #4B9BEB;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-          }
-          
-          .search-button:hover {
-            background-color: #2b7aca;
-          }      
-          
-          .image-container {
-            flex: 0 0 40%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          
-          .image-container img {
-            max-width: 100%;
-            height: auto;
-            max-height: 400px;
-            object-fit: contain;
-          }
 
-          .search-container h1 {
-            font-size: 32px; /* ADAPTER LA POLICE, UNE FOIS QUE c'EST FAIT, que tout est bien pensé */
-            font-weight: bold; /* Rends mieux en gras ou pas ? */
-            text-align: center; /* Center le texte */
-          }      
-          
-          .search-section p label {
-            font-size: 18px; /* Taille plus petite/grandes ==> selon mes besoin */
-            color: rgba(0, 0, 0, 0.7); /* Ajuste la couleur si nécessaire */
-            text-align: center; /* Optionnel */
-          }    
+/* Bloc 1 : Responsive Intro */
+.intro {
+  text-align: center;
+  background-color: #4B9BEB;
+  padding: 2rem 1rem;
+  max-width: 1200px; /* Limite la largeur sur desktop */
+  margin: 0 auto; /* Centre le bloc */
+}
 
-          .note {
-            font-size: 16px; /* Taille plus petite/grandes ==> selon mes besoin */
-            color: rgba(0, 0, 0, 0.7); /* Ajuste la couleur si nécessaire */
-            text-align: center; /* Optionnel */
-          }    
+.intro h1 {
+  font-size: clamp(1.875rem, 4vw, 2.625rem); /* Échelle fluide entre mobile et desktop */
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  font-size: clamp(1rem, 3vw, 1.875rem); /* Taille ajustable pour mobile à desktop */
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding: 1.5rem 1rem; /* Moins de padding pour les petits écrans */
+  }
+}
+
           
           
+/* Bloc 2 : Responsive Search Section */
+.search-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem; /* Réduit l'espace pour mobile */
+  padding: 2rem 1rem;
+}
+
+.search-container {
+  flex: 1 1 100%; /* Prend toute la largeur sur mobile */
+  max-width: 500px; /* Largeur maximale */
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+@media (min-width: 769px) {
+  .search-container {
+    flex: 1 1 45%; /* Prend environ 45% de la largeur sur les écrans plus larges */
+  }
+
+  .image-container {
+    flex: 1 1 45%;
+  }
+}
+
           
-          /* Bloc 3 : Titre et chiffre */
-          .stats {
-            text-align: center;
-            padding: 45px 15px; /* Réduit de 60px 20px à 45px 15px */
-          }
           
-          .stats h1 {
-            font-size: 26px; /* Réduit de 24px à 20px */
-            color: #000000;
-            margin-bottom: 16px; /* Réduit de 20px à 16px */
-          }
-          
-          .stats .number {
-            font-size: 190px; /* Réduit de 96px à 72px */
-            color: #000000;
-            margin-bottom: 8px; /* Réduit de 10px à 8px */
-          }
-          
-          .stats p {
-            font-size: 16px;
-            color: #000000;
-          }
+         
+/* Bloc 3 : Stats */
+.stats {
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 3rem 1rem;
+}
+
+.stats h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.stats .number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #4B9BEB;
+}
+
+.stats p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .stats h1 {
+    font-size: 1.875rem;
+  }
+
+  .stats .number {
+    font-size: 2rem;
+  }
+}
+
           
           /*Bloc 4 : Les cartes*/
           .lescardsecolos {
@@ -544,6 +509,7 @@
             font-style: normal;
             margin-bottom: 30px;
           }
+
           
           /*
           
