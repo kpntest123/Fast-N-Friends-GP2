@@ -61,10 +61,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_inscription']))
             wp_set_auth_cookie($user_id);
 
             // Rediriger vers une page de profil
-            wp_redirect(home_url('/profil')); // Remplace par l'URL de ta page de profil
+            wp_redirect(home_url('/my-profil')); // Remplace par l'URL de ta page de profil
             exit;
         } else {
-            $error_message = "Une erreur est survenue lors de la création de votre compte.";
+            $error_message = "Un problemo est venu tout capouto lors de la création de ton compte, réessaye";
         }
     }
 }
