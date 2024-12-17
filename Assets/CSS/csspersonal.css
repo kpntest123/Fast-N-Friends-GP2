@@ -37,13 +37,13 @@
           /* Style de la barre de navigation */
           /* Navbar globale */
         .custom-navbar {
+          margin: 0 20px; /* Marge de 0 en haut/bas et 20px à gauche/droite */
           font-size: 18px;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          background-color: white;
+          background-color: rgb(177, 173, 173);
           padding: 10px 20px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
           position: relative;
         }
 
@@ -865,7 +865,9 @@
 
 /* STYLE POUR LE FOOTER, le vrai :*/
 .footer {
-  background-color: #8e8f91; /* Arrière plan global, couleur de fond*/
+  margin: 0 20px; /* Marge de 0 en haut/bas et 20px à gauche/droite */
+  border: #000;
+  background-color: #ffffff; /* Arrière plan global, couleur de fond*/
   color: black;
   padding: 20px;
   display: flex;
