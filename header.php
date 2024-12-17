@@ -1,27 +1,28 @@
 
       <!--ICI, favicon et titres des pages : -->
       <?php
-    if (is_page('deep-search')) : ?>
-        <title>Recherche approfondie - FNF</title>
-        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
-    <?php elseif (is_page('register')) : ?> <!-- INSCRIPTION c'est register, besoin d'angliscisme c'est important -->
-        <title>S'inscrire - FNF</title>
-        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
-    <?php elseif (is_page('login')) : ?>
-        <title>Se connecter - FNF</title>
-        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
-    <?php elseif (is_page('password-reset')) : ?>
-        <title>Réinisialise ton MDP - FNF</title>
-        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
-    <?php elseif (is_page('add-a-traject')) : ?>
-        <title>Ajoutes ton trajet - FNF</title>
-        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
-    <?php elseif (is_page('404')) : ?> <!-- VERIF LURL DE LA PAGE 404, ce sont les détails qui font les grandes choses -->
-        <title>404 t'es paumé</title>
-        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
-    <?php elseif (is_page('home')) : ?>
-        <title>Accueil - FNF</title>
-        <link rel="icon" href="https://thecaseycontinuum.wordpress.com/wp-content/uploads/2013/07/snl5.jpg" type="image/x-icon">
+        if (is_page('deep-search')) : ?>
+            <title>Recherche approfondie - FNF</title>
+            <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+        <?php elseif (is_page('register')) : ?> <!-- INSCRIPTION c'est register, besoin d'angliscisme c'est important -->
+            <title>S'inscrire - FNF</title>
+            <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+        <?php elseif (is_page('login')) : ?>
+            <title>Se connecter - FNF</title>
+            <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+        <?php elseif (is_page('password-reset')) : ?>
+            <title>Réinisialise ton MDP - FNF</title>
+            <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+        <?php elseif (is_page('add-a-traject')) : ?>
+            <title>Ajoutes ton trajet - FNF</title>
+            <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+        <?php elseif (is_page('404')) : ?> <!-- VERIF LURL DE LA PAGE 404, ce sont les détails qui font les grandes choses -->
+            <title>404 t'es paumé</title>
+            <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+        <?php elseif (is_page('home')) : ?>
+            <title>Accueil - FNF</title>
+            <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+        <?php endif; ?>
 
 
 
