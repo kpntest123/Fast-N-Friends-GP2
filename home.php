@@ -45,8 +45,9 @@ get_header();
         <label for="date">Quand ?</label>
         <input type="date" id="date" name="date" required>
       </div>
-      <button type="submit" class="search-button">Chercher !</button>
-    </form>
+      <button type="submit" class="search-button">Rechercher !</button>
+      </form>
+    <br>
     <p class="note">*Malheureusement, n'est disponible que dans 500 grandes villes en Belgique</p>
   </div>
   <div class="image-container">

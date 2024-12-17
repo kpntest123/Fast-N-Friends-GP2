@@ -78,31 +78,6 @@
 
         <script>
 
-    
-const cities = [
-        "Bruxelles", "Anvers", "Gand", "Charleroi", "Liège", "Bruges", "Namur",
-        "Louvain", "Mons", "Alost", "Malines", "La Louvière", "Courtrai",
-        "Hasselt", "Ostende", "Seraing", "Saint-Nicolas", "Tournai", "Genk",
-        "Roulers", "Mouscron", "Verviers", "Beveren", "Beringen", "Louvain-la-Neuve"
-    ];
-
-    const cityDropdown = document.getElementById('cityDropdown');
-
-    cities.forEach(city => {
-        const cityItem = document.createElement('li');
-        const cityLink = document.createElement('a');
-        cityLink.className = 'dropdown-item';
-        cityLink.href = '#';
-        cityLink.textContent = city;
-        cityItem.appendChild(cityLink);
-        cityDropdown.appendChild(cityItem);
-    });
-
-
-
-
-
-
     <!-- Script filtres -->
 
     let selectedCity = "";

@@ -11,11 +11,11 @@ $date = isset($_GET['date']) ? sanitize_text_field($_GET['date']) : 'Non spécif
 
 ?>
 
-<div class="container">
+<div class="container-search-results">
     <!-- Carte contenant les résultats de la recherche -->
     <div class="card">
         <div class="card-header">
-            <h2>Résultats de ta recherche</h2>
+            <h1>Résultats de ta recherche</h1>
         </div>
         <div class="card-body">
             <!-- Affichage des résultats -->
