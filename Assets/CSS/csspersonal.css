@@ -377,7 +377,7 @@
         }
     
         .forme-card-bleue, .forme-card-bleue-miroir {
-            background-color: #6cbbfc;
+            background-color: #4B9BEB;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -503,7 +503,7 @@
                           max-width: 600px; 
                       }
               .faq-btn:hover {
-                  background-color: #0056b3;
+                  background-color: #4B9BEB;
               }
               .Plus-icon {
                           font-size: 18px; 
@@ -599,7 +599,7 @@
           .inscription-form input[type="tel"]:focus,
           .inscription-form input[type="date"]:focus,
           .inscription-form textarea:focus {
-              border-color: #007BFF;
+              border-color: #4B9BEB;
               outline: none;
           }
           
@@ -794,7 +794,7 @@
 
 .verif-title {
   font-weight: bold;
-  color: #3d3db3;
+  color: #4B9BEB;
   margin-bottom: 20px;
   font-size: 1.3rem;
 }
@@ -802,14 +802,14 @@
 
 .verif-form-label {
   font-weight: bold;
-  color: #3d3db3;
+  color: #4B9BEB;
   margin-bottom: 8px;
   display: block;
 }
 
 
 .verif-form-control {
-  border: 2px solid #3d3db3;
+  border: 2px solid #4B9BEB;
   border-radius: 8px;
   padding: 10px;
 }
@@ -817,7 +817,7 @@
 
 .verif-btn-submit {
   border-radius: 8px;
-  background-color: #3d3db3;
+  background-color: #4B9BEB;
   border: none;
   color: white;
   font-weight: bold;
@@ -828,7 +828,7 @@
 }
 
 .verif-btn-submit:hover {
-  background-color: #2a2a88;
+  background-color: #4B9BEB;
   transform: scale(1.02);
 }
 
@@ -887,7 +887,7 @@
 }
 
 .search-btn {
-  background-color: #007bff;
+  background-color: #4B9BEB;
   color: white;
   border: none;
   border-radius: 5px;
@@ -899,7 +899,7 @@
 
 /* Login Page Specific Styles */
 .login-container {
-  background: rgba(190, 239, 255, 0.7);
+  background: rgba(75, 135, 235, 0.7);
   border-radius: 15px;
   overflow: hidden;
   max-width: 900px;
@@ -909,7 +909,7 @@
 
 /* Left Section */
 .info-section {
-  background: rgba(190, 239, 255, 0.7);
+  background: rgba(75, 135, 235, 0.7);
   padding: 40px;
 }
 
@@ -924,13 +924,13 @@
   width: 100%;
   padding: 10px;
   font-size: 1rem;
-  border: 1px solid #3d3db3;
+  border: 1px solid #4B9BEB;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .info-section button {
-  background: #3d3db3;
+  background: #4B9BEB;
   color: white;
   border: none;
   padding: 10px;
@@ -973,7 +973,13 @@
   }
 }
 
-/* Page profil */
+.header {
+  background-color: #4B9BEB;
+  text-align: center;
+  padding: 70px 20px;
+  color: white;
+}
+
 .profile-container {
   display: flex;
   flex-direction: column;
@@ -981,108 +987,103 @@
   justify-content: center;
   text-align: center;
   padding: 20px;
-  
 }
 
-/* Image de profil */
 .profile-picture {
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   margin: 20px 0;
 }
 
-/* Section rôle (Conducteur/Passager) */
 .role-section {
   margin: 20px 0;
-  color: #4949FF;
-}
-
-/* Section d'informations principales */
-.info-section {
+  color: #4B9BEB;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
+  justify-content: center;
+}
+.info-section {
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-bottom: 20px;
 }
 
 .info-section p {
   margin: 5px 0;
-  
 }
 
-/* Section Téléphone / Mail */
 .contact-section {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  max-width: 600px;
-  margin: 10px 0;
+display: flex;
+justify-content: space-between;
+width: 80%;
+max-width: 800px;
+margin: 20px 0;
 }
 
 .contact-section p {
-  flex: 1;
-  text-align: center;
-  color: #3d3db3;
-}
-
-/* Section Trajets */
-.trips-section {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  max-width: 600px;
-  margin-top: 30px;
-}
-
-.trips-section p {
-  flex: 1;
-  text-align: center;
-  color:#3d3db3 ;
-}
-
-.box {
-background-color: white;
-border-radius: 15px;
-width: 60%;
-height: 350px;
-display: flex; 
-justify-content: center; 
-align-items: center; 
-padding: 40px; 
-}
-
-.backgroundbox {
-display: flex; 
-flex-direction: column; 
-justify-content: center; 
-align-items: center; 
-background-color: rgba(173, 216, 230, 0.5); 
-margin: 0 auto;
-width: 100%;
-max-width: 1330px;
-height: 600px;
-border-radius: 20px; 
-padding: 5px; 
-}
-
-.profil-h3 {
-color: #333; 
-font-size: 0.8rem; 
-margin-bottom: 20px; 
 display: flex;
 justify-content: center;
+color: #4B9BEB;
 }
+
+
+/* Section À propos */
+
+.profil-h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .highlight {
-color: green; 
-font-weight: bold; 
+  color: green;
+  font-weight: bold;
+}
+
+.profil-box {
+background-color: white;  /* Fond blanc */
+border: 2px solid #ffffff; /* Bordure bleue de 2px */
+border-radius: 15px;      /* Bordures arrondies */
+width: 500px;             /* Largeur de la boîte */
+height: 300px;            /* Hauteur de la boîte */
+padding: 20px;            /* Espacement interne */
+display: flex; 
+justify-content: center;  /* Centrer horizontalement */
+align-items: center;      /* Centrer verticalement */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Ombre subtile autour de la boîte */
+margin: 20px auto;        /* Centrer la boîte horizontalement */
+}
+
+/* Si vous voulez ajouter un contenu à l'intérieur de la boîte (ex. du texte ou une image) */
+.profil-box-content {
+font-size: 16px;          /* Taille du texte à l'intérieur de la boîte */
+color: #333;              /* Couleur du texte */
+text-align: center;       /* Centrer le texte */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .profile-container {
+      flex-direction: column;
+  }
+
+  .contact-section {
+      flex-direction: column;
+      text-align: left;
+  }
+
+  .box {
+      padding: 20px;
+  }
 }
 
 .actions-section {
   display: flex;
   justify-content: center;
-  color: #007BFF;
+  color: #4B9BEB;
 }
 
 /* Add a traject (AAT) */
@@ -1127,7 +1128,7 @@ font-weight: bold;
 }
 
 .AAT-button {
-  background-color: #4C8BFF;
+  background-color: #4B9BEB;
   color: white;
   padding: 15px;
   width: 100%;
@@ -1148,26 +1149,26 @@ font-weight: bold;
           text-align: center;
           font-weight: bold;
           margin-bottom: 40px;
-          color: #3d3db3;
+          color: #4B9BEB;
       }
 
       /* Style global des inputs */
       .edit-info-event-input {
-          border: 2px solid #3d3db3;
+          border: 2px solid #4B9BEB;
           border-radius: 8px;
       }
 
       /* Section contenant les inputs */
       .edit-info-event-label {
           font-weight: bold;
-          color: #3d3db3;
+          color: #4B9BEB;
       }
 
       /* Bouton principal */
       .edit-info-event-btn {
           border-radius: 8px;
-          background-color: #3d3db3;
-          border: 2px solid #3d3db3;
+          background-color: #4B9BEB;
+          border: 2px solid #4B9BEB;
           color: white;
           font-weight: bold;
           padding: 10px 15px;
@@ -1177,7 +1178,7 @@ font-weight: bold;
 
       /* Effet sur le bouton */
       .edit-info-event-btn:hover {
-          background-color: #2a2a88;
+          background-color: #4B9BEB;
           transform: scale(1.02);
       }
 
@@ -1195,7 +1196,7 @@ font-weight: bold;
 
       .header-box button {
         background-color: white;
-        border: 2px solid #3d3db3;
+        border: 2px solid #4B9BEB;
         border-radius: 10px;
         padding: 15px 20px;
         font-size: 1.3rem;
@@ -1207,7 +1208,7 @@ font-weight: bold;
     }
     
     .header-box button:hover {
-        background-color: #3d3db3;
+        background-color: #4B9BEB;
         color: white;
         border-color: white;
         transform: scale(1.05);
@@ -1240,7 +1241,7 @@ font-weight: bold;
         font-size: 1rem;
         font-weight: bold;
         color: white;
-        background-color: #4949ff;
+        background-color: #4B9BEB;
         padding: 5px 10px;
         border-radius: 5px;
         margin-bottom: 10px;
@@ -1282,7 +1283,7 @@ font-weight: bold;
     
     .active-filter {
         font-weight: bold;
-        background-color: #4949FF;
+        background-color: #4B9BEB;
         color: white;
     }
     
@@ -1329,26 +1330,26 @@ font-weight: bold;
             text-align: center;
             font-weight: bold;
             margin-bottom: 40px;
-            color: #3d3db3;
+            color: #4B9BEB;
         }
 
         /* Style global des inputs */
         .edit-info-event-input {
-            border: 2px solid #3d3db3;
+            border: 2px solid #4B9BEB;
             border-radius: 8px;
         }
 
         /* Section contenant les inputs */
         .edit-info-event-label {
             font-weight: bold;
-            color: #3d3db3;
+            color: #4B9BEB;
         }
 
         /* Bouton principal */
         .edit-info-event-btn {
             border-radius: 8px;
-            background-color: #3d3db3;
-            border: 2px solid #3d3db3;
+            background-color: #4B9BEB;
+            border: 2px solid #4B9BEB;
             color: white;
             font-weight: bold;
             padding: 10px 15px;
@@ -1358,7 +1359,7 @@ font-weight: bold;
 
         /* Effet sur le bouton */
         .edit-info-event-btn:hover {
-            background-color: #2a2a88;
+            background-color: #4B9BEB;
             transform: scale(1.02);
         }
 
@@ -1380,7 +1381,7 @@ font-weight: bold;
     
         /* Style pour le bouton */
         .btn-custom {
-          background-color: #007bff; /* bleu */
+          background-color: #4B9BEB; /* bleu */
           color: white;
           border-radius: 10px;
           padding: 10px 20px;
@@ -1389,7 +1390,7 @@ font-weight: bold;
         }
     
         .btn-custom:hover {
-          background-color: #0056b3;
+          background-color: #4B9BEB;
         }
     
         /* Marges pour les containers */
@@ -1430,14 +1431,14 @@ font-weight: bold;
   padding: 10px 20px;
   font-size: 1rem;
   color: #fff;
-  background-color: #0073aa; /* Bleu WordPress */
+  background-color: #4B9BEB; /* Bleu WordPress */
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
 .error-404 a.button.home-button:hover {
-  background-color: #005177; /* Bleu plus foncé au hover */
+  background-color: #4B9BEB; /* Bleu plus foncé au hover */
 }
 
 /* Media Queries */

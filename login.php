@@ -46,7 +46,7 @@ if (isset($_GET['login_error'])) : ?>
 
 
 
-<div style="background-color:rgb(134, 179, 61); text-align: center; padding: 25px;">
+<div style="background-color:#3d3db3; text-align: center; padding: 25px;">
     <h1 class="text-white">Connecte-toi</h1>
     <p class="text-white">pour accéder à ton compte, logique</p>
 </div>
