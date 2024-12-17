@@ -43,20 +43,6 @@ if (isset($_GET['login_error'])) : ?>
     </div>
 <?php endif; ?>
 
-<<<<<<< HEAD
-
-        <!-- Exemple d'affichage d'une erreur spécifique sur le nom d'utilisateur -->
-        <?php if (isset($error_message) && strpos($error_message, 'incorrect') !== false) : ?>
-            <div class="error-message">Nom d'utilisateur ou mot de passe incorrect</div>
-        <?php endif; ?>
-
-
-
-<div style="background-color:rgb(134, 179, 61); text-align: center; padding: 25px;">
-<div style="background-color:#3d3db3; text-align: center; padding: 25px;">
-=======
-<div style="background-color:#4B9BEB; text-align: center; padding: 25px;">
->>>>>>> 63a08397539b36dac438c3a31e06fc02ff66a068
     <h1 class="text-white">Connecte-toi</h1>
     <p class="text-white">pour accéder à ton compte, logique</p>
 </div>
