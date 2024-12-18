@@ -31,13 +31,6 @@ if ( is_user_logged_in() ) {
 <!-- Contenu de la page de profil -->
 <div class="container mt-4">
     <div class="row">
-        <div class="col-lg-3 col-md-6">
-            <div class="profile-container">
-                <h2><?php echo esc_html($firstname . ' ' . $lastname); ?></h2>
-                <img src="<?php echo esc_url($profile_picture); ?>" alt="Votre photo de profil" class="profile-picture">
-            </div>
-        </div>
-
         <div class="col-lg-6 col-md-6">
             <div class="role-section">
                 <h3><?php echo esc_html($gender); ?> - <?php 
@@ -78,12 +71,11 @@ if ( is_user_logged_in() ) {
                         ?>
                     </span>
                 </p>
-            </div>
+            
 
-            <div class="contact-section">
-                <p><strong>Téléphone :</strong> <?php echo esc_html($phone); ?></p>
-                <p><strong>École :</strong> <?php echo esc_html($school); ?></p>
-            </div>
+                <p>Téléphone : <?php echo esc_html($phone); ?></p>
+                <p>École :  <?php echo esc_html($school); ?></p>
+                </div>
 
             <div class="profil-h3">
                 <h3>À propos de moi</h3>
@@ -93,12 +85,19 @@ if ( is_user_logged_in() ) {
                     <p><?php echo nl2br(esc_html($about)); ?></p>
                 </div>
             </div>
+            </div>
        
-
-    <!-- Section actions -->
-    <div class="actions-section">
-        <p>Modifier vos infos ? <a href="<?php echo home_url('/edit-my-profil/'); ?>">C'est par ici !</a></p>
-        <p>Devenir conducteur ? <a href="<?php echo home_url('/become-a-driver/'); ?>">Clique ici !</a></p>
+            <div class="col-lg-6 col-md-6">
+            <div class="profile-container">
+                <h2><?php echo esc_html($firstname . ' ' . $lastname); ?></h2>
+                <img src= "<?php echo get_template_directory_uri(); ?>Assets/Img/placeholder.jpg" alt="Votre photo de profil" class="profile-picture">
+            
+            <p>Devenir conducteur ? <a href="<?php echo home_url('/become-a-driver/'); ?>">Clique ici !</a></p>
+            <p>Modifier vos infos ? <a href="<?php echo home_url('/edit-my-profil/'); ?>">C'est par ici !</a></p>
+            </div>
+        </div>    
+    </div>
+    </div>
     </div>
 </div>
 </div>
