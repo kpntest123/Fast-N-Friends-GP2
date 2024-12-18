@@ -1,6 +1,41 @@
 <?php
 /* Template Name: Ajouter un Trajet */
 get_header();
+// Vérification si le formulaire a été soumis
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
+    // Récupération des données du formulaire
+    $from = sanitize_text_field($_POST['from']);
+    $to = sanitize_text_field($_POST['to']);
+    $people = intval($_POST['people']);
+    $date = sanitize_text_field($_POST['date']);
+    $description = sanitize_textarea_field($_POST['description']);
+    
+    // Filtres supplémentaires
+    $ladies_only = isset($_POST['ladies_only']) ? 1 : 0;
+    $heating = isset($_POST['heating']) ? 1 : 0;
+    $pets_allowed = isset($_POST['pets_allowed']) ? 1 : 0;
+
+    // Création du trajet
+    $trajet_data = array(
+        'post_title' => $from . ' à ' . $to,
+        'post_content' => $description,
+        'post_type' => 'trajet', // Assurez-vous que ce type existe, ou remplacez-le par un type personnalisé
+        'post_status' => 'publish',
+        'meta_input' => array(
+            'from' => $from,
+            'to' => $to,
+            'people' => $people,
+            'date' => $date,
+            'ladies_only' => $ladies_only,
+            'heating' => $heating,
+            'pets_allowed' => $pets_allowed,
+        ),
+    );
+
+    // Insertion dans la base de données
+    wp_insert_post($trajet_data);
+}
+
 ?>
 
 <div class="blue-separation">
