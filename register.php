@@ -71,6 +71,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_inscription']))
 ?>
 
 <!-- Contenu de la page d'inscription -->
+<div class="blue-separation"></div>
+<br>
+
 <div class="container-fluid"> 
     <div class="row justify-content-center">
         <!-- Colonne centrale avec gouttière -->

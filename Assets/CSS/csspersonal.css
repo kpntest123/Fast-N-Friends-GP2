@@ -42,7 +42,7 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          background-color: rgb(177, 173, 173);
+          background-color: rgb(255, 255, 255);
           padding: 10px 20px;
           position: relative;
         }
@@ -508,7 +508,7 @@
                       justify-content: space-between;
                       align-items: center;
                       cursor: pointer;
-                      background-color: #94890e; /* Couleur de background*/
+                      background-color: #4B9BEB; /* Couleur de background*/
                       transition: background-color 0.3s ease;
                       border-radius: 11px;/*Se décider si on en mets une*/
                     }
@@ -576,11 +576,11 @@
           
           /* STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION ! ==> register*/
                 .background-register {
-                  background-color: #4B9BEB; /* Appliquer la couleur de fond ici */
+                  background-color: #C8C6F5; /* Appliquer la couleur de fond ici */
               }
 
               .container-fluid .custom-margin {
-                margin: 0 100px !important; /* Appliquer la marge de 0 en haut/bas et 100px à gauche/droite */
+                margin: 0 400px !important; /* Appliquer la marge de 0 en haut/bas et 100px à gauche/droite */
              }
               .custom-input-fields input.form-control, 
               .custom-input-fields select.form-control, 
@@ -626,9 +626,10 @@
               width: 80%; /* La carte prendra 80% de la largeur de son conteneur */
               max-width: 600px; /* Et donc, avec le %, il faut composer avec ceci Limite la largeur maximale */
               margin: 0 auto; /* Centre la carte horizontalement */
+              background-color: #C8C6F5;
             }
             .card-header {
-              background-color: #ffffff;
+              background-color: #4B9BEB;
               text-align: center;
             }
 
@@ -718,7 +719,8 @@
 }
 
 .verif-container-form {
-  background-color: white;
+  background-color:rgb(200, 198, 245, 0.5);
+
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 40px;
@@ -729,8 +731,7 @@
 
 
 .verif-title {
-  font-weight: bold;
-  color: #4B9BEB;
+  color: #000000;
   margin-bottom: 20px;
   font-size: 25px;
 }
@@ -852,7 +853,7 @@
   overflow: hidden;
   max-width: 900px;
   width: 90%;
-  margin: 0 auto;
+  margin:30px 400px auto !important;
 }
 
 /* Left Section */
@@ -985,7 +986,7 @@ color: #4B9BEB;
 
 /* Section À propos */
 .profil-h3 {
-  color: #333;
+  color: #4B9BEB;
   font-size: 18px;
   margin-bottom: 20px;
   text-align: center;
@@ -994,7 +995,7 @@ color: #4B9BEB;
 }
 
 .highlight {
-  color: green;
+  color: #4B9BEB;
   font-weight: bold;
 }
 
@@ -1062,25 +1063,15 @@ text-align: center;       /* Centrer le texte */
 .AAT-form-container {
   width: 100%;
   max-width: 500px;
-  background-color: #fff;
+  background-color:rgb(200, 198, 245, 0.5)
+  ;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  text-align: center;
-  margin: 0 auto; 
+  margin: 20px auto;
 }
 
-
-.AAT-header h1 {
-  color: white;
-  margin: 0;
-  font-size: 25px;
-}
-
-.AAT-form {
-  margin-top: 20px;
-}
-
+/* Labels and Inputs */
 .AAT-label {
   display: block;
   margin-bottom: 10px;
@@ -1098,6 +1089,7 @@ text-align: center;       /* Centrer le texte */
   box-sizing: border-box;
 }
 
+/* Button */
 .AAT-button {
   background-color: #4B9BEB;
   color: white;
@@ -1107,11 +1099,33 @@ text-align: center;       /* Centrer le texte */
   border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .AAT-button:hover {
   background-color: #3a7bc2;
 }
+
+/* Margin page styling */
+.AAT-Margin-Page {
+  margin: 20px 0;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .AAT-form-container {
+      padding: 15px;
+  }
+
+  .AAT-label {
+      font-size: 16px;
+  }
+
+  .AAT-button {
+      font-size: 18px;
+  }
+}
+
 
 /* Edit info */
 
@@ -1350,7 +1364,7 @@ text-align: center;       /* Centrer le texte */
 /* Edit profil */
         .form-control {
           border-radius: 10px;
-          background-color: #E6E6FA; /* couleur lavande */
+          background-color: #ffffff;
         }
     
         /* Alignement des labels à droite */

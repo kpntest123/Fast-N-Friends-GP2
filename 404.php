@@ -6,6 +6,7 @@
  */
 
 get_header(); ?>
+<div class="blue-separation"> </div>
 
 <div class="container error-page">
     <div class="error-404 not-found">

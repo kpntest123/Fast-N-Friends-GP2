@@ -2,11 +2,11 @@
 /* Template Name: Devenir un conducteur */
 get_header();?>
 
+<div class="blue-separation"> </div>
 <div class="verif-page-container">
     <div class="verif-container-form">
         <h2 class="verif-title">
-            Pour vous faire vérifier, vous devez envoyer votre carte d'identité recto-verso. 
-            Vous recevrez votre vérification dans les 24 heures qui suivent. <!-- SOIT COMME CA, OU ALORS, une fois qu'on a la ID, devenir automatiquement conducteur, j'ai rien dis c'était une connerie -->
+        Pour être vérifié, il te suffit d'envoyer ta carte d'identité recto-verso. Tu recevras ta vérification dans les 24 heures qui suivent.
         </h2> 
         <form id="verif-form" action="#" method="post" enctype="multipart/form-data">
             <div class="mb-4">

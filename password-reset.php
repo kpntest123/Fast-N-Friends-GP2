@@ -3,7 +3,7 @@
 get_header();
 
 ?>
-
+<div class="blue-separation"> </div>
 <form action="reset_password.php" method="POST">
     <input type="email" class="form-control" id="Email" name="email" placeholder="johndoe@gmail.com" required>
     <button type="submit" class="btn btn-primary w-100">Envoyez le lien de réinitialisation</button>

@@ -2,7 +2,7 @@
 /* Template Name: Recherche profonde / filtres */
 get_header();?>
 
-
+<div class="blue-separation"> </div>
   <br><br><br><br>
   <div class="deep-search-form-container">
   <form class="deep-search-form" action="<?php echo home_url('/search-results/'); ?>" method="get">

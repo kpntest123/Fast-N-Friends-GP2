@@ -45,13 +45,13 @@ if (isset($_GET['login_error'])) : ?>
 <div class="blue-separation">
 
 
-    <h1 class="text-white">Connecte-toi</h1>
-    <p class="text-white">pour accéder à ton compte, logique</p>
+    <h1>Connecte-toi</h1>
+    <p>pour accéder à ton compte, logique</p>
 
 </div>
 <br>
 <div class="container login-container">
-    <div class="row g-0">
+    <div class="row">
         <div class="col-md-6 info-section d-flex flex-column justify-content-center">
             <form action="" method="POST" novalidate>
                 <?php wp_nonce_field('user_login_action', 'user_login_nonce'); ?>
@@ -115,7 +115,7 @@ if (isset($_GET['login_error'])) : ?>
         
         <div class="col-md-6 image-section">
             <?php 
-            $image_url = get_template_directory_uri() . '/Assets/Img/connexion sécurisée.svg';
+            $image_url = get_template_directory_uri() . 'Assets\Img\secure-connection.svg';
             ?>
             <img 
                 src="<?php echo esc_url($image_url); ?>" 

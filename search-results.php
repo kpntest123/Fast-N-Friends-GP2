@@ -60,7 +60,7 @@ $args['orderby'] = array(
 // Exécution de la requête
 $query = new WP_Query($args);
 ?>
-
+<div class="blue-separation"> </div>
 <div class="container-search-results">
     <!-- Carte principale avec les critères de recherche -->
     <div class="card">
