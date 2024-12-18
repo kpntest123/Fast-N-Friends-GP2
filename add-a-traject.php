@@ -6,7 +6,8 @@ get_header();
 <div class="blue-separation">
     <h1>Ajoute un trajet</h1>
 </div>
-
+<br>
+<div class="AAT-Margin-Page"></div>
 <div class="AAT-form-container" id="AAT-form-container">
     <form method="POST" id="AAT-form">
         <label for="from" class="AAT-label" id="AAT-label-from">De :</label>
@@ -27,5 +28,5 @@ get_header();
         <button type="submit" name="submit_trajet" id="AAT-submit" class="AAT-button">Ajouter un trajet</button>
     </form>
 </div>
-
+<br>
 <?php get_footer(); ?>

@@ -576,11 +576,11 @@
           
           /* STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION ! ==> register*/
                 .background-register {
-                  background-color: #4B9BEB; /* Appliquer la couleur de fond ici */
+                  background-color: #C8C6F5; /* Appliquer la couleur de fond ici */
               }
 
               .container-fluid .custom-margin {
-                margin: 0 100px !important; /* Appliquer la marge de 0 en haut/bas et 100px à gauche/droite */
+                margin: 0 400px !important; /* Appliquer la marge de 0 en haut/bas et 100px à gauche/droite */
              }
               .custom-input-fields input.form-control, 
               .custom-input-fields select.form-control, 
@@ -852,7 +852,7 @@
   overflow: hidden;
   max-width: 900px;
   width: 90%;
-  margin: 0 auto;
+  margin:30px 400px auto !important;
 }
 
 /* Left Section */
@@ -1050,21 +1050,10 @@ text-align: center;       /* Centrer le texte */
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  text-align: center;
-  margin: 0 auto; 
+  margin: 20px auto;
 }
 
-
-.AAT-header h1 {
-  color: white;
-  margin: 0;
-  font-size: 25px;
-}
-
-.AAT-form {
-  margin-top: 20px;
-}
-
+/* Labels and Inputs */
 .AAT-label {
   display: block;
   margin-bottom: 10px;
@@ -1082,6 +1071,7 @@ text-align: center;       /* Centrer le texte */
   box-sizing: border-box;
 }
 
+/* Button */
 .AAT-button {
   background-color: #4B9BEB;
   color: white;
@@ -1091,11 +1081,33 @@ text-align: center;       /* Centrer le texte */
   border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .AAT-button:hover {
   background-color: #3a7bc2;
 }
+
+/* Margin page styling */
+.AAT-Margin-Page {
+  margin: 20px 0;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .AAT-form-container {
+      padding: 15px;
+  }
+
+  .AAT-label {
+      font-size: 16px;
+  }
+
+  .AAT-button {
+      font-size: 18px;
+  }
+}
+
 
 /* Edit info */
 

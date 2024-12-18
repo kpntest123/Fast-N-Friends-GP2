@@ -68,7 +68,7 @@ get_header();
         <div class="card-wrapper">
             <div class="fond-card-1">
                 <div class="fond-card-2">
-                    <img src="Assets\Img\Economiquement stratégique.svg" alt="Description" class="fond-card-2-image">
+                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/Economiquement stratégique.svg" alt="homme chevauchant une tirellire">
                 </div>
                 <div class="forme-card-bleue">
                     <h2 class="h2-cards">Économiquement stratégique</h2>
@@ -83,7 +83,7 @@ get_header();
         <div class="card-wrapper">
             <div class="fond-card-1-miroir">
                 <div class="fond-card-2-miroir">
-                    <img src="Assets\Img\Ecologiquement responsable.svg" alt="Main avec une plante qui pousse" class="fond-card-2-miroir-image">
+                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/Ecologiquement responsable.svg" alt="main tenant une plante">
                 </div>
                 <div class="forme-card-bleue-miroir">
                     <h2 class="h2-cards-miroir">Ecologiquement responsable</h2>
@@ -98,7 +98,7 @@ get_header();
         <div class="card-wrapper">
             <div class="fond-card-1">
                 <div class="fond-card-2">
-                    <img src="Assets\Img\Ladies only.svg" alt="Une femme entrain de marcher" class="fond-card-2-image">
+                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/Ladies only.svg" alt="femme entrain de marcher">
                 </div>
                 <div class="forme-card-bleue">
                     <h2 class="h2-cards">Ladies only</h2>
@@ -113,7 +113,7 @@ get_header();
         <div class="card-wrapper">
             <div class="fond-card-1-miroir">
                 <div class="fond-card-2-miroir">
-                    <img src="Assets\Img\Profils vérifiés.svg" alt="Une voiture qui roule avec un signe de vérification audessus" class="fond-card-2-miroir-image">
+                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/Profils vérifiés.svg" alt="voiture avec un logo de verification audessus">
                 </div>
                 <div class="forme-card-bleue-miroir">
                     <h2 class="h2-cards-miroir">Profils vérifiés</h2>
@@ -128,7 +128,7 @@ get_header();
         <div class="card-wrapper">
             <div class="fond-card-1">
                 <div class="fond-card-2">
-                    <img src="Assets\Img\Events accessible.svg" alt="Une femme pointant un événement avec une loupe sur un tableau" class="fond-card-2-image">
+                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/Events accessible.svg" alt="une femme pointant un evenement avec une loupe sur un tableau">
                 </div>
                 <div class="forme-card-bleue">
                     <h2 class="h2-cards">Des événements accessibles</h2>
@@ -143,7 +143,7 @@ get_header();
         <div class="card-wrapper">
             <div class="fond-card-1-miroir">
                 <div class="fond-card-2-miroir">
-                    <img src="Assets\Img\Tchattez.svg" alt="Une femme et un homme assis sur une moto entrain de discuter" class="fond-card-2-miroir-image">
+                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/Events accessible.svg" alt="une femme et un homme discutant de tout et de rien">
                 </div>
                 <div class="forme-card-bleue-miroir">
                     <h2 class="h2-cards-miroir">Tchattez pour faire connaissance</h2>

@@ -163,43 +163,43 @@ if (!e.target.matches('#from, #to')) {
      }, 3); // Ajuste la vitesse de l'animation en ms ici
    });  
 
-   //Animation des cards dans accueil/
+// Animations cards
 
-     
-      const observerOptions = {
-          root: null, 
-          threshold: 0.5 
-      };
+const observerOptions = {
+  root: null, 
+  threshold: 0.5 
+};
 
-      
-      function animateCard(card, direction) {
-          anime({
-              targets: card,
-              translateX: direction === 'left' ? ['-100vw', '0'] : ['100vw', '0'],
-              opacity: [0, 1],
-              duration: 1500,
-              easing: 'easeOutExpo'
-          });
+
+function animateCard(card, direction) {
+  anime({
+      targets: card,
+      translateX: direction === 'left' ? ['-100vw', '0'] : ['100vw', '0'],
+      opacity: [0, 1],
+      duration: 1500,
+      easing: 'easeOutExpo'
+  });
+}
+
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          
+          const card = entry.target;
+          const direction = card.classList.contains('fond-card-1') ? 'right' : 'left';
+          animateCard(card, direction);
+
+          
+          observer.unobserve(card);
       }
+  });
+}, observerOptions);
 
-      
-      const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                  
-                  const card = entry.target;
-                  const direction = card.classList.contains('fond-card-1') ? 'right' : 'left';
-                  animateCard(card, direction);
 
-                  observer.unobserve(card);
-              }
-          });
-      }, observerOptions);
-
-   
-      document.querySelectorAll('.fond-card-1, .fond-card-1-miroir').forEach(card => {
-          observer.observe(card);
-      });
+document.querySelectorAll('.fond-card-1, .fond-card-1-miroir').forEach(card) => {
+  observer.observe(card);
+}
 
 
 
@@ -311,43 +311,3 @@ item.classList.remove("active-filter");
 document.getElementById("datePicker").value = "";
 renderEvents(events);
 });
-
-
-// Animations cards
-
-const observerOptions = {
-  root: null, 
-  threshold: 0.5 
-};
-
-
-function animateCard(card, direction) {
-  anime({
-      targets: card,
-      translateX: direction === 'left' ? ['-100vw', '0'] : ['100vw', '0'],
-      opacity: [0, 1],
-      duration: 1500,
-      easing: 'easeOutExpo'
-  });
-}
-
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-      if (entry.isIntersecting) {
-          
-          const card = entry.target;
-          const direction = card.classList.contains('fond-card-1') ? 'right' : 'left';
-          animateCard(card, direction);
-
-          
-          observer.unobserve(card);
-      }
-  });
-}, observerOptions);
-
-
-document.querySelectorAll('.fond-card-1, .fond-card-1-miroir').forEach(card => {
-  observer.observe(card);
-});
-
