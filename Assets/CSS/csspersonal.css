@@ -1444,3 +1444,134 @@ text-align: center;       /* Centrer le texte */
   padding: 70px;
   color: white;
 }
+
+/*Css pour la page de recherches, autre css, différents que la page d'acceuil, avec du bootstrap*/
+.deep-search-form-container {
+  background-color: #ff0000;
+  margin: 0 100px;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.deep-search-modal-content h2 {
+  text-align: center; /* Centrer le titre des filtres */
+}
+
+.deep-search-form-container img {
+  height: 32px;
+  margin-left: 0px;
+}
+
+.deep-search-modal-body {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espace entre les filtres */
+  /*padding: 2px 16px; */
+}
+
+.deep-search-modal-body input[type="checkbox"] {
+  margin-right: 10px; /* Espacement entre les cases à cocher */
+}
+
+.deep-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.deep-search-form-field {
+  flex: 1 1 200px;
+}
+
+.deep-search-form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.deep-search-form-submit,
+.deep-search-form-filters {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.deep-search-form-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.deep-search-form-button-icon {
+  margin-right: 8px;
+}
+
+.deep-search-form-filters-button {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.deep-search-form-filters-button-icon {
+  margin-right: 8px;
+}
+
+.deep-search-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.deep-search-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+.deep-search-modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.deep-search-modal-close:hover,
+.deep-search-modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.deep-search-modal-footer {
+  padding: 2px 16px;
+  text-align: right;
+}
+
+.deep-search-modal-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

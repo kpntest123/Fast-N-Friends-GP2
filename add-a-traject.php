@@ -24,8 +24,24 @@ get_header();
         <label for="description" class="AAT-label" id="AAT-label-description">Description :</label>
         <textarea id="AAT-description" name="description" class="AAT-input" rows="4"></textarea>
 
+        <!-- Filtres supplémentaires -->
+        <div class="AAT-extra-options">
+            <label for="ladies_only">
+                <input type="checkbox" id="ladies_only" name="ladies_only"> Ladies Only
+            </label>
+
+            <label for="heating">
+                <input type="checkbox" id="heating" name="heating"> Chauffage
+            </label>
+
+            <label for="pets_allowed">
+                <input type="checkbox" id="pets_allowed" name="pets_allowed"> Animaux autorisés
+            </label>
+        </div>
+
         <button type="submit" name="submit_trajet" id="AAT-submit" class="AAT-button">Ajouter un trajet</button>
     </form>
 </div>
+
 
 <?php get_footer(); ?>
