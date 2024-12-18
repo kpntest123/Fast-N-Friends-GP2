@@ -2,8 +2,6 @@
 /* Template Name: Page d'inscription */
 get_header();
 
-
-
 // Vérification si le formulaire a été soumis
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_inscription'])) {
     // Assainir et récupérer les données

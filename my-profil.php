@@ -2,10 +2,11 @@
 /* Template Name: Page de Profil */
 get_header();
 
-// Dégager utilisateur qui n'est pas connecté/inscrits :
+// Vérifier si l'utilisateur n'est pas connecté
 if ( !is_user_logged_in() ) {
-    wp_redirect( home_url('/login/') );
-    exit;
+    // Rediriger vers la page /hom si l'utilisateur n'est pas connecté
+    wp_redirect( home_url('/home') );
+    exit; // Toujours appeler exit après une redirection
 }
 
 // Récupérer l'ID de l'utilisateur actuel
