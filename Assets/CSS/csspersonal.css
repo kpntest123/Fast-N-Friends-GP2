@@ -574,129 +574,34 @@
             margin-bottom: 30px;
           }
           
-          /*
-          
-          STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION !
-          
-          */
-          
-          /* Style général pour le formulaire */
-          .inscription-form {
-              max-width: 600px;
-              margin: 0 auto;
-              padding: 20px;
-              background-color: #f9f9f9; /* Fond clair */
-              border: 1px solid #ddd; /* Bordure légère */
-              border-radius: 10px;
-              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-              font-family: Arial, sans-serif;
-          }
-          
-          .inscription-form h2 {
-              text-align: center;
-              color: #333;
-              margin-bottom: 20px;
-          }
-          
-          /* Style des champs */
-          .inscription-form label {
-              display: block;
-              margin-bottom: 5px;
-              font-weight: bold;
-              color: #555;
-          }
-          
-          .inscription-form input[type="text"],
-          .inscription-form input[type="email"],
-          .inscription-form input[type="password"],
-          .inscription-form input[type="tel"],
-          .inscription-form input[type="date"],
-          .inscription-form textarea,
-          .inscription-form select {
-              width: 100%;
-              padding: 10px;
-              margin-bottom: 15px;
-              border: 1px solid #ccc;
-              border-radius: 5px;
-              font-size: 20px;
-              box-sizing: border-box;
-              background-color: #fff;
-              transition: border-color 0.2s;
-          }
-          
-          .inscription-form input[type="text"]:focus,
-          .inscription-form input[type="email"]:focus,
-          .inscription-form input[type="password"]:focus,
-          .inscription-form input[type="tel"]:focus,
-          .inscription-form input[type="date"]:focus,
-          .inscription-form textarea:focus {
-              border-color: #4B9BEB;
-              outline: none;
-          }
-          
-          /* Style des boutons radio et cases à cocher */
-          .inscription-form input[type="radio"],
-          .inscription-form input[type="checkbox"] {
-              margin-right: 10px;
-          }
-          
-          .inscription-form div {
-              margin-bottom: 15px;
-          }
-          
-          /* Style du bouton */
-          .inscription-form input[type="submit"] {
-              width: 100%;
-              padding: 12px;
-              background-color: #4B9BEB; /* Bleu */
-              color: #fff;
-              border: none;
-              border-radius: 5px;
-              font-size: 16px;
-              font-weight: bold;
-              cursor: pointer;
-              transition: background-color 0.3s;
-          }
-          
-          .inscription-form input[type="submit"]:hover {
-              background-color: #4B9BEB;
-          }
-          
-          /* Style pour les messages d'erreur */
-          .error-message {
-              color: #d9534f;
-              background-color: #4B9BEB;
-              border: 1px solid #ebccd1;
-              padding: 10px;
-              margin-bottom: 15px;
-              border-radius: 5px;
-              text-align: center;
-          }
-          
-          /* Style du textarea */
-          .inscription-form textarea {
-              height: 100px;
-              resize: vertical;
-          }
-          
-          /* Style spécifique à la photo de profil */
-          .inscription-form input[type="file"] {
-              margin-top: 10px;
-          }
-          
-          /* Style des conditions et newsletter */
-          .inscription-form div:last-child {
-              display: flex;
-              flex-direction: column;
-              gap: 10px;
-              font-size: 16px;
-          }
-          
-          /* Alignement des genres */
-          .inscription-form div input[type="radio"] {
-              margin: 0;
-              margin-right: 5px;
-          }
+          /* STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION ! ==> register*/
+                .background-register {
+                  background-color: #4B9BEB; /* Appliquer la couleur de fond ici */
+              }
+
+              .container-fluid .custom-margin {
+                margin: 0 100px !important; /* Appliquer la marge de 0 en haut/bas et 100px à gauche/droite */
+             }
+              .custom-input-fields input.form-control, 
+              .custom-input-fields select.form-control, 
+              .custom-input-fields textarea.form-control {
+                  background-color: #ffffff; /* Gris clair pour les champs */
+                  border-radius: 5px; /* Bordures arrondies */
+                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère pour plus de profondeur */
+                  margin-bottom: 15px; /* Espacement entre les champs */
+                  padding: 10px; /* Espacement interne */
+              }
+              .btn-primary2 {
+                background-color: #ffffff;
+                color: rgb(0, 0, 0);
+                padding: 8px 16px;
+                border-color: #000;
+                border-radius: 6px;
+                text-decoration: none;
+                transition: background-color 0.3s;
+              }
+      
+        
           
 
           /*Ici, c'est la partie pour Les résultats de recherches ;*/
@@ -723,7 +628,7 @@
               margin: 0 auto; /* Centre la carte horizontalement */
             }
             .card-header {
-              background-color: #4B9BEB;
+              background-color: #ffffff;
               text-align: center;
             }
 
@@ -1072,7 +977,6 @@ color: #4B9BEB;
 
 
 /* Section À propos */
-
 .profil-h3 {
   color: #333;
   font-size: 1.5rem;
