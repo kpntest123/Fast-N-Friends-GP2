@@ -177,7 +177,7 @@ function redirect_after_login($redirect_to, $request, $user) {
                 if (in_array('administrator', $user->roles)) {
                     return admin_url(); // Redirige les administrateurs vers le tableau de bord
                 } else {
-                    return home_url('/mon-compte'); // Redirige les utilisateurs normaux
+                    return home_url('/my-profil'); // Redirige les utilisateurs normaux
                 }
             }
             return $redirect_to;

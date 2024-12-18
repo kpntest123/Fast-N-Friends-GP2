@@ -47,6 +47,7 @@ if (isset($_GET['login_error'])) : ?>
 
     <h1 class="text-white">Connecte-toi</h1>
     <p class="text-white">pour accéder à ton compte, logique</p>
+
 </div>
 <br>
 <div class="container login-container">

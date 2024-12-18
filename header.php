@@ -1,4 +1,33 @@
 
+            <!-- ICI, favicon et titres des pages : -->
+            <?php
+            if (is_page('deep-search')) : ?>
+                <title>Recherche approfondie - FNF</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_page('register')) : ?> <!-- INSCRIPTION c'est register, besoin d'anglicisme c'est important -->
+                <title>S'inscrire - FNF</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_page('login')) : ?>
+                <title>Se connecter - FNF</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_page('password-reset')) : ?>
+                <title>Réinitialise ton MDP - FNF</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_page('add-a-traject')) : ?>
+                <title>Ajoute ton trajet - FNF</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_404()) : ?> <!-- Vérification correcte pour une page 404 -->
+                <title>404 - T'es paumé</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_front_page() || is_home()) : ?> <!-- Vérification pour la page d'accueil -->
+                <title>Accueil - FNF</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php else : ?>
+                <!-- Titre par défaut pour toutes les autres pages -->
+                <title><?php wp_title('|', true, 'right'); ?></title>
+                <link rel="icon" href="<?php echo get_site_icon_url(); ?>" type="image/x-icon">
+            <?php endif; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -37,38 +66,6 @@
 
  
 
-
-
-
-      
-            <!-- ICI, favicon et titres des pages : -->
-            <?php
-            if (is_page('deep-search')) : ?>
-                <title>Recherche approfondie - FNF</title>
-                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-            <?php elseif (is_page('register')) : ?> <!-- INSCRIPTION c'est register, besoin d'anglicisme c'est important -->
-                <title>S'inscrire - FNF</title>
-                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-            <?php elseif (is_page('login')) : ?>
-                <title>Se connecter - FNF</title>
-                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-            <?php elseif (is_page('password-reset')) : ?>
-                <title>Réinitialise ton MDP - FNF</title>
-                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-            <?php elseif (is_page('add-a-traject')) : ?>
-                <title>Ajoute ton trajet - FNF</title>
-                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-            <?php elseif (is_404()) : ?> <!-- Vérification correcte pour une page 404 -->
-                <title>404 - T'es paumé</title>
-                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-            <?php elseif (is_front_page() || is_home()) : ?> <!-- Vérification pour la page d'accueil -->
-                <title>Accueil - FNF</title>
-                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-            <?php else : ?>
-                <!-- Titre par défaut pour toutes les autres pages -->
-                <title><?php wp_title('|', true, 'right'); ?></title>
-                <link rel="icon" href="<?php echo get_site_icon_url(); ?>" type="image/x-icon">
-            <?php endif; ?>
 
 
 
