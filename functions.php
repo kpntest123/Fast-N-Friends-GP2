@@ -33,28 +33,25 @@ function styles_scripts() {
         true        // Charger dans le footer
     );
 
-    function my_theme_enqueue_scripts() {
-        // Lier le fichier JavaScript local
-        wp_enqueue_script(
-            'thejs', // Nom unique pour le script
-            get_template_directory_uri() . '/Assets/js/thejs.js', // Chemin vers le fichier JS
-            array(), // Dépendances (si aucune, laissez vide)
-            null, // Version (laisser null pour utiliser la version par défaut)
-            true // Mettre "true" pour placer le script dans le footer (recommandé)
-        );
-    }
-    add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
+    wp_enqueue_script(
+        'anime-js', // Nom unique pour le script
+        'https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js', // Lien CDN vers Anime.js
+        [], // Pas de dépendances
+        '3.2.2', // Version
+        true // Charger dans le footer
+    );
 
-                    // Lier Anime.js
-                    wp_enqueue_script(
-                        'anime-master',
-                        get_template_directory_uri() . '/Assets/anime-master/lib/anime.min.js', 
-                        [], 
-                        '3.2.2', 
-                        true 
-                    );
-                }
-                add_action('wp_enqueue_scripts', 'styles_scripts');
+    // Lier votre fichier JS principal (utilisant Anime.js)
+    wp_enqueue_script(
+        'thejs', // Nom unique pour votre script local
+        get_template_directory_uri() . '/Assets/js/thejs.js', // Chemin vers votre fichier JS
+        ['anime-js'], // Dépendance à Anime.js
+        null, // Pas de version spécifique
+        true // Charger dans le footer
+    );
+}
+add_action('wp_enqueue_scripts', 'styles_scripts');
+
 
 // Fonction pour lier les styles personnalisés
 function enqueue_custom_styles() {
