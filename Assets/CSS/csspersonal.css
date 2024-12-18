@@ -9,7 +9,6 @@
           }
           
           body {
-            margin: 0 100px; /* Marge de 0 en haut/bas et 20px à gauche/droite */
             background-color: #ffffff;
             color: #000000;
           }
@@ -38,6 +37,7 @@
           /* Style de la barre de navigation */
           /* Navbar globale */
         .custom-navbar {
+          margin: 0 100px; /* Marge de 0 en haut/bas et 20px à gauche/droite */
           font-size: 18px;
           display: flex;
           justify-content: space-between;
@@ -209,8 +209,6 @@
           /*PARTIE BLOC 2 : IMAGE ET BARRE DE RECHERCHE*/
           .search-section {
             background-color: #4B9BEB;
-            border-radius: 50px;
-            margin: 50 0px; /* Marge de 0 en haut/bas et 20px à gauche/droite */
             padding: 2rem;
             display: flex;
             justify-content: center;
@@ -219,7 +217,7 @@
           
           .search-container {
             width: 100%;
-            border-radius: 25px;
+            border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             color: #333;
             background-color: rgb(255, 255, 255); /* ==> normalement à supprimer, juste pour prévisualiser le contenait de recherche, finalement, le rendu est au rdv !*/
@@ -867,6 +865,7 @@
 
 /* STYLE POUR LE FOOTER, le vrai :*/
 .footer {
+  margin: 0 100px; /* Marge de 0 en haut/bas et 20px à gauche/droite */
   border: #000;
   background-color: #ffffff; /* Arrière plan global, couleur de fond*/
   color: black;
