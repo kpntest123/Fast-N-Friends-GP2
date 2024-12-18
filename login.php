@@ -42,6 +42,8 @@ if (isset($_GET['login_error'])) : ?>
         <?php echo esc_html(urldecode($_GET['login_error'])); ?>
     </div>
 <?php endif; ?>
+<div class="blue-separation">
+
 
     <h1 class="text-white">Connecte-toi</h1>
     <p class="text-white">pour accéder à ton compte, logique</p>
@@ -122,6 +124,7 @@ if (isset($_GET['login_error'])) : ?>
         </div>
     </div>
 </div>
+<br>
 
 <?php
 get_footer();

@@ -15,13 +15,13 @@
           
           p {
             font-style: normal;
-            font-size: 20px;  
+            font-size: 18px;  
           }
           
           /* Styles des titres */
           .titre-1-classic {
             font-style: normal;
-            font-size: 26px; /* Réduit de 32px à 26px pour correspondre au H1 de la navbar */
+            font-size: 25px; /* Réduit de 32px à 26px pour correspondre au H1 de la navbar */
           }
           
           .titre-2-classic {
@@ -31,7 +31,7 @@
           
           .titre-3-classic {
             font-style: normal;
-            font-size: 16px; /* Réduit de 20px à 16px */
+            font-size: 18px; /* Réduit de 20px à 16px */
           }
           
           /* Style de la barre de navigation */
@@ -161,7 +161,7 @@
   gap: 10px;
   padding: 10px 15px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   color: #333;
   transition: background 0.3s;
 }
@@ -185,17 +185,17 @@
           .intro {
             text-align: center;
             background-color: #4B9BEB;
-            font-size: 1.25rem; /* Réduit de 24px à 20px */
+            font-size: 25px; /* Réduit de 24px à 20px */
             padding: 1.875rem 0.9375rem; /* Réduit de 40px 20px à 30px 15px */
           }
           
           .intro p {
-            font-size: 1rem; /* Réduit de 20px à 16px */
+            font-size: 18px; /* Réduit de 20px à 16px */
             color: #000000;
           }
           
           .intro h1 {
-            font-size: 1.625rem; /* Réduit de 24px à 20px */
+            font-size: 25px; /* Réduit de 24px à 20px */
             color: #000000;
             font-style: normal;
             margin-bottom: 1.875rem;
@@ -279,7 +279,7 @@
           }
 
           .search-container h1 {
-            font-size: 32px; /* ADAPTER LA POLICE, UNE FOIS QUE c'EST FAIT, que tout est bien pensé */
+            font-size: 25px; /* ADAPTER LA POLICE, UNE FOIS QUE c'EST FAIT, que tout est bien pensé */
             font-weight: bold; /* Rends mieux en gras ou pas ? */
             text-align: center; /* Center le texte */
           }      
@@ -291,7 +291,7 @@
           }    
 
           .note {
-            font-size: 16px; /* Taille plus petite/grandes ==> selon mes besoin */
+            font-size: 18px; /* Taille plus petite/grandes ==> selon mes besoin */
             color: rgba(0, 0, 0, 0.7); /* Ajuste la couleur si nécessaire */
             text-align: center; /* Optionnel */
           }             
@@ -303,7 +303,7 @@
           }
           
           .stats h1 {
-            font-size: 26px; /* Réduit de 24px à 20px */
+            font-size: 25px; /* Réduit de 24px à 20px */
             color: #000000;
             margin-bottom: 16px; /* Réduit de 20px à 16px */
           }
@@ -315,7 +315,7 @@
           }
           
           .stats p {
-            font-size: 16px;
+            font-size: 18px;
             color: #000000;
           }
           
@@ -470,12 +470,12 @@
           }
           
           .why-us p {
-            font-size: 16px; /* Réduit de 20px à 16px */
+            font-size: 18px; /* Réduit de 20px à 16px */
             color: #000000;
           }
           
           .why-us h1 {
-            font-size: 26px; /* Réduit de 24px à 20px */
+            font-size: 25px; /* Réduit de 24px à 20px */
             color: #000000;
             font-style: normal;
             margin-bottom: 30px;
@@ -563,12 +563,12 @@
           }
           
           .bloc6 p {
-            font-size: 16px; 
+            font-size: 18px; 
             color: #000000;
           }
           
           .bloc6 h1 {
-            font-size: 26px; 
+            font-size: 25px; 
             color: #000000;
             font-style: normal;
             margin-bottom: 30px;
@@ -652,7 +652,7 @@
               color: #fff;
               border: none;
               border-radius: 5px;
-              font-size: 16px;
+              font-size: 18px;
               font-weight: bold;
               cursor: pointer;
               transition: background-color 0.3s;
@@ -689,7 +689,7 @@
               display: flex;
               flex-direction: column;
               gap: 10px;
-              font-size: 16px;
+              font-size: 18px;
           }
           
           /* Alignement des genres */
@@ -786,7 +786,7 @@
           .close-btn {
             background: none;
             border: none;
-            font-size:16px;
+            font-size:18px;
             cursor: pointer;
             color: #333;
           }
@@ -827,7 +827,7 @@
   font-weight: bold;
   color: #4B9BEB;
   margin-bottom: 20px;
-  font-size: 1.3rem;
+  font-size: 25px;
 }
 
 
@@ -935,7 +935,7 @@
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
 }
 
@@ -965,7 +965,7 @@
 .info-section input[type="password"] {
   width: 100%;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 18px;
   border: 1px solid #4B9BEB;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -976,7 +976,7 @@
   color: white;
   border: none;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -1058,6 +1058,7 @@ align-items: center;
 
 .info-Psection p {
   margin: 5px 0;
+  font-size: 18px;
 }
 
 .contact-section {
@@ -1081,7 +1082,7 @@ color: #4B9BEB;
 
 .profil-h3 {
   color: #333;
-  font-size: 1.5rem;
+  font-size: 18px;
   margin-bottom: 20px;
   text-align: center;
   align-items: center;
@@ -1109,7 +1110,7 @@ margin: 20px auto;        /* Centrer la boîte horizontalement */
 
 /* Si vous voulez ajouter un contenu à l'intérieur de la boîte (ex. du texte ou une image) */
 .profil-box-content {
-font-size: 16px;          /* Taille du texte à l'intérieur de la boîte */
+font-size: 18px;          /* Taille du texte à l'intérieur de la boîte */
 color: #333;              /* Couleur du texte */
 text-align: center;       /* Centrer le texte */
 }
@@ -1153,7 +1154,7 @@ text-align: center;       /* Centrer le texte */
 .AAT-header h1 {
   color: white;
   margin: 0;
-  font-size: 26px;
+  font-size: 25px;
 }
 
 .AAT-form {
@@ -1163,7 +1164,7 @@ text-align: center;       /* Centrer le texte */
 .AAT-label {
   display: block;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 18px;
   color: #333;
 }
 
@@ -1184,7 +1185,7 @@ text-align: center;       /* Centrer le texte */
   width: 100%;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -1200,6 +1201,8 @@ text-align: center;       /* Centrer le texte */
           font-weight: bold;
           margin-bottom: 40px;
           color: #4B9BEB;
+          display: flex;
+          justify-content: center;
       }
 
       /* Style global des inputs */
@@ -1249,7 +1252,7 @@ text-align: center;       /* Centrer le texte */
         border: 2px solid #4B9BEB;
         border-radius: 10px;
         padding: 15px 20px;
-        font-size: 1.3rem;
+        font-size: 20px;
         color: #3d3db3;
         font-weight: bold;
         transition: all 0.3s ease;
@@ -1262,6 +1265,12 @@ text-align: center;       /* Centrer le texte */
         color: white;
         border-color: white;
         transform: scale(1.05);
+    }
+
+    .event-title{
+      text-align: center;
+      margin-top: 20px;
+      font-size: 20px;
     }
     
     .event-container {
@@ -1288,7 +1297,7 @@ text-align: center;       /* Centrer le texte */
     }
     
     .event-card .event-tag {
-        font-size: 1rem;
+        font-size: 18px;
         font-weight: bold;
         color: white;
         background-color: #4B9BEB;
@@ -1314,19 +1323,19 @@ text-align: center;       /* Centrer le texte */
     }
     
     .event-info h4 {
-        font-size: 1.3rem;
+        font-size: 18px;
         font-weight: bold;
         margin-bottom: 5px;
     }
     
     .event-info p {
         color: #6c757d;
-        font-size: 1rem;
+        font-size: 18px;
     }
     
     .event-info .event-date,
     .event-info .event-location {
-        font-size: 1rem;
+        font-size: 18px;
         display: block;
         margin-top: 5px;
     }
@@ -1467,19 +1476,19 @@ text-align: center;       /* Centrer le texte */
 }
 
 .error-404 h1.page-title {
-  font-size: 2.5rem;
+  font-size: 25px;
   margin-bottom: 10px;
 }
 
 .error-404 p.error-message {
-  font-size: 1.2rem;
+  font-size: 18px;
   margin-bottom: 20px;
 }
 
 .error-404 a.button.home-button {
   display: inline-block;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 20px;
   color: #fff;
   background-color: #4B9BEB; /* Bleu WordPress */
   text-decoration: none;
@@ -1496,16 +1505,16 @@ text-align: center;       /* Centrer le texte */
 /* Écrans petits (mobiles) */
 @media (max-width: 768px) {
   .error-404 h1.page-title {
-      font-size: 2rem;
+      font-size: 25px;
   }
 
   .error-404 p.error-message {
-      font-size: 1rem;
+      font-size: 18px;
   }
 
   .error-404 a.button.home-button {
       padding: 8px 16px;
-      font-size: 0.9rem;
+      font-size: 20px;
   }
 }
 
@@ -1523,4 +1532,11 @@ text-align: center;       /* Centrer le texte */
       padding: 6px 12px;
       font-size: 0.8rem;
   }
+}
+
+.blue-separation {
+  background-color: #4B9BEB;
+  text-align: center;
+  padding: 70px;
+  color: white;
 }

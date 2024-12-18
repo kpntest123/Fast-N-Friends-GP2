@@ -26,7 +26,8 @@ if ( is_user_logged_in() ) {
     return;
 }
 ?>
-<div style="background-color: #4B9BEB; text-align: center; padding: 70px;">
+<div class="blue-separation">
+    <h1>Mon Profil</h1>
 </div>
 <!-- Contenu de la page de profil -->
 <div class="container mt-4">

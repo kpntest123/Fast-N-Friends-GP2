@@ -3,11 +3,7 @@
 get_header();
 ?>
 
-<<<<<<< HEAD
-<div style="background-color: #4B9BEB; text-align: center; padding: 25px;">
-=======
-<div style="background-color:#4B9BEB; text-align: center; padding: 25px;">
->>>>>>> 9e9359b6cc1a0d1a489dbb640b56179dbd7adace
+<div class="blue-separation">
     <h1>Ajoute un trajet</h1>
 </div>
 

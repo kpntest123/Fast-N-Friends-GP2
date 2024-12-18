@@ -2,8 +2,8 @@
 /* Template Name: Evenement partenaire */
 get_header(); ?>
 
-<div style="background-color: #4B9BEB; text-align: center; padding: 25px;">
-            <h1 style="color: white;">Événements Partenaires</h1>
+<div class="blue-separation">
+            <h1>Événements Partenaires</h1>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-4">
@@ -55,7 +55,7 @@ get_header(); ?>
 
 
 <div>
-    <div style="text-align: center; margin-top: 20px;">
+    <div class=event-title>
         <h2>Événements à venir</h2>
     </div>
     
@@ -98,7 +98,7 @@ get_header(); ?>
     </div>
     <div>
     <div>
-    <div style="text-align: center; margin-top: 20px;">
+    <div class="event-title">
         <h2>Tous les événements</h2>
     </div>
 

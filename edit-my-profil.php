@@ -66,11 +66,11 @@ if ( is_user_logged_in() ) {
 ?>
 
 <!-- Contenu de la page Edit My Profile -->
-<div style="background-color: #4B9BEB; text-align: center; padding: 70px;">
+<div class= blue-separation>
     <!-- Couleur de fond personnalisée pour l'en-tête -->
 </div>
 <div class="container">
-    <div class="edit-info-event-title" style="display: flex; justify-content: center;">
+    <div class="edit-info-event-title">
         <h1>Modifier mes infos</h1>
     </div>
     <br><br>
