@@ -68,13 +68,12 @@ get_header();
         <div class="card-wrapper">
             <div class="fond-card-1">
                 <div class="fond-card-2">
-                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/Economiquement stratégique.svg" alt="homme chevauchant une tirellire">
+                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/econmicly-strategic.svg" alt="homme chevauchant une tirellire">
                 </div>
                 <div class="forme-card-bleue">
                     <h2 class="h2-cards">Économiquement stratégique</h2>
                     <p class="p-cards">
-                        Le covoiturage est une solution économique stratégique, permettant de réduire les coûts de transport tout en optimisant l'utilisation des véhicules. Il contribue également à la diminution de la congestion routière et des émissions de CO2. En favorisant cette pratique, on soutient une mobilité durable et rentable.
-                    </p>
+                    Le covoiturage, c'est une super solution pour économiser, tout en réduisant les coûts de transport et en utilisant mieux nos voitures. En plus, ça aide à désengorger les routes et à réduire les émissions de CO2. En l'adoptant, tu choisis une mobilité plus durable et qui fait vraiment du bien au porte-monnaie !</p>
                 </div>
             </div>
         </div>
@@ -83,13 +82,12 @@ get_header();
         <div class="card-wrapper">
             <div class="fond-card-1-miroir">
                 <div class="fond-card-2-miroir">
-                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/Ecologiquement responsable.svg" alt="main tenant une plante">
+                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/ecologicly-responsible.svg" alt="main tenant une plante">
                 </div>
                 <div class="forme-card-bleue-miroir">
                     <h2 class="h2-cards-miroir">Ecologiquement responsable</h2>
                     <p class="p-cards">
-                        Le covoiturage est une pratique écologiquement responsable, car elle réduit le nombre de véhicules en circulation et diminue ainsi les émissions de CO2. En partageant les trajets, on optimise l’utilisation des ressources et on limite la pollution. Cela contribue directement à la préservation de l’environnement.
-                    </p>
+                    Le covoiturage, c’est un geste éco-responsable, parce qu'il réduit le nombre de voitures sur la route et donc les émissions de CO2. En partageant les trajets, tu optimises les ressources et tu diminues la pollution. C’est direct : tu contribues à préserver l’environnement !</p>
                 </div>
             </div>
         </div>
@@ -98,13 +96,12 @@ get_header();
         <div class="card-wrapper">
             <div class="fond-card-1">
                 <div class="fond-card-2">
-                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/Ladies only.svg" alt="femme entrain de marcher">
+                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/ladies-only.svg" alt="femme entrain de marcher">
                 </div>
                 <div class="forme-card-bleue">
                     <h2 class="h2-cards">Ladies only</h2>
                     <p class="p-cards">
-                        Le covoiturage "ladies only" offre un environnement sécurisé et confortable pour les femmes, en favorisant des trajets partagés entre conductrices et passagères. Cette option répond à un besoin de sécurité et de convivialité, tout en permettant de réduire les coûts et l'empreinte carbone. C'est une alternative respectueuse des préférences personnelles et écologiquement responsable.
-                    </p>
+                    Le covoiturage "ladies only" crée un espace sécurisé et sympa pour les femmes, en privilégiant les trajets entre conductrices et passagères. C’est une option parfaite pour celles qui veulent se sentir en sécurité et à l’aise, tout en réduisant les coûts et l'empreinte carbone. Une solution qui respecte les envies de chacune et qui reste super écolo !</p>
                 </div>
             </div>
         </div>
@@ -113,13 +110,12 @@ get_header();
         <div class="card-wrapper">
             <div class="fond-card-1-miroir">
                 <div class="fond-card-2-miroir">
-                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/Profils vérifiés.svg" alt="voiture avec un logo de verification audessus">
+                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/verified-profil.svg" alt="voiture avec un logo de verification audessus">
                 </div>
                 <div class="forme-card-bleue-miroir">
                     <h2 class="h2-cards-miroir">Profils vérifiés</h2>
                     <p class="p-cards">
-                        Les profils vérifiés dans Fast'N Friends garantissent une sécurité accrue, en permettant de s'assurer de l'identité et de la fiabilité des participants. Cette vérification renforce la confiance entre conducteurs et passagers, favorisant des trajets plus sûrs et sereins. Elle contribue également à la création d'une communauté responsable et respectueuse.
-                    </p>
+                    Les profils vérifiés sur Fast'N Friends, c’est la garantie d’une sécurité en plus, en te permettant de vérifier l'identité et la fiabilité des gens avec qui tu voyages. Ça renforce la confiance entre conducteurs et passagers, pour des trajets plus tranquilles et sûrs. Et en plus, ça aide à créer une communauté respectueuse et responsable !</p>
                 </div>
             </div>
         </div>
@@ -128,13 +124,12 @@ get_header();
         <div class="card-wrapper">
             <div class="fond-card-1">
                 <div class="fond-card-2">
-                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/Events accessible.svg" alt="une femme pointant un evenement avec une loupe sur un tableau">
+                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/accessible-events.svg" alt="une femme pointant un evenement avec une loupe sur un tableau">
                 </div>
                 <div class="forme-card-bleue">
                     <h2 class="h2-cards">Des événements accessibles</h2>
                     <p class="p-cards">
-                        Fast'N Friends permet de trouver facilement des trajets pour se rendre à des événements, qu'ils soient culturels, sportifs ou professionnels. Cela offre une solution pratique et économique pour rejoindre un lieu en partageant les frais de transport. En plus, cela crée un esprit de convivialité et de partage entre participants.
-                    </p>
+                    Fast'N Friends te permet de trouver facilement des trajets pour tous tes événements, que ce soit culturel, sportif ou pro. C’est une solution pratique et économique pour y aller en partageant les frais de transport. En plus, ça crée une super ambiance de partage et de convivialité entre ceux qui partagent le trajet !</p>
                 </div>
             </div>
         </div>
@@ -143,15 +138,12 @@ get_header();
         <div class="card-wrapper">
             <div class="fond-card-1-miroir">
                 <div class="fond-card-2-miroir">
-                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/Events accessible.svg" alt="une femme et un homme discutant de tout et de rien">
+                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/tchat.svg" alt="une femme et un homme discutant de tout et de rien">
                 </div>
                 <div class="forme-card-bleue-miroir">
                     <h2 class="h2-cards-miroir">Tchattez pour faire connaissance</h2>
                     <p class="p-cards">
-                        Fast'N Friends propose un tchat intégré qui permet aux conducteurs et passagers de faire connaissance avant le trajet. Cela offre une occasion d'échanger des informations, de discuter des détails du voyage et de renforcer la confiance entre les participants. Ce système favorise une expérience de covoiturage plus conviviale et sereine.
-
-
-
+                    Fast'N Friends te propose un tchat intégré pour que conducteurs et passagers puissent faire connaissance avant le trajet. C’est l’occasion d’échanger des infos, de discuter des détails du voyage et de créer une vraie confiance entre vous. Ce système rend le covoiturage plus cool et serein !
                     </p>
                 </div>
             </div>
@@ -164,30 +156,27 @@ get_header();
 <div class="conteneur-faq">
     <div class="item-faq">
       <div class="question-faq">
-        Q3        
+        Comment faire pour devenir conducteur ?    
         <span class="fleche">➡️</span>
       </div>
       <div class="reponse-faq">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quia, nesciunt sint quidem nostrum 
-      </div>
+      Il te suffit d'aller dans ton profil et de cliquer sur "devenir un conducteur". Ensuite, tu n'as qu'à nous envoyer ta carte d'identité et c’est bon !</div>
     </div>
     <div class="item-faq">
       <div class="question-faq">
-        Q2
+        Fast'N Friends est t'il gratuit ?
         <span class="fleche">➡️</span>
       </div>
       <div class="reponse-faq">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quia, nesciunt sint quidem nostrum 
-      </div>
+      Oui, notre site est complètement gratuit et il n’y a aucune transaction à faire.</div>
     </div>
     <div class="item-faq">
       <div class="question-faq">
-        Q1
+        J'ai une question comment je vous la pose ?
         <span class="fleche">➡️</span>
       </div>
       <div class="reponse-faq">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quia, nesciunt sint quidem nostrum 
-      </div>
+      Tu peux simplement nous envoyer un mail avec ta question, et on te répondra le plus vite possible !</div>
     </div>
   </div>
 

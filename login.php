@@ -115,7 +115,7 @@ if (isset($_GET['login_error'])) : ?>
         
         <div class="col-md-6 image-section">
             <?php 
-            $image_url = get_template_directory_uri() . '/Assets/Img/connexion sécurisée.svg';
+            $image_url = get_template_directory_uri() . 'Assets\Img\secure-connection.svg';
             ?>
             <img 
                 src="<?php echo esc_url($image_url); ?>" 

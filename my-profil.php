@@ -72,11 +72,11 @@ if ( is_user_logged_in() ) {
                         ?>
                     </span>
                 </p>
-            
 
-                <p>Téléphone : <?php echo esc_html($phone); ?></p>
-                <p>École :  <?php echo esc_html($school); ?></p>
+                <p>Téléphone : <span class="highlight"> <?php echo esc_html($phone); ?></p> </span>
+                <p>École : <span class="highlight"> <?php echo esc_html($school); ?></p> </span>
                 </div>
+                        
 
             <div class="profil-h3">
                 <h3>À propos de moi</h3>

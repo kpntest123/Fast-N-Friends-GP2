@@ -42,7 +42,7 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          background-color: rgb(177, 173, 173);
+          background-color: rgb(255, 255, 255);
           padding: 10px 20px;
           position: relative;
         }
@@ -508,7 +508,7 @@
                       justify-content: space-between;
                       align-items: center;
                       cursor: pointer;
-                      background-color: #94890e; /* Couleur de background*/
+                      background-color: #4B9BEB; /* Couleur de background*/
                       transition: background-color 0.3s ease;
                       border-radius: 11px;/*Se décider si on en mets une*/
                     }
@@ -626,9 +626,10 @@
               width: 80%; /* La carte prendra 80% de la largeur de son conteneur */
               max-width: 600px; /* Et donc, avec le %, il faut composer avec ceci Limite la largeur maximale */
               margin: 0 auto; /* Centre la carte horizontalement */
+              background-color: #C8C6F5;
             }
             .card-header {
-              background-color: #ffffff;
+              background-color: #4B9BEB;
               text-align: center;
             }
 
@@ -718,7 +719,8 @@
 }
 
 .verif-container-form {
-  background-color: white;
+  background-color:rgb(200, 198, 245, 0.5);
+
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 40px;
@@ -729,8 +731,7 @@
 
 
 .verif-title {
-  font-weight: bold;
-  color: #4B9BEB;
+  color: #000000;
   margin-bottom: 20px;
   font-size: 25px;
 }
@@ -985,7 +986,7 @@ color: #4B9BEB;
 
 /* Section À propos */
 .profil-h3 {
-  color: #333;
+  color: #4B9BEB;
   font-size: 18px;
   margin-bottom: 20px;
   text-align: center;
@@ -994,7 +995,7 @@ color: #4B9BEB;
 }
 
 .highlight {
-  color: green;
+  color: #4B9BEB;
   font-weight: bold;
 }
 
@@ -1046,7 +1047,8 @@ text-align: center;       /* Centrer le texte */
 .AAT-form-container {
   width: 100%;
   max-width: 500px;
-  background-color: #fff;
+  background-color:rgb(200, 198, 245, 0.5)
+  ;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -1346,7 +1348,7 @@ text-align: center;       /* Centrer le texte */
 /* Edit profil */
         .form-control {
           border-radius: 10px;
-          background-color: #E6E6FA; /* couleur lavande */
+          background-color: #ffffff;
         }
     
         /* Alignement des labels à droite */
@@ -1455,4 +1457,135 @@ text-align: center;       /* Centrer le texte */
   text-align: center;
   padding: 70px;
   color: white;
+}
+
+/*Css pour la page de recherches, autre css, différents que la page d'acceuil, avec du bootstrap*/
+.deep-search-form-container {
+  background-color: #ff0000;
+  margin: 0 100px;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.deep-search-modal-content h2 {
+  text-align: center; /* Centrer le titre des filtres */
+}
+
+.deep-search-form-container img {
+  height: 32px;
+  margin-left: 0px;
+}
+
+.deep-search-modal-body {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espace entre les filtres */
+  /*padding: 2px 16px; */
+}
+
+.deep-search-modal-body input[type="checkbox"] {
+  margin-right: 10px; /* Espacement entre les cases à cocher */
+}
+
+.deep-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.deep-search-form-field {
+  flex: 1 1 200px;
+}
+
+.deep-search-form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.deep-search-form-submit,
+.deep-search-form-filters {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.deep-search-form-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.deep-search-form-button-icon {
+  margin-right: 8px;
+}
+
+.deep-search-form-filters-button {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.deep-search-form-filters-button-icon {
+  margin-right: 8px;
+}
+
+.deep-search-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.deep-search-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+.deep-search-modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.deep-search-modal-close:hover,
+.deep-search-modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.deep-search-modal-footer {
+  padding: 2px 16px;
+  text-align: right;
+}
+
+.deep-search-modal-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
