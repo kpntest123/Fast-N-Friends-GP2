@@ -2,6 +2,7 @@
 /* Template Name: Devenir un conducteur */
 get_header();?>
 
+<div class="blue-separation"> </div>
 <div class="verif-page-container">
     <div class="verif-container-form">
         <h2 class="verif-title">

@@ -67,7 +67,6 @@ if ( is_user_logged_in() ) {
 
 <!-- Contenu de la page Edit My Profile -->
 <div class= blue-separation>
-    <!-- Couleur de fond personnalisée pour l'en-tête -->
 </div>
 <div class="container">
     <div class="edit-info-event-title">

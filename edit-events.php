@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['TitreArt'])) {
 }
 ?>
 
-
+<div class="blue-separation"> </div>
 <br><br><br><br>
     <div class="edit-info-event-title">
         <h1>Vignette de l'article</h1>
