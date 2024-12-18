@@ -298,43 +298,7 @@ function redirect_after_login($redirect_to, $request, $user) {
                 }
                 add_action('template_redirect', 'restrict_page_access_for_roles');
 
-                            //Pour être sur a 10000000% que ce sont _*$QUE LES CONDUCTEURS QUI PEUVENT PUBLIER UN TRAJET$*_ ==> mieux vaut être trop prudent, c'ets une bonne pratique !
-                            if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
-                                $user = wp_get_current_user();
                             
-                                // Vérifie si l'utilisateur est un conducteur
-                                if (in_array('conducteur', (array) $user->roles)) {
-                                    // Récupérer et valider les données du formulaire
-                                    $from = sanitize_text_field($_POST['from']);
-                                    $to = sanitize_text_field($_POST['to']);
-                                    $people = intval($_POST['people']);
-                                    $date = sanitize_text_field($_POST['date']);
-                                    $description = sanitize_textarea_field($_POST['description']);
-                            
-                                    // Créer un nouveau trajet
-                                    $trajet_id = wp_insert_post(array(
-                                        'post_type' => 'trajet',
-                                        'post_title' => "$from → $to",
-                                        'post_content' => $description,
-                                        'post_status' => 'publish',
-                                        'meta_input' => array(
-                                            'from' => $from,
-                                            'to' => $to,
-                                            'people' => $people,
-                                            'date' => $date,
-                                        ),
-                                    ));
-                            
-                                    if ($trajet_id) {
-                                        echo '<p style="color: green;">Ton trajet a été publié ! Apprête toi à être submergé sous les demandes !</p>';
-                                    } else {
-                                        echo '<p style="color: red;">Problemo lors de la publication du trajet, réésaye</p>';
-                                    }
-                                } else {
-                                    // Si l'utilisateur n'est pas conducteur ==> s'ils paviennet quand même à acceder à la page ce qui me parrait impossible ! 
-                                    echo '<p style="color: red;">Seuls les conducteurs peuvent ajouter un trajet.</p>';
-                                }
-                            }
         
 
 

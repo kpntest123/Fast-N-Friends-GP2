@@ -1043,6 +1043,22 @@ text-align: center;       /* Centrer le texte */
 }
 
 /* Add a traject (AAT) */
+.success-message {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.error-message {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 
 .AAT-form-container {
   width: 100%;
@@ -1589,3 +1605,4 @@ text-align: center;       /* Centrer le texte */
   border-radius: 4px;
   cursor: pointer;
 }
+

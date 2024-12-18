@@ -1,13 +1,63 @@
 <?php
 /* Template Name: Ajouter un Trajet */
 get_header();
+
+// Vérification si le formulaire a été soumis
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
+    // Récupération des données du formulaire
+    $from = sanitize_text_field($_POST['from']);
+    $to = sanitize_text_field($_POST['to']);
+    $people = intval($_POST['people']);
+    $date = sanitize_text_field($_POST['date']);
+    $description = sanitize_textarea_field($_POST['description']);
+    
+    // Filtres supplémentaires
+    $ladies_only = isset($_POST['ladies_only']) ? 1 : 0;
+    $heating = isset($_POST['heating']) ? 1 : 0;
+    $pets_allowed = isset($_POST['pets_allowed']) ? 1 : 0;
+
+    // Création du trajet
+    $trajet_data = array(
+        'post_title' => $from . ' à ' . $to,
+        'post_content' => $description,
+        'post_type' => 'trajet', // Assurez-vous que ce type existe, ou remplacez-le par un type personnalisé
+        'post_status' => 'publish',
+        'meta_input' => array(
+            'from' => $from,
+            'to' => $to,
+            'people' => $people,
+            'date' => $date,
+            'ladies_only' => $ladies_only,
+            'heating' => $heating,
+            'pets_allowed' => $pets_allowed,
+        ),
+    );
+
+    // Insertion dans la base de données
+    $post_id = wp_insert_post($trajet_data);
+    
+    // Vérification si l'insertion a réussi
+    if ($post_id) {
+        $message = "Trajet bien publié, vous pouvez retourner à l'accueil.";
+        $message_class = "success-message";
+    } else {
+        $message = "Une erreur est survenue lors de la publication du trajet.";
+        $message_class = "error-message";
+    }
+}
+
 ?>
 
 <div class="blue-separation">
     <h1>Ajoute un trajet</h1>
 </div>
-<br>
-<div class="AAT-Margin-Page"></div>
+
+<?php if (isset($message)) : ?>
+    <div class="alert <?php echo esc_attr($message_class); ?>">
+        <?php echo esc_html($message); ?>
+    </div>
+<?php endif; ?>
+
 <div class="AAT-form-container" id="AAT-form-container">
     <form method="POST" id="AAT-form">
         <label for="from" class="AAT-label" id="AAT-label-from">De :</label>
@@ -28,21 +78,19 @@ get_header();
         <!-- Filtres supplémentaires -->
         <div class="AAT-extra-options">
             <label for="ladies_only">
-                <input type="checkbox" id="ladies_only" name="ladies_only"> Ladies Only
+                <input type="checkbox" id="filter1" name="ladies_only"> Ladies Only
             </label>
-
             <label for="heating">
-                <input type="checkbox" id="heating" name="heating"> Chauffage
+                <input type="checkbox" id="filter2" name="heating"> Chauffage
             </label>
 
             <label for="pets_allowed">
-                <input type="checkbox" id="pets_allowed" name="pets_allowed"> Animaux autorisés
+                <input type="checkbox" id="filter3" name="pets_allowed"> Animaux autorisés
             </label>
         </div>
 
         <button type="submit" name="submit_trajet" id="AAT-submit" class="AAT-button">Ajouter un trajet</button>
     </form>
 </div>
-
 
 <?php get_footer(); ?>

@@ -19,13 +19,9 @@
             <?php elseif (is_404()) : ?> <!-- Vérification correcte pour une page 404 -->
                 <title>404 - T'es paumé</title>
                 <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-            <?php elseif (is_front_page() || is_home()) : ?> <!-- Vérification pour la page d'accueil -->
+            <?php elseif (is_page('home')) : ?> <!-- Vérification pour la page d'accueil -->
                 <title>Accueil - FNF</title>
                 <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-            <?php else : ?>
-                <!-- Titre par défaut pour toutes les autres pages -->
-                <title><?php wp_title('|', true, 'right'); ?></title>
-                <link rel="icon" href="<?php echo get_site_icon_url(); ?>" type="image/x-icon">
             <?php endif; ?>
 
 <!DOCTYPE html>
