@@ -1,6 +1,7 @@
 <?php
 /* Template Name: Ajouter un Trajet */
 get_header();
+
 // Vérification si le formulaire a été soumis
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
     // Récupération des données du formulaire
@@ -33,7 +34,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
     );
 
     // Insertion dans la base de données
-    wp_insert_post($trajet_data);
+    $post_id = wp_insert_post($trajet_data);
+    
+    // Vérification si l'insertion a réussi
+    if ($post_id) {
+        $message = "Trajet bien publié, vous pouvez retourner à l'accueil.";
+        $message_class = "success-message";
+    } else {
+        $message = "Une erreur est survenue lors de la publication du trajet.";
+        $message_class = "error-message";
+    }
 }
 
 ?>
@@ -41,6 +51,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
 <div class="blue-separation">
     <h1>Ajoute un trajet</h1>
 </div>
+
+<?php if (isset($message)) : ?>
+    <div class="alert <?php echo esc_attr($message_class); ?>">
+        <?php echo esc_html($message); ?>
+    </div>
+<?php endif; ?>
 
 <div class="AAT-form-container" id="AAT-form-container">
     <form method="POST" id="AAT-form">
@@ -62,20 +78,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
         <!-- Filtres supplémentaires -->
         <div class="AAT-extra-options">
             <label for="ladies_only">
-                <input type="checkbox" id="filter1" name="Air-co"> Ladies Only
+                <input type="checkbox" id="filter1" name="ladies_only"> Ladies Only
             </label>
             <label for="heating">
-                <input type="checkbox" id="filter2" name="Chauffage"> Chauffage
+                <input type="checkbox" id="filter2" name="heating"> Chauffage
             </label>
 
             <label for="pets_allowed">
-                <input type="checkbox" id="filter3" name="Massage"> Animaux autorisés
+                <input type="checkbox" id="filter3" name="pets_allowed"> Animaux autorisés
             </label>
         </div>
 
         <button type="submit" name="submit_trajet" id="AAT-submit" class="AAT-button">Ajouter un trajet</button>
     </form>
 </div>
-
 
 <?php get_footer(); ?>

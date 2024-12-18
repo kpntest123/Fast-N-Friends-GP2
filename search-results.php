@@ -3,15 +3,15 @@
 
 get_header();
 
-get_header();
-
 // Récupération des données envoyées par le formulaire avec sécurisation
 $from = isset($_GET['from']) ? sanitize_text_field($_GET['from']) : 'Non spécifié';
 $to = isset($_GET['to']) ? sanitize_text_field($_GET['to']) : 'Non spécifié';
 $people = isset($_GET['people']) ? intval($_GET['people']) : 1;
 $date = isset($_GET['date']) ? sanitize_text_field($_GET['date']) : 'Non spécifiée';
+?>
 
 
+<?php
 // Construire la requête selon les critères
 $args = array(
     'post_type' => 'trajet',  // Type de publication (assurez-vous que c'est le bon)
@@ -31,7 +31,6 @@ $args = array(
         ),
     ),
 );
-
 
 // Filtrer par date (si la date est renseignée) et trier les résultats
 if ($date !== 'Non spécifiée') {
@@ -125,4 +124,3 @@ $query = new WP_Query($args);
 wp_reset_postdata();
 
 get_footer();
-
