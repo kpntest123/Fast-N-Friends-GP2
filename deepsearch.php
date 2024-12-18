@@ -34,9 +34,8 @@ get_header();?>
   </div>
 
   <!-- Champs cachés pour les filtres additionnels -->
-  <input type="hidden" id="filter1" name="filter1">
-  <input type="hidden" id="filter2" name="filter2">
-  <!-- Ajouter d'autres champs cachés pour les autres filtres -->
+
+
 </form>
 
 </div>
@@ -46,11 +45,6 @@ get_header();?>
     <span class="deep-search-modal-close"></span>
     <h2>Filtres additionnels</h2>
     <div class="deep-search-modal-body">
-      <input type="checkbox" id="filter1" name="filter1">
-      <label for="filter1">Filtre 1</label>
-      <input type="checkbox" id="filter2" name="filter2">
-      <label for="filter2">Filtre 2</label>
-      <!-- Ajouter d'autres filtres ici -->
     </div>
     <div class="deep-search-modal-footer">
       <button type="button" class="deep-search-modal-button" onclick="closeFiltersModal()">Fermer</button>
@@ -74,16 +68,6 @@ function openFiltersModal() {
 function closeFiltersModal() {
   document.getElementById("filters-modal").style.display = "none";
 }
-
-// Capture des filtres lorsque l'utilisateur les sélectionne dans le modal
-document.getElementById('filter1').addEventListener('change', function() {
-  document.querySelector('input[name="filter1"]').value = this.checked ? '1' : '';  // '1' si activé, vide sinon
-});
-document.getElementById('filter2').addEventListener('change', function() {
-  document.querySelector('input[name="filter2"]').value = this.checked ? '1' : '';  // '1' si activé, vide sinon
-});
-
-
 </script>
 
 

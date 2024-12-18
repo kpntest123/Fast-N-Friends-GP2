@@ -62,15 +62,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
         <!-- Filtres supplémentaires -->
         <div class="AAT-extra-options">
             <label for="ladies_only">
-                <input type="checkbox" id="ladies_only" name="ladies_only"> Ladies Only
+                <input type="checkbox" id="filter1" name="Air-co"> Ladies Only
             </label>
-
             <label for="heating">
-                <input type="checkbox" id="heating" name="heating"> Chauffage
+                <input type="checkbox" id="filter2" name="Chauffage"> Chauffage
             </label>
 
             <label for="pets_allowed">
-                <input type="checkbox" id="pets_allowed" name="pets_allowed"> Animaux autorisés
+                <input type="checkbox" id="filter3" name="Massage"> Animaux autorisés
             </label>
         </div>
 

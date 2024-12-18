@@ -11,9 +11,6 @@ $to = isset($_GET['to']) ? sanitize_text_field($_GET['to']) : 'Non spécifié';
 $people = isset($_GET['people']) ? intval($_GET['people']) : 1;
 $date = isset($_GET['date']) ? sanitize_text_field($_GET['date']) : 'Non spécifiée';
 
-// Récupération des filtres supplémentaires (si présents)
-$filter1 = isset($_GET['filter1']) ? $_GET['filter1'] : '';
-$filter2 = isset($_GET['filter2']) ? $_GET['filter2'] : '';
 
 // Construire la requête selon les critères
 $args = array(
@@ -35,21 +32,6 @@ $args = array(
     ),
 );
 
-// Application des filtres supplémentaires si présents
-if ($filter1) {
-    $args['meta_query'][] = array(
-        'key'     => 'filter1',
-        'value'   => '1',
-        'compare' => '=',
-    );
-}
-if ($filter2) {
-    $args['meta_query'][] = array(
-        'key'     => 'filter2',
-        'value'   => '1',
-        'compare' => '=',
-    );
-}
 
 // Filtrer par date (si la date est renseignée) et trier les résultats
 if ($date !== 'Non spécifiée') {
