@@ -43,7 +43,6 @@ if (isset($_GET['login_error'])) : ?>
     </div>
 <?php endif; ?>
 
-<div style="background-color:#4B9BEB; text-align: center; padding: 25px;">
     <h1 class="text-white">Connecte-toi</h1>
     <p class="text-white">pour accéder à ton compte, logique</p>
 </div>
