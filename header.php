@@ -31,40 +31,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fast 'N Friends</title>
-
-    <link rel="shortcut icon" src="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF_logos_svg" type="image/x-icon">
-
-
-      <!--
-    TEMPORAIRE : LIEN POUR LA POLICE FUTURA PT, DANS LE FUTUR INTEGRER LES FICHIERS COMPLETS
-    qui se trouvent déjà dans les ASSETS 
-    
-    POLICE POUR LE FUTURA PT :  -->
-    <link rel="stylesheet" href="https://use.typekit.net/uah5lqa.css"> 
-
-    <!-- LIEN POUR LA MUSEO MODERNO ==> logo + recher sur accueil :  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bokor&family=Jost:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-
-
-
-
-          <!--LIEN POUR UN CALENDRIER + joli ==> peut-être supp, a voir si j'utilises ou pas-->
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-           <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-                    <!-- TRUC QUI SERS A JE NE SAIS PLUS QUOI, MAIS A QUELQUE CHOSE JE PENSE -->
-                    <script>
-                    const templateDirectoryUri = "<?php echo get_template_directory_uri(); ?>";
-                    </script>
-
- 
-
-
-
-
 </head>
 
 <?php wp_head(); ?>
