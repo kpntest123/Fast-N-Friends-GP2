@@ -76,6 +76,8 @@ get_header();
                 </div>
         </div>
 
+        <br><br><br>
+
         <!-- Version miroir -->
             <div class="fond-card-1-miroir">
                 <div class="fond-card-2-miroir">
@@ -87,6 +89,8 @@ get_header();
                     Le covoiturage, c’est un geste éco-responsable, parce qu'il réduit le nombre de voitures sur la route et donc les émissions de CO2. En partageant les trajets, tu optimises les ressources et tu diminues la pollution. C’est direct : tu contribues à préserver l’environnement !</p>
                 </div>
         </div>
+
+        <br><br><br>
 
         <!-- Card normale -->
             <div class="fond-card-1">
@@ -100,6 +104,8 @@ get_header();
                 </div>
         </div>
 
+        <br><br><br>
+
         <!-- Card miroir -->
             <div class="fond-card-1-miroir">
                 <div class="fond-card-2-miroir">
@@ -112,6 +118,8 @@ get_header();
                 </div>
             </div>
 
+            <br><br><br>
+
         <!-- Card normale -->
             <div class="fond-card-1">
                 <div class="fond-card-2">
@@ -123,6 +131,8 @@ get_header();
                     Fast'N Friends te permet de trouver facilement des trajets pour tous tes événements, que ce soit culturel, sportif ou pro. C’est une solution pratique et économique pour y aller en partageant les frais de transport. En plus, ça crée une super ambiance de partage et de convivialité entre ceux qui partagent le trajet !</p>
                 </div>
         </div>
+
+        <br><br><br>
 
         <!-- Card miroir -->
             <div class="fond-card-1-miroir">
@@ -137,80 +147,263 @@ get_header();
                 </div>
             </div>
         </div>
+
+        <br><br><br><br><br><br>
   
 
 
 <!-- Bloc 5 : FAQ -->
 <div class="conteneur-faq">
-    <div class="item-faq">
-      <div class="question-faq">
-        Comment faire pour devenir conducteur ?    
-        <span class="fleche">➡️</span>
-      </div>
-      <div class="reponse-faq">
-      Il te suffit d'aller dans ton profil et de cliquer sur "devenir un conducteur". Ensuite, tu n'as qu'à nous envoyer ta carte d'identité et c’est bon !</div>
+  <div class="item-faq">
+    <div class="question-faq">
+      Comment faire pour devenir conducteur ?    
+      <span class="fleche">➡️</span>
     </div>
-    <div class="item-faq">
-      <div class="question-faq">
-        Fast'N Friends est t'il gratuit ?
-        <span class="fleche">➡️</span>
-      </div>
-      <div class="reponse-faq">
-      Oui, notre site est complètement gratuit et il n’y a aucune transaction à faire.</div>
-    </div>
-    <div class="item-faq">
-      <div class="question-faq">
-        J'ai une question comment je vous la pose ?
-        <span class="fleche">➡️</span>
-      </div>
-      <div class="reponse-faq">
-      Tu peux simplement nous envoyer un mail avec ta question, et on te répondra le plus vite possible !</div>
+    <div class="reponse-faq">
+      Il te suffit d'aller dans ton profil et de cliquer sur "devenir un conducteur". Ensuite, tu n'as qu'à nous envoyer ta carte d'identité et c’est bon !
     </div>
   </div>
+  <div class="item-faq">
+    <div class="question-faq">
+      Fast'N Friends est-il gratuit ?
+      <span class="fleche">➡️</span>
+    </div>
+    <div class="reponse-faq">
+      Oui, notre site est complètement gratuit et il n’y a aucune transaction à faire.
+    </div>
+  </div>
+  <div class="item-faq">
+    <div class="question-faq">
+      J'ai une question, comment je vous la pose ?
+      <span class="fleche">➡️</span>
+    </div>
+    <div class="reponse-faq">
+      Tu peux simplement nous envoyer un mail avec ta question, et on te répondra le plus vite possible !
+    </div>
+  </div>
+  <div class="item-faq">
+    <div class="question-faq">
+      Est-ce que je dois vérifier les documents des passagers ?
+      <span class="fleche">➡️</span>
+    </div>
+    <div class="reponse-faq">
+      Non, ce n’est pas nécessaire. Notre plateforme est basée sur la confiance et la bonne foi des utilisateurs.
+    </div>
+  </div>
+  <div class="item-faq">
+    <div class="question-faq">
+      Puis-je annuler un trajet après l'avoir publié ?
+      <span class="fleche">➡️</span>
+    </div>
+    <div class="reponse-faq">
+      Oui, tu peux annuler un trajet en allant dans ton profil, dans la section "Mes trajets", puis en cliquant sur "Annuler".
+    </div>
+  </div>
+  <div class="item-faq">
+    <div class="question-faq">
+      Comment savoir si un passager est fiable ?
+      <span class="fleche">➡️</span>
+    </div>
+    <div class="reponse-faq">
+      Consulte les avis laissés par d'autres conducteurs sur le profil du passager. Notre système de notation est là pour t'aider.
+    </div>
+  </div>
+  <div class="item-faq">
+    <div class="question-faq">
+      Puis-je partager des frais d'essence avec mes passagers ?
+      <span class="fleche">➡️</span>
+    </div>
+    <div class="reponse-faq">
+      Non, Fast'N Friends est une plateforme entièrement bénévole. Aucun échange d'argent n'est autorisé.
+    </div>
+  </div>
+  <div class="item-faq">
+    <div class="question-faq">
+      Combien de passagers puis-je prendre dans ma voiture ?
+      <span class="fleche">➡️</span>
+    </div>
+    <div class="reponse-faq">
+      Le nombre de passagers dépend de la capacité de ta voiture. Assure-toi que chacun a une ceinture de sécurité.
+    </div>
+  </div>
+  <div class="item-faq">
+    <div class="question-faq">
+      Que faire si un passager ne se présente pas ?
+      <span class="fleche">➡️</span>
+    </div>
+    <div class="reponse-faq">
+      Si un passager ne se présente pas, laisse un avis sur son profil pour informer les autres conducteurs. 
+    </div>
+  </div>
+  <div class="item-faq">
+    <div class="question-faq">
+      Puis-je proposer des trajets réguliers (par exemple, tous les lundis) ?
+      <span class="fleche">➡️</span>
+    </div>
+    <div class="reponse-faq">
+      Oui, tu peux planifier des trajets réguliers en indiquant les jours récurrents dans la section "Créer un trajet".
+    </div>
+  </div>
+</div>
+
+                <script>
+                      //JavaScript pour la FAQ
+                      const itemsFaq = document.querySelectorAll('.item-faq');
+
+                itemsFaq.forEach(item => {
+                    const question = item.querySelector('.question-faq');
+                    const answer = item.querySelector('.reponse-faq');
+                    const arrow = item.querySelector('.fleche');
+
+                    question.addEventListener('click', () => {
+                        const isOpen = answer.classList.contains('open');
+
+                        // Fermer toutes les réponses ouvertes
+                        document.querySelectorAll('.reponse-faq').forEach(a => a.classList.remove('open'));
+                        document.querySelectorAll('.fleche').forEach(a => a.classList.remove('open'));
+
+                        // Basculer l'élément actuel
+                        if (!isOpen) {
+                            answer.classList.add('open');
+                            arrow.classList.add('open');
+                        }
+                    });
+                });
+                </script>
+
+  
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <!-- Bloc 6 : Avis users -->
+  <section id="stars-section">
+        <div id="stars-container">
+            <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
+            </svg>
+        </div>
+        <p id="stars-message">C'est la note attribuée par nos utilisateurs</p>
+    </section>
+
+                <script>
+                  //La javascript pour les AVIS !
+                  document.addEventListener("DOMContentLoaded", function () {
+                const stars = document.querySelectorAll(".star");
+                const message = document.getElementById("stars-message");
+
+                // Fonction pour animer les étoiles
+                const animateStars = () => {
+                    stars.forEach((star, index) => {
+                        setTimeout(() => {
+                            star.style.opacity = 1;
+                            star.style.transform = "scale(1)";
+                        }, index * 300); // Délai entre chaque étoile
+                    });
+
+                    // Affiche la phrase après que toutes les étoiles soient animées
+                    setTimeout(() => {
+                        message.style.opacity = 1;
+                    }, stars.length * 300 + 500); // +500ms après l'animation
+                };
+
+                // Observer pour détecter quand la section est visible
+                const observer = new IntersectionObserver(
+                    (entries, observer) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                animateStars();
+                                observer.disconnect(); // Stop l'observation après animation
+                            }
+                        });
+                    },
+                    { threshold: 0.5 } // Active quand 50% de la section est visible
+                );
+
+                // Cible la section
+                const starsSection = document.getElementById("stars-section");
+                observer.observe(starsSection);
+              });
+              </script>
 
 
 
-  <script>
-    const itemsFaq = document.querySelectorAll('.item-faq');
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-    itemsFaq.forEach(item => {
-        const question = item.querySelector('.question-faq');
-        const answer = item.querySelector('.reponse-faq');
-        const arrow = item.querySelector('.fleche');
 
-        question.addEventListener('click', () => {
-            const isOpen = answer.classList.contains('open');
 
-            // Fermer toutes les réponses ouvertes
-            document.querySelectorAll('.reponse-faq').forEach(a => a.classList.remove('open'));
-            document.querySelectorAll('.fleche').forEach(a => a.classList.remove('open'));
 
-            // Basculer l'élément actuel
-            if (!isOpen) {
-                answer.classList.add('open');
-                arrow.classList.add('open');
-            }
-        });
+<div class="reviews-container">
+  <div class="review">
+    <p class="review-text">"Ce produit a changé ma vie! Il est non seulement pratique, mais aussi très élégant. Je le recommande vivement!"</p>
+    <p class="review-author">John Doe</p>
+  </div>
+  <div class="review">
+    <p class="review-text">"Un service incroyable, je ne pensais pas que ça fonctionnerait aussi bien. Très satisfait de mon achat!"</p>
+    <p class="review-author">Jane Smith</p>
+  </div>
+  <div class="review">
+    <p class="review-text">"J'ai essayé plusieurs produits similaires, mais celui-ci est de loin le meilleur. La qualité est irréprochable!"</p>
+    <p class="review-author">Alex Johnson</p>
+  </div>
+  <div class="review">
+    <p class="review-text">"Je suis vraiment impressionné par la rapidité et l'efficacité de ce produit. Un must-have!"</p>
+    <p class="review-author">Emily Davis</p>
+  </div>
+  <div class="review">
+    <p class="review-text">"Mon expérience avec ce produit a été exceptionnelle. Facile à utiliser et très efficace!"</p>
+    <p class="review-author">Michael Brown</p>
+  </div>
+  <div class="review">
+    <p class="review-text">"Je ne peux plus m'en passer. Ce produit a résolu tous mes problèmes. Une vraie révolution!"</p>
+    <p class="review-author">Sarah Williams</p>
+  </div>
+  <div class="review">
+    <p class="review-text">"Je l'ai recommandé à tous mes amis, et ils en sont tous ravis. Une qualité de fabrication impeccable!"</p>
+    <p class="review-author">David Clark</p>
+  </div>
+  <div class="review">
+    <p class="review-text">"Le design est magnifique et la fonctionnalité au top. Vraiment satisfait de mon achat!"</p>
+    <p class="review-author">Olivia Martinez</p>
+  </div>
+  <div class="review">
+    <p class="review-text">"Une expérience utilisateur exceptionnelle. Je n'ai jamais rien vu de pareil, un produit révolutionnaire!"</p>
+    <p class="review-author">Daniel Scott</p>
+  </div>
+  <div class="review">
+    <p class="review-text">"Au début, j'étais sceptique, mais après l'avoir essayé, je ne peux plus m'en passer. Top qualité!"</p>
+    <p class="review-author">Sophia Turner</p>
+  </div>
+</div>
+
+
+<script>
+// Attendre que le DOM soit prêt
+document.addEventListener('DOMContentLoaded', function () {
+  // Animer chaque avis avec GSAP
+  const reviews = document.querySelectorAll('.review');
+
+  reviews.forEach((review, index) => {
+    gsap.to(review, {
+      opacity: 1,             // Faire apparaître l'élément
+      y: 0,                   // Remettre à la position originale
+      duration: 1,            // Durée de l'animation
+      delay: index * 0.2,     // Délai pour chaque avis (effet d'empilement)
+      ease: 'power2.out'      // Type de transition (facile à utiliser)
     });
+  });
+});
+
 </script>
 
-
-
-
-
-
-
-<!-- Bloc 6 -->
-<section class="bloc6">
-  <h1>Lorem or IMG</h1>
-  <p>IMG ????????????? IMG ????????????? </p>
-</section>
-
-
-  <!-- Bloc ??? : TEST EN TOUT GENRE -->
-  <h1 class="titre-1-classic">Test - taille de titre</h1>
-  <h2 class="titre-2-classic">Test - taille de titre</h2>
-  <h3 class="titre-3-classic">Test - taille de titre</h3>
 
 
 

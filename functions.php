@@ -44,9 +44,15 @@ function fnf_enqueue_assets() {
 add_action('wp_enqueue_scripts', 'fnf_enqueue_assets');
 
 
+// GSAP
+wp_enqueue_script(
+    'gsap', 
+    'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js', 
+    [], // Pas de dépendances
+    '3.12.2', 
+    true
+);
 
-
-//test
 // Nouvelle version - JS local prioritaire et indépendant
 wp_enqueue_script(
     'thejs',

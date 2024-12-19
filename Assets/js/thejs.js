@@ -248,4 +248,3 @@ TAGS.forEach(tag => {
   tagDropdown.appendChild(tagItem);
 });
 
-

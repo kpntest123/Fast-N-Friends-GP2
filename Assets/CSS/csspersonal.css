@@ -209,6 +209,7 @@
           /*PARTIE BLOC 2 : IMAGE ET BARRE DE RECHERCHE*/
           .search-section {
             background-color: #4B9BEB;
+            height: 700px;
             padding: 2rem;
             display: flex;
             justify-content: center;
@@ -467,7 +468,7 @@
                     /* Partie FAQ */
                     .conteneur-faq {
                       width: 100%;
-                      max-width: 500px;
+                      max-width: 900px;
                       border-radius: 10px;
                       overflow: hidden;
                       margin: 0 auto; /* Pour centrer la FAQ */
@@ -475,7 +476,9 @@
                     }
 
                     .item-faq {
-                      border-bottom: 1px solid #000000;
+                      border-bottom: 1px solid #4f4e4e;
+                      border-radius: 10px;
+
                     }
 
                     .item-faq:last-child {
@@ -496,7 +499,7 @@
                     }
 
                     .question-faq:hover {
-                      background-color: #5c83c1;
+                      background-color: #C8C6F5;
                     }
 
                     .reponse-faq {
@@ -537,25 +540,77 @@
                     }
     
           
-          /*Bloc 6 */
-          .bloc6 {
-            text-align: center;
-            background-color: #ffffff;
-            padding: 30px 15px;
-          }
+                                                      /*Bloc 6 - étoiles USERS */
+                                                      #stars-section {
+                                                        text-align: center;
+                                                        padding: 50px 20px;
+                                                        background-color: #C8C6F5;
+                                                        color: rgb(0, 0, 0);
+                                                      }
+
+                                                      /* Style des étoiles */
+                                                      #stars-container {
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        gap: 10px;
+                                                        margin-bottom: 20px;
+                                                      }
+
+                                                      .star {
+                                                        width: 50px;
+                                                        height: 50px;
+                                                        opacity: 0;
+                                                        transform: scale(0.5);
+                                                        transition: all 0.5s ease-out;
+                                                      }
+
+                                                      /* Style du texte sous les étoiles */
+                                                      #stars-message {
+                                                        opacity: 0; /* Caché au départ */
+                                                        font-size: 1.5rem;
+                                                        transition: opacity 1s ease;
+                                                      }
           
-          .bloc6 p {
-            font-size: 18px; 
-            color: #000000;
-          }
-          
-          .bloc6 h1 {
-            font-size: 25px; 
-            color: #000000;
-            font-style: normal;
-            margin-bottom: 30px;
-          }
-          
+                                                      
+/*Style pour les avis users ==> après les étoiles */
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Colonnes plus larges */
+  gap: 30px;
+  padding: 40px;
+  width: 90%;
+  max-width: 1200px; /* Limite la largeur des avis */
+  justify-items: center; /* Centre les avis horizontalement */
+  align-items: center;
+}
+
+.review {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;  /* Initialement caché pour l'animation */
+  transform: translateY(30px);  /* Position initiale pour l'animation */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  width: 100%;
+  max-width: 400px; /* Limite la largeur de chaque bloc */
+}
+
+.review-text {
+  font-size: 18px;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.review-author {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  text-align: right;
+  margin-top: 10px;
+}
+
           /* STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION ! ==> register*/
                 .background-register {
                   background-color: #C8C6F5; /* Appliquer la couleur de fond ici */
