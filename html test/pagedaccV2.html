@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil V2</title>
+
+    <style>
+/* Général */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  background-color: #87CEEB;
+  padding: 2rem;
+  height: 80vh; /* Réduction de la hauteur pour un aspect plus rectangulaire */
+}
+
+.left-column {
+  flex: 1;
+  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue-box {
+  background-color: #87CEEB;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.blue-box h1 {
+  margin-top: 0;
+}
+
+.search-bar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0.625rem;
+  padding: 0.9375rem 0;
+  border-radius: 1.875rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.search-bar > * {
+  min-width: 0;
+}
+
+.search-bar input[type="text"],
+.search-bar input[type="number"],
+.search-bar input[type="date"] {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 1.5625rem;
+  width: 100%;
+  background: white;
+}
+
+.search-bar button.btn-search {
+  padding: 0.75rem 1.5rem;
+  background-color: #FF5733;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  border-radius: 1.5625rem;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+  display: block;
+  margin-top: 0.625rem;
+  width: 100%;
+}
+
+.search-bar button.btn-search:hover {
+  background-color: #E64C3C;
+}
+
+.autocomplete-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 0.9375rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+  margin-top: 0.3125rem;
+  z-index: 1000;
+}
+
+.autocomplete-suggestions div {
+  padding: 0.625rem;
+  cursor: pointer;
+}
+
+.autocomplete-suggestions div:hover {
+  background-color: #4B9BEB;
+}
+
+.note {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.car-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+    </style>
+
+</head>
+<body>
+<section class="hero-section">
+  <div class="hero-text">
+    <h2>Besoin de te déplacer ?</h2>
+    <p>Que ce soit pour aller étudier ou aller à un event ?</p>
+    <em>T’es au bon endroit !</em>
+  </div>
+  <div class="search-container">
+    <form action="#" method="GET">
+      <input type="text" placeholder="De ?" name="from" class="search-input">
+      <input type="text" placeholder="Vers ?" name="to" class="search-input">
+      <input type="number" placeholder="Combien de personnes ?" name="people" class="search-input">
+      <input type="date" placeholder="Quand ?" name="date" class="search-input">
+      <button type="submit" class="search-button">Rechercher !</button>
+    </form>
+  </div>
+  <div class="hero-illustration">
+    <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/car-illustration.svg" alt="Illustration voiture">
+  </div>
+</section>
+
+</body>
+</html>

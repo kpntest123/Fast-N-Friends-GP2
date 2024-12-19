@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    /* Base styles */
+    .card-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .fond-card-1, .fond-card-1-miroir {
+        background-color: #ffffff;
+        width: 100%;
+        position: relative;
+        min-height: 293px;
+        overflow: hidden;
+        opacity: 0; /* initially hidden */
+    }
+
+    .fond-card-2, .fond-card-2-miroir {
+        background-color: #C8C6F5;
+        width: 75%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .fond-card-2-image {
+        max-width: 50%;
+        height: 80%;
+        object-fit: cover;
+    }
+
+    .fond-card-2-miroir-image {
+        max-width: 50%;
+        height: 80%;
+        object-fit: cover;
+        margin-left: auto;
+    }
+
+    .forme-card-bleue, .forme-card-bleue-miroir {
+        background-color: #6cbbfc;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    /* Desktop Styles */
+    @media screen and (min-width: 992px) {
+        .fond-card-1 .fond-card-2 {
+            left: 0;
+            justify-content: flex-start;
+        }
+
+        .fond-card-1 .forme-card-bleue {
+            width: 60%;
+            height: 60%;
+            right: 0;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 70px;
+        }
+
+        .fond-card-1-miroir .fond-card-2-miroir {
+            right: 0;
+            justify-content: flex-end;
+        }
+
+        .fond-card-1-miroir .forme-card-bleue-miroir {
+            width: 60%;
+            height: 60%;
+            left: 0;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 70px;
+        }
+    }
+
+    /* Mobile Styles */
+    @media screen and (max-width: 991px) {
+    .fond-card-2, .fond-card-2-miroir {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    }
+
+    @media screen and (max-width: 991px) {
+        .fond-card-1, .fond-card-1-miroir {
+            min-height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fond-card-2, .fond-card-2-miroir {
+            position: relative;
+            width: 100%;
+            height: 200px;
+        }
+
+        .fond-card-2-image, .fond-card-2-miroir-image {
+            max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        margin: 0;
+        object-fit: contain; 
+
+        }
+
+        .forme-card-bleue, .forme-card-bleue-miroir {
+            width: 100%;
+            height: auto;
+            position: relative;
+            top: 0;
+            transform: none;
+            padding: 1rem;
+        }
+
+        .h2-cards, .h2-cards-miroir {
+            position: static;
+            margin-bottom: 0.5rem;
+        }
+    }
+    /*  Style pour faq*/
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Version normale -->
+        <div class="card-wrapper">
+            <div class="fond-card-1">
+                <div class="fond-card-2">
+                    <img src="Assets\Img\Economiquement stratégique.svg" alt="Description" class="fond-card-2-image">
+                </div>
+                <div class="forme-card-bleue">
+                    <h2 class="h2-cards">Économiquement stratégique</h2>
+                    <p class="p-cards">
+                        Le covoiturage est une solution économique stratégique, permettant de réduire les coûts de transport tout en optimisant l'utilisation des véhicules. Il contribue également à la diminution de la congestion routière et des émissions de CO2. En favorisant cette pratique, on soutient une mobilité durable et rentable.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Version miroir -->
+        <div class="card-wrapper">
+            <div class="fond-card-1-miroir">
+                <div class="fond-card-2-miroir">
+                    <img src="Assets\Img\Ecologiquement responsable.svg" alt="Main avec une plante qui pousse" class="fond-card-2-miroir-image">
+                </div>
+                <div class="forme-card-bleue-miroir">
+                    <h2 class="h2-cards-miroir">Ecologiquement responsable</h2>
+                    <p class="p-cards">
+                        Le covoiturage est une pratique écologiquement responsable, car elle réduit le nombre de véhicules en circulation et diminue ainsi les émissions de CO2. En partageant les trajets, on optimise l’utilisation des ressources et on limite la pollution. Cela contribue directement à la préservation de l’environnement.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card normale -->
+        <div class="card-wrapper">
+            <div class="fond-card-1">
+                <div class="fond-card-2">
+                    <img src="Assets\Img\Ladies only.svg" alt="Une femme entrain de marcher" class="fond-card-2-image">
+                </div>
+                <div class="forme-card-bleue">
+                    <h2 class="h2-cards">Ladies only</h2>
+                    <p class="p-cards">
+                        Le covoiturage "ladies only" offre un environnement sécurisé et confortable pour les femmes, en favorisant des trajets partagés entre conductrices et passagères. Cette option répond à un besoin de sécurité et de convivialité, tout en permettant de réduire les coûts et l'empreinte carbone. C'est une alternative respectueuse des préférences personnelles et écologiquement responsable.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card miroir -->
+        <div class="card-wrapper">
+            <div class="fond-card-1-miroir">
+                <div class="fond-card-2-miroir">
+                    <img src="Assets\Img\Profils vérifiés.svg" alt="Une voiture qui roule avec un signe de vérification audessus" class="fond-card-2-miroir-image">
+                </div>
+                <div class="forme-card-bleue-miroir">
+                    <h2 class="h2-cards-miroir">Profils vérifiés</h2>
+                    <p class="p-cards">
+                        Les profils vérifiés dans Fast'N Friends garantissent une sécurité accrue, en permettant de s'assurer de l'identité et de la fiabilité des participants. Cette vérification renforce la confiance entre conducteurs et passagers, favorisant des trajets plus sûrs et sereins. Elle contribue également à la création d'une communauté responsable et respectueuse.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card normale -->
+        <div class="card-wrapper">
+            <div class="fond-card-1">
+                <div class="fond-card-2">
+                    <img src="Assets\Img\Events accessible.svg" alt="Une femme pointant un événement avec une loupe sur un tableau" class="fond-card-2-image">
+                </div>
+                <div class="forme-card-bleue">
+                    <h2 class="h2-cards">Des événements accessibles</h2>
+                    <p class="p-cards">
+                        Fast'N Friends permet de trouver facilement des trajets pour se rendre à des événements, qu'ils soient culturels, sportifs ou professionnels. Cela offre une solution pratique et économique pour rejoindre un lieu en partageant les frais de transport. En plus, cela crée un esprit de convivialité et de partage entre participants.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card miroir -->
+        <div class="card-wrapper">
+            <div class="fond-card-1-miroir">
+                <div class="fond-card-2-miroir">
+                    <img src="Assets\Img\Tchattez.svg" alt="Une femme et un homme assis sur une moto entrain de discuter" class="fond-card-2-miroir-image">
+                </div>
+                <div class="forme-card-bleue-miroir">
+                    <h2 class="h2-cards-miroir">Tchattez pour faire connaissance</h2>
+                    <p class="p-cards">
+                        Fast'N Friends propose un tchat intégré qui permet aux conducteurs et passagers de faire connaissance avant le trajet. Cela offre une occasion d'échanger des informations, de discuter des détails du voyage et de renforcer la confiance entre les participants. Ce système favorise une expérience de covoiturage plus conviviale et sereine.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

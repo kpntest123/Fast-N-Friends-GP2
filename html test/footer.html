@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mes ieps</title>
+    
+    
+    <!--LE LIEN DE LA FUTURA PT :-->
+    <link rel="stylesheet" href="https://use.typekit.net/uah5lqa.css"> 
+
+
+
+
+
+
+
+    <!-- Temporaire, le style du footer -->
+     <style>
+        /*Pied de page - refais*/
+body{
+	line-height: 1.5;
+    font-family: "Futura-PT", sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+
+}
+
+    .footer {
+        background-color: #5784d3;
+        color: black;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .footer .column {
+        flex: 1;
+        margin: 0 10px;
+    }
+    .footer .column h3 {
+        margin-top: 0;
+    }
+
+    .footer .column a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        margin: 5px 0;
+    }
+    .footer .column a:hover {
+        text-decoration: underline;
+    }
+    .footer .logo {
+        display: flex;
+        align-items: center;
+    }
+    .footer .logo img {
+        margin-right: 10px;
+        width: 50px;
+    }
+    .footer .newsletter {
+        max-width: 300px;
+    }
+    .footer .newsletter input[type="email"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 10px;
+        background-color: #D35757;
+        border: 1px solid #000;
+        border-radius: 4px;
+        color: black;
+    }
+    .footer .newsletter input[type="email"]::placeholder {
+        color: black;
+    }
+    .footer .social {
+        display: flex;
+        align-items: center;
+    }
+    .footer .social a {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+    .footer .newsletter .message {
+        margin-top: 10px;
+        display: none;
+    }
+    .footer .newsletter button {
+        background-color: #fff;
+        border: none;
+        padding: 8px 16px;
+        margin-top: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+     </style>
+
+
+
+</head>
+<body>
+
+        <!-- Pied de page -->
+<footer class="footer">
+    <div class="column logo">
+        <img src="futur lien du logo que je dois foutre ici" alt="Logo">
+        <div>
+            <h1>Fast 'N Friends</h1>
+        </div>
+    </div>
+    <div class="column">
+        <h3>
+            <a href="Page D'accueil.html">Accueil</a>
+        </h3>
+        <h3>Découvrir les scouts</h3>
+        <a href="Erreur 404/Erreur 404 !.html">Le scoutisme c'est quoi ?</a>
+        <a href="Erreur 404/Erreur 404 !.html">Les sections</a>
+        <a href="Erreur 404/Erreur 404 !.html">La lois scouts</a>
+
+        <!-- FOOTER DEPENDANT DE SI CONNECTE OU PAS CONNECTE -->
+
+        <h3>Mon compte :</h3>
+
+                <?php
+                // Démarrer la session PHP
+                session_start();
+
+                // Vérifie si l'utilisateur est connecté (exemple : une variable de session appelée 'logged_in' est définie)
+                $is_logged_in = isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
+                ?>
+
+                <?php if ($is_logged_in): ?>
+                    <!-- Si l'utilisateur est connecté -->
+                    <a href="modifier_profil.php">Modifier profil</a>
+                    <a href="chat.php">Chat</a>
+                    <a href="deconnexion.php">Déconnexion</a>
+                <?php else: ?>
+                    <!-- Si l'utilisateur n'est pas connecté -->
+                    <a href="connexion.php">Connexion</a>
+                    <a href="inscription.php">Inscriptions</a>
+                <?php endif; ?>
+            </div>
+
+            <!-- Fin du FOOTER DEPENDANT DE SI CONNECTE OU PAS CONNECTE -->
+
+    
+    </div>
+    <div class="column">
+        <h3>
+            <a href="Erreur 404/Erreur 404 !.html">Location</a>
+        </h3>
+        <h3>Espaces membres</h3>
+        <a href="Erreur 404/Erreur 404 !.html">Déjà inscrit</a>
+        <a href="Erreur 404/Erreur 404 !.html">Pas encore inscrit</a>
+        <h3>
+            <a href="Page de contact.html">Contacts</a>
+        </h3>
+    </div>
+    <!--
+
+    FACEBOOK : 
+
+    <div class="column social">
+        <h3>Suivez-nous sur Facebook !</h3>
+        <a href="https://www.facebook.com/profile.php?id=100064804988393"><img src="Images/facedebook.png" alt="Facebook" width="24"></a>
+    </div>
+    
+    -->
+    <div class="column newsletter">
+        <h3><em>Vous souhaitez être au courant de toutes les dernières news ?</em> <strong>Inscrivez-vous à notre newsletter !</strong></h3>
+        <input type="email" placeholder="Votre e-mail">
+        <button onclick="submitNewsletter()">Soumettre</button>
+        <div class="message"><i>Voilà, c'est fait ! Vous êtes inscrit</i></div>
+    </div>
+</footer>
+</body>
+</html>
