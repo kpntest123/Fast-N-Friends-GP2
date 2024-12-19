@@ -1,7 +1,9 @@
 // Constants
 const CITIES = [
-    "Bruxelles", "Anvers", "Gand", "Charleroi", "Liège", "Bruges", "Namur",
-    "Louvain", "Mons", "Alost", "Malines", "La Louvière", "Courtrai",
+  "Bruxelles", "Anvers", "Gand", "Charleroi", "Liège", "Bruges", "Namur",
+  "Louvain", "Mons", "Alost", "Malines", "La Louvière", "Courtrai",
+  "Hasselt", "Ostende", "Seraing", "Saint-Nicolas", "Tournai", "Genk",
+  "Roulers", "Mouscron", "Verviers", "Beveren", "Beringen", "Louvain-la-Neuve"
     // ... (reste des villes)
   ];
   
@@ -16,6 +18,21 @@ const CITIES = [
     resetFilters: document.getElementById("resetFilters")
   };
   
+
+
+  const cityDropdown = document.getElementById('cityDropdown');
+
+  CITIES.forEach(city => {
+      const cityItem = document.createElement('li');
+      const cityLink = document.createElement('a');
+      cityLink.className = 'dropdown-item';
+      cityLink.href = '#';
+      cityLink.textContent = city;
+      cityItem.appendChild(cityLink);
+      cityDropdown.appendChild(cityItem);
+  });
+
+
   // Filter State
   const filterState = {
     selectedCity: "",
