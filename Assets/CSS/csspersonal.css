@@ -319,24 +319,6 @@
             color: #000000;
           }
           
-          /*Bloc 4 : Les cartes*/
-          .lescardsecolos {
-            text-align: center;
-            background-color: #ffffff;
-            padding: 30px 15px;
-          }
-          
-          .lescardsecolos p {
-            font-size: 16px; 
-            color: #000000;
-          }
-          
-          .lescardsecolos h1 {
-            font-size: 26px; 
-            color: #000000;
-            font-style: normal;
-            margin-bottom: 30px;
-          }
 
           .card-wrapper {
             max-width: 1200px;
