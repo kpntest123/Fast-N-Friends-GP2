@@ -103,65 +103,89 @@ const CITIES = [
   function initializeFilters() {
     // Modal handlers
     elements.openFilters?.addEventListener("click", () => {
-      elements.filterOverlay?.classList.remove("hidden");
+        elements.filterOverlay?.classList.remove("hidden");
     });
-  
+
     elements.closeModal?.addEventListener("click", () => {
-      elements.filterOverlay?.classList.add("hidden");
+        elements.filterOverlay?.classList.add("hidden");
     });
-  
+
     elements.filterOverlay?.addEventListener("click", (event) => {
-      if (event.target === elements.filterOverlay) {
-        elements.filterOverlay.classList.add("hidden");
-      }
+        if (event.target === elements.filterOverlay) {
+            elements.filterOverlay.classList.add("hidden");
+        }
     });
-  
+
     // Filter handlers
     function updateActiveFilter(menuItems, selectedValue) {
-      menuItems.forEach(item => {
-        item.classList.toggle("active-filter", item.textContent === selectedValue);
-      });
+        menuItems.forEach(item => {
+            item.classList.toggle("active-filter", item.textContent === selectedValue);
+        });
     }
-  
+
     function filterEvents() {
-      const filteredEvents = events.filter(event => {
-        const matchesCity = !filterState.selectedCity || event.city === filterState.selectedCity;
-        const matchesTag = !filterState.selectedTag || event.tag === filterState.selectedTag;
-  
-        if (!filterState.selectedDate) return matchesCity && matchesTag;
-  
-        const [day, month, year] = event.date.split('/');
-        const eventDate = new Date(year, month - 1, day);
-        const selectedDateObj = new Date(filterState.selectedDate);
-  
-        return matchesCity && matchesTag && 
-          eventDate.toDateString() === selectedDateObj.toDateString();
-      });
-  
-      renderEvents(filteredEvents);
+        const filteredEvents = events.filter(event => {
+            const matchesCity = !filterState.selectedCity || event.city === filterState.selectedCity;
+            const matchesTag = !filterState.selectedTag || event.tag === filterState.selectedTag;
+
+            if (!filterState.selectedDate) return matchesCity && matchesTag;
+
+            const [year, month, day] = filterState.selectedDate.split('-'); // Format attendu : YYYY-MM-DD
+            const selectedDateObj = new Date(year, month - 1, day);
+            const [eventDay, eventMonth, eventYear] = event.date.split('/'); // Format attendu : DD/MM/YYYY
+            const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+
+            return matchesCity && matchesTag &&
+                eventDate.toDateString() === selectedDateObj.toDateString();
+        });
+
+        renderEvents(filteredEvents);
     }
-  
-    // Initialize filter listeners
+
+    // Listener pour les villes
     document.querySelectorAll("#cityDropdown .dropdown-item").forEach(item => {
-      item.addEventListener("click", () => {
-        filterState.selectedCity = item.textContent;
-        filterEvents();
-        updateActiveFilter(
-          document.querySelectorAll("#cityDropdown .dropdown-item"),
-          item.textContent
-        );
-      });
+        item.addEventListener("click", () => {
+            filterState.selectedCity = item.textContent;
+            filterEvents();
+            updateActiveFilter(
+                document.querySelectorAll("#cityDropdown .dropdown-item"),
+                item.textContent
+            );
+        });
     });
-  
+
+    // Listener pour les tags
+    document.querySelectorAll("#tagDropdown .dropdown-item").forEach(item => {
+        item.addEventListener("click", () => {
+            filterState.selectedTag = item.textContent;
+            filterEvents();
+            updateActiveFilter(
+                document.querySelectorAll("#tagDropdown .dropdown-item"),
+                item.textContent
+            );
+        });
+    });
+
+    // Listener pour le DatePicker
+    document.querySelectorAll("#datePicker").forEach(item => {
+        item.addEventListener("change", () => {
+            filterState.selectedDate = item.value; // Met à jour l'état du filtre avec la date sélectionnée
+            filterEvents(); // Applique les filtres
+        });
+    });
+
+    // Reset filters
     elements.resetFilters?.addEventListener("click", () => {
-      Object.keys(filterState).forEach(key => filterState[key] = "");
-      document.querySelectorAll(".dropdown-item").forEach(item => {
-        item.classList.remove("active-filter");
-      });
-      elements.datePicker.value = "";
-      renderEvents(events);
+        Object.keys(filterState).forEach(key => filterState[key] = "");
+        document.querySelectorAll(".dropdown-item").forEach(item => {
+            item.classList.remove("active-filter");
+        });
+        elements.datePicker.value = "";
+        renderEvents(events);
     });
-  }
+}
+
+
   
   // Card Animations
   function initializeCardAnimations() {
@@ -184,7 +208,7 @@ const CITIES = [
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const card = entry.target;
-          const direction = card.classList.contains('fond-card-1') ? 'right' : 'left';
+          const direction = card.classList.contains('fond-card-1') ? 'right' : 'left'
           animateCard(card, direction);
           observer.unobserve(card);
         }
@@ -206,3 +230,22 @@ const CITIES = [
       cityItem.appendChild(cityLink);
       cityDropdown.appendChild(cityItem);
   });
+
+  const tagDropdown = document.getElementById('tagDropdown');
+
+  const TAGS = [
+      "Fête", "Expo", "Festival", "Sport", "Concert", "Bal"
+  ];
+  
+
+TAGS.forEach(tag => {
+  const tagItem = document.createElement('li');
+  const tagLink = document.createElement('a');
+  tagLink.className = 'dropdown-item';
+  tagLink.href = '#';
+  tagLink.textContent = tag;
+  tagItem.appendChild(tagLink);
+  tagDropdown.appendChild(tagItem);
+});
+
+

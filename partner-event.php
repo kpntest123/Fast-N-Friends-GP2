@@ -21,24 +21,21 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="header-box">
-                            <button class="btn btn-secondary dropdown-toggle" 
-                            type="button" 
-                            id="dropdownMenuButton" 
-                            data-bs-toggle="dropdown" 
-                            aria-expanded="false">Event</button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <li><a class="dropdown-item" href="#">Bal</a></li>
-                                <li><a class="dropdown-item" href="#">Concert</a></li>
-                                <li><a class="dropdown-item" href="#">Festival</a></li>
-                                <li><a class="dropdown-item" href="#">Expo</a></li>
-                                <li><a class="dropdown-item" href="#">Fête</a></li>
-                                <li><a class="dropdown-item" href="#">Sport</a></li>
+                    <div class="header-box">
+                            <button 
+                                class="btn btn-secondary dropdown-toggle" 
+                                type="button" 
+                                id="dropdownMenuButton" 
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false">
+                                Event
+                            </button>
+                            <ul class="dropdown-menu" id="tagDropdown">
                             </ul>
-        
+                        </div>
     
                         </div>
-                    </div>
+                    
                     <div class="col-4">
                         <div class="header-box">
                             <input
