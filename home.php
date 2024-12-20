@@ -248,9 +248,9 @@ get_header();
 </div>
 </section>
 
-<section class="sec-loeb">
-  <div class=" justify-content-center align-items-center">
-    <div class="contenair-opinions-users">
+<section>
+<div class="d-flex justify-content-center align-items-center vh-100"> <!-- Section Loeb ???? -->
+<div class="contenair-opinions-users">
       <!-- Bloc principal à droite -->
       <div class="contenair-opinions-main">
         <div class="main-content">

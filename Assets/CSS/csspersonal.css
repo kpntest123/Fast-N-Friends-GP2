@@ -293,7 +293,7 @@
           
           .search-section {
             background-color: #4B9BEB;
-            max-height: 500px;
+            min-height: 700px;
             padding: 2rem;
             display: flex;
             justify-content: center;
