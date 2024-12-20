@@ -35,7 +35,7 @@
           }
           
           /* Style de la barre de navigation */
-          /* Navbar globale */
+        /* Navbar globale */
         .custom-navbar {
           margin: 0 100px; /* Marge de 0 en haut/bas et 20px à gauche/droite */
           font-size: 18px;
@@ -52,11 +52,6 @@
           align-items: center;
         }
 
-        .logo-container img {
-          height: 32px;
-          margin-left: 12px;
-        }
-
         #fnfheader {
           font-size: 30px;
           font-weight: bold;
@@ -64,16 +59,6 @@
           text-decoration: none;
           color: #4B9BEB;
         }
-
-            /*Version pour mobile
-            #fnfheadersimple {
-              font-size: 25px;
-              font-weight: bold;
-              font-family: MuseoModerno;
-              text-decoration: none;
-              color: #4B9BEB;
-            }*/
-
 
         .nav-links {
           display: flex;
@@ -111,22 +96,17 @@
           background-color: #4B9BEB;
         }
 
-        .add-event{
+        .add-event {
           font-weight: bold;
           font-size: 25px;
           color: red;
-
           animation: colorChange 1s infinite; /* Animation 'colorChange' sur 2 secondes, en boucle infinie, pour que ce soit visuel */
         }
 
-                  @keyframes colorChange { /*Faire cloignoter le texte pour les admins*/
-                    0% {
-                        color: black; /* Texte noir */
-                    }
-                    100% {
-                        color: rgb(255, 0, 0); /* Texte rouge */
-                    }
-                  }
+        @keyframes colorChange { /*Faire cloignoter le texte pour les admins*/
+          0% { color: black; }
+          100% { color: rgb(255, 0, 0); }
+        }
 
 
 
@@ -207,25 +187,7 @@
           
           
           /*PARTIE BLOC 2 : IMAGE ET BARRE DE RECHERCHE*/
-          .search-section {
-            background-color: #4B9BEB;
-            height: 700px;
-            padding: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          
-          .search-container {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            color: #333;
-            background-color: rgb(255, 255, 255); /* ==> normalement à supprimer, juste pour prévisualiser le contenait de recherche, finalement, le rendu est au rdv !*/
-            max-width: 600px; /* Augmentation de la largeur maximale du conteneur */
-            width: 100%; /* Le conteneur prend toute la largeur disponible */
-            padding: 2rem; /* Réduction du padding pour un rendu plus compact */
-          }
+
           
           .search-form {
             display: grid;
@@ -264,20 +226,6 @@
           .search-button:hover {
             background-color: #2b7aca;
           }      
-          
-          .image-container {
-            flex: 0 0 40%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          
-          .image-container img {
-            max-width: 100%;
-            height: auto;
-            max-height: 400px;
-            object-fit: contain;
-          }
 
           .search-container h1 {
             font-size: 25px; /* ADAPTER LA POLICE, UNE FOIS QUE c'EST FAIT, que tout est bien pensé */
@@ -295,7 +243,80 @@
             font-size: 18px; /* Taille plus petite/grandes ==> selon mes besoin */
             color: rgba(0, 0, 0, 0.7); /* Ajuste la couleur si nécessaire */
             text-align: center; /* Optionnel */
-          }             
+          }
+          
+          .search-section {
+            background-color: #4B9BEB;
+            min-height: 700px;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+          }
+          
+          .search-container {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #333;
+            background-color: rgb(255, 255, 255);
+            max-width: 600px;
+            padding: 2rem;
+          }
+          
+          .image-container {
+            flex: 0 0 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .image-container img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+          }
+          
+          @media screen and (max-width: 768px) {
+            .search-section {
+              min-height: auto;
+              padding: 1.5rem;
+              flex-direction: column;
+              gap: 1.5rem;
+            }
+          
+            .search-container {
+              max-width: 90%;
+              margin: 0 auto;
+              padding: 1.5rem;
+            }
+          
+            .image-container {
+              width: 50%;
+              margin: 0 auto;
+            }
+          
+            .image-container img {
+              max-height: 150px;
+              width: auto;
+            }
+          
+            .search-form {
+              grid-template-columns: 1fr;
+            }
+          
+            .form-group input {
+              font-size: 16px;
+              padding: 0.75rem 1rem;
+            }
+          
+            .search-button {
+              padding: 1rem;
+              font-size: 16px;
+            }
+          }
           
           /* Bloc 3 : Titre et chiffre */
           .stats {
@@ -1031,7 +1052,12 @@ font-size: 18px;
 }
 
 
-/* Login Page Specific Styles */
+
+
+
+
+
+/* Login Page Specific Styles ==> page de connexion*/
 .login-container {
   background-color:#C8C6F5;
   border-radius: 5px;

@@ -302,27 +302,27 @@ get_header();
       <!-- Bloc horizontal en dessous -->
       <div class="contenair-opinions-bottom">
           <!-- Bloc 6 : Avis users -->
-  <section id="stars-section">
-        <div id="stars-container">
-            <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
-            </svg>
-            <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
-            </svg>
-            <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
-            </svg>
-            <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
-            </svg>
+        <section id="stars-section">
+              <div id="stars-container">
+                  <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
+                  </svg>
+                  <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
+                  </svg>
+                  <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
+                  </svg>
+                  <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
+                  </svg>
+              </div>
+              <p id="stars-message">C'est la note attribuée par nos utilisateurs !</p>
+          </section>
+            </div>
+          </div>
         </div>
-        <p id="stars-message">C'est la note attribuée par nos utilisateurs</p>
-    </section>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
 
