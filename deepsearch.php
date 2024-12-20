@@ -43,7 +43,7 @@ get_header();?>
 <div id="filters-modal" class="deep-search-modal">
   <div class="deep-search-modal-content">
     <span class="deep-search-modal-close"></span>
-    <h2>Filtres additionnels</h2>
+    <h1 class=deep-search-modal-h1>Filtres additionnels</h1>
     <div class="deep-search-modal-body">
     </div>
     <div class="deep-search-modal-footer">

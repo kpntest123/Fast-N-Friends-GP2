@@ -84,7 +84,7 @@ if (isset($_GET['login_error'])) : ?>
                 </div>
                 
                 <div class="form-group mb-3">
-                    <div class="form-check">
+                    <div class="form-check-login">
                         <input 
                             type="checkbox" 
                             name="remember" 
@@ -93,12 +93,12 @@ if (isset($_GET['login_error'])) : ?>
 
                             <?php echo (isset($_POST['remember']) && $_POST['remember']) ? 'checked' : ''; ?>
                         >
-                        <label class="form-check-label" for="remember">
+                        <label class="form-check-label" for="remember" class="remember-me">
                             Se souvenir de moi
                         </label>
                     </div>
                     
-                    <a href="<?php echo wp_lostpassword_url(); ?>" class="small text-muted">
+                    <a href="<?php echo wp_lostpassword_url(); ?>" class="mdp-oublie">
                         Mot de passe oublié ?
                     </a>
                 </div>
@@ -115,7 +115,7 @@ if (isset($_GET['login_error'])) : ?>
         
         <div class="col-md-6 image-section">
             <?php 
-            $image_url = get_template_directory_uri() . 'Assets\Img\secure-connection.svg';
+            $image_url = get_template_directory_uri() . '/Assets/Img/secure-connection.svg';
             ?>
             <img 
                 src="<?php echo esc_url($image_url); ?>" 

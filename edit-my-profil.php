@@ -67,98 +67,96 @@ if ( is_user_logged_in() ) {
 
 <!-- Contenu de la page Edit My Profile -->
 <div class= blue-separation>
+<h1>Modifier mes infos</h1>
 </div>
 <div class="container">
-    <div class="edit-info-event-title">
-        <h1>Modifier mes infos</h1>
-    </div>
     <br><br>
 
     <form name="Edit-profil" id="edit-profil" method="POST" enctype="multipart/form-data">
         <!-- Titre de l'article -->
         <div class="row mb-3">
-            <label for="Nom" class="col-sm-2 col-form-label">Nom</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="Nom" name="firstname" value="<?php echo esc_attr($firstname); ?>" required>
-            </div>
-        </div>
-
-        <!-- Prénom -->
-        <div class="row mb-3">
-            <label for="Prénom" class="col-sm-2 col-form-label">Prénom</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="Prénom" name="lastname" value="<?php echo esc_attr($lastname); ?>" required>
-            </div>
-        </div>
-
-        <!-- Date -->
-        <div class="row mb-3">
-            <label for="birthday" class="col-sm-2 col-form-label">Date</label>
-            <div class="col-sm-10">
-                <input type="date" id="birthday" name="birthdate" class="form-control" value="<?php echo esc_attr($birthdate); ?>" required>
-            </div>
-        </div>
-
-        <!-- Genre -->
-        <div class="row mb-3">
-            <label for="Genre" class="col-sm-2 col-form-label">Genre</label>
-            <div class="col-sm-10">
-                <select class="form-control" id="Genre" name="gender">
-                    <option value="Homme" <?php selected($gender, 'Homme'); ?>>Homme</option>
-                    <option value="Femme" <?php selected($gender, 'Femme'); ?>>Femme</option>
-                    <option value="Autre" <?php selected($gender, 'Autre'); ?>>Autre</option>
-                </select>
-            </div>
-        </div>
-
-        <!-- Ville -->
-        <div class="row mb-3">
-            <label for="Ville" class="col-sm-2 col-form-label">Ville</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="Ville" name="city" value="<?php echo esc_attr($city); ?>" required>
-            </div>
-        </div>
-
-        <!-- École -->
-        <div class="row mb-3">
-            <label for="Ecole" class="col-sm-2 col-form-label">École</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="Ecole" name="school" value="<?php echo esc_attr($school); ?>">
-            </div>
-        </div>
-
-        <!-- Numéro de téléphone -->
-        <div class="row mb-3">
-            <label for="Numero de telephone" class="col-sm-2 col-form-label">Téléphone</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="Numero de telephone" name="phone" value="<?php echo esc_attr($phone); ?>" placeholder="+32 4XX XX XX XX">
-            </div>
-        </div>
-
-        <!-- Description -->
-        <div class="row mb-3">
-            <label for="Aboutyou" class="col-sm-2 col-form-label">À propos de toi</label>
-            <div class="col-sm-10">
-                <textarea class="form-control" id="Aboutyou" name="about" rows="8"><?php echo esc_textarea($about); ?></textarea>
-            </div>
-        </div>
-
-        <!-- Image de la vignette -->
-        <div class="row mb-3">
-            <label for="profile_picture" class="col-sm-2 col-form-label">Changer votre photo de profil</label>
-            <div class="col-sm-10">
-                <input type="file" class="form-control" id="profile_picture" name="profile_picture" accept="image/*">
-            </div>
-        </div>
-
-        <!-- Bouton Appliquer les modifications -->
-        <div class="row mb-3">
-            <div class="col-sm-12 text-center">
-                <input type="submit" name="submit_edit_profile" value="Mettre à jour mon profil" class="btn-custom">
-            </div>
-        </div>
-    </form>
+    <label for="Nom" class="col-sm-2 col-form-label EMP-form-label">Nom</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control EMP-form-input" id="Nom" name="firstname" value="<?php echo esc_attr($firstname); ?>" required>
+    </div>
 </div>
+
+<!-- Prénom -->
+<div class="row mb-3">
+    <label for="Prénom" class="col-sm-2 col-form-label EMP-form-label">Prénom</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control EMP-form-input" id="Prénom" name="lastname" value="<?php echo esc_attr($lastname); ?>" required>
+    </div>
+</div>
+
+<!-- Date -->
+<div class="row mb-3">
+    <label for="birthday" class="col-sm-2 col-form-label EMP-form-label">Date</label>
+    <div class="col-sm-10">
+        <input type="date" id="birthday" name="birthdate" class="form-control EMP-form-input" value="<?php echo esc_attr($birthdate); ?>" required>
+    </div>
+</div>
+
+<!-- Genre -->
+<div class="row mb-3">
+    <label for="Genre" class="col-sm-2 col-form-label EMP-form-label">Genre</label>
+    <div class="col-sm-10">
+        <select class="form-control EMP-form-input" id="Genre" name="gender">
+            <option value="Homme" <?php selected($gender, 'Homme'); ?>>Homme</option>
+            <option value="Femme" <?php selected($gender, 'Femme'); ?>>Femme</option>
+            <option value="Autre" <?php selected($gender, 'Autre'); ?>>Autre</option>
+        </select>
+    </div>
+</div>
+
+<!-- Ville -->
+<div class="row mb-3">
+    <label for="Ville" class="col-sm-2 col-form-label EMP-form-label">Ville</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control EMP-form-input" id="Ville" name="city" value="<?php echo esc_attr($city); ?>" required>
+    </div>
+</div>
+
+<!-- École -->
+<div class="row mb-3">
+    <label for="Ecole" class="col-sm-2 col-form-label EMP-form-label">École</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control EMP-form-input" id="Ecole" name="school" value="<?php echo esc_attr($school); ?>">
+    </div>
+</div>
+
+<!-- Numéro de téléphone -->
+<div class="row mb-3">
+    <label for="Numero de telephone" class="col-sm-2 col-form-label EMP-form-label">Téléphone</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control EMP-form-input" id="Numero de telephone" name="phone" value="<?php echo esc_attr($phone); ?>" placeholder="+32 4XX XX XX XX">
+    </div>
+</div>
+
+<!-- Description -->
+<div class="row mb-3">
+    <label for="Aboutyou" class="col-sm-2 col-form-label EMP-form-label">À propos de toi</label>
+    <div class="col-sm-10">
+        <textarea class="form-control EMP-form-input" id="Aboutyou" name="about" rows="8"><?php echo esc_textarea($about); ?></textarea>
+    </div>
+</div>
+
+<!-- Image de la vignette -->
+<div class="row mb-3">
+    <label for="profile_picture" class="col-sm-2 col-form-label EMP-form-label">Changer votre photo de profil</label>
+    <div class="col-sm-10">
+        <input type="file" class="form-control EMP-form-input" id="profile_picture" name="profile_picture" accept="image/*">
+    </div>
+</div>
+
+<!-- Bouton Appliquer les modifications -->
+<div class="row mb-3">
+    <div class="col-sm-12 text-center">
+        <input type="submit" name="submit_edit_profile" value="Mettre à jour mon profil" class="EMP-btn-custom">
+    </div>
+</div>
+
+
 
 
 <?php get_footer(); ?>
