@@ -20,8 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
     $trajet_data = array(
         'post_title' => $from . ' à ' . $to,
         'post_content' => $description,
-        'post_type' => 'trajet', // Assurez-vous que ce type existe, ou remplacez-le par un type personnalisé
+        'post_type' => 'trajet',
         'post_status' => 'publish',
+        'post_author' => get_current_user_id(), 
         'meta_input' => array(
             'from' => $from,
             'to' => $to,
@@ -32,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
             'pets_allowed' => $pets_allowed,
         ),
     );
+
 
     // Insertion dans la base de données
     $post_id = wp_insert_post($trajet_data);

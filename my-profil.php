@@ -2,6 +2,41 @@
 /* Template Name: Page de Profil */
 get_header();
 
+// Vérifier si un ID utilisateur est passé dans l'URL
+$user_id = isset($_GET['user_id']) ? intval($_GET['user_id']) : get_current_user_id(); 
+
+// Récupérer les informations de l'utilisateur spécifié
+$user_data = get_userdata($user_id);
+
+if (!$user_data) {
+    echo '<p>Utilisateur non trouvé.</p>';
+    get_footer();
+    exit;
+}
+
+// Récupérer l'ID utilisateur depuis l'URL
+$user_id = isset($_GET['user_id']) ? intval($_GET['user_id']) : get_current_user_id();
+
+// Récupérer les informations de l'utilisateur
+$user_data = get_userdata($user_id);
+
+if ($user_data) {
+    // Afficher les informations de l'utilisateur
+    echo 'Nom : ' . esc_html($user_data->display_name);
+    // Ajouter d'autres informations ici
+} else {
+    echo 'Utilisateur non trouvé';
+}
+
+
+// Récupérer les métadonnées de l'utilisateur
+$firstname = get_user_meta($user_id, 'first_name', true);
+$lastname = get_user_meta($user_id, 'last_name', true);
+$gender = get_user_meta($user_id, 'gender', true);
+$school = get_user_meta($user_id, 'school', true);
+$phone = get_user_meta($user_id, 'phone', true);
+$about = get_user_meta($user_id, 'about', true);
+
 // Vérifier si l'utilisateur n'est pas connecté
 if ( !is_user_logged_in() ) {
     // Rediriger vers la page /hom si l'utilisateur n'est pas connecté

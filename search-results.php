@@ -95,20 +95,29 @@ $query = new WP_Query($args);
             while ($query->have_posts()) : $query->the_post();
             ?>
                 <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2><?php the_title(); ?></h2>
-                        </div>
-                        <div class="card-body">
-                            <p><strong>De :</strong> <?php echo esc_html(get_post_meta(get_the_ID(), 'from', true)); ?></p>
-                            <p><strong>À :</strong> <?php echo esc_html(get_post_meta(get_the_ID(), 'to', true)); ?></p>
-                            <p><strong>Places disponibles :</strong> <?php echo esc_html(get_post_meta(get_the_ID(), 'people', true)); ?></p>
-                            <p><strong>Date :</strong> <?php echo esc_html(get_post_meta(get_the_ID(), 'date', true)); ?></p>
-                            <p><strong>Description :</strong> <?php the_content(); ?></p>
+                <div class="card">
+    <div class="card-header">
+        <h2><?php the_title(); ?></h2>
+        <p><strong>Créé par :</strong> 
+            <?php 
+                $author_id = get_post_field('post_author', get_the_ID());
+                $author_url = get_author_posts_url($author_id);  // URL de la page profil de l'utilisateur
+            ?>
+            <a href="<?php echo esc_url($author_url); ?>">
+                <?php echo esc_html(get_the_author_meta('display_name', $author_id)); ?>
+            </a>
+        </p>
+    </div>
+    <div class="card-body">
+        <p><strong>De :</strong> <?php echo esc_html(get_post_meta(get_the_ID(), 'from', true)); ?></p>
+        <p><strong>À :</strong> <?php echo esc_html(get_post_meta(get_the_ID(), 'to', true)); ?></p>
+        <p><strong>Places disponibles :</strong> <?php echo esc_html(get_post_meta(get_the_ID(), 'people', true)); ?></p>
+        <p><strong>Date :</strong> <?php echo esc_html(get_post_meta(get_the_ID(), 'date', true)); ?></p>
+        <p><strong>Description :</strong> <?php the_content(); ?></p>
+    </div>
+</div>
 
-                        </div>
-                    </div>
-                </div>
+
             <?php endwhile; ?>
         </div>
     <?php else : ?>
