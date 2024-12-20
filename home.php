@@ -67,7 +67,7 @@ get_header();
         <!-- Version normale -->
             <div class="fond-card-1">
                 <div class="fond-card-2">
-                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/econmicly-strategic.svg" alt="homme chevauchant une tirellire">
+                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/econmicly-strategic.svg" alt="homme chevauchant une tirellire" class="fond-card-2-image">
                 </div>
                 <div class="forme-card-bleue">
                     <h2 class="h2-cards">Économiquement stratégique</h2>
@@ -81,11 +81,11 @@ get_header();
         <!-- Version miroir -->
             <div class="fond-card-1-miroir">
                 <div class="fond-card-2-miroir">
-                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/ecologicly-responsible.svg" alt="main tenant une plante">
+                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/ecologicly-responsible.svg" alt="main tenant une plante" class="fond-card-2-miroir-image">
                 </div>
                 <div class="forme-card-bleue-miroir">
                     <h2 class="h2-cards-miroir">Ecologiquement responsable</h2>
-                    <p class="p-cards">
+                    <p class="p-cards-mirror">
                     Le covoiturage, c’est un geste éco-responsable, parce qu'il réduit le nombre de voitures sur la route et donc les émissions de CO2. En partageant les trajets, tu optimises les ressources et tu diminues la pollution. C’est direct : tu contribues à préserver l’environnement !</p>
                 </div>
         </div>
@@ -95,7 +95,7 @@ get_header();
         <!-- Card normale -->
             <div class="fond-card-1">
                 <div class="fond-card-2">
-                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/ladies-only.svg" alt="femme entrain de marcher">
+                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/ladies-only.svg" alt="femme entrain de marcher" class="fond-card-2-image">
                 </div>
                 <div class="forme-card-bleue">
                     <h2 class="h2-cards">Ladies only</h2>
@@ -109,11 +109,11 @@ get_header();
         <!-- Card miroir -->
             <div class="fond-card-1-miroir">
                 <div class="fond-card-2-miroir">
-                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/verified-profil.svg" alt="voiture avec un logo de verification audessus">
+                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/verified-profil.svg" alt="voiture avec un logo de verification audessus" class="fond-card-2-miroir-image">
                 </div>
                 <div class="forme-card-bleue-miroir">
                     <h2 class="h2-cards-miroir">Profils vérifiés</h2>
-                    <p class="p-cards">
+                    <p class="p-cards-mirror">
                     Les profils vérifiés sur Fast'N Friends, c’est la garantie d’une sécurité en plus, en te permettant de vérifier l'identité et la fiabilité des gens avec qui tu voyages. Ça renforce la confiance entre conducteurs et passagers, pour des trajets plus tranquilles et sûrs. Et en plus, ça aide à créer une communauté respectueuse et responsable !</p>
                 </div>
             </div>
@@ -123,7 +123,7 @@ get_header();
         <!-- Card normale -->
             <div class="fond-card-1">
                 <div class="fond-card-2">
-                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/accessible-events.svg" alt="une femme pointant un evenement avec une loupe sur un tableau">
+                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/accessible-events.svg" alt="une femme pointant un evenement avec une loupe sur un tableau" class="fond-card-2-image">
                 </div>
                 <div class="forme-card-bleue">
                     <h2 class="h2-cards">Des événements accessibles</h2>
@@ -137,11 +137,11 @@ get_header();
         <!-- Card miroir -->
             <div class="fond-card-1-miroir">
                 <div class="fond-card-2-miroir">
-                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/tchat.svg" alt="une femme et un homme discutant de tout et de rien">
+                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/tchat.svg" alt="une femme et un homme discutant de tout et de rien" class="fond-card-2-miroir-image">
                 </div>
                 <div class="forme-card-bleue-miroir">
                     <h2 class="h2-cards-miroir">Tchattez pour faire connaissance</h2>
-                    <p class="p-cards">
+                    <p class="p-cards-mirror">
                     Fast'N Friends te propose un tchat intégré pour que conducteurs et passagers puissent faire connaissance avant le trajet. C’est l’occasion d’échanger des infos, de discuter des détails du voyage et de créer une vraie confiance entre vous. Ce système rend le covoiturage plus cool et serein !
                     </p>
                 </div>
