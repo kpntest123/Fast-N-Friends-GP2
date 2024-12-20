@@ -915,11 +915,13 @@
               margin-top: 5rem;
             }
 
+            
+
             .container-search-results h1{
             margin-top: 10px; /*Pour pas que ca se fasse écrasé par le bloc !*/
               font-size: 25px;
             color: #000;
-            font-weight: bold;            
+            font-weight: bold;    
             }
 
             .container-search-results div{
@@ -948,7 +950,7 @@
               font-weight: normal; /* Texte normal à droite */
               text-align: left; /* Alignement à gauche */
             }
-
+            
       /* STYLE POUR LA PAGE DE recherches profondes ==> same base que sur l'accueil, mais quelques ajouts / deep search*/
                 /* Overlay */
           .filter-overlay {
@@ -1258,6 +1260,23 @@ height: 100%;
   color: white;
 }
 
+.profile-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-col-main {
+  width: 50%;
+}
+
+.profile-col-side {
+  width: 50%;
+}
+
+.profile-content-container {
+  order: 2;
+}
+
 .profile-container {
   display: flex;
   flex-direction: column;
@@ -1266,6 +1285,7 @@ height: 100%;
   text-align: center;
   padding: 20px;
   height: 300px;
+  order: 1;
 }
 
 .profile-picture {
@@ -1285,12 +1305,13 @@ height: 100%;
   text-align: center;
   font-size: 25px;
 }
+
 .info-Psection {
-display: flex;
-flex-direction: column;
-justify-content: center;
-margin-bottom: 20px;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
   text-align: center;
 }
 
@@ -1299,31 +1320,12 @@ align-items: center;
   font-size: 18px;
 }
 
-.contact-section {
-display: flex;
-justify-content: center;
-width: 80%;
-max-width: 800px;
-margin: 20px 0;
-align-items: center;
-text-align: center;
-}
-
-.contact-section p {
-display: flex;
-justify-content: center;
-color: #4B9BEB;
-}
-
-
-/* Section À propos */
 .profil-h1 {
   color: #4B9BEB;
   font-size: 25px;
   margin-bottom: 20px;
   text-align: center;
   align-items: center;
-  text-align: center;
 }
 
 .highlight {
@@ -1332,39 +1334,54 @@ color: #4B9BEB;
 }
 
 .profil-box {
-background-color: white;  /* Fond blanc */
-border: 2px solid #ffffff; /* Bordure bleue de 2px */
-border-radius: 15px;      /* Bordures arrondies */
-width: 500px;             /* Largeur de la boîte */
-height: 300px;            /* Hauteur de la boîte */
-padding: 20px;            /* Espacement interne */
-display: flex; 
-justify-content: center;  /* Centrer horizontalement */
-align-items: center;      /* Centrer verticalement */
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Ombre subtile autour de la boîte */
-margin: 20px auto;        /* Centrer la boîte horizontalement */
+  background-color: white;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  width: 500px;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
 }
 
-/* Si vous voulez ajouter un contenu à l'intérieur de la boîte (ex. du texte ou une image) */
 .profil-box-content {
-font-size: 18px;          /* Taille du texte à l'intérieur de la boîte */
-color: #333;              /* Couleur du texte */
-text-align: center;       /* Centrer le texte */
+  font-size: 18px;
+  color: #333;
+  text-align: center;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
+  .profile-col-main,
+  .profile-col-side {
+      width: 100%;
+  }
+
+  .profile-row {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .profile-content-container {
+      order: 2;
+  }
+
   .profile-container {
-      flex-direction: column;
+      order: 1;
   }
 
-  .contact-section {
-      flex-direction: column;
-      text-align: left;
+  .profil-box {
+      width: 90%;
+      height: auto;
+      min-height: 200px;
   }
+}
 
-  .box {
-      padding: 20px;
+@media (max-width: 480px) {
+  .profil-box {
+      padding: 15px;
   }
 }
 
@@ -1475,82 +1492,116 @@ text-align: center;       /* Centrer le texte */
 .edit-info-event-title {
   text-align: center;
   font-weight: bold;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color: #4B9BEB;
   font-size: 25px;
 }
 
-
 .body-edit-info {
-  margin: 0 auto; 
-  padding: 0 20px; 
+  margin: 0 auto;
+  padding: 0 15px;
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: flex-start; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .edit-info-form {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Ajoute de l'espace entre chaque élément du formulaire */
+  gap: 15px;
   width: 100%;
-  max-width: 800px; /* Limite la largeur du formulaire */
-  margin: 0 auto; /* Centre le formulaire */
-  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
-
 }
 
 .edit-info-event-input {
   border: 2px solid #4B9BEB;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 16px;
   padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* Section contenant les inputs */
 .edit-info-event-label {
   font-weight: bold;
   color: #4B9BEB;
   font-size: 18px;
 }
 
-/* Bouton principal */
 .edit-info-event-btn {
   border-radius: 8px;
   background-color: #4B9BEB;
   border: 2px solid #4B9BEB;
   color: white;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 12px 15px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   width: 100%;
+  font-size: 16px;
 }
 
-/* Effet sur le bouton */
 .edit-info-event-btn:hover {
   background-color: #4B9BEB;
   transform: scale(1.02);
 }
 
-/* Marges entre les sections */
 .edit-info-event-section {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
-/* Espacement entre les sections */
 .edit-article {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Ajoute de l'espace entre les sections du formulaire */
-  padding: 20px;
+  gap: 15px;
+  padding: 15px;
   width: 100%;
   max-width: 800px;
-  margin: 0 auto; /* Centre le formulaire */
+  margin: 0 auto;
   border: 1px solid #ccc;
   border-radius: 8px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .edit-info-event-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .body-edit-info {
+    padding: 0 10px;
+  }
+
+  .edit-info-form,
+  .edit-article {
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .edit-info-event-input {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .edit-info-event-label {
+    font-size: 16px;
+  }
+
+  .edit-info-event-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .edit-info-event-section {
+    margin-bottom: 15px;
+  }
 }
 
 /* Event-partner */
@@ -1687,6 +1738,7 @@ text-align: center;       /* Centrer le texte */
             margin: 0; 
         }
     }
+
     
     
     @media (max-width: 480px) {
@@ -1694,7 +1746,14 @@ text-align: center;       /* Centrer le texte */
             flex-basis: 100%; 
             min-width: 100%; 
         }
+
+
+    .header-box button {
+      padding: 20px 25px; 
+      font-size: 18px; 
+      max-width: 100%; 
     }
+     }
 /* Edit event */
 
            /* Titre principal */
@@ -1743,7 +1802,7 @@ text-align: center;       /* Centrer le texte */
 /* Edit profil */
 /* Styles uniquement pour le formulaire EMP */
 .EMP-form-label {
-  text-align: right;
+  text-align: left;
   font-size: 18px;
 }
 
@@ -1778,6 +1837,7 @@ text-align: center;       /* Centrer le texte */
 }
 
         /* Styles par défaut */
+        
 .container.error-page {
   display: flex;
   flex-direction: column;
@@ -1818,6 +1878,9 @@ text-align: center;       /* Centrer le texte */
   background-color: #4B9BEB; /* Bleu plus foncé au hover */
 }
 
+.error-404-body {
+  background-color: #4B9BEB;
+}
 /* Media Queries */
 
 /* Écrans petits (mobiles) */

@@ -67,7 +67,7 @@ $query = new WP_Query($args);
         <div class="card-header">
             <h1>Résultats de ta recherche</h1>
         </div>
-        <div class="card-body">
+        <div class="card-body-first">
             <div class="row mb-3">
                 <div class="col-6 col-left">Tu voulais aller de :</div>
                 <div class="col-6 col-right"><?php echo esc_html($from); ?></div>

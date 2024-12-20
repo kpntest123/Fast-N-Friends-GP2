@@ -6,8 +6,7 @@
  */
 
 get_header(); ?>
-<div class="blue-separation"> </div>
-
+<div class="error-404-body">
 <div class="container error-page">
     <div class="error-404 not-found">
         <img class="car-accident" src="<?php echo get_template_directory_uri(); ?>/Assets/Img/car-accident-for-404.svg" alt="Illustration of a car accident for the 404 error page">
@@ -17,6 +16,7 @@ get_header(); ?>
         
         <a class="button home-button" href="<?php echo esc_url(home_url('/')); ?>">Retourne à la page d'accueil !</a>
     </div>
+</div>
 </div>
 
 <?php get_footer(); ?>

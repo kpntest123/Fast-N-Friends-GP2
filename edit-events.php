@@ -143,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['TitreArt'])) {
     </div>
 </form>
 
-
+<br>
     <div class="edit-info-event-title">
         <h1 class=edit-info-event-title>Article</h1>
     </div>
