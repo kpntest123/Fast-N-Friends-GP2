@@ -39,10 +39,17 @@
 
 <?php wp_head(); ?>
 
-<!-- CECI EST LA BARRE DE NAV :-->
+<!-- CECI EST LA BARRE DE NAV -->
 <nav class="custom-navbar">
   <div class="logo-container">
     <a id="fnfheader" href="<?php echo home_url(); ?>">FAST 'N FRIENDS</a>
+  </div>
+
+  <!-- Icône du menu hamburger -->
+  <div class="hamburger-menu" id="hamburger-menu">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 
   <div class="overlay" id="overlay">
@@ -115,20 +122,14 @@
 
 <script>
 // Sélectionner le menu hamburger et le bloc du menu
-const hamburger = document.querySelector('.hamburger-menu');
-const navMenu = document.getElementById('nav-menu');
+const hamburger = document.getElementById('hamburger-menu');
+const navMenu = document.getElementById('nav-links');
 
 // Ouvrir/fermer le menu lorsque le hamburger est cliqué
 hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('active');
 });
 
-// Fermer le menu lorsque l'utilisateur clique en dehors du menu
-window.addEventListener('click', (event) => {
-  if (!navMenu.contains(event.target) && !hamburger.contains(event.target)) {
-    navMenu.classList.remove('active');
-  }
-});
 
 </script>
 

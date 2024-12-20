@@ -153,6 +153,7 @@ get_header();
 
 
 <!-- Bloc 5 : FAQ -->
+ <section>
 <div class="conteneur-faq">
   <div class="item-faq">
     <div class="question-faq">
@@ -245,17 +246,17 @@ get_header();
     </div>
   </div>
 </div>
+</section>
 
-
-<section>
-  <div class="d-flex justify-content-center align-items-center vh-100">
+<section class="sec-loeb">
+  <div class=" justify-content-center align-items-center">
     <div class="contenair-opinions-users">
       <!-- Bloc principal à droite -->
       <div class="contenair-opinions-main">
         <div class="main-content">
           <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/S.loeb.webp" alt="Sébastien Loeb" class="extra-large-avatar">
           <p class="extra-large-text">
-            "J'espère que les conducteurs de cette plateforme ne rouleront pas aussi vite que moi !"
+            "Roulez pas trop vite les jeun's"
           </p>
           <div class="user-info">
             <span class="user-name">Sébastien Loeb</span>
@@ -308,22 +309,12 @@ get_header();
               </div>
               <p id="stars-message">C'est la note attribuée par nos utilisateurs !</p>
           </section>
-            </div>
           </div>
-        </div>
-      </section>
-
-<br><br>
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-<section>
-
+      </section>        
+    </div>
 </section>
 
-
+<br><br><br><br><br>
 
 <?php
 get_footer(); // Inclut le footer.php

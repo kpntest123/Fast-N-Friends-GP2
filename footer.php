@@ -12,10 +12,13 @@
                     <a href="<?php echo home_url('deep-search'); ?>">Rechercher un trajet</a>
                 </h1>
 
-                <h1>H1</h1>
-                <a href="Erreur 404/Erreur 404 !.html">Lorem 1</a>
-                <a href="Erreur 404/Erreur 404 !.html">Lorem 2</a>
-                <a href="Erreur 404/Erreur 404 !.html">Lorem 3</a>
+                <br>
+
+                <h1>
+                    <a href="<?php echo home_url('partner-events'); ?>">Événements partenaires</a>
+                </h1>
+
+            
                 <br><br><br><br>
                 <h3>&copy; <?php echo date('Y'); ?> Fast 'N Friends. Tous droits réservés.</h3>
             </div>
