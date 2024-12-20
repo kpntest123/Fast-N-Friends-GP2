@@ -247,17 +247,6 @@ get_header();
 </div>
 
 
-
-  
-
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-<br><br><br><br><br><br>
-
 <section>
   <div class="d-flex justify-content-center align-items-center vh-100">
     <div class="contenair-opinions-users">
@@ -323,6 +312,8 @@ get_header();
           </div>
         </div>
       </section>
+
+<br><br>
 
 
 
