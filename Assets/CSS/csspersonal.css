@@ -247,7 +247,7 @@
           
           .search-section {
             background-color: #4B9BEB;
-            min-height: 700px;
+            max-height: 500px;
             padding: 2rem;
             display: flex;
             justify-content: center;
@@ -1764,7 +1764,21 @@ text-align: center;       /* Centrer le texte */
   padding: 20px;
   font-size: 18px;
   border-radius: 40px;
+  position: relative;
 }
+
+.deep-search-image {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px; /* espace entre les champs et l'image */
+}
+
+.deep-search-image img {
+  width: auto;
+  max-width: 250px; /* ou ajustez en fonction de votre besoin */
+  height: auto;
+}
+
 
 .deep-search-modal-content h2 {
   text-align: center; /* Centrer le titre des filtres */

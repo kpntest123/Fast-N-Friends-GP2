@@ -123,7 +123,7 @@ get_header();
         <!-- Card normale -->
             <div class="fond-card-1">
                 <div class="fond-card-2">
-                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/accessible-events.svg" alt="une femme pointant un evenement avec une loupe sur un tableau" class="fond-card-2-image">
+                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/events-better.svg" alt="un événément se déroulant dans une forêt" class="fond-card-2-image">
                 </div>
                 <div class="forme-card-bleue">
                     <h2 class="h1-cards">Des événements accessibles</h2>

@@ -3,35 +3,42 @@
 get_header();?>
 
 <div class="blue-separation"> </div>
-  <br><br><br><br>
+  <div class="deep-search-image">
+      <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/look-for-a-traject.svg" alt="Femme pointant un trajet avec une loupe">
+    </div>
+  </div>
+<br>
   <div class="deep-search-form-container">
-  <form class="deep-search-form" action="<?php echo home_url('/search-results/'); ?>" method="get">
-  <div class="deep-search-form-field">
-    <input type="text" class="deep-search-form-input" id="from" name="from" placeholder="D'où partez-vous ?" required onkeyup="suggestCities(this.value, 'from')">
-    <ul id="from-suggestions" class="suggestions-list"></ul>
-  </div>
-  <div class="deep-search-form-field">
-    <input type="text" class="deep-search-form-input" id="to" name="to" placeholder="Où allez-vous ?" required onkeyup="suggestCities(this.value, 'to')">
-    <ul id="to-suggestions" class="suggestions-list"></ul>
-  </div>
-  <div class="deep-search-form-field">
-    <input type="number" class="deep-search-form-input" id="people" name="people" min="1" placeholder="Nombre de personnes" required>
-  </div>
-  <div class="deep-search-form-field">
-    <input type="date" class="deep-search-form-input" id="date" name="date" required>
-  </div>
-  <div class="deep-search-form-filters">
-    <button type="button" class="deep-search-form-filters-button" onclick="openFiltersModal()">
-      <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/add-something.svg" alt="Filtre" class="deep-search-form-filters-button-icon" />
-      Ajouter des filtres
-    </button>
-  </div>
-  <div class="deep-search-form-submit">
-    <button type="submit" class="deep-search-form-button">
-      <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/search-ico.svg" alt="Loupe" class="deep-search-form-button-icon" />
-      Rechercher
-    </button>
-  </div>
+    <form class="deep-search-form" action="<?php echo home_url('/search-results/'); ?>" method="get">
+      <div class="deep-search-form-field">
+        <input type="text" class="deep-search-form-input" id="from" name="from" placeholder="D'où partez-vous ?" required onkeyup="suggestCities(this.value, 'from')">
+        <ul id="from-suggestions" class="suggestions-list"></ul>
+      </div>
+      <div class="deep-search-form-field">
+        <input type="text" class="deep-search-form-input" id="to" name="to" placeholder="Où allez-vous ?" required onkeyup="suggestCities(this.value, 'to')">
+        <ul id="to-suggestions" class="suggestions-list"></ul>
+      </div>
+      <div class="deep-search-form-field">
+        <input type="number" class="deep-search-form-input" id="people" name="people" min="1" placeholder="Nombre de personnes" required>
+      </div>
+      <div class="deep-search-form-field">
+        <input type="date" class="deep-search-form-input" id="date" name="date" required>
+      </div>
+      <div class="deep-search-form-filters">
+        <button type="button" class="deep-search-form-filters-button" onclick="openFiltersModal()">
+          <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/add-something.svg" alt="Filtre" class="deep-search-form-filters-button-icon" />
+          Ajouter des filtres
+        </button>
+      </div>
+      <div class="deep-search-form-submit">
+        <button type="submit" class="deep-search-form-button">
+          <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/search-ico.svg" alt="Loupe" class="deep-search-form-button-icon" />
+          Rechercher
+        </button>
+      </div>
+    </form>
+
+
 
   <!-- Champs cachés pour les filtres additionnels -->
 
@@ -51,6 +58,8 @@ get_header();?>
     </div>
   </div>
 </div>
+
+
 
 <script>
 // Ajouter un événement pour fermer le modal si l'utilisateur clique en dehors
