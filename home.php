@@ -246,36 +246,62 @@ get_header();
   </div>
 </div>
 
-                <script>
-                      //JavaScript pour la FAQ
-                      const itemsFaq = document.querySelectorAll('.item-faq');
 
-                itemsFaq.forEach(item => {
-                    const question = item.querySelector('.question-faq');
-                    const answer = item.querySelector('.reponse-faq');
-                    const arrow = item.querySelector('.fleche');
-
-                    question.addEventListener('click', () => {
-                        const isOpen = answer.classList.contains('open');
-
-                        // Fermer toutes les réponses ouvertes
-                        document.querySelectorAll('.reponse-faq').forEach(a => a.classList.remove('open'));
-                        document.querySelectorAll('.fleche').forEach(a => a.classList.remove('open'));
-
-                        // Basculer l'élément actuel
-                        if (!isOpen) {
-                            answer.classList.add('open');
-                            arrow.classList.add('open');
-                        }
-                    });
-                });
-                </script>
 
   
 
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-  <!-- Bloc 6 : Avis users -->
+
+
+
+
+<br><br><br><br><br><br>
+
+<section>
+  <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="contenair-opinions-users">
+      <!-- Bloc principal à droite -->
+      <div class="contenair-opinions-main">
+        <div class="main-content">
+          <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/S.loeb.webp" alt="Sébastien Loeb" class="extra-large-avatar">
+          <p class="extra-large-text">
+            "J'espère que les conducteurs de cette plateforme ne rouleront pas aussi vite que moi !"
+          </p>
+          <div class="user-info">
+            <span class="user-name">Sébastien Loeb</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trois blocs à gauche -->
+      <div class="contenair-opinions-left">
+        <div class="opinion-left-block">
+          <p class="opinion-text">"Simple, efficace et économique ! Je recommande."</p>
+          <div class="user-info">
+            <img src="https://via.placeholder.com/40" alt="Avatar User" class="user-avatar">
+            <span class="user-name">Antoine O.</span>
+          </div>
+        </div>
+        <div class="opinion-left-block">
+          <p class="opinion-text">"Une solution parfaite pour mes trajets quotidiens."</p>
+          <div class="user-info">
+            <img src="https://via.placeholder.com/40" alt="Avatar User" class="user-avatar">
+            <span class="user-name">Marie K.</span>
+          </div>
+        </div>
+        <div class="opinion-left-block">
+          <p class="opinion-text">"J'adore partager mes trajets avec d'autres étudiants."</p>
+          <div class="user-info">
+            <img src="https://via.placeholder.com/40" alt="Avatar User" class="user-avatar">
+            <span class="user-name">Jean B.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloc horizontal en dessous -->
+      <div class="contenair-opinions-bottom">
+          <!-- Bloc 6 : Avis users -->
   <section id="stars-section">
         <div id="stars-container">
             <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
@@ -293,52 +319,18 @@ get_header();
         </div>
         <p id="stars-message">C'est la note attribuée par nos utilisateurs</p>
     </section>
-
-                <script>
-                  //La javascript pour les AVIS !
-                  document.addEventListener("DOMContentLoaded", function () {
-                const stars = document.querySelectorAll(".star");
-                const message = document.getElementById("stars-message");
-
-                // Fonction pour animer les étoiles
-                const animateStars = () => {
-                    stars.forEach((star, index) => {
-                        setTimeout(() => {
-                            star.style.opacity = 1;
-                            star.style.transform = "scale(1)";
-                        }, index * 300); // Délai entre chaque étoile
-                    });
-
-                    // Affiche la phrase après que toutes les étoiles soient animées
-                    setTimeout(() => {
-                        message.style.opacity = 1;
-                    }, stars.length * 300 + 500); // +500ms après l'animation
-                };
-
-                // Observer pour détecter quand la section est visible
-                const observer = new IntersectionObserver(
-                    (entries, observer) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                animateStars();
-                                observer.disconnect(); // Stop l'observation après animation
-                            }
-                        });
-                    },
-                    { threshold: 0.5 } // Active quand 50% de la section est visible
-                );
-
-                // Cible la section
-                const starsSection = document.getElementById("stars-section");
-                observer.observe(starsSection);
-              });
-              </script>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+<section>
 
+</section>
 
 
 
