@@ -28,15 +28,15 @@ get_header();
     <p>Que ce soit pour aller étudier ou aller à un event, tu es au bon endroit !</p>
     <form class="search-form" action="<?php echo home_url('/search-results/'); ?>" method="get">
       <div class="form-group">
-        <input type="text" id="from" name="from" placeholder="D'où partez-vous ?" required onkeyup="suggestCities(this.value, 'from')">
+        <input type="text" id="from" name="from" placeholder="D'où pars-tu ?" required onkeyup="suggestCities(this.value, 'from')">
         <ul id="from-suggestions" class="suggestions-list"></ul>
       </div>
       <div class="form-group">
-        <input type="text" id="to" name="to" placeholder="Où allez-vous ?" required onkeyup="suggestCities(this.value, 'to')">
+        <input type="text" id="to" name="to" placeholder="Où va-tu ?" required onkeyup="suggestCities(this.value, 'to')">
         <ul id="to-suggestions" class="suggestions-list"></ul>
       </div>
       <div class="form-group">
-        <input type="number" id="people" name="people" min="1" placeholder="Nombre de personnes" required>
+        <input type="number" id="people" name="people" min="1" placeholder="Pour combien de personnes ?" required>
       </div>
       <div class="form-group">
         <input type="date" id="date" name="date" required>
@@ -44,7 +44,7 @@ get_header();
       <button type="submit" class="search-button">Rechercher !</button>
     </form>
     <br>
-    <p class="note">*Malheureusement, n'est disponible que dans 500 grandes villes en Belgique</p>
+    <p class="note">*Malheureusement, n'est disponible que dans 500 grandes villes en Belgique.</p>
   </div>
   <div class="image-container">
     <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/vintage-car.svg" alt="Voiture vintage avec un arbre moderne">
@@ -70,7 +70,7 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/econmicly-strategic.svg" alt="homme chevauchant une tirellire" class="fond-card-2-image">
                 </div>
                 <div class="forme-card-bleue">
-                    <h2 class="h2-cards">Économiquement stratégique</h2>
+                    <h2 class="h1-cards">Économiquement stratégique</h2>
                     <p class="p-cards">
                     Le covoiturage, c'est une super solution pour économiser, tout en réduisant les coûts de transport et en utilisant mieux nos voitures. En plus, ça aide à désengorger les routes et à réduire les émissions de CO2. En l'adoptant, tu choisis une mobilité plus durable et qui fait vraiment du bien au porte-monnaie !</p>
                 </div>
@@ -84,7 +84,7 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/ecologicly-responsible.svg" alt="main tenant une plante" class="fond-card-2-miroir-image">
                 </div>
                 <div class="forme-card-bleue-miroir">
-                    <h2 class="h2-cards-miroir">Ecologiquement responsable</h2>
+                    <h2 class="h1-cards-miroir">Ecologiquement responsable</h2>
                     <p class="p-cards-mirror">
                     Le covoiturage, c’est un geste éco-responsable, parce qu'il réduit le nombre de voitures sur la route et donc les émissions de CO2. En partageant les trajets, tu optimises les ressources et tu diminues la pollution. C’est direct : tu contribues à préserver l’environnement !</p>
                 </div>
@@ -98,7 +98,7 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/ladies-only.svg" alt="femme entrain de marcher" class="fond-card-2-image">
                 </div>
                 <div class="forme-card-bleue">
-                    <h2 class="h2-cards">Ladies only</h2>
+                    <h2 class="h1-cards">Ladies only</h2>
                     <p class="p-cards">
                     Le covoiturage "ladies only" crée un espace sécurisé et sympa pour les femmes, en privilégiant les trajets entre conductrices et passagères. C’est une option parfaite pour celles qui veulent se sentir en sécurité et à l’aise, tout en réduisant les coûts et l'empreinte carbone. Une solution qui respecte les envies de chacune et qui reste super écolo !</p>
                 </div>
@@ -112,7 +112,7 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/verified-profil.svg" alt="voiture avec un logo de verification audessus" class="fond-card-2-miroir-image">
                 </div>
                 <div class="forme-card-bleue-miroir">
-                    <h2 class="h2-cards-miroir">Profils vérifiés</h2>
+                    <h2 class="h&-cards-miroir">Profils vérifiés</h2>
                     <p class="p-cards-mirror">
                     Les profils vérifiés sur Fast'N Friends, c’est la garantie d’une sécurité en plus, en te permettant de vérifier l'identité et la fiabilité des gens avec qui tu voyages. Ça renforce la confiance entre conducteurs et passagers, pour des trajets plus tranquilles et sûrs. Et en plus, ça aide à créer une communauté respectueuse et responsable !</p>
                 </div>
@@ -126,7 +126,7 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/accessible-events.svg" alt="une femme pointant un evenement avec une loupe sur un tableau" class="fond-card-2-image">
                 </div>
                 <div class="forme-card-bleue">
-                    <h2 class="h2-cards">Des événements accessibles</h2>
+                    <h2 class="h1-cards">Des événements accessibles</h2>
                     <p class="p-cards">
                     Fast'N Friends te permet de trouver facilement des trajets pour tous tes événements, que ce soit culturel, sportif ou pro. C’est une solution pratique et économique pour y aller en partageant les frais de transport. En plus, ça crée une super ambiance de partage et de convivialité entre ceux qui partagent le trajet !</p>
                 </div>
@@ -140,7 +140,7 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/tchat.svg" alt="une femme et un homme discutant de tout et de rien" class="fond-card-2-miroir-image">
                 </div>
                 <div class="forme-card-bleue-miroir">
-                    <h2 class="h2-cards-miroir">Tchattez pour faire connaissance</h2>
+                    <h2 class="h1-cards-miroir">Tchattez pour faire connaissance</h2>
                     <p class="p-cards-mirror">
                     Fast'N Friends te propose un tchat intégré pour que conducteurs et passagers puissent faire connaissance avant le trajet. C’est l’occasion d’échanger des infos, de discuter des détails du voyage et de créer une vraie confiance entre vous. Ce système rend le covoiturage plus cool et serein !
                     </p>
