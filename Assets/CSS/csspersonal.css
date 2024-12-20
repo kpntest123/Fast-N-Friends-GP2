@@ -350,6 +350,8 @@
             max-width: 50%;
             height: 80%;
             object-fit: cover;
+            margin-right: auto;
+            padding: 30px;
         }
     
         .fond-card-2-miroir-image {
@@ -357,17 +359,36 @@
             height: 80%;
             object-fit: cover;
             margin-left: auto;
+            padding: 20px;
         }
     
-        .forme-card-bleue, .forme-card-bleue-miroir {
+        .forme-card-bleue {
             background-color: #4B9BEB;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            padding: 1rem;
+            align-items: flex-end;
+            text-align: right;
+            padding: 10px;
+        }
+
+        .forme-card-bleue-miroir {
+          background-color: #4B9BEB;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 10px;
+
+        }
+
+        .h2-cards, .h2-cards-miroir {
+          color: white;
+          font-weight: bold;
         }
     
         /* Desktop Styles */
@@ -375,7 +396,7 @@
             .fond-card-1 .fond-card-2 {
                 left: 0;
                 justify-content: flex-start;
-            }
+            }}
     
             .fond-card-1 .forme-card-bleue {
                 width: 60%;
@@ -397,6 +418,19 @@
                 border-top-right-radius: 30px;
                 border-bottom-right-radius: 70px;
             }
+
+        .p-cards-mirror {
+          font-size: 18px;
+          justify-content: left;
+          display: flex;
+          color: white;
+        }
+
+        .p-cards  {
+          font-size: 18px;
+          display: flex;
+          align-items: right;
+          color: white;
         }
     
         /* Mobile Styles */
@@ -435,7 +469,7 @@
                 position: relative;
                 top: 0;
                 transform: none;
-                padding: 1rem;
+                padding: 12px;
             }
     
             .h2-cards, .h2-cards-miroir {
