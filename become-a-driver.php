@@ -11,7 +11,7 @@ get_header();?>
         <form id="verif-form" action="#" method="post" enctype="multipart/form-data">
             <div class="mb-4">
                 <label for="carteID" class="verif-form-label">
-                    Carte d'identité (recto-verso)
+                    <p class="verif-p">Carte d'identité (recto-verso)</p>
                 </label>
                 <input 
                 type="file" 
@@ -25,7 +25,7 @@ get_header();?>
                 
                 <br>
 
-                <small>Tout formats d'images acceptés. Maximum : 2 images.</small>
+                <p class="verif-p"> Tout formats d'images acceptés. Maximum : 2 images.</p>
             </div>
             <div>
                 <button type="submit" class="verif-btn-submit">

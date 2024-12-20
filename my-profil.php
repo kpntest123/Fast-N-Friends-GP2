@@ -70,7 +70,7 @@ if ( is_user_logged_in() ) {
     <div class="row">
         <div class="col-lg-6 col-md-6">
             <div class="role-section">
-                <h3><?php echo esc_html($gender); ?> - <?php 
+                <h1 class="role-section"><?php echo esc_html($gender); ?> - <?php 
                     // Récupérer le rôle de l'utilisateur
                     $user_roles = $current_user->roles; 
                     if (!empty($user_roles)) {
@@ -78,7 +78,7 @@ if ( is_user_logged_in() ) {
                     } else {
                         echo 'Aucun rôle défini'; // Si aucun rôle n'est défini ==> même si impossible
                     }
-                ?></h3>
+                ?></h1>
             </div>
 
             <div class="info-Psection">
@@ -114,8 +114,8 @@ if ( is_user_logged_in() ) {
                 </div>
                         
 
-            <div class="profil-h3">
-                <h3>À propos de moi</h3>
+            <div class="profil-h1">
+                <h1 class="profil-h1">À propos de moi</h1>
             </div>
             <div class="profil-box">
                 <div class="profil-content">

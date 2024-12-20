@@ -45,11 +45,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['TitreArt'])) {
 
 <div class="blue-separation"> </div>
 <br><br><br><br>
+<div class=body-edit-info>
     <div class="edit-info-event-title">
-        <h1>Vignette de l'article</h1>
+        <h1 class=edit-info-event-title>Vignette de l'article</h1>
     </div>
 
-    <form name="edit-article" id="edit-article" action="" method="POST" enctype="multipart/form-data">
+    <form name="edit-article" id="edit-article" action="" method="POST" enctype="multipart/form-data" class=edit-info-form>
     <div class="EMP-container">
         <!-- Titre de l'article -->
         <div class="row mb-3">
@@ -144,10 +145,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['TitreArt'])) {
 
 
     <div class="edit-info-event-title">
-        <h1>Article</h1>
+        <h1 class=edit-info-event-title>Article</h1>
     </div>
 
-    <form name="edit-article" id="edit-article">
+    <form name="edit-article" id="edit-article" class=edit-info-form>
         <div class="EMP-container">
             <!-- Description détaillée -->
             <div class="row mb-3">
@@ -175,6 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['TitreArt'])) {
             </div>
         </div>
     </form>
+    </div>
     <br><br><br>
 
 <?php get_footer(); ?>

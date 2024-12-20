@@ -915,12 +915,17 @@
   font-size: 25px;
 }
 
+.verif-p {
+font-size: 18px;
+}
+
 
 .verif-form-label {
   font-weight: bold;
   color: #4B9BEB;
   margin-bottom: 8px;
   display: block;
+  font-size: 18px;
 }
 
 
@@ -941,6 +946,7 @@
   width: 100%;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 20px;
 }
 
 .verif-btn-submit:hover {
@@ -1032,7 +1038,21 @@
   overflow: hidden;
   max-width: 900px;
   width: 90%;
-  margin:30px 400px auto !important;
+}
+
+.mdp-oublie {
+  font-size: 18px;
+  color: #4B9BEB;
+
+}
+
+.remember-me {
+  font-size: 18px;
+}
+
+.form-check-login {
+  display: flex;
+  justify-content: left;
 }
 
 /* Left Section */
@@ -1131,6 +1151,7 @@ height: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 25px;
 }
 .info-Psection {
 display: flex;
@@ -1164,9 +1185,9 @@ color: #4B9BEB;
 
 
 /* Section À propos */
-.profil-h3 {
+.profil-h1 {
   color: #4B9BEB;
-  font-size: 18px;
+  font-size: 25px;
   margin-bottom: 20px;
   text-align: center;
   align-items: center;
@@ -1266,6 +1287,14 @@ text-align: center;       /* Centrer le texte */
   border-radius: 5px;
   background-color: #f9f9f9;
   box-sizing: border-box;
+  font-size: 18px;
+}
+
+.AAT-extra-options {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-evenly;
+  
 }
 
 /* Button */
@@ -1308,50 +1337,89 @@ text-align: center;       /* Centrer le texte */
 
 /* Edit info */
 
-        /* Titre principal */
-        .edit-info-event-title {
-          text-align: center;
-          font-weight: bold;
-          margin-bottom: 40px;
-          color: #4B9BEB;
-          display: flex;
-          justify-content: center;
-      }
 
-      /* Style global des inputs */
-      .edit-info-event-input {
-          border: 2px solid #4B9BEB;
-          border-radius: 8px;
-      }
 
-      /* Section contenant les inputs */
-      .edit-info-event-label {
-          font-weight: bold;
-          color: #4B9BEB;
-      }
+/* Titre principal */
+.edit-info-event-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #4B9BEB;
+  font-size: 25px;
+}
 
-      /* Bouton principal */
-      .edit-info-event-btn {
-          border-radius: 8px;
-          background-color: #4B9BEB;
-          border: 2px solid #4B9BEB;
-          color: white;
-          font-weight: bold;
-          padding: 10px 15px;
-          transition: background-color 0.3s ease, transform 0.2s ease;
-          width: 100%;
-      }
 
-      /* Effet sur le bouton */
-      .edit-info-event-btn:hover {
-          background-color: #4B9BEB;
-          transform: scale(1.02);
-      }
+.body-edit-info {
+  margin: 0 auto; 
+  padding: 0 20px; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: flex-start; 
+}
 
-      /* Marges entre les sections */
-      .edit-info-event-section {
-          margin-bottom: 40px;
-      }
+.edit-info-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Ajoute de l'espace entre chaque élément du formulaire */
+  width: 100%;
+  max-width: 800px; /* Limite la largeur du formulaire */
+  margin: 0 auto; /* Centre le formulaire */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+}
+
+.edit-info-event-input {
+  border: 2px solid #4B9BEB;
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 8px;
+}
+
+/* Section contenant les inputs */
+.edit-info-event-label {
+  font-weight: bold;
+  color: #4B9BEB;
+  font-size: 18px;
+}
+
+/* Bouton principal */
+.edit-info-event-btn {
+  border-radius: 8px;
+  background-color: #4B9BEB;
+  border: 2px solid #4B9BEB;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+/* Effet sur le bouton */
+.edit-info-event-btn:hover {
+  background-color: #4B9BEB;
+  transform: scale(1.02);
+}
+
+/* Marges entre les sections */
+.edit-info-event-section {
+  margin-bottom: 40px;
+}
+
+/* Espacement entre les sections */
+.edit-article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Ajoute de l'espace entre les sections du formulaire */
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; /* Centre le formulaire */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
 
 /* Event-partner */
 
@@ -1380,10 +1448,10 @@ text-align: center;       /* Centrer le texte */
         transform: scale(1.05);
     }
 
-    .event-title{
+    .event-title h1{
       text-align: center;
       margin-top: 20px;
-      font-size: 20px;
+      font-size: 25px;
     }
     
     .event-container {
@@ -1541,36 +1609,41 @@ text-align: center;       /* Centrer le texte */
         }
 
 /* Edit profil */
-        .form-control {
-          border-radius: 10px;
-          background-color: #ffffff;
-        }
-    
-        /* Alignement des labels à droite */
-        .col-form-label {
-          text-align: right;
-        }
-    
-        /* Style pour le bouton */
-        .btn-custom {
-          background-color: #4B9BEB; /* bleu */
-          color: white;
-          border-radius: 10px;
-          padding: 10px 20px;
-          border: none;
-          font-weight: bold;
-        }
-    
-        .btn-custom:hover {
-          background-color: #4B9BEB;
-        }
-    
-        /* Marges pour les containers */
-        .EMP-container {
-          margin-top: 20px;
-          margin-right: 70px;
-          margin-left: 0px;
-        }
+/* Styles uniquement pour le formulaire EMP */
+.EMP-form-label {
+  text-align: right;
+  font-size: 18px;
+}
+
+.EMP-form-input {
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+/* Style pour le bouton */
+
+.EMP-btn-custom {
+  background-color: #4B9BEB; 
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer; 
+}
+
+.EMP-btn-custom:hover {
+  background-color: #3a8cc1; 
+}
+
+/* Marges pour les containers */
+.EMP-container {
+  margin-top: 20px;
+  margin-right: 70px;
+  margin-left: 0px;
+}
 
         /* Styles par défaut */
 .container.error-page {
@@ -1656,10 +1729,11 @@ text-align: center;       /* Centrer le texte */
 
 /*Css pour la page de recherches, autre css, différents que la page d'acceuil, avec du bootstrap*/
 .deep-search-form-container {
-  background-color: #ff0000;
+  background-color: #C8C6F5;
   margin: 0 100px;
   padding: 20px;
   font-size: 18px;
+  border-radius: 40px;
 }
 
 .deep-search-modal-content h2 {
@@ -1708,7 +1782,7 @@ text-align: center;       /* Centrer le texte */
 }
 
 .deep-search-form-button {
-  background-color: #007bff;
+  background-color: #4B9BEB;
   color: #fff;
   padding: 10px 20px;
   font-size: 18px;
@@ -1764,6 +1838,11 @@ text-align: center;       /* Centrer le texte */
   font-weight: bold;
 }
 
+.deep-search-modal-h1 {
+  font-size: 25px;
+  text-align: center;
+}
+
 .deep-search-modal-close:hover,
 .deep-search-modal-close:focus {
   color: black;
@@ -1777,11 +1856,12 @@ text-align: center;       /* Centrer le texte */
 }
 
 .deep-search-modal-button {
-  background-color: #007bff;
+  background-color: #4B9BEB;
   color: white;
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 18px;
 }
 

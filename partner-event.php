@@ -53,7 +53,7 @@ get_header(); ?>
 
 <div>
     <div class=event-title>
-        <h2>Événements à venir</h2>
+        <h1>Événements à venir</h1>
     </div>
     
     <div class="event-container">
@@ -96,7 +96,7 @@ get_header(); ?>
     <div>
     <div>
     <div class="event-title">
-        <h2>Tous les événements</h2>
+        <h1>Tous les événements</h1>
     </div>
 
     <div class="event-container" id="eventContainer">
