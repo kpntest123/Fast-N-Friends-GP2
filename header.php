@@ -56,7 +56,7 @@
     <ul class="nav-links" id="nav-links">
       <?php if (current_user_can('administrator')) : ?>
         <li>
-          <a class="add-event" href="<?php echo esc_url(admin_url()); ?>">
+          <a class="add-event" href="<?php echo home_url('/event-edit/'); ?>">
             ADMIN - Ajouter un event
           </a>
         </li>
