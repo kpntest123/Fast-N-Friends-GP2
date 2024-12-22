@@ -1814,7 +1814,10 @@ height: 100%;
             margin: 0; 
         }
     }
-
+    .header-box {
+      position: relative; 
+      width: 300px; 
+    }
     
     
     @media (max-width: 480px) {
