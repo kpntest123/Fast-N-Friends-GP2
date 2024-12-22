@@ -67,23 +67,22 @@ $query = new WP_Query($args);
         <div class="card-header">
             <h1>Résultats de ta recherche</h1>
         </div>
-        <div class="card-body-first">
-            <div class="row mb-3">
-                <div class="col-6 col-left">Tu voulais aller de :</div>
-                <div class="col-6 col-right"><?php echo esc_html($from); ?></div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-6 col-left">Pour aller à :</div>
-                <div class="col-6 col-right"><?php echo esc_html($to); ?></div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-6 col-left">Pour autant de personnes :</div>
-                <div class="col-6 col-right"><?php echo esc_html($people); ?></div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-6 col-left">En date du :</div>
-                <div class="col-6 col-right"><?php echo esc_html($date); ?></div>
-            </div>
+        <div class="card-body">
+        <strong><p>Tu voulais aller de :</strong> <?php echo esc_html($from); ?> </p>
+                
+            
+            
+                <strong><p> Pour aller à : </strong> <?php echo esc_html($to); ?>  </p>
+                
+          
+         
+                <strong><p>Pour autant de personnes : </strong> <?php echo esc_html($people); ?> </p>
+                
+         
+           
+               <strong> <p> En date du : </strong> <?php echo esc_html($date); ?> </p>
+               
+               </div>
         </div>
     </div>
 
