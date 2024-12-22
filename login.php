@@ -63,7 +63,7 @@ if (isset($_GET['login_error'])) : ?>
                         name="username" 
                         id="username" 
                         class="form-control" 
-                        placeholder="Nom d'utilisateur" 
+                        placeholder="" 
                         value="<?php echo isset($_POST['username']) ? esc_attr($_POST['username']) : ''; ?>" 
                         required 
                         autocomplete="username"
@@ -77,7 +77,7 @@ if (isset($_GET['login_error'])) : ?>
                         name="password" 
                         id="password" 
                         class="form-control" 
-                        placeholder="Mot de passe" 
+                        placeholder="" 
                         required 
                         autocomplete="current-password"
                     >

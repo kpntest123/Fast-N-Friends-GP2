@@ -143,7 +143,7 @@ if ( is_user_logged_in() ) {
 
 <!-- Image de la vignette -->
 <div class="row mb-3">
-    <label for="profile_picture" class="col-sm-2 col-form-label EMP-form-label">Changer votre photo de profil</label>
+    <label for="profile_picture" class="col-sm-2 col-form-label EMP-form-label">Changer ta photo de profil</label>
     <div class="col-sm-10">
         <input type="file" class="form-control EMP-form-input" id="profile_picture" name="profile_picture" accept="image/*">
     </div>

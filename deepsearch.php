@@ -11,11 +11,11 @@ get_header();?>
   <div class="deep-search-form-container">
     <form class="deep-search-form" action="<?php echo home_url('/search-results/'); ?>" method="get">
       <div class="deep-search-form-field">
-        <input type="text" class="deep-search-form-input" id="from" name="from" placeholder="D'où partez-vous ?" required onkeyup="suggestCities(this.value, 'from')">
+        <input type="text" class="deep-search-form-input" id="from" name="from" placeholder="D'où pars-tu  ?" required onkeyup="suggestCities(this.value, 'from')">
         <ul id="from-suggestions" class="suggestions-list"></ul>
       </div>
       <div class="deep-search-form-field">
-        <input type="text" class="deep-search-form-input" id="to" name="to" placeholder="Où allez-vous ?" required onkeyup="suggestCities(this.value, 'to')">
+        <input type="text" class="deep-search-form-input" id="to" name="to" placeholder="Où vas-tu ?" required onkeyup="suggestCities(this.value, 'to')">
         <ul id="to-suggestions" class="suggestions-list"></ul>
       </div>
       <div class="deep-search-form-field">
