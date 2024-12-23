@@ -777,7 +777,7 @@
 
 /* Bloc principal (droite) : ajusté */
 .contenair-opinions-main {
-  background-color: #d9e5f5; /* Fond similaire */
+  background-color: #c8c6f5; /* Fond similaire */
   border-radius: 15px; /* Angle légèrement arrondi */
   padding: 0px;
   margin: 0px;
@@ -856,7 +856,7 @@
 }
 
 .opinion-left-block {
-  background-color: #f5d5d8; /* Couleur identique */
+  background-color: #a8d7f7; /* Couleur identique */
   border-radius: 10px; /* Coins arrondis */
   padding: 15px;
   display: flex;
