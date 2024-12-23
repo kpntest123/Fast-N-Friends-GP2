@@ -2,6 +2,13 @@
 /* Template Name: Éditer un événement */
 get_header();
 
+// Vérifiez si l'utilisateur est un administrateur
+if (!current_user_can('administrator')) {
+    // Rediriger vers la page d'accueil personnalisée
+    wp_redirect('http://localhost/fast-n-friends-GP2/home/'); // Remplacez par l'URL de votre page d'accueil personnalisée
+    exit; // Arrête l'exécution du script
+}
+
 // Traitement du formulaire (ajout événement)
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['TitreArt'])) {
     // Récupérer les données du formulaire
