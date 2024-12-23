@@ -21,35 +21,70 @@ get_header();
   
   -->
 
-  <!-- Bloc 2 : Image et module de recherche -->
-  <section class="search-section">
-  <div class="search-container">
-    <h1>Besoin de te déplacer ?</h1>
-    <p>Que ce soit pour aller étudier ou aller à un event, tu es au bon endroit !</p>
-    <form class="search-form" action="<?php echo home_url('/search-results/'); ?>" method="get">
-      <div class="form-group">
-        <input type="text" id="from" name="from" placeholder="D'où pars-tu ?" required onkeyup="suggestCities(this.value, 'from')">
-        <ul id="from-suggestions" class="suggestions-list"></ul>
-      </div>
-      <div class="form-group">
-        <input type="text" id="to" name="to" placeholder="Où va-tu ?" required onkeyup="suggestCities(this.value, 'to')">
-        <ul id="to-suggestions" class="suggestions-list"></ul>
-      </div>
-      <div class="form-group">
-        <input type="number" id="people" name="people" min="1" placeholder="Pour combien de personnes ?" required>
-      </div>
-      <div class="form-group">
-        <input type="date" id="date" name="date" required>
-      </div>
-      <button type="submit" class="search-button">Rechercher !</button>
-    </form>
-    <br>
-    <p class="note">*Malheureusement, n'est disponible que dans 500 grandes villes en Belgique.</p>
-  </div>
-  <div class="image-container">
-    <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/vintage-car.svg" alt="Voiture vintage avec un arbre moderne">
+<!-- Bloc 2 : Image et module de recherche -->
+<section class="search-section">
+  <div class="search-content"> <!-- Utilisation de search-content au lieu de content-wrapper -->
+    <div class="search-container">
+      <h1>Besoin de te déplacer ?</h1>
+      <p>Que ce soit pour aller étudier ou aller à un event, tu es au bon endroit !</p>
+      <form class="search-form" action="<?php echo home_url('/search-results/'); ?>" method="get">
+        <div class="form-group">
+          <input 
+            type="text" 
+            id="from" 
+            name="from" 
+            placeholder="D'où pars-tu ?" 
+            required 
+            onkeyup="suggestCities(this.value, 'from')"
+          />
+          <ul id="from-suggestions" class="suggestions-list"></ul>
+        </div>
+        <div class="form-group">
+          <input 
+            type="text" 
+            id="to" 
+            name="to" 
+            placeholder="Où vas-tu ?" 
+            required 
+            onkeyup="suggestCities(this.value, 'to')"
+          />
+          <ul id="to-suggestions" class="suggestions-list"></ul>
+        </div>
+        <div class="form-group">
+          <input 
+            type="number" 
+            id="people" 
+            name="people" 
+            min="1" 
+            placeholder="Pour combien de personnes ?" 
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input 
+            type="date" 
+            id="date" 
+            name="date" 
+            required
+          />
+        </div>
+        <button type="submit" class="search-button">Rechercher !</button>
+      </form>
+      <p class="note">
+        *Malheureusement, cette fonctionnalité n'est disponible que dans 500 grandes villes en Belgique.
+      </p>
+    </div>
+    <div class="image-container">
+      <img 
+        src="<?php echo get_template_directory_uri(); ?>/Assets/Img/vintage-car.svg" 
+        alt="Voiture vintage avec un arbre moderne" 
+      />
+    </div>
   </div>
 </section>
+
+
+
 
 
 

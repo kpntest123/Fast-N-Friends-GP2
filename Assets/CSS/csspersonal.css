@@ -247,17 +247,71 @@
           }
           
           .form-group label {
-            font-size: 18px;
-            margin-bottom: 0.5rem;
-          }
-          
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            color: #2c3e50;
+        }
+
           .form-group input {
-            padding: 0.75rem 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 18px;
+            padding: 1rem 1.25rem;
+            border: 2px solid #e0e9f5;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            background: #fcfdff;
+        }
+        
+        .form-group input:focus {
+          border-color: #4b9beb;
+          box-shadow: 0 0 0 4px rgba(75, 155, 235, 0.1);
+          outline: none;
+      }
+        
+          /*Bloc de recherche avec l'image*/
+          .search-section {
+            background-color: #4b9beb;
+            min-height: 700px;
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Aligne les éléments au centre */
+            align-items: center;
           }
           
+          .search-content {
+            width: 100%;
+            max-width: 1400px; /* Limite la largeur du contenu */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem 0;
+            margin: 0 100px; /* Ajoute des marges à gauche et à droite du contenu */
+          }
+          
+          .search-container {
+            flex: 0 0 55%;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(75, 155, 235, .15);
+            background: linear-gradient(to bottom right, #fff, #f8fbff);
+            transform: translateY(-20px);
+            transition: transform .3s;
+            animation: 3s infinite shakeMeGently; /* Réduire le temps d'animation pour un effet plus rapide */
+          }
+          
+          .image-container {
+            flex: 0 0 40%;
+            max-width: 40%;
+            margin: 0;
+          }
+          
+          .image-container img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+          }
+
           .search-button {
             grid-column: 1 / -1;
             padding: 1rem 2rem;
@@ -290,41 +344,33 @@
             color: rgba(0, 0, 0, 0.7); /* Ajuste la couleur si nécessaire */
             text-align: center; /* Optionnel */
           }
-          
-          .search-section {
-            background-color: #4B9BEB;
-            min-height: 700px;
-            padding: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
+
+          /* Animation de vibration */
+          @keyframes shakeMeGently {
+            0%, 100%, 95% {
+              transform: translateY(-30px); /* Augmenter la hauteur du mouvement */
+            }
+            96% {
+              transform: translateY(-35px) translateX(-5px); /* Augmenter l'intensité du mouvement horizontal */
+            }
+            97% {
+              transform: translateY(-30px) translateX(5px); /* Augmenter l'intensité du mouvement horizontal */
+            }
+            98% {
+              transform: translateY(-40px) translateX(-4px); /* Augmenter l'intensité du mouvement vertical et horizontal */
+            }
+            99% {
+              transform: translateY(-30px) translateX(4px); /* Augmenter l'intensité du mouvement horizontal */
+            }
           }
-          
-          .search-container {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            color: #333;
-            background-color: rgb(255, 255, 255);
-            max-width: 600px;
-            padding: 2rem;
+
+          /* Animation hover sur le conteneur de recherche */
+          .search-container:hover {
+            transform: translateY(-25px);
+            animation: none; /* Arrête l'animation au hover */
           }
-          
-          .image-container {
-            flex: 0 0 40%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          
-          .image-container img {
-            max-width: 100%;
-            height: auto;
-            max-height: 400px;
-            object-fit: contain;
-          }
-          
+
+          /* Responsive Design */
           @media screen and (max-width: 768px) {
             .search-section {
               min-height: auto;
@@ -332,89 +378,119 @@
               flex-direction: column;
               gap: 1.5rem;
             }
-          
+
+            .search-content {
+              margin: 0; /* Supprime la marge horizontale pour petits écrans */
+              padding: 0;
+              flex-direction: column;
+            }
+
             .search-container {
               max-width: 90%;
               margin: 0 auto;
               padding: 1.5rem;
             }
-          
+
             .image-container {
               width: 50%;
               margin: 0 auto;
             }
-          
+
             .image-container img {
               max-height: 150px;
               width: auto;
             }
-          
+
             .search-form {
               grid-template-columns: 1fr;
             }
-          
+
             .form-group input {
               font-size: 16px;
               padding: 0.75rem 1rem;
             }
-          
+
             .search-button {
               padding: 1rem;
               font-size: 16px;
             }
           }
+
+
           
 /* Bloc 3 : Titre et chiffre */
 .stats {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e3eeff 100%); /* Nouveau background plus doux */
+  position: relative;
   text-align: center;
-  padding: 45px 15px; /* Réduit de 60px 20px à 45px 15px */
-}
-
-.stats h1 {
-  font-size: 25px; /* Réduit de 24px à 20px */
-  color: #000000;
-  margin-bottom: 16px; /* Réduit de 20px à 16px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .stats .number {
-  font-size: 190px; /* Réduit de 96px à 72px */
-  color: #000000;
-  margin-bottom: 8px; /* Réduit de 10px à 8px */
+  font-size: 190px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #4b9beb, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: numberPulse 2s infinite alternate;
+  display: inline-block;
 }
 
-.stats p {
-  font-size: 18px;
-  color: #000000;
+.stats h1, .stats p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .stats {
-    padding: 30px 10px; /* Moins d'espace autour du bloc */
-  }
+.stats h1 {
+  margin-bottom: 30px;
+  position: relative;
+}
 
-  .stats h1 {
-    font-size: 20px; /* Réduit encore plus le titre */
-    margin-bottom: 10px; /* Moins d'espace sous le titre */
-  }
+.stats h1:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #4b9beb;
+  border-radius: 2px;
+}
 
-  .stats .number {
-    font-size: 100px; /* Taille plus petite pour les écrans plus petits */
-    margin-bottom: 5px; /* Moins d'espace sous le nombre */
+@keyframes numberPulse {
+  from {
+      transform: scale(1);
   }
-
-  .stats p {
-    font-size: 16px; /* Plus petite taille de texte pour le paragraphe */
+  to {
+      transform: scale(1.05);
   }
 }
 
-          
+          /* les cards de l'accueil */
 
           .card-wrapper {
             max-width: 1200px;
             margin: 0 auto;
             margin-bottom: 2rem;
         }
+      
+      .fond-card-1:hover, .fond-card-1-miroir:hover {
+          transform: scale(1.03) translateY(-10px);
+          box-shadow: 0 20px 40px rgba(75, 155, 235, 0.15);
+      }
+      
+      .fond-card-1:hover .fond-card-2,
+      .fond-card-1-miroir:hover .fond-card-2-miroir {
+          transform: scale(1.05);
+      }
     
         .fond-card-1, .fond-card-1-miroir {
             background-color: #ffffff;
@@ -423,9 +499,12 @@
             min-height: 293px;
             overflow: hidden;
             opacity: 0; 
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            will-change: transform;
         }
     
         .fond-card-2, .fond-card-2-miroir {
+          transition: transform 0.4s ease;
             background-color: #C8C6F5;
             width: 75%;
             height: 100%;
