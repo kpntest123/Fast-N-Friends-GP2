@@ -146,5 +146,3 @@ hamburger.addEventListener('click', () => {
 
 
 <body> 
-  <?php body_class(); ?>
-  >
