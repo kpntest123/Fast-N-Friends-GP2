@@ -64,20 +64,24 @@
 
       <li>
         <a href="<?php echo home_url('/partner-event/'); ?>">
-          Événements partenaires
           <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/fiesta.svg" alt="Dropdown">
+          Événements partenaires
         </a>
       </li>
       <li>
         <a href="<?php echo home_url('/deep-search/'); ?>">
-          Rechercher
           <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/search-ico.svg" alt="Search">
+          Rechercher
         </a>
       </li>
 
       <?php if ( ! is_user_logged_in() ) : ?>
-        <li><a href="<?php echo home_url('/login/'); ?>">Se connecter</a></li>
-        <li><a class="btn-primary" href="<?php echo home_url('/register/'); ?>">S'inscrire</a></li>
+        <li>
+          <a href="<?php echo home_url('/login/'); ?>">Se connecter</a>
+        </li>
+        <li>
+          <a class="btn-primary" href="<?php echo home_url('/register/'); ?>" title="Tu fais le bon choix ! 🙃">Rejoinds l'aventure 🚀</a>
+        </li>
       <?php else : ?>
         <li class="account-icon">
           <a href="#" class="icon-animation">

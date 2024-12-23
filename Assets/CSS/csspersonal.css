@@ -80,11 +80,12 @@
           width: 25px;
           height: 25px;
           margin-left: 10px;
-          margin-right: 5px;
+          margin-right: 10px;
         }
         
         .btn-primary {
           background-color: #4B9BEB;
+          font-weight: bold;
           color: white;
           padding: 8px 16px;
           border-radius: 6px;
@@ -93,7 +94,7 @@
         }
         
         .btn-primary:hover {
-          background-color: #4B9BEB;
+          background-color: #C8C6F5;
         }
         
         .add-event {
@@ -267,7 +268,30 @@
           outline: none;
       }
         
-          /*Bloc de recherche avec l'image*/
+            /*Banière animée*/
+            .banner-container {
+              background-color: #ffce00;
+              overflow: hidden;
+              position: relative;
+              padding: 10px 0;
+            }
+            
+            .banner {
+              display: flex;
+              gap: 100px; /* Espacement entre les messages */
+              white-space: nowrap;
+              font-size: 18px;
+              color: #000;
+              font-weight: bold;
+            }
+
+            .banner-container:hover {
+              background-color: #C8C6F5; /* Couleur modifiée lors du survol */
+              cursor: pointer;
+            }
+
+      
+      /*Bloc de recherche avec l'image*/
           .search-section {
             background-color: #4b9beb;
             min-height: 700px;
@@ -755,6 +779,15 @@
                                                       
                 /* Les bloc avec les avis : 
 /* Conteneur principal */
+.avis-section {
+  background-color: #4b9beb;
+  min-height: 700px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Aligne les éléments au centre */
+  align-items: center;
+}
+
 .sec-loeb {
   margin: 0 auto; /* Centrage automatique */
   padding: 50px 20px; /* Espacement interne */

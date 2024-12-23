@@ -21,6 +21,16 @@ get_header();
   
   -->
 
+  <!-- Bloc 1 : bannière animée -->
+  <div class="banner-container">
+    <div class="banner">
+      <span>🚗 Rejoins notre communauté pour des trajets sécurisés et économiques ! 🚗</span>
+      <span>🌍 Fais des économies et réduits ton empreinte carbone ! 🌍</span>
+      <span>👩‍🦰 Trajets spécifiques sécurisés entre femmes ! 👩‍🦰</span>
+      <span>📅 Fais pas le rat, partages régulièremment ta caisse ! 📅</span>
+    </div>
+  </div>
+
 <!-- Bloc 2 : Image et module de recherche -->
 <section class="search-section">
   <div class="search-content"> <!-- Utilisation de search-content au lieu de content-wrapper -->
@@ -89,11 +99,13 @@ get_header();
 
 
   <!-- Bloc 3 : Titre et chiffre -->
-  <section class="stats">
-    <h1>Notre communauté s'étend !</h1>
-    <div class="number" id="userCount">0</div>
-    <p>Conducteurs sont prêts à te conduire dès maintenant !</p>
-  </section>
+    <section class="stats">
+      <h1>Notre communauté s'étend !</h1>
+      <div class="number" id="userCount">0</div>
+      <p>Conducteurs sont prêts à te conduire dès maintenant !</p>
+    </section>
+
+
 
 <br>
 
@@ -184,10 +196,76 @@ get_header();
         </div>
 
         <br><br><br><br><br><br>
-  
 
+        <!-- Bloc 5 ==> les avis dont celui de Section Loeb d'oreille (quel clown) !-->
 
-<!-- Bloc 5 : FAQ -->
+<section class="avis-section">
+<div> <!-- Section Loeb ???? -->
+<div class="contenair-opinions-users">
+      <!-- Bloc principal à droite -->
+      <div class="contenair-opinions-main">
+        <div class="main-content">
+          <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/S.loeb.webp" alt="Sébastien Loeb" class="extra-large-avatar">
+          <p class="extra-large-text">
+            "Roulez pas trop vite les jeun's"
+          </p>
+          <div class="user-info">
+            <span class="user-name">Sébastien Loeb</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trois blocs à gauche -->
+      <div class="contenair-opinions-left">
+        <div class="opinion-left-block">
+          <p class="opinion-text">"Simple, efficace et économique ! Je recommande."</p>
+          <div class="user-info">
+            <img src="https://via.placeholder.com/40" alt="Avatar User" class="user-avatar">
+            <span class="user-name">Antoine O.</span>
+          </div>
+        </div>
+        <div class="opinion-left-block">
+          <p class="opinion-text">"Une solution parfaite pour mes trajets quotidiens."</p>
+          <div class="user-info">
+            <img src="https://via.placeholder.com/40" alt="Avatar User" class="user-avatar">
+            <span class="user-name">Marie K.</span>
+          </div>
+        </div>
+        <div class="opinion-left-block">
+          <p class="opinion-text">"J'adore partager mes trajets avec d'autres étudiants."</p>
+          <div class="user-info">
+            <img src="https://via.placeholder.com/40" alt="Avatar User" class="user-avatar">
+            <span class="user-name">Jean B.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloc horizontal en dessous -->
+      <div class="contenair-opinions-bottom">
+          <!-- Bloc 6 : Avis users -->
+        <section id="stars-section">
+              <div id="stars-container">
+                  <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
+                  </svg>
+                  <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
+                  </svg>
+                  <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
+                  </svg>
+                  <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
+                  </svg>
+              </div>
+              <p id="stars-message">C'est la note attribuée par nos utilisateurs !</p>
+          </section>
+          </div>
+      </section>        
+    </div>
+</section>
+
+<!-- Bloc 6 : FAQ -->
  <section>
 <div class="conteneur-faq">
   <div class="item-faq">
@@ -281,76 +359,6 @@ get_header();
     </div>
   </div>
 </div>
-</section>
-
-
-
-<!-- Section Loeb !-->
-
-<section>
-<div> <!-- Section Loeb ???? -->
-<div class="contenair-opinions-users">
-      <!-- Bloc principal à droite -->
-      <div class="contenair-opinions-main">
-        <div class="main-content">
-          <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/S.loeb.webp" alt="Sébastien Loeb" class="extra-large-avatar">
-          <p class="extra-large-text">
-            "Roulez pas trop vite les jeun's"
-          </p>
-          <div class="user-info">
-            <span class="user-name">Sébastien Loeb</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Trois blocs à gauche -->
-      <div class="contenair-opinions-left">
-        <div class="opinion-left-block">
-          <p class="opinion-text">"Simple, efficace et économique ! Je recommande."</p>
-          <div class="user-info">
-            <img src="https://via.placeholder.com/40" alt="Avatar User" class="user-avatar">
-            <span class="user-name">Antoine O.</span>
-          </div>
-        </div>
-        <div class="opinion-left-block">
-          <p class="opinion-text">"Une solution parfaite pour mes trajets quotidiens."</p>
-          <div class="user-info">
-            <img src="https://via.placeholder.com/40" alt="Avatar User" class="user-avatar">
-            <span class="user-name">Marie K.</span>
-          </div>
-        </div>
-        <div class="opinion-left-block">
-          <p class="opinion-text">"J'adore partager mes trajets avec d'autres étudiants."</p>
-          <div class="user-info">
-            <img src="https://via.placeholder.com/40" alt="Avatar User" class="user-avatar">
-            <span class="user-name">Jean B.</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bloc horizontal en dessous -->
-      <div class="contenair-opinions-bottom">
-          <!-- Bloc 6 : Avis users -->
-        <section id="stars-section">
-              <div id="stars-container">
-                  <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
-                  </svg>
-                  <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
-                  </svg>
-                  <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
-                  </svg>
-                  <svg class="star" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.4 8.175L12 18.897l-7.334 3.859 1.4-8.175L.132 9.211l8.2-1.193z" />
-                  </svg>
-              </div>
-              <p id="stars-message">C'est la note attribuée par nos utilisateurs !</p>
-          </section>
-          </div>
-      </section>        
-    </div>
 </section>
 
 <br><br><br><br><br>

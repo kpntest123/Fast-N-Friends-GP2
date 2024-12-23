@@ -30,7 +30,7 @@ const filterState = {
   selectedDate: ""
 };
 
-// Utility Functions
+// Animation des chiffres
 function isElementInViewport(el) {
   if (!el) return false;
   const rect = el.getBoundingClientRect();
@@ -59,6 +59,41 @@ function initializeCounterAnimation() {
     }
   }, 30);
 }
+
+
+
+
+        // La bannière de CALL TO ACTION, VOULOIR QUE LES GENS REJOIGNENT NOTRE SITE !
+            // Sélectionnez la bannière
+            const banner = document.querySelector(".banner");
+
+            // Clonez les enfants pour créer une boucle infinie fluide
+            const bannerItems = banner.children;
+            const cloneItems = [...bannerItems].map((item) => item.cloneNode(true));
+            cloneItems.forEach((clone) => banner.appendChild(clone));
+
+            // Calculez la largeur totale pour une animation fluide
+            const bannerWidth = banner.scrollWidth;
+
+            // Créez l'animation avec GSAP
+            const bannerAnimation = gsap.to(".banner", {
+              x: () => `-${bannerWidth / 2}px`, // La bannière se déplace sur la moitié de sa largeur (avec les clones)
+              ease: "none", // Supprime les variations de vitesse pour un mouvement fluide
+              repeat: -1, // Animation infinie
+              duration: 37, // Durée de l'animation (ajustez à votre goût)
+            });
+
+            // Pause l'animation au survol
+            banner.addEventListener("mouseenter", () => {
+              bannerAnimation.pause();
+            });
+
+            // Reprend l'animation lorsqu'on quitte la zone
+            banner.addEventListener("mouseleave", () => {
+              bannerAnimation.play();
+            });
+
+
 
 function handleScroll() {
   if (elements.counter && isElementInViewport(elements.counter)) {
