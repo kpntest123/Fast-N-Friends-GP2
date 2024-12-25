@@ -109,6 +109,12 @@ get_header();
 
 <br>
 
+<!-- Petit blabla de séparation -->
+<div class="blue-separation">
+  <h1>Pourquoi le covoiturage est bénéfique à tout le monde ?</h1>
+  <p>Sortons de l'individualisme, pensons aux autres et à l'environnement !</p>
+</div>
+
 <!-- Bloc 4 : les cards animés -->
 <div class="container">
         <!-- Version normale -->
@@ -197,8 +203,15 @@ get_header();
 
         <br><br><br><br><br><br>
 
-        <!-- Bloc 5 ==> les avis dont celui de Section Loeb d'oreille (quel clown) !-->
 
+        <div class="blue-separation">
+          <h1>Fast 'N Friends a déjà conquis des coeurs :</h1>
+          <p>Nos utilisateurs convaincus parlent mieux de nous que nous ne parlons de nous !</p>
+        </div>
+
+        <br>
+
+        <!-- Bloc 5 ==> les avis dont celui de Section Loeb d'oreille (quel clown) !-->
 <section class="avis-section">
 <div> <!-- Section Loeb ???? -->
 <div class="contenair-opinions-users">
@@ -264,6 +277,16 @@ get_header();
       </section>        
     </div>
 </section>
+
+<br><br><br>
+
+        <div class="blue-separation">
+          <h1>Encores des doutes ou des questions ?</h1>
+          <p>Notre F.A.Q peut t'aider !</p>
+        </div>
+
+        <br>
+
 
 <!-- Bloc 6 : FAQ -->
  <section>
@@ -360,6 +383,12 @@ get_header();
   </div>
 </div>
 </section>
+
+<div class="scroll-to-top" id="scrollToTopBtn">
+  <span class="arrow">&#8593;</span>
+  <span class="text">Retourner en haut de la page</span>
+</div>
+
 
 <br><br><br><br><br>
 

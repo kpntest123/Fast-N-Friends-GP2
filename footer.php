@@ -39,6 +39,7 @@
 </footer>
 
 
+
     </footer> <!-- Footer de la page, mais pas du footer footer, oui je sais ce que je dis tqt-->
 
 
