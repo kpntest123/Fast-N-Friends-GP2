@@ -43,7 +43,7 @@ get_header();
             type="text" 
             id="from" 
             name="from" 
-            placeholder="D'où pars-tu ?" 
+            placeholder="D'où pars-tu?" 
             required 
             onkeyup="suggestCities(this.value, 'from')"
           />

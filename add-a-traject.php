@@ -40,10 +40,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
     
     // Vérification si l'insertion a réussi
     if ($post_id) {
-        $message = "Trajet bien publié, vous pouvez retourner à l'accueil.";
+        $message = "Ton trajet a bien été publié, tu peux retourner à l'accueil";
         $message_class = "success-message";
     } else {
-        $message = "Une erreur est survenue lors de la publication du trajet.";
+        $message = "Erreur, problema, réessaye, qui ne tente rien n'a rien !";
         $message_class = "error-message";
     }
 }
@@ -51,7 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_trajet'])) {
 ?>
 
 <div class="blue-separation">
-    <h1>Ajoute un trajet</h1>
+    <h1>Ajoute ton trajet</h1>
+    <p>Vas où tu veux, des gens seront toujours emballés pour te suivre !</p>
 </div>
 
 <?php if (isset($message)) : ?>

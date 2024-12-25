@@ -63,7 +63,8 @@ if ( is_user_logged_in() ) {
 }
 ?>
 <div class="blue-separation">
-    <h1>Mon Profil</h1>
+    <h1>Ton profil :</h1>
+    <p>Ta zone perso ! Laisse parler ton esprits</p>
 </div>
 <!-- Contenu de la page de profil -->
 <div class="container mt-4">

@@ -9,7 +9,7 @@
           }
           
           body {
-            background-color: #ffffff;
+            background-color: #e3eeff;
             color: #000000;
           }
           
@@ -445,7 +445,7 @@
 /* Bloc 3 : Titre et chiffre */
 .stats {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e3eeff 100%); /* Nouveau background plus doux */
+  background: linear-gradient(135deg, #e3eeff 0%, #e3eeff 100%); /* Nouveau background plus doux */
   position: relative;
   text-align: center;
   display: flex;
@@ -517,7 +517,7 @@
       }
     
         .fond-card-1, .fond-card-1-miroir {
-            background-color: #ffffff;
+            background-color: #e3eeff;
             width: 100%;
             position: relative;
             min-height: 293px;
@@ -529,7 +529,7 @@
     
         .fond-card-2, .fond-card-2-miroir {
           transition: transform 0.4s ease;
-            background-color: #C8C6F5;
+            background-color: #e3eeff;
             width: 75%;
             height: 100%;
             position: absolute;
@@ -579,7 +579,7 @@
         }
 
         .h1-cards, .h1-cards-miroir {
-          color: white;
+          color: #e3eeff;
           font-weight: bold;
           font-size: 25px;
         }
@@ -1009,31 +1009,29 @@
 
 
           /* STYLE POUR LE FICHIER, LA PAGE D'INSCRIPTION ! ==> register*/
-                .background-register {
-                  background-color: #C8C6F5; /* Appliquer la couleur de fond ici */
-              }
+                /* Style pour la couleur de fond lila et padding */
+                .bg-light-lilac {
+                  background-color: #C8C6F5;
+                  padding: 40px 20px !important; /* Ajout du !important pour s'assurer que le padding est appliqué */
+                }                
 
-              .container-fluid .custom-margin {
-                margin: 0 400px !important; /* Appliquer la marge de 0 en haut/bas et 100px à gauche/droite */
-             }
-              .custom-input-fields input.form-control, 
-              .custom-input-fields select.form-control, 
-              .custom-input-fields textarea.form-control {
-                  background-color: #ffffff; /* Gris clair pour les champs */
-                  border-radius: 5px; /* Bordures arrondies */
-                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère pour plus de profondeur */
-                  margin-bottom: 15px; /* Espacement entre les champs */
-                  padding: 10px; /* Espacement interne */
-              }
-              .btn-primary2 {
-                background-color: #ffffff;
-                color: rgb(0, 0, 0);
-                padding: 8px 16px;
-                border-color: #000;
-                border-radius: 6px;
-                text-decoration: none;
-                transition: background-color 0.3s;
-              }
+            .btn-primary3 {
+              background-color: #4B9BEB;
+              color: rgb(0, 0, 0);
+              border-color: #000;
+              border-radius: 6px;
+              text-decoration: none;
+              transition: background-color 0.3s;
+            }
+            /* Pour personnaliser les champs de formulaire */
+            .form-control {
+              padding: 15px;
+              background-color: #ffffff;
+              border-radius: 5px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              margin-bottom: 15px;
+            }
+
       
         
           
@@ -1042,9 +1040,6 @@
             .container-search-results {
               margin-top: 5rem;
             }
-
-            
-
             .container-search-results h1{
             margin-top: 10px; /*Pour pas que ca se fasse écrasé par le bloc !*/
               font-size: 25px;
@@ -1057,7 +1052,12 @@
               color: #000;
               }
 
-            /* Carte */
+
+
+
+
+              
+            /* Carte de la page d'accueil je suppse ? */
             .card {
               width: 80%; /* La carte prendra 80% de la largeur de son conteneur */
               max-width: 600px; /* Et donc, avec le %, il faut composer avec ceci Limite la largeur maximale */
@@ -1079,8 +1079,9 @@
               text-align: left; /* Alignement à gauche */
             }
             
-      /* STYLE POUR LA PAGE DE recherches profondes ==> same base que sur l'accueil, mais quelques ajouts / deep search*/
-                /* Overlay */
+            
+          /* Css qui est relié à rien ==> qu'est ce que c'est que ce bordel sérieusement ???????????????????????????????*/
+          /* Overlay ==> lié à je ne sais toujours pas ?  */
           .filter-overlay {
             position: fixed;
             top: 0;
@@ -1346,8 +1347,6 @@ font-size: 18px;
   font-size: 18px;
   cursor: pointer;
 }
-
-
 
 
 
@@ -1792,7 +1791,14 @@ height: 100%;
   }
 }
 
-/* Event-partner */
+/* Event-partner ==> evenements partenaires, importants !*/
+.partner-event {
+  background-color:#C8C6F5;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 900px;
+  width: 90%;
+}
 
 .header-box {
   position: relative; 
@@ -1945,7 +1951,14 @@ height: 100%;
       max-width: 100%; 
     }
      }
-/* Edit event */
+
+
+
+
+
+
+
+     /* Edit event */
 
            /* Titre principal */
            .edit-info-event-title {
@@ -2109,159 +2122,236 @@ height: 100%;
 .blue-separation {
   background-color: #4B9BEB;
   text-align: center;
-  padding: 70px;
-  color: white;
-}
-
-/*Css pour la page de recherches, autre css, différents que la page d'acceuil, avec du bootstrap*/
-.deep-search-form-container {
-  background-color: #C8C6F5;
-  margin: 0 100px;
-  padding: 20px;
-  font-size: 18px;
-  border-radius: 40px;
-  position: relative;
-}
-
-.deep-search-image {
-  width: 100%;
-  text-align: center;
-  margin-top: 30px; /* espace entre les champs et l'image */
-}
-
-.deep-search-image img {
-  width: auto;
-  max-width: 250px; /* ou ajustez en fonction de votre besoin */
-  height: auto;
+  padding: 30px;
 }
 
 
-.deep-search-modal-content h2 {
-  text-align: center; /* Centrer le titre des filtres */
+.blue-separation p {
+  font-size: 18px; /* Réduit de 20px à 16px */
+  color: #000000;
 }
 
-.deep-search-form-container img {
-  height: 32px;
-  margin-left: 0px;
-}
-
-.deep-search-modal-body {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Espace entre les filtres */
-  /*padding: 2px 16px; */
-}
-
-.deep-search-modal-body input[type="checkbox"] {
-  margin-right: 10px; /* Espacement entre les cases à cocher */
-}
-
-.deep-search-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.deep-search-form-field {
-  flex: 1 1 200px;
-}
-
-.deep-search-form-input {
-  width: 100%;
-  padding: 10px;
-  font-size: 18px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.deep-search-form-submit,
-.deep-search-form-filters {
-  flex-basis: 100%;
-  text-align: center;
-}
-
-.deep-search-form-button {
-  background-color: #4B9BEB;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 18px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-block;
-}
-
-.deep-search-form-button-icon {
-  margin-right: 8px;
-}
-
-.deep-search-form-filters-button {
-  background-color: #fff;
-  color: #333;
-  padding: 10px 20px;
-  font-size: 18px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-block;
-}
-
-.deep-search-form-filters-button-icon {
-  margin-right: 8px;
-}
-
-.deep-search-modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.deep-search-modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 60%;
-}
-
-.deep-search-modal-close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
+.blue-separation h1 {
+  font-size: 25px; /* Réduit de 24px à 20px */
+  color: #000000;
+  font-style: normal;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
-.deep-search-modal-h1 {
-  font-size: 25px;
-  text-align: center;
-}
 
-.deep-search-modal-close:hover,
-.deep-search-modal-close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
+/* STYLE POUR LA PAGE DE recherches profondes ==> same base que sur l'accueil, 
+mais quelques ajouts / deep search ==> complètemment faux, c'est qui le con qui fait n'importe quioi avec les comm ? */
+      /*Css pour la page de recherches, autre css, différents que la page d'acceuil, avec du bootstrap*/
+      .deep-search-form-container {
+        background-color: #C8C6F5;
+        margin: 0 100px;
+        padding: 50px;
+        font-size: 18px;
+        border-radius: 40px;
+        position: relative;
+      }
 
-.deep-search-modal-footer {
-  padding: 2px 16px;
-  text-align: right;
-}
+      .deep-search-image {
+        width: 100%;
+        text-align: center;
+        margin-top: 30px; /* espace entre les champs et l'image */
+      }
 
-.deep-search-modal-button {
-  background-color: #4B9BEB;
-  color: white;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 18px;
-}
+      .deep-search-image img {
+        width: auto;
+        max-width: 250px; /* ou ajustez en fonction de votre besoin */
+        height: auto;
+      }
+
+
+      .deep-search-modal-content h2 {
+        text-align: center; /* Centrer le titre des filtres */
+      }
+
+      .deep-search-form-container img {
+        height: 32px;
+        margin-left: 0px;
+      }
+
+      .deep-search-modal-body {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Espace entre les filtres */
+        /*padding: 2px 16px; */
+      }
+
+      .deep-search-modal-body input[type="checkbox"] {
+        margin-right: 10px; /* Espacement entre les cases à cocher */
+      }
+
+      .deep-search-form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .deep-search-form-field {
+        flex: 1 1 200px;
+      }
+
+      .deep-search-form-input {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+
+      .deep-search-form-submit,
+      .deep-search-form-filters {
+        flex-basis: 100%;
+        text-align: center;
+      }
+
+      .deep-search-form-button {
+        background-color: #4B9BEB;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+      }
+
+      .deep-search-form-button-icon {
+        margin-right: 8px;
+      }
+
+      .deep-search-form-filters-button {
+        background-color: #fff;
+        color: #333;
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+      }
+
+      .deep-search-form-filters-button-icon {
+        margin-right: 8px;
+      }
+
+      .deep-search-modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .deep-search-modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 60%;
+      }
+
+      .deep-search-modal-close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .deep-search-modal-h1 {
+        font-size: 25px;
+        text-align: center;
+      }
+
+      .deep-search-modal-close:hover,
+      .deep-search-modal-close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .deep-search-modal-footer {
+        padding: 2px 16px;
+        text-align: right;
+      }
+
+      .deep-search-modal-button {
+        background-color: #4B9BEB;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+            @media screen and (max-width: 768px) {
+              /* Conteneur principal du formulaire de recherche */
+              .deep-search-form-container {
+                margin: 0; /* Supprime les marges */
+                border-radius: 0; /* Supprime les coins arrondis */
+                width: 100%; /* Prend toute la largeur de l'écran */
+                padding: 20px; /* Ajuste le padding */
+              }
+            
+              /* Champs du formulaire (empilés verticalement) */
+              .deep-search-form {
+                flex-direction: column;
+                gap: 10px; /* Réduit l'espace entre les champs */
+              }
+            
+              /* Champs individuels */
+              .deep-search-form-field {
+                flex: 1 1 auto; /* Champs prennent 100% de largeur */
+                width: 100%;
+              }
+            
+              /* Boutons du formulaire */
+              .deep-search-form-submit,
+              .deep-search-form-filters {
+                text-align: center;
+                width: 100%;
+              }
+            
+              .deep-search-form-button {
+                width: 100%; /* Boutons prennent toute la largeur */
+              }
+            
+              .deep-search-form-filters-button {
+                width: 100%; /* Boutons de filtre prennent toute la largeur */
+              }
+            
+              /* Image en bas du formulaire */
+              .deep-search-image img {
+                max-width: 80%; /* Réduit la taille sur les petits écrans */
+                margin: 0 auto;
+              }
+            
+              /* Modale (centrée avec ajustements responsives) */
+              .deep-search-modal-content {
+                width: 90%; /* Réduit la largeur pour mieux s'adapter */
+                margin: 10% auto; /* Centrage vertical */
+              }
+            
+              /* Titre dans la modale */
+              .deep-search-modal-h1 {
+                font-size: 20px; /* Police réduite pour petits écrans */
+              }
+            
+              /* Boutons dans la modale */
+              .deep-search-modal-button {
+                font-size: 16px; /* Police réduite pour petits écrans */
+                padding: 10px 15px; /* Ajuste le padding */
+              }
+            }
+      
 

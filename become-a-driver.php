@@ -44,7 +44,7 @@ document.getElementById('verif-form').addEventListener('submit', function(event)
     
     // Vérification du nombre d'images
     if (files.length === 0) {
-        alert("Veuillez sélectionner deux images pour la vérification.");
+        alert("Sélectionnes deux images pour la vérification.");
         event.preventDefault();
         return;
     }

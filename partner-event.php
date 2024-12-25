@@ -3,6 +3,14 @@
 get_header(); ?>
 
 <div class="blue-separation">
+
+
+    <h1>Connecte-toi</h1>
+    <p>pour accéder à ton compte, logique</p>
+
+</div>
+
+<div>
             <h1>Événements Partenaires</h1>
             <div class="container">
                 <div class="row justify-content-center">
@@ -168,7 +176,6 @@ get_header(); ?>
         </script>
     </div>
 </div>
-
 
 
 

@@ -71,85 +71,90 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_inscription']))
 ?>
 
 <!-- Contenu de la page d'inscription -->
-<div class="blue-separation"></div>
+<div class="blue-separation">
+  <h1>Tu es sur la bonne voie pour rejoindre notre communauté !</h1>
+  <p>Tu ne regretteras rien !</p>
+</div>
+
 <br>
 
 <div class="container-fluid"> 
-    <div class="row justify-content-center">
-        <!-- Colonne centrale avec gouttière -->
-        <div class="col-12 col-md-10 col-lg-8 p-4 background-register">
-            <div class="row align-items-center">
-                <!-- Colonne pour le texte et le formulaire -->
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div>
-                        <h1>Bienvenue sur Fast'N Friends</h1>
-                        <i><p>Créer un compte et rejoins-nous</p></i>
-                    </div>
-                    <!-- Formulaire -->
-                    <form action="" method="post" enctype="multipart/form-data">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" name="firstname" placeholder="Nom" value="<?php echo isset($firstname) ? esc_attr($firstname) : ''; ?>" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" name="lastname" placeholder="Prénom" value="<?php echo isset($lastname) ? esc_attr($lastname) : ''; ?>" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" name="username" placeholder="Pseudo" value="<?php echo isset($username) ? esc_attr($username) : ''; ?>" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="date" class="form-control" name="birthdate" value="<?php echo isset($birthdate) ? esc_attr($birthdate) : ''; ?>" required>
-                        </div>
-                        <div class="mb-3">
-                            <select class="form-control" name="gender" required>
-                                <option value="" disabled selected>Genre</option>
-                                <option value="Homme" <?php echo (isset($gender) && $gender === 'Homme') ? 'selected' : ''; ?>>Homme</option>
-                                <option value="Femme" <?php echo (isset($gender) && $gender === 'Femme') ? 'selected' : ''; ?>>Femme</option>
-                                <option value="Autre" <?php echo (isset($gender) && $gender === 'Autre') ? 'selected' : ''; ?>>Autre</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" name="email" placeholder="Adresse email" value="<?php echo isset($email) ? esc_attr($email) : ''; ?>" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" name="confirm_email" placeholder="Confirmez votre email" value="<?php echo isset($email) ? esc_attr($email) : ''; ?>" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="password" class="form-control" name="password" placeholder="Mot de passe" required>
-                            <div class="form-text">Votre mot de passe doit comporter entre 8 et 20 caractères, inclure des lettres et des chiffres, et ne doit pas contenir d'espaces.</div>
-                        </div>
-                        <div class="mb-3">
-                            <input type="password" class="form-control" name="confirm_password" placeholder="Confirmez votre mot de passe" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" name="about" placeholder="À propos de toi" required><?php echo isset($about) ? esc_textarea($about) : ''; ?></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <input type="tel" class="form-control" name="phone" placeholder="Téléphone (facultatif)" value="<?php echo isset($phone) ? esc_attr($phone) : ''; ?>">
-                        </div>
-                        <div class="mb-3">
-                            <input type="file" class="form-control" name="profile_picture" accept="image/*">
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" name="terms" required>
-                            <label class="form-check-label" for="terms">J'ai lu les conditions d'utilisation</label>
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" name="newsletter">
-                            <label class="form-check-label" for="newsletter">Je m'inscris à la Newsletter</label>
-                        </div>
-                        <div class="d-grid">
-                            <button type="submit" name="submit_inscription" class="btn-primary2">Inscrivez-vous</button>
-                        </div>
-                    </form>
-                </div>
-                <!-- Colonne pour l'image -->
-                <div class="col-lg-6 col-md-6 col-sm-12 text-center mb-4 mb-lg-0">
-                    <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/vintage-car.svg" alt="voiture sous un soleil" class="img-fluid">
-                </div>
+  <div class="row justify-content-center">
+    <!-- Colonne centrale avec gouttière -->
+    <div class="col-12 col-md-10 col-lg-8 p-4 bg-light-lilac">
+      <div class="row align-items-center">
+        <!-- Colonne pour le texte et le formulaire -->
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div>
+            <h1>Bienvenue sur Fast 'N Friends</h1>
+            <i><p>Créer un compte et rejoins-nous</p></i>
+          </div>
+          <!-- Formulaire -->
+          <form action="" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+              <input type="text" class="form-control" name="firstname" placeholder="Nom" value="<?php echo isset($firstname) ? esc_attr($firstname) : ''; ?>" required>
             </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" name="lastname" placeholder="Prénom" value="<?php echo isset($lastname) ? esc_attr($lastname) : ''; ?>" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" name="username" placeholder="Pseudo" value="<?php echo isset($username) ? esc_attr($username) : ''; ?>" required>
+            </div>
+            <div class="mb-3">
+              <input type="date" class="form-control" name="birthdate" value="<?php echo isset($birthdate) ? esc_attr($birthdate) : ''; ?>" required>
+            </div>
+            <div class="mb-3">
+              <select class="form-control" name="gender" required>
+                <option value="" disabled selected>Genre</option>
+                <option value="Homme" <?php echo (isset($gender) && $gender === 'Homme') ? 'selected' : ''; ?>>Homme</option>
+                <option value="Femme" <?php echo (isset($gender) && $gender === 'Femme') ? 'selected' : ''; ?>>Femme</option>
+                <option value="Autre" <?php echo (isset($gender) && $gender === 'Autre') ? 'selected' : ''; ?>>Autre</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" name="email" placeholder="Adresse email" value="<?php echo isset($email) ? esc_attr($email) : ''; ?>" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" name="confirm_email" placeholder="Confirmez votre email" value="<?php echo isset($email) ? esc_attr($email) : ''; ?>" required>
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" name="password" placeholder="Mot de passe" required>
+              <div class="form-text">Votre mot de passe doit comporter entre 8 et 20 caractères, inclure des lettres et des chiffres, et ne doit pas contenir d'espaces.</div>
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" name="confirm_password" placeholder="Confirmez votre mot de passe" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" name="about" placeholder="À propos de toi" required><?php echo isset($about) ? esc_textarea($about) : ''; ?></textarea>
+            </div>
+            <div class="mb-3">
+              <input type="tel" class="form-control" name="phone" placeholder="Téléphone (facultatif)" value="<?php echo isset($phone) ? esc_attr($phone) : ''; ?>">
+            </div>
+            <div class="mb-3">
+              <input type="file" class="form-control" name="profile_picture" accept="image/*">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" name="terms" required>
+              <label class="form-check-label" for="terms">J'ai lu les conditions d'utilisation</label>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" name="newsletter">
+              <label class="form-check-label" for="newsletter">Je m'inscris à la Newsletter</label>
+            </div>
+            <div class="d-grid btn-primary3">
+              <button type="submit" name="submit_inscription" class="btn btn-primary">Inscrits-toi</button>
+            </div>
+          </form>
         </div>
+        <!-- Colonne pour l'image -->
+        <div class="col-lg-6 col-md-6 col-sm-12 text-center mb-4 mb-lg-0">
+          <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/vintage-car.svg" alt="voiture sous un soleil" class="img-fluid">
+        </div>
+      </div>
     </div>
+  </div>
 </div>
+
 
 
 <br><br><br>

@@ -2,7 +2,7 @@
             <!-- ICI, favicon et titres des pages : -->
             <?php
                 if (is_page('deep-search')) : ?>
-                    <title>Fais une recherche approfondie | Fast 'N Friends</title>
+                    <title>Recherches plus en détails | Fast 'N Friends</title>
                     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
                 <?php elseif (is_page('register')) : ?> <!-- Anglicisme respecté pour "register" -->
                     <title>Inscrits-toi | Fast 'N Friends</title>
@@ -22,8 +22,14 @@
                 <?php elseif (is_page('home')) : ?>
                     <title>Plus on est de fous plus on rit | Fast 'N Friends</title>
                     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-                    <?php elseif (is_page('partner-events')) : ?>
+                <?php elseif (is_page('partner-events')) : ?>
                     <title>Événements partenaires | Fast 'N Friends</title>
+                    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+                <?php elseif (is_page('event-edit')) : ?>
+                    <title>Ajoute un event | Fast 'N Friends</title>
+                    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+                <?php elseif (is_page('my-profil')) : ?>
+                    <title>Ton profil : | Fast 'N Friends</title>
                     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
                 <?php endif; ?>
 
@@ -104,12 +110,14 @@
               </a>
             </li>
 
-            <?php if (current_user_can('conducteur')): ?>
-              <a href="<?php echo home_url('/add-a-traject/'); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/add-something.svg" alt="Chat">
-                Publier un trajet
-              </a>
-            <?php endif; ?>
+            <li>
+              <?php if (current_user_can('conducteur') || current_user_can('administrator')): ?>
+                <a href="<?php echo home_url('/add-a-traject/'); ?>">
+                  <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/add-something.svg" alt="Add">
+                    Publier un trajet
+                </a>
+              <?php endif; ?>
+            </li>
 
             <li>
               <a href="<?php echo wp_logout_url(home_url()); ?>">
