@@ -95,6 +95,16 @@
         .btn-primary:hover {
           background-color: #C8C6F5;
         }
+
+        .btn-secondary {
+          color: white;
+          padding: 8px 16px;
+          border-radius: 6px;
+        }
+        
+        .btn-secondary:hover {
+          background-color: #C8C6F5;
+        }
         
         .add-event {
           font-weight: bold;
@@ -517,61 +527,97 @@
 
 
           
-/* Bloc 3 : Titre et chiffre */
-.stats {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #e3eeff 0%, #e3eeff 100%); /* Nouveau background plus doux */
-  position: relative;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+                      /* Bloc 3 : Titre et chiffre */
+                      .stats {
+                        padding: 80px 20px;
+                        background: linear-gradient(135deg, #e3eeff 0%, #e3eeff 100%);
+                        position: relative;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                      }
 
-.stats .number {
-  font-size: 190px;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(45deg, #4b9beb, #6366f1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: numberPulse 2s infinite alternate;
-  display: inline-block;
-}
+                      .stats .number {
+                        font-size: 190px;
+                        line-height: 1;
+                        margin: 0;
+                        padding: 0;
+                        background: linear-gradient(45deg, #4B9BEB, #C8C6F5);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        animation: numberPulse 2s infinite alternate;
+                        display: inline-block;
+                      }
 
-.stats h1, .stats p {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
+                      .stats h1, .stats p {
+                        max-width: 600px;
+                        margin-left: auto;
+                        margin-right: auto;
+                      }
 
-.stats h1 {
-  margin-bottom: 30px;
-  position: relative;
-}
+                      .stats h1 {
+                        margin-bottom: 30px;
+                        position: relative;
+                      }
 
-.stats h1:after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: #4b9beb;
-  border-radius: 2px;
-}
+                      .stats h1:after {
+                        content: '';
+                        position: absolute;
+                        bottom: -10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 60px;
+                        height: 4px;
+                        background: #4b9beb;
+                        border-radius: 2px;
+                      }
 
-@keyframes numberPulse {
-  from {
-      transform: scale(1);
-  }
-  to {
-      transform: scale(1.05);
-  }
-}
+                      @keyframes numberPulse {
+                        from {
+                          transform: scale(1);
+                        }
+                        to {
+                          transform: scale(1.05);
+                        }
+                      }
+
+                      /* Media Queries for responsiveness */
+                      @media (max-width: 768px) {
+                        .stats .number {
+                          font-size: 120px; /* Adjust number size on smaller screens */
+                        }
+
+                        .stats h1 {
+                          font-size: 32px; /* Reduce the font size of the title */
+                          margin-bottom: 20px;
+                        }
+
+                        .stats p {
+                          font-size: 16px; /* Adjust paragraph font size */
+                        }
+                      }
+
+                      @media (max-width: 480px) {
+                        .stats {
+                          padding: 40px 10px; /* Reduce padding on small screens */
+                        }
+
+                        .stats .number {
+                          font-size: 90px; /* Further reduce number size */
+                        }
+
+                        .stats h1 {
+                          font-size: 28px; /* Further reduce title font size */
+                          margin-bottom: 15px;
+                        }
+
+                        .stats p {
+                          font-size: 14px; /* Adjust paragraph font size for mobile */
+                        }
+                      }
+
 
           /* les cards de l'accueil */
 

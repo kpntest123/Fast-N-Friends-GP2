@@ -83,7 +83,7 @@
 
       <?php if ( ! is_user_logged_in() ) : ?>
         <li>
-          <a href="<?php echo home_url('/login/'); ?>">Se connecter</a>
+          <a class="btn-secondary" href="<?php echo home_url('/login/'); ?>">Se connecter</a>
         </li>
         <li>
           <a class="btn-primary" href="<?php echo home_url('/register/'); ?>" title="Tu fais le bon choix ! 🙃">Rejoinds l'aventure 🚀</a>
