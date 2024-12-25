@@ -40,7 +40,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fast 'N Friends</title>
+  <title>Fast 'N Friends | Voyage voyage éternellement</title>
 </head>
 
 <?php wp_head(); ?>
@@ -140,12 +140,12 @@ const navMenu = document.getElementById('nav-links');
 // Ouvrir/fermer le menu lorsque le hamburger est cliqué
 hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('active');
+  hamburger.classList.toggle('active');
 });
 
 
+
 </script>
-
-
 
 
 

@@ -102,38 +102,36 @@ function initializeCounterAnimation() {
               ease: "power1.inOut",        // Fonction d'accélération pour rendre le mouvement fluide
             });
 
-
             //Bouton d'encre d'accueil 
-  // Récupérer l'élément du bouton et du footer
-  var mybutton = document.getElementById("scrollToTopBtn");
-  var footer = document.querySelector(".footer"); // Assurez-vous que la classe du footer est correcte
+              // Récupérer l'élément du bouton et du footer
+              var mybutton = document.getElementById("scrollToTopBtn");
+              var footer = document.querySelector(".footer"); // Assurez-vous que la classe du footer est correcte
 
-  // Afficher ou cacher le bouton en fonction du défilement de la page
-  window.onscroll = function() {
-    // Vérifier si la page est défilée vers le bas
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
+              // Afficher ou cacher le bouton en fonction du défilement de la page
+              window.onscroll = function() {
+                // Vérifier si la page est défilée vers le bas
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                  mybutton.style.display = "block";
+                } else {
+                  mybutton.style.display = "none";
+                }
 
-    // Masquer le bouton lorsque l'utilisateur approche du footer
-    var footerPosition = footer.getBoundingClientRect().top; // Position du footer par rapport à l'écran
-    if (footerPosition < window.innerHeight) {
-      mybutton.style.display = "none"; // Cacher le bouton si le footer est visible
-    } else {
-      mybutton.style.display = "block"; // Afficher le bouton sinon
-    }
-  };
+                // Masquer le bouton lorsque l'utilisateur approche du footer
+                var footerPosition = footer.getBoundingClientRect().top; // Position du footer par rapport à l'écran
+                if (footerPosition < window.innerHeight) {
+                  mybutton.style.display = "none"; // Cacher le bouton si le footer est visible
+                } else {
+                  mybutton.style.display = "block"; // Afficher le bouton sinon
+                }
+              };
 
-  // Lorsque l'utilisateur clique sur le bouton, il sera redirigé en haut de la page
-  mybutton.addEventListener("click", function() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-
+                      // Lorsque l'utilisateur clique sur le bouton, il sera redirigé en haut de la page
+                      mybutton.addEventListener("click", function() {
+                        window.scrollTo({
+                          top: 0,
+                          behavior: "smooth"
+                        });
+                      });
 
 
 function handleScroll() {

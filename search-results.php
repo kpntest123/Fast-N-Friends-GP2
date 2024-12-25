@@ -60,7 +60,10 @@ $args['orderby'] = array(
 // Exécution de la requête
 $query = new WP_Query($args);
 ?>
-<div class="blue-separation"> </div>
+<div class="blue-separation">
+    <h1>Nous sommes ravis de te voir chercher un trajet !</h1>
+    <p>N'oublie pas, respecte les gens comme tu voudrais qu'on re repecte !</p>
+</div>
 <div class="container-search-results">
     <!-- Carte principale avec les critères de recherche -->
     <div class="card">

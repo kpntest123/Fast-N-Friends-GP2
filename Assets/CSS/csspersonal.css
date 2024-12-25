@@ -42,9 +42,10 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          background-color: rgb(255, 255, 255);
+          background-color: #e3eeff;
           padding: 10px 20px;
           position: relative;
+
         }
         
         .logo-container {
@@ -123,37 +124,111 @@
           background-color: #000;
         }
         
-        /* Masquer les menus sur les petits écrans et activer le menu hamburger */
-        @media (max-width: 768px) {
-          .nav-links {
-            display: none;
-            width: 100%;
-            position: absolute;
-            top: 50px;
-            left: 0;
-            background-color: white;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            padding: 20px;
-          }
-        
-          .nav-links.active {
-            display: flex;
-          }
-        
-          .hamburger-menu {
-            display: flex;
-          }
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Le menu hamburger doit passer au-dessus du contenu */
+  #hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1000; /* Le menu hamburger passe au-dessus du reste */
+    position: fixed; /* Il reste fixe, même pendant le scroll */
+    top: 15px; /* Espacement du haut */
+    right: 20px; /* Espacement de droite */
+  }
 
-          #fnfheader {
-            font-size: 20px;
-            font-weight: bold;
-            font-family: MuseoModerno;
-            text-decoration: none;
-            color: #4B9BEB;
-          }
-        }
+  /* Les lignes du hamburger */
+  #hamburger-menu span {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Animation pour transformer le hamburger en croix */
+  #hamburger-menu.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  #hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger-menu.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* Menu mobile : caché par défaut */
+  #nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Fond blanc */
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Sous le hamburger */
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  /* Menu actif : affiché */
+  #nav-links.active {
+    display: block;
+    max-height: 500px; /* Valeur d'extension maximale */
+  }
+
+  /* Menu items (li) sans décoration et uniforme */
+  #nav-links ul {
+    list-style: none; /* Enlever les puces */
+    padding: 0;
+    margin: 0;
+  }
+
+    /* Menu items (li) sans décoration et uniforme */
+    #nav-links ul li {
+      padding: 15px 0;
+      margin: 20%;
+      text-align: center;
+      font-size: 18px; /* Taille uniforme de 18px */
+      text-decoration: none; /* Retirer la décoration des liens */
+    }
+
+
+  #nav-links ul li a {
+    color: #333; /* Couleur de texte uniforme */
+    font-weight: normal; /* Retirer le gras, si appliqué */
+    text-transform: none; /* Retirer toute transformation de texte (majuscule) */
+    text-decoration: none; /* Retirer la sous-ligne des liens */
+  }
+
+  /* Supprimer les logos dans le menu hamburger mobile */
+  #nav-links ul li a img {
+    display: none; /* Masquer les images des logos */
+  }
+
+  /* Centrer le texte des liens dans le menu hamburger */
+  #nav-links ul li a {
+    display: block; /* S'assurer que chaque lien prend toute la largeur disponible */
+    text-align: center; /* Centrer le texte */
+  }
+
+  /* Espacement du logo et du hamburger */
+  .logo-container {
+    margin-right: 40px; /* Plus de marge à droite */
+  }
+
+  .navbar__brand {
+    font-size: 1.8rem; /* Taille du logo plus grande */
+    margin-left: 30px; /* Décalage plus important sur mobile */
+  }
+}
+
+
         
 
 
@@ -234,12 +309,11 @@
           
           
           /*PARTIE BLOC 2 : IMAGE ET BARRE DE RECHERCHE*/
-
-          
           .search-form {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-gap: 1rem;
+            padding-bottom: 25px;
           }
           
           .form-group {
@@ -397,10 +471,11 @@
           /* Responsive Design */
           @media screen and (max-width: 768px) {
             .search-section {
+              padding-top: 600px;
               min-height: auto;
               padding: 1.5rem;
               flex-direction: column;
-              gap: 1.5rem;
+              gap: 1.5rem;    
             }
 
             .search-content {
@@ -411,8 +486,10 @@
 
             .search-container {
               max-width: 90%;
-              margin: 0 auto;
               padding: 1.5rem;
+
+              margin-top: 60px;  /* Ajuste la marge supérieure sur mobile */
+              margin-bottom: 60px; /* Ajuste la marge inférieure sur mobile */      
             }
 
             .image-container {
