@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_inscription']))
     // Vérifications des erreurs
     $error_message = '';
     if (!$terms) {
-        $error_message = "Vous devez accepter les conditions d'utilisation.";
+        $error_message = "Tu dois accepter les conditions d'utilisation.";
     } elseif (username_exists($username)) {
         $error_message = "Ce nom d'utilisateur est déjà pris.";
     } elseif (email_exists($email)) {
@@ -86,8 +86,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_inscription']))
         <!-- Colonne pour le texte et le formulaire -->
         <div class="col-lg-6 col-md-6 col-sm-12">
           <div>
-            <h1>Bienvenue sur Fast 'N Friends</h1>
-            <i><p>Créer un compte et rejoins-nous</p></i>
+            <div class="h1-register"><h1>Bienvenue sur Fast 'N Friends</h1></div>
+            <div class="p-register"></div><i><p>Créer un compte et rejoins-nous</p></i>
           </div>
           <!-- Formulaire -->
           <form action="" method="post" enctype="multipart/form-data">
@@ -115,14 +115,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_inscription']))
               <input type="email" class="form-control" name="email" placeholder="Adresse email" value="<?php echo isset($email) ? esc_attr($email) : ''; ?>" required>
             </div>
             <div class="mb-3">
-              <input type="email" class="form-control" name="confirm_email" placeholder="Confirmez votre email" value="<?php echo isset($email) ? esc_attr($email) : ''; ?>" required>
+              <input type="email" class="form-control" name="confirm_email" placeholder="Confirme ton email" value="<?php echo isset($email) ? esc_attr($email) : ''; ?>" required>
             </div>
             <div class="mb-3">
               <input type="password" class="form-control" name="password" placeholder="Mot de passe" required>
-              <div class="form-text">Votre mot de passe doit comporter entre 8 et 20 caractères, inclure des lettres et des chiffres, et ne doit pas contenir d'espaces.</div>
+              <div class="form-text">Ton mot de passe doit comporter entre 8 et 20 caractères, inclure des lettres et des chiffres, et ne doit pas contenir d'espaces.</div>
             </div>
             <div class="mb-3">
-              <input type="password" class="form-control" name="confirm_password" placeholder="Confirmez votre mot de passe" required>
+              <input type="password" class="form-control" name="confirm_password" placeholder="Confirme ton mot de passe" required>
             </div>
             <div class="mb-3">
               <textarea class="form-control" name="about" placeholder="À propos de toi" required><?php echo isset($about) ? esc_textarea($about) : ''; ?></textarea>

@@ -11,54 +11,48 @@ get_header(); ?>
 </div>
 
 <div>
-           <div class="event-title h1"> <h1>Événements Partenaires</h1> </div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-4">
-                        <div class="header-box">
-                            <button
-                                class="header-box button"
-                                type="button"
-                                id="dropdownMenuButton"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Lieu
-                            </button>
-                            <ul class="dropdown-menu" id="cityDropdown">
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                    <div class="header-box">
-                            <button 
-                                class="header-box button" 
-                                type="button" 
-                                id="dropdownMenuButton" 
-                                data-bs-toggle="dropdown" 
-                                aria-expanded="false">
-                                Event
-                            </button>
-                            <ul class="dropdown-menu" id="tagDropdown">
-                            </ul>
-                        </div>
-    
-                        </div>
-                    
-                    <div class="col-4">
-                        <div class="header-box">
-                            <input
-                            class="header-box button"
-                            type="date"
-                            class="form-control"
-                            id="datePicker"
-                            style="padding: 15px; font-size: 1.2rem; text-align: center; border-radius: 10px; border: 2px solid #4B9BEB; color: #4B9BEB;"
-                 >
-                        </div>
-                    </div>
-                </div>
+<div class="event-title h1">
+    <h1>Événements Partenaires</h1>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <div class="header-box">
+                <button
+                    class="header-box button"
+                    type="button"
+                    id="cityDropdownButton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Lieu
+                </button>
+                <ul id="cityDropdown" class="dropdown-menu"></ul>
             </div>
         </div>
-
+        <div class="col-4">
+            <div class="header-box">
+                <button
+                    class="header-box button"
+                    type="button"
+                    id="tagDropdownButton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Event
+                </button>
+                <ul id="tagDropdown" class="dropdown-menu"></ul>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="header-box">
+                <input
+                    type="date"
+                    class="form-control"
+                    id="datePicker"
+                    style="padding: 15px; font-size: 1.2rem; text-align: center; border-radius: 10px; border: 2px solid #4B9BEB; color: #4B9BEB;">
+            </div>
+        </div>
+    </div>
+</div>
 
 <div>
     

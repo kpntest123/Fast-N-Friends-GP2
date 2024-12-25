@@ -5,7 +5,7 @@ get_header();
 // Vérifiez si l'utilisateur est un administrateur
 if (!current_user_can('administrator')) {
     // Rediriger vers la page d'accueil personnalisée
-    wp_redirect('http://localhost/fast-n-friends-GP2/home/'); // Remplacez par l'URL de votre page d'accueil personnalisée
+    wp_redirect('http://localhost/fast-n-friends-GP2/home/'); 
     exit; // Arrête l'exécution du script
 }
 

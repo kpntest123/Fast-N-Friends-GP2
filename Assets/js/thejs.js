@@ -80,7 +80,7 @@ function initializeCounterAnimation() {
               x: () => `-${bannerWidth / 2}px`, // La bannière se déplace sur la moitié de sa largeur (avec les clones)
               ease: "none", // Supprime les variations de vitesse pour un mouvement fluide
               repeat: -1, // Animation infinie
-              duration: 37, // Durée de l'animation (ajustez à votre goût)
+              duration: 37, // Durée de l'animation 
             });
 
             // Pause l'animation au survol

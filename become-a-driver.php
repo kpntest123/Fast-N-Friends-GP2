@@ -50,7 +50,7 @@ document.getElementById('verif-form').addEventListener('submit', function(event)
     }
 
     if (files.length > 2) {
-        alert("Vous ne pouvez téléverser que 2 images maximum.");
+        alert("Tu ne peux téléverser que 2 images maximum.");
         event.preventDefault();
         return;
     }

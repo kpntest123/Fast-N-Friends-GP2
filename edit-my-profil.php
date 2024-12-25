@@ -49,7 +49,7 @@ if ( is_user_logged_in() ) {
                 update_user_meta($current_user->ID, 'profile_picture', $upload['url']);
             } else {
                 // Si l'upload échoue, afficher un message d'erreur
-                echo 'Une erreur est survenue lors du téléchargement de votre photo de profil.';
+                echo 'Une erreur est survenue lors du téléchargement de ta photo de profil.';
             }
         }
 
@@ -58,7 +58,7 @@ if ( is_user_logged_in() ) {
         exit;
     }
 } else {
-    echo 'Veuillez vous connecter pour modifier votre profil.';
+    echo 'Connecte toi pour modifier ton profil.';
     return;
 }
 

@@ -20,13 +20,7 @@ $user_id = isset($_GET['user_id']) ? intval($_GET['user_id']) : get_current_user
 // Récupérer les informations de l'utilisateur
 $user_data = get_userdata($user_id);
 
-if ($user_data) {
-    // Afficher les informations de l'utilisateur
-    echo 'Nom : ' . esc_html($user_data->display_name);
-    // Ajouter d'autres informations ici
-} else {
-    echo 'Utilisateur non trouvé';
-}
+
 
 
 // Récupérer les métadonnées de l'utilisateur
@@ -58,13 +52,13 @@ if ( is_user_logged_in() ) {
     $about = get_user_meta($current_user->ID, 'about', true);
     $profile_picture = get_user_meta($current_user->ID, 'profile_picture', true);
 } else {
-    echo 'Veuillez vous connecter pour voir votre profil.';
+    echo 'Connecte toi pour voir ton profil.';
     return;
 }
 ?>
 <div class="blue-separation">
     <h1>Ton profil :</h1>
-    <p>Ta zone perso ! Laisse parler ton esprits</p>
+    <p>Ta zone perso ! Laisse parler ton esprit</p>
 </div>
 <!-- Contenu de la page de profil -->
 <div class="container mt-4">
@@ -123,9 +117,9 @@ if ( is_user_logged_in() ) {
         <div class="profile-col-side">
             <div class="profile-container">
                 <h2><?php echo esc_html($firstname . ' ' . $lastname); ?></h2>
-                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/placeholder.jpg" alt="Votre photo de profil" class="profile-picture">
+                <img src="<?php echo get_template_directory_uri(); ?>Assets/Img/placeholder.jpg" alt=" photo de profil" class="profile-picture">
                 <p>Devenir conducteur ? <a href="<?php echo home_url('/become-a-driver/'); ?>">Clique ici !</a></p>
-                <p>Modifier vos infos ? <a href="<?php echo home_url('/edit-my-profil/'); ?>">C'est par ici !</a></p>
+                <p>Modifier tes infos ? <a href="<?php echo home_url('/edit-my-profil/'); ?>">C'est par ici !</a></p>
             </div>
         </div>    
     </div>

@@ -3,7 +3,6 @@
 
 get_header();
 
-// Récupération des données envoyées par le formulaire avec sécurisation
 $from = isset($_GET['from']) ? sanitize_text_field($_GET['from']) : 'Non spécifié';
 $to = isset($_GET['to']) ? sanitize_text_field($_GET['to']) : 'Non spécifié';
 $people = isset($_GET['people']) ? intval($_GET['people']) : 1;
@@ -12,13 +11,13 @@ $date = isset($_GET['date']) ? sanitize_text_field($_GET['date']) : 'Non spécif
 
 
 <?php
-// Construire la requête selon les critères
+
 $args = array(
-    'post_type' => 'trajet',  // Type de publication (assurez-vous que c'est le bon)
-    'posts_per_page' => -1,   // Nombre de résultats
+    'post_type' => 'trajet',  
+    'posts_per_page' => -1,  
     'meta_query' => array(
         'relation' => 'AND',
-        // Filtrer selon les critères de base (lieu de départ et arrivée)
+        
         array(
             'key'     => 'from',
             'value'   => $from,
@@ -32,7 +31,6 @@ $args = array(
     ),
 );
 
-// Filtrer par date (si la date est renseignée) et trier les résultats
 if ($date !== 'Non spécifiée') {
     $args['meta_query'][] = array(
         'key'     => 'date',
@@ -62,7 +60,7 @@ $query = new WP_Query($args);
 ?>
 <div class="blue-separation">
     <h1>Nous sommes ravis de te voir chercher un trajet !</h1>
-    <p>N'oublie pas, respecte les gens comme tu voudrais qu'on re repecte !</p>
+    <p>N'oublie pas, respecte les gens comme tu voudrais qu'on te repecte !</p>
 </div>
 <div class="container-search-results">
     <!-- Carte principale avec les critères de recherche -->

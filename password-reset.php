@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $to = $email;
         $subject = "Réinitialisation de mot de passe";
-        $message = "Cliquez sur ce lien pour réinitialiser votre mot de passe : <lien>";
+        $message = "Clique sur ce lien pour réinitialiser ton mot de passe : <lien>";
         $headers = "From: no-reply@fastnfriends.com";
 
         if (mail($to, $subject, $message, $headers)) {

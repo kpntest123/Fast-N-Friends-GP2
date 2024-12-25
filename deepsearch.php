@@ -5,11 +5,12 @@ get_header();?>
 <div class="blue-separation">
   <h1>Besoins d'une recherche plus spécifique ?</h1>
   <p>T'es au bon endroit</p>
-</div>
+
+  </div>
   <div class="deep-search-image">
       <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/look-for-a-traject.svg" alt="Femme pointant un trajet avec une loupe">
     </div>
-  </div>
+
 <br>
   <div class="deep-search-form-container">
     <form class="deep-search-form" action="<?php echo home_url('/search-results/'); ?>" method="get">
@@ -38,11 +39,13 @@ get_header();?>
           <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/search-ico.svg" alt="Loupe" class="deep-search-form-button-icon" />
           Rechercher
         </button>
+        
       </div>
+      
     </form>
 
-
-
+    </div>
+    
   <!-- Champs cachés pour les filtres additionnels -->
 
 
