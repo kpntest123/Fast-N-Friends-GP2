@@ -11,13 +11,13 @@ get_header(); ?>
 </div>
 
 <div>
-            <h1>Événements Partenaires</h1>
+           <div class="event-title h1"> <h1>Événements Partenaires</h1> </div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-4">
                         <div class="header-box">
                             <button
-                                class="btn btn-secondary dropdown-toggle"
+                                class="header-box button"
                                 type="button"
                                 id="dropdownMenuButton"
                                 data-bs-toggle="dropdown"
@@ -31,7 +31,7 @@ get_header(); ?>
                     <div class="col-4">
                     <div class="header-box">
                             <button 
-                                class="btn btn-secondary dropdown-toggle" 
+                                class="header-box button" 
                                 type="button" 
                                 id="dropdownMenuButton" 
                                 data-bs-toggle="dropdown" 
@@ -47,6 +47,7 @@ get_header(); ?>
                     <div class="col-4">
                         <div class="header-box">
                             <input
+                            class="header-box button"
                             type="date"
                             class="form-control"
                             id="datePicker"
@@ -60,9 +61,6 @@ get_header(); ?>
 
 
 <div>
-    <div class=event-title>
-        <h1>Événements à venir</h1>
-    </div>
     
     <div class="event-container">
         
@@ -103,10 +101,6 @@ get_header(); ?>
     </div>
     <div>
     <div>
-    <div class="event-title">
-        <h1>Tous les événements</h1>
-    </div>
-
     <div class="event-container" id="eventContainer">
         <?php
         // WP_Query pour récupérer les événements
