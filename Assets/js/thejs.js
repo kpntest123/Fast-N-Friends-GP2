@@ -348,6 +348,15 @@ function initializeDropdowns() {
       cityItem.appendChild(cityLink);
       cityDropdown.appendChild(cityItem);
     });
+
+    cityDropdown.addEventListener('click', event => {
+      if (event.target.classList.contains('dropdown-item')) {
+        const selectedCity = event.target.textContent;
+        console.log('Ville sélectionnée :', selectedCity);
+        filterState.selectedCity = selectedCity;
+        filterEvents();
+      }
+    });
   }
 
   if (tagDropdown) {
@@ -359,6 +368,15 @@ function initializeDropdowns() {
       tagLink.textContent = tag;
       tagItem.appendChild(tagLink);
       tagDropdown.appendChild(tagItem);
+    });
+
+    tagDropdown.addEventListener('click', event => {
+      if (event.target.classList.contains('dropdown-item')) {
+        const selectedTag = event.target.textContent;
+        console.log('Tag sélectionné :', selectedTag);
+        filterState.selectedTag = selectedTag;
+        filterEvents();
+      }
     });
   }
 }
@@ -372,8 +390,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeCardAnimations();
   initializeFAQ();
   initializeStarsAnimation();
-  
+
   // Initialize scroll handler
   window.addEventListener('scroll', handleScroll);
   handleScroll();
 });
+

@@ -3,56 +3,53 @@
 get_header(); ?>
 
 <div class="blue-separation">
-
-
     <h1>Connecte-toi</h1>
     <p>pour accéder à ton compte, logique</p>
-
 </div>
 
 <div>
-<div class="event-title h1">
-    <h1>Événements Partenaires</h1>
-</div>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-4">
-            <div class="header-box">
-                <button
-                    class="header-box button"
-                    type="button"
-                    id="cityDropdownButton"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Lieu
-                </button>
-                <ul id="cityDropdown" class="dropdown-menu"></ul>
+    <div class="event-title h1">
+        <h1>Événements Partenaires</h1>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <div class="header-box">
+                    <button
+                        class="header-box button dropdown-toggle"
+                        type="button"
+                        id="cityDropdownButton"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Lieu
+                    </button>
+                    <ul id="cityDropdown" class="dropdown-menu"></ul>
+                </div>
             </div>
-        </div>
-        <div class="col-4">
-            <div class="header-box">
-                <button
-                    class="header-box button"
-                    type="button"
-                    id="tagDropdownButton"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Event
-                </button>
-                <ul id="tagDropdown" class="dropdown-menu"></ul>
+            <div class="col-4">
+                <div class="header-box">
+                    <button
+                        class="header-box button dropdown-toggle"
+                        type="button"
+                        id="tagDropdownButton"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Event
+                    </button>
+                    <ul id="tagDropdown" class="dropdown-menu"></ul>
+                </div>
             </div>
-        </div>
-        <div class="col-4">
-            <div class="header-box">
-                <input
-                    type="date"
-                    class="form-control"
-                    id="datePicker"
-                    style="padding: 15px; font-size: 1.2rem; text-align: center; border-radius: 10px; border: 2px solid #4B9BEB; color: #4B9BEB;">
+            <div class="col-4">
+                <div class="header-box">
+                    <input
+                        type="date"
+                        class="form-control"
+                        id="datePicker"
+                        style="padding: 15px; font-size: 1.2rem; text-align: center; border-radius: 10px; border: 2px solid #4B9BEB; color: #4B9BEB;">
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 <div>
     
