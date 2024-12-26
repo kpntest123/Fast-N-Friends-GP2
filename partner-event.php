@@ -3,8 +3,8 @@
 get_header(); ?>
 
 <div class="blue-separation">
-    <h1>Connecte-toi</h1>
-    <p>pour accéder à ton compte, logique</p>
+    <h1>Envie de t'amuser ?</h1>
+    <p>Voici les événements à venir</p>
 </div>
 
 <div>

@@ -165,7 +165,7 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/verified-profil.svg" alt="voiture avec un logo de verification audessus" class="fond-card-2-miroir-image">
                 </div>
                 <div class="forme-card-bleue-miroir">
-                    <h2 class="h&-cards-miroir">Profils vérifiés</h2>
+                    <h2 class="h1-cards-miroir">Profils vérifiés</h2>
                     <p class="p-cards-mirror">
                     Les profils vérifiés sur Fast'N Friends, c’est la garantie d’une sécurité en plus, en te permettant de vérifier l'identité et la fiabilité des gens avec qui tu voyages. Ça renforce la confiance entre conducteurs et passagers, pour des trajets plus tranquilles et sûrs. Et en plus, ça aide à créer une communauté respectueuse et responsable !</p>
                 </div>
