@@ -126,6 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_inscription']))
             </div>
             <div class="mb-3">
               <textarea class="form-control" name="about" placeholder="À propos de toi" required><?php echo isset($about) ? esc_textarea($about) : ''; ?></textarea>
+              <div class="form-text">Tout ce que tu écriras ici, ce retrouvera sur ton profil, alors fais gaffe ;-)</div>
             </div>
             <div class="mb-3">
               <input type="tel" class="form-control" name="phone" placeholder="Téléphone (facultatif)" value="<?php echo isset($phone) ? esc_attr($phone) : ''; ?>">
