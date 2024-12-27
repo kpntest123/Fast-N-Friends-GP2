@@ -24,19 +24,19 @@ add_action('after_setup_theme', 'fnf_theme_setup');
  * Assets Management
  */
 function fnf_enqueue_assets() {
-    // Styles
+    // Les styles, polices et autres :
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Bokor&family=Jost:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
     wp_enqueue_style('futura-pt', 'https://use.typekit.net/uah5lqa.css');
     wp_enqueue_style('flatpickr', 'https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css');
     wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', [], '5.3.3');
     wp_enqueue_style('theme-style', ASSETS_URI . '/CSS/csspersonal.css', ['bootstrap'], filemtime(get_template_directory() . '/Assets/CSS/csspersonal.css'));
 
-    // Conditional styles
+    // Styles conditionnel ==> supp et voir si on en a besoins, je pense pas, c'est quand y'avais un bug auparavanrt
     if (is_page_template('page-connexion.php')) {
         wp_enqueue_style('login-styles', ASSETS_URI . '/css/login.css', ['theme-style'], filemtime(get_template_directory() . '/Assets/css/login.css'));
     }
 
-    // Scripts
+    // Scripts ==> JS ==> bootstrap voir si je l'ai lié en ligne/CDN ou local !
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap-bundle', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', ['jquery'], '5.3.3', true);
     wp_enqueue_script('flatpickr', 'https://cdn.jsdelivr.net/npm/flatpickr', [], '4.6.13', true);
@@ -62,11 +62,11 @@ wp_enqueue_script(
     true
 );
 
-// Anime.js chargé séparément après
+// Anime.js chargé séparément après car non primordial !
 wp_enqueue_script(
     'anime-js',
     'https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js',
-    ['thejs'], // Dépendance à votre JS local
+    ['thejs'], // Dépendance au JS local ==> sinon bug et lag 
     '3.2.2',
     true
 );
@@ -75,8 +75,8 @@ wp_enqueue_script(
 
 
 
-/**
- * Custom Post Types
+/*
+        Custom Post Types pour les recherches et trajets !
  */
 function fnf_register_post_types() {
     // Trajets CPT
@@ -111,8 +111,8 @@ function fnf_register_post_types() {
 }
 add_action('init', 'fnf_register_post_types');
 
-/**
- * Custom Meta Fields
+/*
+    Customizer les champs de recherches 
  */
 function fnf_register_meta_fields() {
     $meta_fields = [
@@ -132,8 +132,8 @@ function fnf_register_meta_fields() {
 }
 add_action('init', 'fnf_register_meta_fields');
 
-/**
- * User Roles and Capabilities
+/*
+        gestion des rôles
  */
 function fnf_setup_user_roles() {
     // Covoitureur role
@@ -156,8 +156,8 @@ add_action('user_register', function($user_id) {
     $user->set_role('covoitureur');
 });
 
-/**
- * Authentication and Access Control
+/*
+        Connexion et enregistrement !
  */
 function fnf_handle_login() {
     if (!isset($_POST['login_submit'])) return;
@@ -182,27 +182,27 @@ function fnf_handle_login() {
 }
 add_action('init', 'fnf_handle_login');
 
-// Redirection rules
+// Les règles de redirections : 
 function fnf_redirect_rules() {
-    // Redirect non-admins from admin area
+    // Les non-admins du site veulent accèder aux endroits admins ==> buiten
     if (is_admin() && !current_user_can('administrator') && !wp_doing_ajax()) {
         wp_redirect(home_url());
         exit;
     }
 
-    // Redirect non-logged-in users from profile page
+    // Si un non connecté veux rejoindre la page my-profil, il est foutu dehors, c'est logique
     if (!is_user_logged_in() && is_page('my-profil')) {
         wp_redirect(home_url());
         exit;
     }
 
-    // Redirect home page to /home
+    // Pas accèder à la page sans le /home, d'office redirigé !
     if (is_front_page()) {
         wp_redirect(home_url('/home/'));
         exit;
     }
 
-    // Restrict add-a-traject page access
+    // Pour la page "add traject", ne pas laisser les non conducteurs accèder à la page
     if (is_page('add-a-traject')) {
         if (!is_user_logged_in()) {
             wp_redirect(wp_login_url());
@@ -215,10 +215,18 @@ function fnf_redirect_rules() {
             exit;
         }
     }
+
+        // Bloquer l'accès aux pages de connexion et inscriptiosn pour qqn de déjà connecté
+        if (is_user_logged_in()) {
+            if (is_page('register') || is_page('login')) {  
+                wp_redirect(home_url());
+                exit;
+            }
+        }
 }
 add_action('template_redirect', 'fnf_redirect_rules');
 
-// Track last login
+// Tracker la dernière connexion pour la page profil !
 function fnf_track_last_login($user_login, $user) {
     update_user_meta($user->ID, 'last_login', current_time('mysql'));
 }
