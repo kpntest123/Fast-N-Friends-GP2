@@ -6,7 +6,7 @@
             <?php elseif (is_page('partner-events')) : ?>
                 <title>Événements partenaires | Fast 'N Friends</title>
                 <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-            <?php elseif (is_page('event-edit')) : ?>
+            <?php elseif (is_page('admin-add-a-event')) : ?>
                 <title>Ajout d'événement | Fast 'N Friends</title>
                 <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
             <?php elseif (is_page('deep-search')) : ?>
@@ -53,7 +53,7 @@
                     <meta name="description" content="Tu veux connaître nos mentions légales ? Tout est ici, on te dit tout pour être transparent !">
                 <?php elseif (is_page('partner-events')) : ?>
                     <meta name="description" content="Découvre tous les événements partenaires où tu pourrais te joindre. C'est le moment de faire de nouvelles rencontres !">
-                <?php elseif (is_page('event-edit')) : ?>
+                <?php elseif (is_page('admin-add-a-event')) : ?>
                     <meta name="description" content="Ajoute ton événement ici. Fais bouger les choses et invite les autres à te rejoindre !">
                 <?php elseif (is_page('deep-search')) : ?>
                     <meta name="description" content="Affûte ta recherche avec notre outil avancé. Trouve exactement ce que tu cherches en quelques clics !">
@@ -98,7 +98,7 @@
     <ul class="nav-links" id="nav-links">
       <?php if (current_user_can('administrator')) : ?>
         <li>
-          <a class="add-event" href="<?php echo home_url('/event-edit/'); ?>">
+          <a class="add-event" href="<?php echo home_url('/admin-add-a-event/'); ?>">
             ADMIN - Ajouter un event
           </a>
         </li>
