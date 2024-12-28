@@ -2608,3 +2608,12 @@ mais quelques ajouts / deep search ==> complètemment faux, c'est qui le con qui
   transform: rotate(180deg);  /* Rotation de la flèche */
 }
 
+.mentions-legales{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-color: #C8C6F5;
+  font-size: 18px;
+}
+.mentions-legales h1{
+  font-size: 25px;
+}
