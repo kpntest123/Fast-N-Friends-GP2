@@ -1,37 +1,43 @@
 
-            <!-- ICI, favicon et titres des pages : -->
-            <?php
-                if (is_page('deep-search')) : ?>
-                    <title>Recherches plus en détails | Fast 'N Friends</title>
-                    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-                <?php elseif (is_page('register')) : ?> <!-- Anglicisme respecté pour "register" -->
-                    <title>Inscrits-toi | Fast 'N Friends</title>
-                    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-                <?php elseif (is_page('login')) : ?>
-                    <title>Connectes-toi | Fast 'N Friends</title>
-                    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-                <?php elseif (is_page('password-reset')) : ?>
-                    <title>Réinitialise ton MDP | Fast 'N Friends</title>
-                    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-                <?php elseif (is_page('add-a-traject')) : ?>
-                    <title>Ajoute ton trajet | Fast 'N Friends</title>
-                    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-                <?php elseif (is_404()) : ?>
-                    <title>Erreur 404, tu t'es pas loupé ! | Fast 'N Friends</title>
-                    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-                <?php elseif (is_page('home')) : ?>
-                    <title>Plus on est de fous plus on rit | Fast 'N Friends</title>
-                    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-                <?php elseif (is_page('partner-events')) : ?>
-                    <title>Événements partenaires | Fast 'N Friends</title>
-                    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-                <?php elseif (is_page('event-edit')) : ?>
-                    <title>Ajoute un event | Fast 'N Friends</title>
-                    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-                <?php elseif (is_page('my-profil')) : ?>
-                    <title>Ton profil : | Fast 'N Friends</title>
-                    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
-                <?php endif; ?>
+            <!-- Favicons + tab title -->
+            <?php if (is_page('legal-notice')) : ?>
+                <title>Mentions légales | Fast 'N Friends</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_page('partner-events')) : ?>
+                <title>Événements partenaires | Fast 'N Friends</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_page('event-edit')) : ?>
+                <title>Ajout d'événement | Fast 'N Friends</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_page('deep-search')) : ?>
+                <title>Recherche avancée | Fast 'N Friends</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_page('search-results')) : ?>
+                <title>Résultats de recherche | Fast 'N Friends</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_page('my-profil')) : ?>
+                <title>Ton profil | Fast 'N Friends</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_page('add-a-traject')) : ?>
+                <title>Ajouter un trajet | Fast 'N Friends</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_page('become-a-driver')) : ?>
+                <title>Deviens conducteur | Fast 'N Friends</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_page('edit-my-profil')) : ?>
+                <title>Modifier mes infos | Fast 'N Friends</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_page('register')) : ?>
+                <title>S'enregistrer | Fast 'N Friends</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_page('login')) : ?>
+                <title>Se connecter | Fast 'N Friends</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php elseif (is_page('home')) : ?>
+                <title>Accueil | Fast 'N Friends</title>
+                <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Img/FNF-logo.svg" type="image/x-icon">
+            <?php endif; ?>
+
 
 
 <!DOCTYPE html>
@@ -40,7 +46,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fast 'N Friends | Voyage voyage éternellement</title>
+  <title>Fast 'N Friends | Voyageons ensemble, connectés et solidaires !</title>
+
+                <!-- Meta description :-->
+                <?php if (is_page('legal-notice')) : ?>
+                    <meta name="description" content="Tu veux connaître nos mentions légales ? Tout est ici, on te dit tout pour être transparent !">
+                <?php elseif (is_page('partner-events')) : ?>
+                    <meta name="description" content="Découvre tous les événements partenaires où tu pourrais te joindre. C'est le moment de faire de nouvelles rencontres !">
+                <?php elseif (is_page('event-edit')) : ?>
+                    <meta name="description" content="Ajoute ton événement ici. Fais bouger les choses et invite les autres à te rejoindre !">
+                <?php elseif (is_page('deep-search')) : ?>
+                    <meta name="description" content="Affûte ta recherche avec notre outil avancé. Trouve exactement ce que tu cherches en quelques clics !">
+                <?php elseif (is_page('search-results')) : ?>
+                    <meta name="description" content="Voici ce qu'on a trouvé pour toi. Parcours les résultats et trouve ce qui te correspond !">
+                <?php elseif (is_page('my-profil')) : ?>
+                    <meta name="description" content="C'est ton espace personnel. Mets à jour tes infos et personnalise ton profil ici !">
+                <?php elseif (is_page('add-a-traject')) : ?>
+                    <meta name="description" content="Propose un trajet et partage la route avec d'autres. C'est simple, rapide et convivial !">
+                <?php elseif (is_page('become-a-driver')) : ?>
+                    <meta name="description" content="Envie de devenir conducteur ? Fais le grand saut et emmène des passagers avec toi. On compte sur toi !">
+                <?php elseif (is_page('edit-my-profil')) : ?>
+                    <meta name="description" content="Modifie tes infos et garde ton profil à jour. Tout se passe ici, c'est rapide et facile !">
+                <?php elseif (is_page('register')) : ?>
+                    <meta name="description" content="Inscris-toi en quelques clics et commence ton aventure avec nous. Rejoins la communauté !">
+                <?php elseif (is_page('login')) : ?>
+                    <meta name="description" content="Connecte-toi pour accéder à ton compte et profiter de toutes les fonctionnalités du site.">
+                <?php elseif (is_page('home')) : ?>
+                    <meta name="description" content="Bienvenue chez Fast 'N Friends ! Découvre, partage et voyage avec nous. On t'attend sur la route !">
+                <?php endif; ?>
+
+
+
 </head>
 
 <?php wp_head(); ?>
@@ -70,7 +106,7 @@
 
       <li>
         <a href="<?php echo home_url('/partner-event/'); ?>">
-          <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/fiesta.svg" alt="Dropdown">
+          <img src="<?php echo get_template_directory_uri(); ?>/Assets/Img/fiesta.svg" alt="La fête">
           Événements partenaires
         </a>
       </li>

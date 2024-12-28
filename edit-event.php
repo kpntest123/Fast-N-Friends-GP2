@@ -2,10 +2,22 @@
 /* Template Name: Éditer un événement */
 get_header();
 
-// Vérifiez si l'utilisateur est un administrateur
-if (!current_user_can('administrator')) {
-    // Rediriger vers la page d'accueil personnalisée
-    wp_redirect('http://localhost/fast-n-friends-GP2/home/'); 
+// Vérifiez si l'utilisateur est connecté
+if (!is_user_logged_in()) {
+    // Redirige les utilisateurs non connectés
+    wp_redirect(home_url()); // Redirige vers la page d'accueil
+    exit;
+}
+
+// Vérifiez si l'utilisateur a les rôles interdits ou n'est pas administrateur
+$user = wp_get_current_user();
+if (
+    in_array('conducteur', $user->roles) || 
+    in_array('covoitureur', $user->roles) || 
+    !current_user_can('administrator')
+) {
+    // Redirige vers la page d'accueil personnalisée
+    wp_redirect('/https://fastnfriends.emu.isfsc.be/home'); 
     exit; // Arrête l'exécution du script
 }
 
