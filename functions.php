@@ -53,6 +53,19 @@ wp_enqueue_script(
     true
 );
 
+//Java de la navbar
+function enqueue_navbar_scripts() {
+    wp_enqueue_script(
+        'navbar-script',
+        get_template_directory_uri() . '/js/navbar.js',
+        array(), 
+        '1.0.0', 
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_navbar_scripts');
+
+
 // Nouvelle version - JS local prioritaire et indépendant
 wp_enqueue_script(
     'thejs',
@@ -181,6 +194,23 @@ function fnf_handle_login() {
     exit;
 }
 add_action('init', 'fnf_handle_login');
+
+
+
+//Redirection après inscriptions réussies : 
+function redirection_inscription() {
+    if (isset($_POST['submit_inscription']) && !is_user_logged_in()) {
+        // Vérifier si l'inscription a réussi
+        if (!is_wp_error($user_id)) {
+            // Redirection vers la page de profil après inscription
+            wp_redirect(home_url('/login')); // Remplace '/my-profil' par l'URL de ta page profil
+            exit;
+        }
+    }
+}
+add_action('template_redirect', 'redirection_inscription');
+
+
 
 // Les règles de redirections : 
 function fnf_redirect_rules() {

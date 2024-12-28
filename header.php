@@ -133,28 +133,29 @@
 </nav>
 
 <script>
-// Sélectionner le menu hamburger et le bloc du menu
-const hamburger = document.getElementById('hamburger-menu');
-const navMenu = document.getElementById('nav-links');
+    
+    //Menu hamburger ==> important qu'il sois ici : 
+    const hamburger = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-links');
+    const overlay = document.getElementById('overlay');
 
-// Ouvrir/fermer le menu lorsque le hamburger est cliqué
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-  hamburger.classList.toggle('active');
-});
+    // Menu supperposé que le hamburger est clické
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navMenu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+      overlay.classList.toggle('active');
+    });
 
-
+    // Le menu se ferme quand on clique en dehors 
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        overlay.classList.remove('active');
+      }
+    });
 
 </script>
-
-
-
-
-
-
-
-
-
-
 
 <body> 

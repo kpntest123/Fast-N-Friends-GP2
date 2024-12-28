@@ -1,9 +1,7 @@
 <?php
 /* Template Name: Page de connexion */
 get_header();
-?>
 
-<?php
 // Login logic
 if (isset($_POST['login_submit']) && wp_verify_nonce($_POST['user_login_nonce'], 'user_login_action')) {
     $username = sanitize_user($_POST['username']);
@@ -33,6 +31,8 @@ if (isset($_POST['login_submit']) && wp_verify_nonce($_POST['user_login_nonce'],
         exit;
     }
 }
+
+
 ?>
 
 <?php
@@ -45,8 +45,8 @@ if (isset($_GET['login_error'])) : ?>
 <div class="blue-separation">
 
 
-    <h1>Connecte-toi</h1>
-    <p>pour accéder à ton compte, logique</p>
+    <h1>Connecte-toi !</h1>
+    <p>Si tu es redirigé ici après t'être connecté, c'est que ton inscription est réussie ! Pour que tu accèdes à ton compte, remplis les champs !</p>
 
 </div>
 <br>
@@ -57,7 +57,7 @@ if (isset($_GET['login_error'])) : ?>
                 <?php wp_nonce_field('user_login_action', 'user_login_nonce'); ?>
                 
                 <div class="form-group mb-3">
-                    <label for="username" class="sr-only">Nom d'utilisateur</label>
+                    <label for="username" class="sr-only">Nom d'utilisateur ou adresse mail</label>
                     <input 
                         type="text" 
                         name="username" 
