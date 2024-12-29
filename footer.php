@@ -32,7 +32,7 @@
 
     <div class="column">
         <h1>Informations légales</h1>
-        <h3><a href="<?php echo home_url('/404'); ?>">Mentions légales</a></h3>
+        <h3><a href="<?php echo home_url('/legal-notice'); ?>">Mentions légales</a></h3>
         <h3><a href="<?php echo home_url('/404'); ?>">Conditions d'utilisation</a></h3>
         <h3><a href="<?php echo home_url('/404'); ?>">Gestions des données</a></h3>
     </div>

@@ -133,7 +133,7 @@
         }
         
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 1250px) {
   .custom-navbar {
     padding: 15px;
     margin: 0;

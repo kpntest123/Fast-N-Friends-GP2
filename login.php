@@ -33,20 +33,30 @@ if (isset($_POST['login_submit']) && wp_verify_nonce($_POST['user_login_nonce'],
 }
 
 
+// Vérifier si l'utilisateur arrive sur la page "login" depuis la page "register" ==> donc inscriptions réussie !
+if (is_page('login') && isset($_SERVER['HTTP_REFERER'])) {
+    $referer = wp_parse_url($_SERVER['HTTP_REFERER']);
+    if (!empty($referer['path']) && strpos($referer['path'], '/register') !== false) {
+        echo '<p>Si tu es redirigé ici après t\'être inscrits, c\'est que ton inscription est réussie !</p>';
+    }
+}
+
+
 ?>
 
 <?php
-// Display login errors
+// Message pour erreur de connexion :
 if (isset($_GET['login_error'])) : ?>
     <div class="alert alert-danger">
         <?php echo esc_html(urldecode($_GET['login_error'])); ?>
     </div>
 <?php endif; ?>
+
 <div class="blue-separation">
 
 
     <h1>Connecte-toi !</h1>
-    <p>Si tu es redirigé ici après t'être connecté, c'est que ton inscription est réussie ! Pour que tu accèdes à ton compte, remplis les champs !</p>
+    <p>Pour que tu accèdes à ton compte, remplis les champs !</p>
 
 </div>
 <br>

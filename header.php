@@ -81,18 +81,18 @@
 
 <?php wp_head(); ?>
 
-<!-- CECI EST LA BARRE DE NAV -->
+<!-- Navbar -->
 <nav class="custom-navbar">
   <div class="logo-container">
     <a id="fnfheader" href="<?php echo home_url(); ?>">FAST 'N FRIENDS</a>
   </div>
 
-  <!-- Icône du menu hamburger -->
-  <div class="hamburger-menu" id="hamburger-menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+      <!-- Icône du menu hamburger -->
+      <div class="hamburger-menu" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
   <div class="overlay" id="overlay">
     <ul class="nav-links" id="nav-links">

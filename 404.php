@@ -6,6 +6,7 @@
  */
 
 get_header(); ?>
+
 <div class="error-404-body">
 <div class="container error-page">
     <div class="error-404 not-found">

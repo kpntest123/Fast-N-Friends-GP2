@@ -214,6 +214,14 @@ add_action('template_redirect', 'redirection_inscription');
 
 // Les règles de redirections : 
 function fnf_redirect_rules() {
+     // Limiter l'accès à une page spécifique aux administrateurs uniquement
+     if (is_page('admin-add-a-event')) { // Remplacez 'admin-only-page' par le slug de votre page
+        if (!current_user_can('administrator')) {
+            wp_redirect(home_url()); // Redirige vers la page d'accueil ou une autre page
+            exit;
+        }
+    }
+    
     // Les non-admins du site veulent accèder aux endroits admins ==> buiten
     if (is_admin() && !current_user_can('administrator') && !wp_doing_ajax()) {
         wp_redirect(home_url());
@@ -228,14 +236,15 @@ function fnf_redirect_rules() {
 
     // Pas accèder à la page sans le /home, d'office redirigé !
     if (is_front_page()) {
-        wp_redirect(home_url('/home/'));
+        wp_redirect(home_url('/home'));
         exit;
     }
 
     // Pour la page "add traject", ne pas laisser les non conducteurs accèder à la page
     if (is_page('add-a-traject')) {
+        // Rediriger les utilisateurs non connectés vers une page spécifique de votre site
         if (!is_user_logged_in()) {
-            wp_redirect(wp_login_url());
+            wp_redirect(home_url('/login')); // Remplacez 'votre-page-de-connexion' par le slug de votre page
             exit;
         }
         

@@ -4,6 +4,7 @@ get_header();
 ?>
 
 <section class="mentions-legales">
+<!-- En mémoire d'un des profs le splus cool, J-C qu'on ne reverra que en 3ème :-( -->
 <div class="container mt-5">
     <h1 class="text-center">Mentions légales</h1>
 
