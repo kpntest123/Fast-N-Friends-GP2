@@ -4,7 +4,7 @@ get_header();?>
 
 <div class="blue-separation">
   <h1>Besoins d'une recherche plus spécifique ?</h1>
-  <p>T'es au bon endroit</p>
+  <p>T'es au bon endroit !</p>
 
   </div>
   <div class="deep-search-image">
@@ -45,9 +45,6 @@ get_header();?>
     </form>
 
     </div>
-    
-  <!-- Champs cachés pour les filtres additionnels -->
-
 
 </form>
 
@@ -87,12 +84,7 @@ function closeFiltersModal() {
 
 
 
-<br><br><br><br><br><br><br><br><br><br>
-
-
-
-  <!-- Bouton "Plus de filtres" ==> a faire fonctionner -->
- 
+<br><br><br><br><br><br><br><br><br><br> 
   
 
 

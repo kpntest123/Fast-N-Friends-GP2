@@ -3,13 +3,13 @@
 get_header(); ?>
 
 <div class="blue-separation">
-    <h1>Envie de t'amuser ?</h1>
-    <p>Voici les événements à venir</p>
+    <h1>Envie de t'amuser ? De passer du bon temps ?</h1>
+    <p>Regarde les événements à venir et suis ton coeur !</p>
 </div>
 
 <div>
     <div class="event-title h1">
-        <h1>Événements Partenaires</h1>
+        <h1>Nos événements partenaires :</h1>
     </div>
     <div class="container">
         <div class="row justify-content-center">

@@ -4,23 +4,6 @@
 get_header();
 ?>
 
-
-
-<!-- CEST LA PAGE DACCUEIL ICI, la page de base, une page basifiée--> 
-
-<!-- LA BARRE DE NAV SE TROUVE DANS LE HEADER -->
-
-
-  <!-- 
-
-  Bloc 1 : Titre et description, blabla agicheur ==> nomalement ne pas garder le bloc ici,................
-  <section class="intro">
-    <h1>Ici, c'est le texte en 42 pixel desktop et mobile = 30 ???</h1>
-    <p>Ici le texte doit etre en 30 sur desktop et sur mobile en 16 ????</p>
-  </section>
-  
-  -->
-
   <!-- Bloc 1 : bannière animée -->
   <div class="banner-container">
     <div class="banner">
@@ -33,7 +16,7 @@ get_header();
 
 <!-- Bloc 2 : Image et module de recherche -->
 <section class="search-section">
-  <div class="search-content"> <!-- Utilisation de search-content au lieu de content-wrapper -->
+  <div class="search-content">
     <div class="search-container">
       <h1>Besoin de te déplacer ?</h1>
       <p>Que ce soit pour aller étudier ou aller à un event, tu es au bon endroit !</p>
@@ -93,11 +76,6 @@ get_header();
   </div>
 </section>
 
-
-
-
-
-
   <!-- Bloc 3 : Titre et chiffre -->
     <section class="stats">
       <h1>Notre communauté s'étend !</h1>
@@ -105,18 +83,14 @@ get_header();
       <p>Conducteurs sont prêts à te conduire dès maintenant !</p>
     </section>
 
-
-
-<br>
-
-<!-- Petit blabla de séparation -->
+<!-- Bloc 3.5 : césure -->
 <div class="blue-separation">
   <h1>Pourquoi le covoiturage est bénéfique à tout le monde ?</h1>
   <p>Sortons de l'individualisme, pensons aux autres et à l'environnement !</p>
 </div>
 
 <!-- Bloc 4 : les cards animés -->
-<div class="container">
+<div class="container"> 
         <!-- Version normale -->
             <div class="fond-card-1">
                 <div class="fond-card-2">
@@ -128,8 +102,6 @@ get_header();
                     Le covoiturage, c'est une super solution pour économiser, tout en réduisant les coûts de transport et en utilisant mieux nos voitures. En plus, ça aide à désengorger les routes et à réduire les émissions de CO2. En l'adoptant, tu choisis une mobilité plus durable et qui fait vraiment du bien au porte-monnaie !</p>
                 </div>
         </div>
-
-        <br><br><br>
 
         <!-- Version miroir -->
             <div class="fond-card-1-miroir">
@@ -143,8 +115,6 @@ get_header();
                 </div>
         </div>
 
-        <br><br><br>
-
         <!-- Card normale -->
             <div class="fond-card-1">
                 <div class="fond-card-2">
@@ -156,8 +126,6 @@ get_header();
                     Le covoiturage "ladies only" crée un espace sécurisé et sympa pour les femmes, en privilégiant les trajets entre conductrices et passagères. C’est une option parfaite pour celles qui veulent se sentir en sécurité et à l’aise, tout en réduisant les coûts et l'empreinte carbone. Une solution qui respecte les envies de chacune et qui reste super écolo !</p>
                 </div>
         </div>
-
-        <br><br><br>
 
         <!-- Card miroir -->
             <div class="fond-card-1-miroir">
@@ -171,8 +139,6 @@ get_header();
                 </div>
             </div>
 
-            <br><br><br>
-
         <!-- Card normale -->
             <div class="fond-card-1">
                 <div class="fond-card-2">
@@ -184,8 +150,6 @@ get_header();
                     Fast'N Friends te permet de trouver facilement des trajets pour tous tes événements, que ce soit culturel, sportif ou pro. C’est une solution pratique et économique pour y aller en partageant les frais de transport. En plus, ça crée une super ambiance de partage et de convivialité entre ceux qui partagent le trajet !</p>
                 </div>
         </div>
-
-        <br><br><br>
 
         <!-- Card miroir -->
             <div class="fond-card-1-miroir">
@@ -200,8 +164,6 @@ get_header();
                 </div>
             </div>
         </div>
-
-        <br><br><br><br><br><br>
 
 
         <div class="blue-separation">
